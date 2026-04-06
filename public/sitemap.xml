@@ -1,112 +1,122 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
    <url>
-      <loc>https://www.appliancevista.shop/</loc>
-      <lastmod>2026-02-06</lastmod>
+      <loc>https://www.drivervista.tech/</loc>
+      <lastmod>2026-04-06</lastmod>
       <changefreq>daily</changefreq>
       <priority>1.0</priority>
    </url>
    <url>
-      <loc>https://www.appliancevista.shop/about</loc>
+      <loc>https://www.drivervista.tech/about</loc>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://www.appliancevista.shop/blog</loc>
+      <loc>https://www.drivervista.tech/blog</loc>
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://www.appliancevista.shop/contact</loc>
+      <loc>https://www.drivervista.tech/contact</loc>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
    </url>
    
    <!-- Services -->
    <url>
-      <loc>https://www.appliancevista.shop/service/washing-machine</loc>
+      <loc>https://www.drivervista.tech/service/chipset-drivers</loc>
       <changefreq>weekly</changefreq>
       <priority>0.9</priority>
    </url>
    <url>
-      <loc>https://www.appliancevista.shop/service/refrigerator</loc>
+      <loc>https://www.drivervista.tech/service/graphics-drivers</loc>
       <changefreq>weekly</changefreq>
       <priority>0.9</priority>
    </url>
    <url>
-      <loc>https://www.appliancevista.shop/service/dishwasher</loc>
+      <loc>https://www.drivervista.tech/service/audio-drivers</loc>
       <changefreq>weekly</changefreq>
       <priority>0.9</priority>
    </url>
    <url>
-      <loc>https://www.appliancevista.shop/service/television</loc>
+      <loc>https://www.drivervista.tech/service/network-drivers</loc>
       <changefreq>weekly</changefreq>
       <priority>0.9</priority>
    </url>
    <url>
-      <loc>https://www.appliancevista.shop/service/coffee-maker</loc>
+      <loc>https://www.drivervista.tech/service/storage-controller</loc>
       <changefreq>weekly</changefreq>
       <priority>0.9</priority>
    </url>
    <url>
-      <loc>https://www.appliancevista.shop/service/air-conditioner</loc>
+      <loc>https://www.drivervista.tech/service/usb-support</loc>
       <changefreq>weekly</changefreq>
       <priority>0.9</priority>
    </url>
    <url>
-      <loc>https://www.appliancevista.shop/service/microwave-oven</loc>
+      <loc>https://www.drivervista.tech/service/bluetooth-drivers</loc>
       <changefreq>weekly</changefreq>
       <priority>0.9</priority>
    </url>
    <url>
-      <loc>https://www.appliancevista.shop/service/oven-stove</loc>
+      <loc>https://www.drivervista.tech/service/input-drivers</loc>
       <changefreq>weekly</changefreq>
       <priority>0.9</priority>
    </url>
    <url>
-      <loc>https://www.appliancevista.shop/service/water-purifier</loc>
+      <loc>https://www.drivervista.tech/service/printer-drivers</loc>
       <changefreq>weekly</changefreq>
       <priority>0.9</priority>
    </url>
    <url>
-      <loc>https://www.appliancevista.shop/service/clothes-dryer</loc>
+      <loc>https://www.drivervista.tech/service/scanner-support</loc>
       <changefreq>weekly</changefreq>
       <priority>0.9</priority>
    </url>
    <url>
-      <loc>https://www.appliancevista.shop/service/kitchen-chimney</loc>
+      <loc>https://www.drivervista.tech/service/webcam-drivers</loc>
       <changefreq>weekly</changefreq>
       <priority>0.9</priority>
    </url>
    <url>
-      <loc>https://www.appliancevista.shop/service/other-appliances</loc>
+      <loc>https://www.drivervista.tech/service/bios-uefi-firmware</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.9</priority>
+   </url>
+   <url>
+      <loc>https://www.drivervista.tech/service/security-drivers</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.9</priority>
+   </url>
+   <url>
+      <loc>https://www.drivervista.tech/service/monitor-calibration</loc>
       <changefreq>weekly</changefreq>
       <priority>0.9</priority>
    </url>
 
    <!-- Policies -->
    <url>
-      <loc>https://www.appliancevista.shop/privacy-policy</loc>
+      <loc>https://www.drivervista.tech/privacy-policy</loc>
       <changefreq>yearly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
-      <loc>https://www.appliancevista.shop/terms-of-service</loc>
+      <loc>https://www.drivervista.tech/terms-of-service</loc>
       <changefreq>yearly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
-      <loc>https://www.appliancevista.shop/refund-policy</loc>
+      <loc>https://www.drivervista.tech/refund-policy</loc>
       <changefreq>yearly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
-      <loc>https://www.appliancevista.shop/cookie-policy</loc>
+      <loc>https://www.drivervista.tech/cookie-policy</loc>
       <changefreq>yearly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
-      <loc>https://www.appliancevista.shop/disclaimer</loc>
+      <loc>https://www.drivervista.tech/disclaimer</loc>
       <changefreq>yearly</changefreq>
       <priority>0.5</priority>
    </url>

@@ -1,25 +1,60 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaCheckCircle, FaSpinner, FaDatabase, FaBolt, FaChevronRight } from 'react-icons/fa';
+import CONFIG from '../config';
 
 const Contact = () => {
    const [isSubmitted, setIsSubmitted] = useState(false);
    const [isLoading, setIsLoading] = useState(false);
+   const [formData, setFormData] = useState({
+      first_name: '',
+      last_name: '',
+      email: '',
+      category: '',
+      message: ''
+   });
 
    useEffect(() => {
       window.scrollTo(0, 0);
    }, []);
 
-   const handleSubmit = (e) => {
+   const handleChange = (e) => {
+      const { name, value } = e.target;
+      setFormData(prev => ({ ...prev, [name]: value }));
+   };
+
+   const handleSubmit = async (e) => {
       e.preventDefault();
       setIsLoading(true);
 
-      // Simulate a technical diagnostic submission
-      setTimeout(() => {
+      try {
+         // Using the base URL from config
+         const response = await fetch(`${CONFIG.API_BASE_URL}/contact.php`, {
+            method: 'POST',
+            headers: {
+               'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+               ...formData,
+               site_origin: window.location.hostname // Dynamically pick domain
+            }),
+         });
+
+         const result = await response.json();
+
+         if (result.status === 'success') {
+            setIsSubmitted(true);
+            setFormData({ first_name: '', last_name: '', email: '', category: '', message: '' });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+         } else {
+            alert("Error: " + result.message);
+         }
+      } catch (error) {
+         console.error("Submission Error:", error);
+         alert("Could not connect to the backend. Please check if XAMPP is running and the PHP file exists.");
+      } finally {
          setIsLoading(false);
-         setIsSubmitted(true);
-         window.scrollTo({ top: 0, behavior: 'smooth' });
-      }, 1500);
+      }
    };
 
    return (
@@ -46,11 +81,11 @@ const Contact = () => {
             </div>
          </section>
 
-         <div className="container mx-auto px-6 lg:px-12 py-24">
+         <div className="container mx-auto px-6 lg:px-12 py-24 ">
             <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-start">
 
                {/* Left Side: Support Identity */}
-               <div className="w-full lg:w-2/5" data-aos="fade-right">
+               <div className="w-full lg:w-2/5">
                   <span className="text-blue-600 text-[11px] font-bold uppercase tracking-[3px] block mb-4">Support Channels</span>
                   <h2 className="text-3xl font-bold text-slate-900 mb-8 leading-tight">Expert Hardware <br />Diagnostics & Fixes</h2>
                   <p className="text-slate-500 text-base font-medium mb-12 leading-relaxed">
@@ -58,16 +93,7 @@ const Contact = () => {
                   </p>
 
                   <div className="space-y-10">
-                     <div className="flex items-start gap-6 group">
-                        <div className="w-14 h-14 bg-slate-50 rounded-2xl flex items-center justify-center text-blue-600 flex-shrink-0 border border-slate-100 group-hover:bg-blue-600 group-hover:text-white transition-all duration-500">
-                           <FaPhoneAlt size={18} />
-                        </div>
-                        <div>
-                           <h4 className="font-bold text-lg text-slate-900 mb-1">Direct Technical Line</h4>
-                           <p className="text-slate-400 text-xs font-bold uppercase tracking-widest mb-2 italic">Standard Support Hours</p>
-                           <a href="tel:+12345678901" className="text-xl font-black text-slate-900 hover:text-blue-600 transition-colors tracking-tight">+1 (234) 567-8901</a>
-                        </div>
-                     </div>
+
 
                      <div className="flex items-start gap-6 group">
                         <div className="w-14 h-14 bg-slate-50 rounded-2xl flex items-center justify-center text-blue-600 flex-shrink-0 border border-slate-100 group-hover:bg-blue-600 group-hover:text-white transition-all duration-500">
@@ -95,7 +121,7 @@ const Contact = () => {
                </div>
 
                {/* Right Side: Professional Form */}
-               <div className="w-full lg:w-3/5" data-aos="fade-left">
+               <div className="w-full lg:w-3/5">
                   <div className="bg-white rounded-[3rem] p-8 md:p-16 border border-slate-100 shadow-[0_30px_60px_-20px_rgba(0,0,0,0.05)] relative overflow-hidden">
                      <div className="absolute top-0 right-0 w-40 h-40 bg-blue-50/50 rounded-bl-[100px]"></div>
 
@@ -118,29 +144,29 @@ const Contact = () => {
                            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                               <div className="space-y-3">
                                  <label className="text-[10px] font-black uppercase tracking-[2px] text-slate-400 ml-1">First Name</label>
-                                 <input required type="text" className="w-full bg-slate-50/50 border border-slate-100 rounded-2xl px-5 py-4 focus:outline-none focus:border-blue-600 focus:bg-white transition-all font-medium placeholder:text-slate-300" placeholder="Ex: Alex" />
+                                 <input name="first_name" value={formData.first_name} onChange={handleChange} required type="text" className="w-full bg-slate-50/50 border border-slate-100 rounded-2xl px-5 py-4 focus:outline-none focus:border-blue-600 focus:bg-white transition-all font-medium placeholder:text-slate-300" placeholder="Ex: Alex" />
                               </div>
                               <div className="space-y-3">
                                  <label className="text-[10px] font-black uppercase tracking-[2px] text-slate-400 ml-1">Last Name</label>
-                                 <input required type="text" className="w-full bg-slate-50/50 border border-slate-100 rounded-2xl px-5 py-4 focus:outline-none focus:border-blue-600 focus:bg-white transition-all font-medium placeholder:text-slate-300" placeholder="Ex: Morgan" />
+                                 <input name="last_name" value={formData.last_name} onChange={handleChange} required type="text" className="w-full bg-slate-50/50 border border-slate-100 rounded-2xl px-5 py-4 focus:outline-none focus:border-blue-600 focus:bg-white transition-all font-medium placeholder:text-slate-300" placeholder="Ex: Morgan" />
                               </div>
                            </div>
 
                            <div className="space-y-3">
                               <label className="text-[10px] font-black uppercase tracking-[2px] text-slate-400 ml-1">Technical Email Address</label>
-                              <input required type="email" className="w-full bg-slate-50/50 border border-slate-100 rounded-2xl px-5 py-4 focus:outline-none focus:border-blue-600 focus:bg-white transition-all font-medium placeholder:text-slate-300" placeholder="your@system-mail.com" />
+                              <input name="email" value={formData.email} onChange={handleChange} required type="email" className="w-full bg-slate-50/50 border border-slate-100 rounded-2xl px-5 py-4 focus:outline-none focus:border-blue-600 focus:bg-white transition-all font-medium placeholder:text-slate-300" placeholder="your@system-mail.com" />
                            </div>
 
                            <div className="space-y-3">
                               <label className="text-[10px] font-black uppercase tracking-[2px] text-slate-400 ml-1">Issue Category</label>
                               <div className="relative">
-                                 <select required className="w-full bg-slate-50/50 border border-slate-100 rounded-2xl px-5 py-4 focus:outline-none focus:border-blue-600 focus:bg-white transition-all font-medium text-slate-600 appearance-none cursor-pointer">
+                                 <select name="category" value={formData.category} onChange={handleChange} required className="w-full bg-slate-50/50 border border-slate-100 rounded-2xl px-5 py-4 focus:outline-none focus:border-blue-600 focus:bg-white transition-all font-medium text-slate-600 appearance-none cursor-pointer">
                                     <option value="">Select failure type...</option>
-                                    <option>Essential (Chipset/Graphics/Audio)</option>
-                                    <option>Hardware (Storage/Bluetooth/Input)</option>
-                                    <option>Peripheral (Printer/Scanner/Webcam)</option>
-                                    <option>Advanced (BIOS/UEFI/Security)</option>
-                                    <option>Other System Failure</option>
+                                    <option value="Essential">Essential (Chipset/Graphics/Audio)</option>
+                                    <option value="Hardware">Hardware (Storage/Bluetooth/Input)</option>
+                                    <option value="Peripheral">Peripheral (Printer/Scanner/Webcam)</option>
+                                    <option value="Advanced">Advanced (BIOS/UEFI/Security)</option>
+                                    <option value="Other">Other System Failure</option>
                                  </select>
                                  <div className="absolute right-5 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400">
                                     <FaBolt size={10} />
@@ -150,7 +176,7 @@ const Contact = () => {
 
                            <div className="space-y-3">
                               <label className="text-[10px] font-black uppercase tracking-[2px] text-slate-400 ml-1">Symptom Description</label>
-                              <textarea required rows="4" className="w-full bg-slate-50/50 border border-slate-100 rounded-2xl px-5 py-4 focus:outline-none focus:border-blue-600 focus:bg-white transition-all font-medium resize-none placeholder:text-slate-300" placeholder="Describe flickers, BSOD codes, or connection errors..."></textarea>
+                              <textarea name="message" value={formData.message} onChange={handleChange} required rows="4" className="w-full bg-slate-50/50 border border-slate-100 rounded-2xl px-5 py-4 focus:outline-none focus:border-blue-600 focus:bg-white transition-all font-medium resize-none placeholder:text-slate-300" placeholder="Describe flickers, BSOD codes, or connection errors..."></textarea>
                            </div>
 
                            <button

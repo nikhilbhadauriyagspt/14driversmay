@@ -28,10 +28,10 @@ const Footer = () => {
     <footer className="bg-[#05070a] text-white pt-20 pb-10 overflow-hidden relative font-poppins">
       {/* Decorative Blur Background */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-blue-600/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
-      
+
       <div className="container mx-auto px-6 lg:px-12 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-          
+
           <div className="space-y-6">
             <Link to="/" className="flex items-center gap-2 group">
               <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center group-hover:rotate-12 transition-transform duration-300 shadow-lg shadow-blue-600/20">
@@ -44,13 +44,7 @@ const Footer = () => {
             <p className="text-slate-400 text-sm leading-relaxed font-medium">
               Leading the way in hardware communication standards. We provide technical diagnostics and verified driver solutions for peak system performance.
             </p>
-            <div className="flex gap-4">
-              {[FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram].map((Icon, index) => (
-                <a key={index} href="#" className="w-9 h-9 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all">
-                  <Icon size={14} />
-                </a>
-              ))}
-            </div>
+
           </div>
 
           <div>
@@ -91,15 +85,7 @@ const Footer = () => {
           <div>
             <h4 className="text-white font-bold text-base mb-8 uppercase tracking-widest border-l-4 border-blue-600 pl-4">System Support</h4>
             <ul className="space-y-6">
-              <li className="flex gap-4">
-                <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center text-blue-500 border border-white/10 shadow-sm">
-                  <FaPhone size={14} />
-                </div>
-                <div>
-                  <p className="text-slate-500 text-[10px] font-bold uppercase tracking-widest mb-1">Direct Line</p>
-                  <p className="text-white text-sm font-bold tracking-tight">+1 (234) 567-8901</p>
-                </div>
-              </li>
+
               <li className="flex gap-4">
                 <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center text-blue-500 border border-white/10 shadow-sm">
                   <FaEnvelope size={14} />

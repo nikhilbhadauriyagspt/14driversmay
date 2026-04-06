@@ -1,4 +1,3 @@
-﻿User-agent: *
+User-agent: *
 Allow: /
-Sitemap: https://www.appliancevista.shop/sitemap.xml
-
+Sitemap: https://www.drivervista.tech/sitemap.xml

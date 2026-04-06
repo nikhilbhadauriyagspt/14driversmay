@@ -17,6 +17,7 @@ import Disclaimer from './pages/policies/Disclaimer';
 import { BookingProvider } from './context/BookingContext';
 import { SettingsProvider } from './context/SettingsContext';
 import BookingModal from './components/modals/BookingModal';
+import QuickSupportFAB from './components/QuickSupportFAB';
 import './App.css';
 
 const AppContent = () => {
@@ -28,6 +29,7 @@ const AppContent = () => {
     <div className="App overflow-x-hidden">
       {!hideHeaderFooter && <Header />}
       <BookingModal />
+      <QuickSupportFAB />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

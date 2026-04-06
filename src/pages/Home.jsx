@@ -30,8 +30,9 @@ const Home = () => {
 
       <Hero />
       <Services />
-      <About />
+
       <Capabilities />
+      <About />
       <Process />
       <TechnicalInsights />
       <FAQ />
