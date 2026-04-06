@@ -50,7 +50,7 @@ const Services = () => {
             <img
               src="/projects/service-main.jpg"
               alt="Service Main"
-              className="w-full h-[300px] rounded-3xl object-cover shadow-2xl shadow-blue-600/10"
+              className="w-full h-[250px] rounded-3xl object-contain shadow-2xl bg-[#10141D] shadow-blue-600/10"
             />
           </div>
         </div>
