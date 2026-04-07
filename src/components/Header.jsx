@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { 
-  FaBars, FaTimes, FaCogs, FaChevronDown, 
-  FaMicrochip, FaDesktop, FaVolumeUp, FaWifi, 
-  FaHdd, FaUsb, FaBluetooth, FaKeyboard, 
-  FaPrint, FaSearchPlus, FaVideo, 
+import {
+  FaBars, FaTimes, FaCogs, FaChevronDown,
+  FaMicrochip, FaDesktop, FaVolumeUp, FaWifi,
+  FaHdd, FaUsb, FaBluetooth, FaKeyboard,
+  FaPrint, FaSearchPlus, FaVideo,
   FaCode, FaShieldAlt, FaTv, FaSearch, FaBolt, FaDatabase
 } from 'react-icons/fa';
 import { servicesData } from '../data/services';
@@ -33,8 +33,8 @@ const Header = () => {
       setSearchResults([]);
       return;
     }
-    const results = servicesData.filter(service => 
-      service.title.toLowerCase().includes(searchTerm.toLowerCase()) || 
+    const results = servicesData.filter(service =>
+      service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
       service.shortDesc.toLowerCase().includes(searchTerm.toLowerCase())
     );
     setSearchResults(results);
@@ -106,7 +106,8 @@ const Header = () => {
 
   return (
     <header className={`fixed top-0 left-0 w-full z-50 font-poppins transition-all duration-300 ${scrolled ? 'shadow-xl' : ''}`}>
-      <style dangerouslySetInnerHTML={{ __html: `
+      <style dangerouslySetInnerHTML={{
+        __html: `
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
         .font-poppins { font-family: 'Poppins', sans-serif; }
       `}} />
@@ -129,7 +130,7 @@ const Header = () => {
       <div className={`w-full bg-white/95 backdrop-blur-md transition-all duration-300 border-b ${scrolled ? 'py-3 border-blue-50/50' : 'py-5 border-gray-100'}`}>
         <div className="container mx-auto px-4 lg:px-12">
           <nav className="flex items-center justify-between gap-8">
-            
+
             <Link to="/" className="flex items-center gap-3 group flex-shrink-0">
               <div className="w-10 h-10 bg-blue-600 rounded flex items-center justify-center shadow-lg transition-transform group-hover:rotate-6">
                 <FaCogs className="text-white text-xl animate-spin-slow" />
@@ -145,15 +146,15 @@ const Header = () => {
             {/* Desktop Search */}
             <div className="hidden xl:flex items-center flex-grow max-w-md relative" ref={searchRef}>
               <div className="relative w-full group">
-                <input 
-                  type="text" 
+                <input
+                  type="text"
                   value={searchTerm}
                   onChange={(e) => {
                     setSearchTerm(e.target.value);
                     setShowSearchBox(true);
                   }}
                   onFocus={() => setShowSearchBox(true)}
-                  placeholder="Search hardware, drivers or firmware..." 
+                  placeholder="Search hardware, drivers or firmware..."
                   className="w-full bg-gray-50 border border-gray-200 rounded-lg py-2.5 pl-10 pr-4 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all"
                 />
                 <FaSearch className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-blue-500 transition-colors" />
@@ -164,7 +165,7 @@ const Header = () => {
                   <div className="max-h-80 overflow-y-auto">
                     {searchResults.length > 0 ? (
                       searchResults.map((result) => (
-                        <div 
+                        <div
                           key={result.id}
                           onClick={() => {
                             navigate(`/service/${result.slug}`);
@@ -174,7 +175,7 @@ const Header = () => {
                           className="flex items-center gap-4 p-4 hover:bg-gray-50 cursor-pointer border-b border-gray-50 last:border-0 transition-colors"
                         >
                           <div className="w-8 h-8 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center text-xs">
-                             <FaCogs />
+                            <FaCogs />
                           </div>
                           <div>
                             <p className="text-sm font-bold text-gray-900">{result.title}</p>
@@ -199,8 +200,8 @@ const Header = () => {
                 <li>
                   <Link to="/" className="px-4 py-2 text-[14px] font-semibold text-gray-700 hover:text-blue-600 transition-all">Home</Link>
                 </li>
-                
-                <li 
+
+                <li
                   className="static group"
                   onMouseEnter={() => setActiveDropdown('drivers')}
                   onMouseLeave={() => setActiveDropdown(null)}
@@ -223,8 +224,8 @@ const Header = () => {
                           <ul className="space-y-4">
                             {cat.items.map((item, i) => (
                               <li key={i} className="group/item">
-                                <Link 
-                                  to={`/service/${item.slug}`} 
+                                <Link
+                                  to={`/service/${item.slug}`}
                                   onClick={() => setActiveDropdown(null)}
                                   className="flex items-start gap-4"
                                 >
@@ -251,7 +252,7 @@ const Header = () => {
 
               <div className="ml-4 pl-4 border-l border-gray-100">
                 <Link to="/contact" className="flex items-center gap-3 bg-blue-600 text-white px-7 py-3 rounded-lg text-sm font-bold shadow-lg shadow-blue-500/20 hover:bg-gray-900 transition-all active:scale-95">
-                  <FaBolt className="text-yellow-400" /> Technical Support
+                  <FaBolt className="text-yellow-400" /> Get In Touch
                 </Link>
               </div>
             </div>
@@ -281,8 +282,8 @@ const Header = () => {
                   {cat.items.map((item, i) => (
                     <li key={i}>
                       <Link to={`/service/${item.slug}`} onClick={() => setIsOpen(false)} className="flex items-center gap-3">
-                         <span className={`${cat.color}`}>{item.icon}</span>
-                         <span className="text-sm font-semibold text-gray-700">{item.name}</span>
+                        <span className={`${cat.color}`}>{item.icon}</span>
+                        <span className="text-sm font-semibold text-gray-700">{item.name}</span>
                       </Link>
                     </li>
                   ))}
@@ -293,7 +294,8 @@ const Header = () => {
         </div>
       </div>
 
-      <style dangerouslySetInnerHTML={{ __html: `
+      <style dangerouslySetInnerHTML={{
+        __html: `
         @keyframes spin-slow { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
         .animate-spin-slow { animation: spin-slow 15s linear infinite; }
       `}} />
