@@ -9,8 +9,8 @@ const PrivacyPolicy = () => {
   return (
     <div className="bg-white min-h-screen pt-32 pb-24 font-poppins">
       <Helmet>
-        <title>Privacy Policy | YourPCDriver Official Standards</title>
-        <meta name="description" content="Detailed Privacy Policy for YourPCDriver. Understand how we collect, use, and protect your technical data." />
+        <title>Privacy Policy | DriverZenith Official Standards</title>
+        <meta name="description" content="Detailed Privacy Policy for DriverZenith. Understand how we collect, use, and protect your technical data." />
       </Helmet>
 
       <div className="container mx-auto px-6 lg:px-12 max-w-5xl">
@@ -23,17 +23,17 @@ const PrivacyPolicy = () => {
         <div className="prose prose-lg max-w-none text-slate-600 leading-relaxed space-y-10 font-medium">
           <section>
             <p>
-              This Privacy Notice for YourPCDriver ("<strong>we</strong>," "<strong>us</strong>," or "<strong>our</strong>"), describes how and why we
+              This Privacy Notice for DriverZenith ("<strong>we</strong>," "<strong>us</strong>," or "<strong>our</strong>"), describes how and why we
               might access, collect, store, use, and/or share ("<strong>process</strong>") your personal information when
               you use our technical services ("<strong>Services</strong>"), including when you:
             </p>
             <ul className="list-disc pl-6 space-y-3 mt-4">
-              <li>Visit our technical portal at <a href="https://www.yourpcdriver.shop/" className="text-blue-600 hover:underline">https://www.yourpcdriver.shop/</a> or any website of ours that links to this Privacy Notice</li>
-              <li>Engage with YourPCDriver for hardware diagnostics. At YourPCDriver, we focus on technical accuracy and system synchronization. Our mission is built on providing diagnostic clarity and performing software-hardware optimizations that aim to extend the lifecycle of your computer systems. We serve clients with a commitment to maintaining standard operating procedures.</li>
+              <li>Visit our technical portal at <a href="https://www.driverzenith.net/" className="text-blue-600 hover:underline">https://www.driverzenith.net/</a> or any website of ours that links to this Privacy Notice</li>
+              <li>Engage with DriverZenith for hardware diagnostics. At DriverZenith, we focus on technical accuracy and system synchronization. Our mission is built on providing diagnostic clarity and performing software-hardware optimizations that aim to extend the lifecycle of your computer systems. We serve clients with a commitment to maintaining standard operating procedures.</li>
               <li>Connect with our technical architects for hardware issue resolutions or system audits.</li>
             </ul>
             <p className="mt-6">
-              <strong>Questions or concerns?</strong> Reading this Privacy Notice will help you understand your privacy rights and choices. We are responsible for making decisions about how your personal information is processed. If you do not agree with our policies and practices, please do not use our Services. If you still have any questions or concerns, please contact us at <a href="mailto:support@yourpcdriver.shop" className="text-blue-600">support@yourpcdriver.shop</a>.
+              <strong>Questions or concerns?</strong> Reading this Privacy Notice will help you understand your privacy rights and choices. We are responsible for making decisions about how your personal information is processed. If you do not agree with our policies and practices, please do not use our Services. If you still have any questions or concerns, please contact us at <a href="mailto:support@driverzenith.net" className="text-blue-600">support@driverzenith.net</a>.
             </p>
           </section>
 
@@ -87,10 +87,10 @@ const PrivacyPolicy = () => {
 
           <section id="contact" className="space-y-6">
             <h3 className="text-xl font-bold text-slate-900">4. How can you contact us?</h3>
-            <p>If you have questions or comments about this notice, you may email us at <strong>support@yourpcdriver.shop</strong> or contact us by post at:</p>
+            <p>If you have questions or comments about this notice, you may email us at <strong>support@driverzenith.net</strong> or contact us by post at:</p>
             <address className="not-italic bg-slate-900 text-white p-10 rounded-[3rem] shadow-xl relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-blue-600/20 rounded-bl-full"></div>
-              <p className="font-black text-xl mb-2 italic">YourPCDriver HQ</p>
+              <p className="font-black text-xl mb-2 italic">DriverZenith HQ</p>
               <p className="text-slate-400 font-bold uppercase tracking-widest text-[10px] mb-4">Technical Operations Center</p>
               <p className="text-lg">1267 Filer Ave E</p>
               <p className="text-lg">Twin Falls, ID 83301, USA</p>

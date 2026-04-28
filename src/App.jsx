@@ -7,8 +7,11 @@ import About from './pages/About';
 import Services from './pages/Services';
 import Blog from './pages/Blog';
 import Contact from './pages/Contact';
+import FAQPage from './pages/FAQ';
 import ServiceDetails from './pages/ServiceDetails';
 import BlogDetails from './pages/BlogDetails';
+import GuideDetails from './pages/GuideDetails';
+import Guides from './pages/Guides';
 import PrivacyPolicy from './pages/policies/PrivacyPolicy';
 import TermsOfService from './pages/policies/TermsOfService';
 import RefundPolicy from './pages/policies/RefundPolicy';
@@ -29,22 +32,27 @@ const AppContent = () => {
     <div className="App overflow-x-hidden">
       {!hideHeaderFooter && <Header />}
       <BookingModal />
-      <QuickSupportFAB />
       <Routes>
+
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/faq" element={<FAQPage />} />
+        <Route path="/guides" element={<Guides />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-of-service" element={<TermsOfService />} />
         <Route path="/refund-policy" element={<RefundPolicy />} />
         <Route path="/cookie-policy" element={<CookiePolicy />} />
         <Route path="/disclaimer" element={<Disclaimer />} />
-        
+
         {/* Dynamic route for all Drivers */}
         <Route path="/service/:slug" element={<ServiceDetails />} />
-        
+
+        {/* Dynamic route for all Guides */}
+        <Route path="/guide/:slug" element={<GuideDetails />} />
+
         {/* Catch-all for blogs */}
         <Route path="/blog/:id" element={<BlogDetails />} />
       </Routes>

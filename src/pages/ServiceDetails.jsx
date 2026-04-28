@@ -1,13 +1,17 @@
-import React, { useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
-import { servicesData } from '../data/services';
-import { FaArrowLeft, FaShieldAlt, FaInfoCircle, FaChevronRight, FaExclamationTriangle, FaCogs } from 'react-icons/fa';
-import * as Icons from 'react-icons/fa';
+import React, { useEffect } from "react";
+import { useParams, Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
+import { 
+  FaCogs, FaDownload, FaShieldAlt, FaHistory, 
+  FaChevronRight, FaCheckCircle, FaExclamationTriangle,
+  FaTools, FaQuestionCircle, FaArrowLeft
+} from "react-icons/fa";
+import { BookOpen } from "lucide-react";
+import { servicesData } from "../data/services";
 
 const ServiceDetails = () => {
   const { slug } = useParams();
-  const service = servicesData.find(s => s.slug === slug);
+  const service = servicesData.find((s) => s.slug === slug);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -15,134 +19,166 @@ const ServiceDetails = () => {
 
   if (!service) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-slate-50 font-poppins">
-        <div className="text-center">
-          <h2 className="text-4xl font-bold text-slate-900 mb-6">Database Record Not Found</h2>
-          <Link to="/services" className="inline-block bg-blue-600 text-white px-8 py-3 rounded-xl font-bold hover:bg-slate-900 transition-all shadow-lg">
-            Back to Driver Index
-          </Link>
-        </div>
+      <div className="min-h-screen flex flex-col items-center justify-center bg-[#F7FAFF] p-6">
+        <h2 className="text-2xl font-bold text-[#0F1B3D]">Service Not Found</h2>
+        <Link to="/" className="mt-4 text-blue-600 font-bold hover:underline flex items-center gap-2">
+          <FaArrowLeft /> Back to Home
+        </Link>
       </div>
     );
   }
 
-  const IconComponent = Icons[service.iconName] || Icons.FaCogs;
-
   return (
-    <div className="bg-white min-h-screen pt-32 pb-24 font-poppins">
+    <div className="bg-[#F7FAFF] min-h-screen font-[Poppins]">
       <Helmet>
-        <title>{service.title} - Technical Specifications & Issue Resolution</title>
-        <meta name="description" content={service.shortDesc} />
+        <title>{service.title} | Technical Documentation & Hardware Guide | DriverZenith</title>
+        <meta name="description" content={`Technical specifications and installation documentation for ${service.title}. Learn about hardware requirements and system compatibility.`} />
       </Helmet>
-      
-      {/* Background Atmosphere */}
-      <div className="absolute top-0 left-0 w-full h-[500px] bg-gradient-to-b from-blue-50/50 to-transparent -z-10"></div>
 
-      <div className="container mx-auto px-6 lg:px-12">
-        <Link to="/services" className="inline-flex items-center gap-2 text-slate-400 hover:text-blue-600 font-bold text-xs uppercase tracking-widest mb-12 transition-colors group">
-          <FaArrowLeft className="group-hover:-translate-x-1 transition-transform" /> Back to Driver Index
-        </Link>
+      {/* Hero Section */}
+      <section className="relative pt-32 pb-20 bg-[#071A3D] overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-full opacity-10">
+          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:40px_40px]" />
+        </div>
         
-        {/* Header Section */}
-        <div className="flex flex-col lg:flex-row gap-16 items-start mb-20">
-          <div className="w-full lg:w-1/2" data-aos="fade-right">
-            <div className="inline-flex items-center gap-2 bg-blue-50 px-4 py-1.5 rounded-full mb-6 border border-blue-100">
-              <FaInfoCircle className="text-blue-600 text-xs" />
-              <span className="text-blue-600 text-[11px] font-bold uppercase tracking-[2px]">Technical Documentation</span>
+        <div className="max-w-[1600px] mx-auto px-6 lg:px-12 relative z-10">
+          <div className="flex flex-col lg:flex-row items-center gap-12">
+            <div className="lg:w-3/5 text-center lg:text-start">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-600/20 border border-blue-500/30 text-blue-400 text-[12px] font-bold uppercase tracking-widest mb-8">
+                <FaCogs /> Technical Wiki & Database
+              </div>
+              <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
+                {service.title} <span className="text-blue-500">Documentation</span>
+              </h1>
+              <p className="text-white/70 text-lg md:text-xl font-medium leading-relaxed max-w-2xl mb-10">
+                Detailed technical analysis and configuration data for {service.title}. Optimized for Windows 10 & 11 hardware architectures.
+              </p>
+              
+              <div className="flex flex-wrap justify-center lg:justify-start gap-4">
+                <Link to="/guides" className="bg-blue-600 text-white px-8 py-4 rounded-xl font-bold text-sm hover:bg-blue-700 transition shadow-lg shadow-blue-600/20 flex items-center gap-3">
+                  <BookOpen className="w-4 h-4" /> View Installation Guides
+                </Link>
+                <Link to="/faq" className="bg-white/10 text-white border border-white/20 px-8 py-4 rounded-xl font-bold text-sm hover:bg-white/20 transition flex items-center gap-3">
+                  <FaQuestionCircle /> Technical FAQ
+                </Link>
+              </div>
             </div>
-            <h1 className="text-4xl md:text-6xl font-extrabold text-slate-900 mb-8 leading-tight">{service.title}</h1>
-            <p className="text-xl text-slate-500 font-medium mb-10 leading-relaxed italic">
-              "{service.shortDesc}"
-            </p>
-            <div className="prose prose-lg text-slate-500 mb-12 max-w-none font-medium leading-relaxed">
-              <p>{service.longDesc}</p>
-            </div>
-
-            <div className="flex flex-wrap gap-4">
-              {service.features.map((feature, index) => (
-                <div key={index} className="px-4 py-2 bg-slate-50 border border-slate-100 rounded-xl text-[11px] font-bold text-slate-600 uppercase tracking-wider">
-                  {feature}
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="w-full lg:w-1/2" data-aos="fade-left">
-            <div className="relative p-1 bg-gradient-to-tr from-blue-100 to-indigo-100 rounded-[3rem] shadow-sm">
-              <div className="bg-white p-12 rounded-[2.8rem] flex flex-col items-center text-center">
-                <div className="w-24 h-24 bg-blue-50 text-blue-600 rounded-[2rem] flex items-center justify-center text-4xl mb-8 shadow-inner">
-                  <IconComponent />
-                </div>
-                <h3 className="text-2xl font-bold text-slate-900 mb-4">System Integration Status</h3>
-                <div className="w-full h-2 bg-slate-100 rounded-full overflow-hidden mb-4">
-                  <div className="h-full bg-blue-600 w-[92%] rounded-full animate-pulse"></div>
-                </div>
-                <div className="flex justify-between w-full text-[10px] font-black text-slate-400 uppercase tracking-widest">
-                  <span>Compatibility</span>
-                  <span className="text-blue-600">92% Verified</span>
-                </div>
-                
-                <div className="mt-12 pt-8 border-t border-slate-50 w-full">
-                   <Link to="/contact" className="w-full bg-slate-900 text-white py-5 rounded-2xl font-bold uppercase tracking-widest text-xs flex items-center justify-center gap-3 hover:bg-blue-600 transition-all shadow-xl shadow-slate-900/10">
-                     Initialize Diagnostic Fix <FaChevronRight size={10} />
-                   </Link>
+            
+            <div className="lg:w-2/5 flex justify-center">
+              <div className="relative">
+                <div className="absolute -inset-4 bg-blue-500/20 rounded-full blur-3xl animate-pulse" />
+                <div className="w-64 h-64 md:w-80 md:h-80 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-3xl flex items-center justify-center text-8xl text-white shadow-2xl rotate-3 relative border border-white/10">
+                  <FaCogs className="animate-spin-slow" />
                 </div>
               </div>
             </div>
           </div>
         </div>
+      </section>
 
-        {/* Common Issues Section - The Core Need */}
-        <div className="mt-24" data-aos="fade-up">
-          <div className="flex items-center gap-4 mb-12">
-            <div className="w-12 h-12 bg-rose-50 text-rose-600 rounded-2xl flex items-center justify-center text-xl border border-rose-100">
-              <FaExclamationTriangle />
-            </div>
-            <div>
-              <h2 className="text-3xl font-bold text-slate-900">Common Failure Symptoms</h2>
-              <p className="text-slate-400 text-sm font-medium">Identify if your system is experiencing {service.title.toLowerCase()} issues.</p>
-            </div>
-          </div>
+      {/* Content Section */}
+      <section className="py-20">
+        <div className="max-w-[1600px] mx-auto px-6 lg:px-12">
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_400px] gap-12">
+            
+            {/* Main Content */}
+            <div className="space-y-12">
+              <div className="bg-white rounded-[32px] border border-[#E6ECF8] p-8 md:p-12 shadow-sm">
+                <h2 className="text-2xl md:text-3xl font-bold text-[#0F1B3D] mb-8 flex items-center gap-4">
+                  <FaShieldAlt className="text-blue-600" /> Technical Overview
+                </h2>
+                <div className="prose prose-lg max-w-none text-[#5B6478] font-medium leading-relaxed">
+                  <p className="mb-6">
+                    The <strong>{service.title}</strong> serves as a critical translation layer between the Windows operating system and your physical hardware components. Understanding its function is key to maintaining system stability and performance.
+                  </p>
+                  <p>
+                    This documentation repository provides data on verified software configurations and architectural requirements. We index technical information for multiple hardware versions to ensure broad compatibility across modern computing environments.
+                  </p>
+                </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {service.issues && service.issues.map((issue, idx) => (
-              <div key={idx} className="group p-8 bg-slate-50/50 border border-slate-100 rounded-[2.5rem] hover:bg-white hover:border-rose-200 hover:shadow-xl hover:shadow-rose-500/5 transition-all duration-500">
-                <div className="flex items-start gap-6">
-                  <div className="w-10 h-10 rounded-xl bg-white border border-slate-100 flex items-center justify-center text-xs font-black text-rose-500 shadow-sm group-hover:bg-rose-500 group-hover:text-white transition-all">
-                    0{idx + 1}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+                  <div className="p-6 rounded-2xl bg-[#F8FAFC] border border-[#E6ECF8]">
+                    <FaCheckCircle className="text-emerald-500 text-2xl mb-4" />
+                    <h4 className="font-bold text-[#0F1B3D] mb-2">Verified Data</h4>
+                    <p className="text-[12px] text-[#5B6478]">Specifications cross-referenced with manufacturer data.</p>
                   </div>
-                  <div>
-                    <h4 className="text-slate-900 font-bold text-lg mb-2">{issue.problem}</h4>
-                    <p className="text-slate-500 text-sm font-medium leading-relaxed mb-4">
-                      {issue.symptom}
-                    </p>
-                    <div className="inline-flex items-center gap-2 text-[10px] font-black text-rose-600 uppercase tracking-widest">
-                      <span className="w-1.5 h-1.5 bg-rose-600 rounded-full"></span> Critical Support Required
+                  <div className="p-6 rounded-2xl bg-[#F8FAFC] border border-[#E6ECF8]">
+                    <FaHistory className="text-blue-500 text-2xl mb-4" />
+                    <h4 className="font-bold text-[#0F1B3D] mb-2">Version History</h4>
+                    <p className="text-[12px] text-[#5B6478]">Information on legacy and modern architecture support.</p>
+                  </div>
+                  <div className="p-6 rounded-2xl bg-[#F8FAFC] border border-[#E6ECF8]">
+                    <FaQuestionCircle className="text-orange-500 text-2xl mb-4" />
+                    <h4 className="font-bold text-[#0F1B3D] mb-2">Technical Insight</h4>
+                    <p className="text-[12px] text-[#5B6478]">Documentation for resolving common hardware conflicts.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-[32px] border border-[#E6ECF8] p-8 md:p-12 shadow-sm">
+                <h2 className="text-2xl md:text-3xl font-bold text-[#0F1B3D] mb-8">Installation Troubleshooting</h2>
+                <div className="space-y-6">
+                  {[
+                    { t: "Automatic Detection", d: "Use our cloud-based tool to automatically identify your hardware ID." },
+                    { t: "Manual Update Path", d: "Guide on using Windows Device Manager to force driver synchronization." },
+                    { t: "Rollback Procedures", d: "How to safely revert to a previous driver version if issues arise." }
+                  ].map((step, i) => (
+                    <div key={i} className="flex gap-6 items-start p-6 rounded-2xl hover:bg-blue-50 transition-colors group">
+                      <div className="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-lg shrink-0 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                        {i + 1}
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-[#0F1B3D] text-lg mb-1">{step.t}</h4>
+                        <p className="text-[#5B6478] text-[14px] font-medium">{step.d}</p>
+                      </div>
                     </div>
-                  </div>
+                  ))}
                 </div>
               </div>
-            ))}
+            </div>
+
+            {/* Sidebar */}
+            <aside className="space-y-8">
+              <div className="bg-[#071A3D] rounded-[32px] p-8 text-white relative overflow-hidden shadow-xl shadow-blue-900/10">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-blue-600/20 rounded-full -mr-16 -mt-16 blur-3xl" />
+                <BookOpen className="text-blue-400 text-4xl mb-6" />
+                <h3 className="text-2xl font-bold mb-4">Need More Info?</h3>
+                <p className="text-white/60 text-sm font-medium mb-8 leading-relaxed">
+                  Explore our comprehensive library of technical guides to better understand hardware-software interactions and system optimization.
+                </p>
+                <Link to="/guides" className="w-full bg-blue-600 text-white py-4 rounded-xl font-bold text-sm hover:bg-blue-700 transition flex items-center justify-center gap-2">
+                  Browse Guides <FaChevronRight />
+                </Link>
+              </div>
+
+              <div className="bg-white rounded-[32px] border border-[#E6ECF8] p-8 shadow-sm">
+                <h4 className="text-[18px] font-bold text-[#0F1B3D] mb-6">Technical Topics</h4>
+                <div className="space-y-4">
+                  {servicesData.filter(s => s.slug !== slug).slice(0, 5).map((s, i) => (
+                    <Link key={i} to={`/service/${s.slug}`} className="flex items-center justify-between group p-3 rounded-xl hover:bg-gray-50 transition-all border border-transparent hover:border-gray-100">
+                      <span className="text-[#5B6478] text-[13px] font-bold group-hover:text-blue-600 transition-colors truncate pr-4">
+                        {s.title} Specs
+                      </span>
+                      <FaChevronRight className="text-gray-300 text-[10px] group-hover:text-blue-600 transition-all group-hover:translate-x-1" />
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </aside>
+
           </div>
         </div>
-
-        {/* Final CTA */}
-        <div className="mt-32 p-12 bg-blue-600 rounded-[3.5rem] text-center relative overflow-hidden shadow-2xl shadow-blue-600/20" data-aos="zoom-in">
-           {/* Abstract Decoration */}
-           <div className="absolute top-0 left-0 w-full h-full opacity-10" style={{ backgroundImage: 'radial-gradient(#fff 1px, transparent 1px)', backgroundSize: '30px 30px' }}></div>
-           
-           <div className="relative z-10">
-             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Expert Technical Assistance Available</h2>
-             <p className="text-blue-100 text-lg font-medium mb-10 max-w-2xl mx-auto">
-               Our team of system specialists can remotely diagnose and resolve complex driver conflicts within 24 hours.
-             </p>
-             <Link to="/contact" className="inline-flex items-center gap-3 bg-white text-blue-600 px-12 py-5 rounded-2xl font-bold uppercase tracking-widest text-sm hover:bg-slate-900 hover:text-white transition-all shadow-xl">
-               Connect with a Specialist <FaChevronRight size={12} />
-             </Link>
-           </div>
-        </div>
-
-      </div>
+      </section>
+      
+      <style dangerouslySetInnerHTML={{ __html: `
+        @keyframes spin-slow {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
+        }
+        .animate-spin-slow {
+          animation: spin-slow 15s linear infinite;
+        }
+      `}} />
     </div>
   );
 };

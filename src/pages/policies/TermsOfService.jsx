@@ -9,9 +9,9 @@ const TermsOfService = () => {
   return (
     <div className="bg-white min-h-screen pt-32 pb-24 font-poppins">
       <Helmet>
-        <title>Terms of Service - YourPCDriver</title>
-        <meta name="description" content="Official Terms of Service for YourPCDriver. Agreement to our legal terms and conditions." />
-        <link rel="canonical" href="https://www.yourpcdriver.shop/terms-of-service" />
+        <title>Terms of Service - DriverZenith</title>
+        <meta name="description" content="Official Terms of Service for DriverZenith. Agreement to our legal terms and conditions." />
+        <link rel="canonical" href="https://www.driverzenith.net/terms-of-service" />
       </Helmet>
 
       <div className="container mx-auto px-6 lg:px-12 max-w-5xl">
@@ -26,24 +26,24 @@ const TermsOfService = () => {
           <section>
             <h2 className="text-2xl font-bold text-slate-900 mb-6">AGREEMENT TO OUR LEGAL TERMS</h2>
             <p>
-              We are YourPCDriver ("<strong>Company</strong>," "<strong>we</strong>," "<strong>us</strong>," "<strong>our</strong>"), a company registered in Idaho,
+              We are DriverZenith ("<strong>Company</strong>," "<strong>we</strong>," "<strong>us</strong>," "<strong>our</strong>"), a company registered in Idaho,
               United States at 1267 Filer Ave E, Twin Falls, ID 83301.
             </p>
             <p>
-              We operate the website <a href="https://www.yourpcdriver.shop/" className="text-blue-600 hover:underline font-bold">https://www.yourpcdriver.shop/</a> (the "<strong>Site</strong>"), as well as any other related
+              We operate the website <a href="https://www.driverzenith.net/" className="text-blue-600 hover:underline font-bold">https://www.driverzenith.net/</a> (the "<strong>Site</strong>"), as well as any other related
               products and services that refer or link to these legal terms (the "<strong>Legal Terms</strong>") (collectively,
               the "<strong>Services</strong>").
             </p>
             <p>
-              YourPCDriver specializes in expert computer driver support and hardware diagnostics. We provide technical solutions to optimize system performance and ensure hardware-software synchronization.
+              DriverZenith specializes in expert computer driver support and hardware diagnostics. We provide technical solutions to optimize system performance and ensure hardware-software synchronization.
             </p>
             <p>
-              You can contact us by email at <a href="mailto:support@yourpcdriver.shop" className="text-blue-600 font-bold">support@yourpcdriver.shop</a>, or by
+              You can contact us by email at <a href="mailto:support@driverzenith.net" className="text-blue-600 font-bold">support@driverzenith.net</a>, or by
               mail to 1267 Filer Ave E, Twin Falls, ID 83301, United States.
             </p>
             <p>
               These Legal Terms constitute a legally binding agreement made between you, whether
-              personally or on behalf of an entity ("<strong>you</strong>"), and YourPCDriver, concerning your access to
+              personally or on behalf of an entity ("<strong>you</strong>"), and DriverZenith, concerning your access to
               and use of the Services. You agree that by accessing the Services, you have read,
               understood, and agreed to be bound by all of these Legal Terms. <strong>IF YOU DO NOT AGREE
                 WITH ALL OF THESE LEGAL TERMS, THEN YOU ARE EXPRESSLY PROHIBITED FROM USING THE
@@ -87,13 +87,13 @@ const TermsOfService = () => {
             <p>In order to resolve a complaint regarding the Services or to receive further information regarding use of the Services, please contact us at:</p>
             <address className="not-italic bg-slate-900 text-white p-10 rounded-[3rem] shadow-xl relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-blue-600/20 rounded-bl-full"></div>
-              <p className="font-black text-xl mb-2 italic">YourPCDriver Legal Dept</p>
+              <p className="font-black text-xl mb-2 italic">DriverZenith Legal Dept</p>
               <p className="text-slate-400 font-bold uppercase tracking-widest text-[10px] mb-4">Operations & Compliance</p>
               <p className="text-lg font-bold">1267 Filer Ave E</p>
               <p className="text-lg font-bold">Twin Falls, ID 83301</p>
               <p className="text-lg font-bold">United States</p>
               <p className="mt-4">
-                <a href="mailto:support@yourpcdriver.shop" className="text-blue-400 hover:underline">support@yourpcdriver.shop</a>
+                <a href="mailto:support@driverzenith.net" className="text-blue-400 hover:underline">support@driverzenith.net</a>
               </p>
             </address>
           </section>

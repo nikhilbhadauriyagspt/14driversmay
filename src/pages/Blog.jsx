@@ -12,9 +12,9 @@ const Blog = () => {
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
-        <title>Our Blog - YourPCDriver</title>
+        <title>Our Blog - DriverZenith</title>
         <meta name="description" content="Read our latest articles about appliance maintenance, repair tips, and industry news." />
-        <link rel="canonical" href="https://www.yourpcdriver.shop/blog" />
+        <link rel="canonical" href="https://www.driverzenith.net/blog" />
       </Helmet>
 
       <div className="relative bg-white py-32 overflow-hidden border-b border-gray-100">

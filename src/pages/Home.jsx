@@ -3,14 +3,12 @@ import { Helmet } from 'react-helmet-async';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Hero from '../components/Hero';
-import Capabilities from '../components/Capabilities';
-import TechnicalInsights from '../components/TechnicalInsights';
-import About from '../components/About';
-import Services from '../components/Services';
-import Blog from '../components/Blog';
-import Contact from '../components/Contact';
-import FAQ from '../components/FAQ';
-import Process from '../components/Process';
+import FAQ from '../components/Faqs';
+import CommonProblems from '../components/commanissue';
+import WhenNeedDrivers from '../components/needdrivers';
+import Driverfixisuue from '../components/driverfixissue';
+import Guides from '../components/Guides';
+import Stats from '../components/stact';
 
 const Home = () => {
   useEffect(() => {
@@ -23,18 +21,17 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>YourPCDriver - Professional System Driver Support & Solutions</title>
-        <meta name="description" content="Expert solutions for computer driver issues. We diagnose and fix chipset, graphics, audio, and network driver problems to optimize your system performance." />
-        <link rel="canonical" href="https://www.yourpcdriver.shop/" />
+        <title>DriverZenith | Technical Hardware Documentation & Architectural Registry</title>
+        <meta name="description" content="Technical repository for hardware specifications, driver-level architectural data, and system optimization documentation for the global technical community." />
+        <link rel="canonical" href="https://www.driverzenith.net/" />
       </Helmet>
 
       <Hero />
-      <Services />
-
-      <Capabilities />
-      <About />
-      <Process />
-      <TechnicalInsights />
+      <CommonProblems />
+      <WhenNeedDrivers />
+      <Driverfixisuue />
+      <Guides />
+      <Stats />
       <FAQ />
     </>
   );

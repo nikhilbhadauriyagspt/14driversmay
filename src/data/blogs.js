@@ -1,71 +1,71 @@
 export const blogsData = [
   {
     id: 1,
-    title: 'How to Maintain Your Fridge',
+    title: 'Understanding Modern Driver Architectures',
     date: 'Jan 23, 2026',
-    author: 'John Doe',
-    shortDesc: 'Tips and tricks to keep your refrigerator running smoothly.',
+    author: 'Admin',
+    shortDesc: 'Deep dive into how modern hardware drivers communicate with Windows 11.',
     longDesc: `
-      <p>Your refrigerator is one of the most important appliances in your home. It runs 24/7 to keep your food fresh. Here are some tips to maintain it:</p>
+      <p>Modern computing systems rely on complex driver-level communication to maintain stability. Understanding how these architectures work is essential for system maintenance.</p>
       
-      <h4>1. Clean the Coils</h4>
-      <p>Dusty coils force your fridge to work harder, increasing energy bills and shortening its life. Vacuum them every 6 months.</p>
+      <h4>1. The Role of the Kernel Mode</h4>
+      <p>Most critical drivers, like graphics and storage, operate in the Kernel Mode of the operating system. This allows them direct access to system memory and hardware resources.</p>
       
-      <h4>2. Check the Door Seals</h4>
-      <p>Loose seals let cool air escape. Test them by closing the door on a dollar bill. If you can pull it out easily, it's time to replace the gasket.</p>
+      <h4>2. Plug and Play (PnP) Protocols</h4>
+      <p>The PnP manager in Windows automatically identifies hardware IDs and matches them with the correct technical documentation in the system registry.</p>
       
-      <h4>3. Keep it Filled (But Not Overstuffed)</h4>
-      <p>Refrigerators work best when they have enough mass to absorb the cold, but need airflow. Aim for 3/4 full.</p>
+      <h4>3. Version Synchronization</h4>
+      <p>Ensuring that your software layer matches your hardware's firmware version prevents architectural conflicts that lead to system instability.</p>
 
-      <h4>4. Set the Right Temperature</h4>
-      <p>Keep the fridge between 37-40°F and the freezer at 0°F for optimal food safety and efficiency.</p>
+      <h4>4. Hardware Abstraction Layers (HAL)</h4>
+      <p>The HAL acts as a bridge, allowing the same operating system to run on different hardware configurations by providing a consistent interface.</p>
     `,
-    image: '/banner/hero-4.jpg'
+    image: '/projects/device-driver-1.jpg'
   },
   {
     id: 2,
-    title: 'Washing Machine Common Issues',
+    title: 'Hardware Troubleshooting Documentation',
     date: 'Jan 20, 2026',
-    author: 'Jane Smith',
-    shortDesc: 'Identify common problems before they become major repairs.',
+    author: 'Admin',
+    shortDesc: 'A guide to reading system error codes and hardware recognition logs.',
     longDesc: `
-      <p>Is your washing machine acting up? Here are common issues and what they mean:</p>
+      <p>Identifying hardware errors requires systematic analysis of system logs and error codes. Here is a technical overview of common diagnostic data:</p>
       
-      <h4>1. Machine Won't Drain</h4>
-      <p>This is often caused by a clogged drain hose or pump. Check for small objects like coins or socks blocking the path.</p>
+      <h4>1. Device Manager Status Codes</h4>
+      <p>Error codes like Code 10 or Code 43 indicate specific communication failures between the hardware registry and the physical component.</p>
       
-      <h4>2. Excessive Vibration</h4>
-      <p>If your washer is walking across the floor, it might be unlevel. Adjust the feet or check if the load is unbalanced.</p>
+      <h4>2. Hardware Interrupts (IRQ)</h4>
+      <p>Technical conflicts often arise when two hardware components attempt to use the same interrupt request line. Modern BIOS/UEFI manages this automatically.</p>
       
-      <h4>3. Leaking Water</h4>
-      <p>Check the hoses connecting to the water supply. They can crack over time. Also, inspect the door seal for tears.</p>
+      <h4>3. Data Packet Integrity</h4>
+      <p>Network and USB drivers rely on precise data packet timing. Architectural latency can cause these protocols to fail, requiring a reset of the communication stack.</p>
 
-      <h4>4. Bad Smells</h4>
-      <p>Run a cleaning cycle with hot water and vinegar to remove mildew and detergent buildup.</p>
+      <h4>4. Driver Rollback Procedures</h4>
+      <p>When new documentation is incompatible with legacy hardware, reverting to a previously verified version is the standard technical resolution.</p>
     `,
-    image: '/banner/hero-5.jpg'
+    image: '/projects/what-is-a-computer-device-driver.png'
   },
   {
     id: 3,
-    title: 'Why AC Service is Important',
+    title: 'BIOS and UEFI Technical Overview',
     date: 'Jan 15, 2026',
-    author: 'Mike Johnson',
-    shortDesc: 'Regular maintenance can save you money in the long run.',
+    author: 'Admin',
+    shortDesc: 'How low-level firmware documentation affects system performance.',
     longDesc: `
-      <p>Regular air conditioner maintenance is crucial for efficiency and longevity. Here's why you shouldn't skip it:</p>
+      <p>The BIOS/UEFI is the first software to run when a computer starts. It initializes all hardware components according to documented protocols.</p>
       
-      <h4>1. Lower Energy Bills</h4>
-      <p>A well-maintained AC runs more efficiently, using less power to cool your home.</p>
+      <h4>1. Post-initialization Sequences</h4>
+      <p>During startup, the system performs a Power-On Self-Test (POST) to ensure all documented hardware components are responding correctly.</p>
       
-      <h4>2. Better Air Quality</h4>
-      <p>Clean filters and coils mean fewer allergens and dust particles circulating in your home.</p>
+      <h4>2. Secure Boot Protocols</h4>
+      <p>Modern UEFI documentation includes security signatures that verify the integrity of the operating system loader before execution.</p>
       
-      <h4>3. Extend Equipment Life</h4>
-      <p>Small problems can turn into big failures if left unchecked. Routine service catches these early.</p>
+      <h4>3. Overclocking and Power States</h4>
+      <p>Firmware documentation defines the voltage and frequency limits of your CPU and RAM to maintain architectural integrity.</p>
 
-      <h4>4. Prevent Costly Breakdowns</h4>
-      <p>Emergency repairs are expensive. Scheduled maintenance is a fraction of the cost.</p>
+      <h4>4. Legacy BIOS Compatibility</h4>
+      <p>CSM (Compatibility Support Module) allows modern hardware to run legacy documentation protocols, though it is being phased out for full UEFI support.</p>
     `,
-    image: '/banner/hero-7.jpg'
+    image: '/projects/device-driver.png'
   }
 ];

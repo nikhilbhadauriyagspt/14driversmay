@@ -1,88 +1,251 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { FaMicrochip, FaDesktop, FaVolumeUp, FaWifi, FaArrowRight, FaShieldAlt, FaCogs, FaWrench } from 'react-icons/fa';
+import React, { useState, useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
+import {
+  Search,
+  ShieldCheck,
+  Settings,
+  Printer,
+  Wifi,
+  Volume2,
+  Usb,
+  AlertTriangle,
+} from "lucide-react";
+import { FaCogs } from "react-icons/fa";
+import { servicesData } from "../data/services";
 
-const Hero = () => {
-  const essentialDrivers = [
-    { name: "Chipset", role: "The Traffic Controller", icon: <FaMicrochip />, color: "text-blue-600", bgColor: "bg-blue-50" },
-    { name: "Graphics", role: "The Visual Engine", icon: <FaDesktop />, color: "text-indigo-600", bgColor: "bg-indigo-50" },
-    { name: "Audio", role: "The Sound Manager", icon: <FaVolumeUp />, color: "text-emerald-600", bgColor: "bg-emerald-50" },
-    { name: "Network", role: "The Internet Bridge", icon: <FaWifi />, color: "text-rose-600", bgColor: "bg-rose-50" },
+export default function Hero() {
+  const [currentTextIndex, setCurrentTextIndex] = useState(0);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [searchResults, setSearchResults] = useState([]);
+  const [showSearchBox, setShowSearchBox] = useState(false);
+  const searchRef = useRef(null);
+  const navigate = useNavigate();
+
+  const phrases = [
+    "Printer Not Working.",
+    "WiFi Disconnected.",
+    "Audio Driver Issues.",
+    "Display Problems.",
+    "USB Not Detected.",
   ];
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTextIndex((prev) => (prev + 1) % phrases.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
+
+  // Search Logic
+  useEffect(() => {
+    if (searchTerm.trim() === "") {
+      setSearchResults([]);
+      return;
+    }
+    const results = servicesData.filter(
+      (service) =>
+        service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        service.shortDesc.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    setSearchResults(results);
+  }, [searchTerm]);
+
+  // Close search when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (searchRef.current && !searchRef.current.contains(event.target)) {
+        setShowSearchBox(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  const handleSearchSubmit = (e) => {
+    if (e) e.preventDefault();
+    if (searchResults.length > 0) {
+      navigate(`/service/${searchResults[0].slug}`);
+      setShowSearchBox(false);
+      setSearchTerm("");
+    }
+  };
+
   return (
-    <section id="home" className="relative min-h-[95vh] flex items-center pt-32 pb-20 bg-white font-poppins overflow-hidden">
-      
-      {/* Advanced Technical Background */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-white to-blue-50/30"></div>
-        <div className="absolute top-[-10%] left-[-10%] w-[600px] h-[600px] bg-blue-400/10 rounded-full blur-[120px] animate-pulse"></div>
-        <div className="absolute bottom-[-10%] right-[-10%] w-[600px] h-[600px] bg-indigo-400/10 rounded-full blur-[120px] animate-pulse delay-700"></div>
-        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'linear-gradient(#000 1px, transparent 1px), linear-gradient(90deg, #000 1px, transparent 1px)', backgroundSize: '50px 50px' }}></div>
-      </div>
+    <section className="relative w-full h-[100vh] min-h-[600px] flex items-center overflow-visible bg-[#F6FAFF]">
+      {/* Background Image */}
+      <img
+        src="/banner/banner_01.png"
+        alt="Driver help hero"
+        className="absolute inset-0 w-full h-full object-cover object-center"
+      />
 
-      <div className="container mx-auto px-6 lg:px-12 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-24">
-          
-          <div className="w-full lg:w-1/2 text-left" data-aos="fade-up">
-            <div className="inline-flex items-center gap-2 bg-blue-600/5 border border-blue-600/10 px-4 py-1.5 rounded-full mb-8 shadow-sm">
-              <FaWrench className="text-blue-600 text-[10px]" />
-              <span className="text-blue-600 text-[11px] font-bold uppercase tracking-[2px]">Expert Driver Support & Diagnostics</span>
-            </div>
+      {/* Left Soft Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/70 to-transparent" />
 
-            <h1 className="text-4xl md:text-6xl font-extrabold text-slate-900 mb-8 leading-[1.1] tracking-tight">
-              Hardware Issues? We <br />
-              <span className="text-blue-600">Restore Your Sync</span>
+      {/* Main Content */}
+      <div className="relative z-10 max-w-[1600px] mx-auto px-6 lg:px-12 w-full py-20">
+        <div className="max-w-4xl">
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 border border-blue-100 shadow-sm text-[#1557E8] text-[12px] font-extrabold mb-6">
+            <ShieldCheck className="w-4 h-4" />
+            TECHNICAL DATABASE & HARDWARE WIKI
+          </div>
+
+          {/* Sliding Heading */}
+          <div className="h-[100px] md:h-[130px] overflow-hidden">
+            <h1 className="text-[38px] md:text-[52px] leading-[1.1] font-bold text-[#071A3D] tracking-[-0.03em]">
+              Hardware Specs?
+              <br />
+              <span className="text-[#1557E8] block transition-all duration-500 animate-slide-up">
+                {phrases[currentTextIndex]}
+              </span>
             </h1>
-
-            <p className="text-slate-600 text-base md:text-lg font-medium mb-10 max-w-xl leading-relaxed">
-              If your computer is flickering, lagging, or failing to connect, it's likely a driver mismatch. We diagnose and fix hardware communication errors to get your system back to peak performance.
-            </p>
-
-            <div className="flex flex-wrap gap-5 mb-16">
-              <Link to="/contact" className="px-10 py-4 bg-blue-600 text-white font-bold rounded-2xl shadow-xl shadow-blue-600/20 hover:bg-slate-900 transition-all flex items-center justify-center gap-3 text-sm group">
-                Report Driver Issue <FaArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link to="/services" className="px-10 py-4 bg-white border border-slate-200 text-slate-700 font-bold rounded-2xl hover:bg-slate-50 transition-all text-sm shadow-sm">
-                Explore Fixed Drivers
-              </Link>
-            </div>
           </div>
 
-          <div className="w-full lg:w-1/2 relative" data-aos="fade-left" data-aos-delay="200">
-            <div className="relative p-8 bg-white/60 backdrop-blur-md border border-white rounded-[3rem] shadow-[0_30px_60px_-20px_rgba(0,0,0,0.08)]">
-              <div className="grid grid-cols-2 gap-6 relative z-10">
-                {essentialDrivers.map((driver, idx) => (
-                  <div key={idx} className="p-8 border border-slate-50 rounded-3xl bg-white shadow-sm hover:border-blue-100 transition-all duration-500 group cursor-default">
-                    <div className={`w-12 h-12 ${driver.bgColor} ${driver.color} rounded-2xl flex items-center justify-center text-xl mb-5 group-hover:scale-110 transition-transform shadow-inner`}>
-                      {driver.icon}
+          {/* Text */}
+          <p className="mt-4 text-[17px] leading-[1.6] text-[#24324F] font-medium max-w-xl">
+            Step-by-step solutions for driver installation, update, and
+            troubleshooting for all your hardware devices.
+          </p>
+
+          {/* Search */}
+          <div className="mt-10 w-full max-w-[520px] relative" ref={searchRef}>
+            <form
+              onSubmit={handleSearchSubmit}
+              className="h-[64px] bg-white rounded-full shadow-sm border border-[#E6ECF8] flex items-center p-1.5 focus-within:ring-2 focus-within:ring-blue-100 transition-all"
+            >
+              <div className="pl-5 pr-3 text-[#8A96AB]">
+                <Search className="w-5 h-5" />
+              </div>
+
+              <input
+                type="text"
+                value={searchTerm}
+                onChange={(e) => {
+                  setSearchTerm(e.target.value);
+                  setShowSearchBox(true);
+                }}
+                onFocus={() => setShowSearchBox(true)}
+                placeholder="Search your driver issue..."
+                className="flex-1 h-full outline-none text-[16px] text-[#0F1B3D] placeholder:text-[#8A96AB] bg-transparent"
+              />
+
+              <button
+                type="submit"
+                className="h-full px-8 bg-[#1557E8] text-white text-[15px] font-bold rounded-full hover:bg-[#0F46C8] transition-all shadow-md shadow-blue-200 active:scale-95"
+              >
+                Search
+              </button>
+            </form>
+
+            {/* Search Dropdown */}
+            {showSearchBox && searchTerm && (
+              <div className="absolute top-full left-0 right-0 mt-2 bg-white shadow-2xl border border-gray-100 rounded-xl overflow-hidden z-[100]">
+                <div className="max-h-80 overflow-y-auto">
+                  {searchResults.length > 0 ? (
+                    searchResults.map((result) => (
+                      <div
+                        key={result.id}
+                        onClick={() => {
+                          navigate(`/service/${result.slug}`);
+                          setShowSearchBox(false);
+                          setSearchTerm("");
+                        }}
+                        className="flex items-center gap-4 p-4 hover:bg-gray-50 cursor-pointer border-b border-gray-50 last:border-0 transition-colors"
+                      >
+                        <div className="w-8 h-8 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center text-xs">
+                          <FaCogs />
+                        </div>
+                        <div>
+                          <p className="text-sm font-bold text-gray-900">
+                            {result.title}
+                          </p>
+                          <p className="text-[10px] text-gray-500 line-clamp-1">
+                            {result.shortDesc}
+                          </p>
+                        </div>
+                      </div>
+                    ))
+                  ) : (
+                    <div className="p-8 text-center">
+                      <Search className="mx-auto text-gray-300 w-8 h-8 mb-3" />
+                      <p className="text-sm text-gray-400 font-medium">
+                        No records found for "{searchTerm}"
+                      </p>
                     </div>
-                    <h4 className="text-slate-900 font-bold text-lg mb-1">{driver.name}</h4>
-                    <p className="text-slate-400 text-xs font-medium leading-relaxed">We fix {driver.name.toLowerCase()} related system errors.</p>
-                  </div>
-                ))}
+                  )}
+                </div>
               </div>
-              
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-slate-900 rounded-full flex flex-col items-center justify-center shadow-2xl border-[4px] border-white z-20 hidden md:flex animate-float">
-                 <FaCogs className="text-blue-500 text-2xl animate-spin-slow mb-1" />
-                 <span className="text-white font-black text-[8px] uppercase tracking-[2px]">Fixing Core</span>
-              </div>
-            </div>
+            )}
           </div>
-
         </div>
       </div>
 
-      <style dangerouslySetInnerHTML={{ __html: `
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
-        .font-poppins { font-family: 'Poppins', sans-serif; }
-        @keyframes float { 0%, 100% { transform: translate(-50%, -50%) translateY(0); } 50% { transform: translate(-50%, -50%) translateY(-10px); } }
-        .animate-float { animation: float 5s ease-in-out infinite; }
-        @keyframes spin-slow { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-        .animate-spin-slow { animation: spin-slow 15s linear infinite; }
-      `}} />
+      {/* Bottom Live Issue Detector - Overlapping 50% */}
+      <div className="absolute left-0 right-0 bottom-0 z-20 px-6 lg:px-12 translate-y-1/2">
+        <div className="max-w-[1600px] mx-auto bg-[#071F4A] rounded-2xl shadow-xl border border-white/10 p-5">
+          <div className="grid grid-cols-1 md:grid-cols-[1.5fr_repeat(5,1fr)] gap-4 items-center">
+            <div className="flex items-center gap-4 border-r border-white/10 pr-4">
+              <div className="w-11 h-11 rounded-xl bg-[#082B66] flex items-center justify-center shrink-0">
+                <Settings className="w-5 h-5 text-[#1C9CFF]" />
+              </div>
+              <div>
+                <h4 className="text-white text-[16px] font-bold leading-tight">
+                  Live Issue Detector
+                </h4>
+                <p className="text-white/60 text-[12px]">Real-time fixes</p>
+              </div>
+            </div>
+
+            <IssueCard
+              icon={<Printer />}
+              title="Printer"
+              status="Fixing..."
+              color="text-red-400"
+            />
+            <IssueCard
+              icon={<Wifi />}
+              title="WiFi"
+              status="Resolved"
+              color="text-green-400"
+            />
+            <IssueCard
+              icon={<Volume2 />}
+              title="Audio"
+              status="No Sound"
+              color="text-yellow-400"
+            />
+            <IssueCard
+              icon={<AlertTriangle />}
+              title="Driver"
+              status="Missing"
+              color="text-red-400"
+            />
+            <IssueCard
+              icon={<Usb />}
+              title="USB"
+              status="Detected"
+              color="text-green-400"
+            />
+          </div>
+        </div>
+      </div>
     </section>
   );
-};
+}
 
-export default Hero;
+function IssueCard({ icon, title, status, color }) {
+  return (
+    <div className="bg-[#09285E]/50 border border-white/5 rounded-xl px-4 py-3 flex items-center gap-3">
+      <div className={`${color} shrink-0`}>
+        {React.cloneElement(icon, { className: "w-5 h-5" })}
+      </div>
+      <div className="overflow-hidden">
+        <h5 className="text-white text-[14px] font-bold truncate">
+          {title}
+        </h5>
+        <p className={`${color} text-[11px] font-medium mt-0.5`}>{status}</p>
+      </div>
+    </div>
+  );
+};

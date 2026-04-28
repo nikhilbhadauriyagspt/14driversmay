@@ -16,7 +16,7 @@ const BlogDetails = () => {
     return (
       <div className="min-h-screen flex items-center justify-center bg-light">
         <Helmet>
-          <title>Blog Not Found - YourPCDriver</title>
+          <title>Blog Not Found - DriverZenith</title>
         </Helmet>
         <div className="text-center">
           <h2 className="text-4xl font-bold text-primary mb-6">Blog Post Not Found</h2>
@@ -31,9 +31,9 @@ const BlogDetails = () => {
   return (
     <article className="bg-white min-h-screen pt-32 pb-24">
       <Helmet>
-        <title>{blog.title} - YourPCDriver Blog</title>
+        <title>{blog.title} - DriverZenith Blog</title>
         <meta name="description" content={blog.shortDesc} />
-        <link rel="canonical" href={`https://www.yourpcdriver.shop/blog/${blog.id}`} />
+        <link rel="canonical" href={`https://www.driverzenith.net/blog/${blog.id}`} />
       </Helmet>
 
       <div className="container mx-auto px-4 max-w-4xl">
@@ -76,23 +76,23 @@ const BlogDetails = () => {
         </div>
 
         <div className="border-t border-gray-100 pt-16 mt-16 text-center bg-gray-50 rounded-[3rem] p-12 shadow-sm border" data-aos="fade-up">
-          <h3 className="text-3xl font-bold text-gray-900 mb-4">Facing Similar Issues?</h3>
+          <h3 className="text-3xl font-bold text-gray-900 mb-4">Need Technical Data?</h3>
           <p className="text-gray-500 max-w-lg mx-auto mb-10 text-lg">
-            Our expert technicians are available 24/7 to help you with any appliance repair or maintenance needs.
+            Explore our comprehensive archive of hardware specifications and architectural documentation for modern computing systems.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-6">
             <Link
-              to="/#contact"
+              to="/guides"
               className="bg-primary hover:bg-primary-dark text-white px-10 py-5 rounded-2xl font-bold uppercase tracking-widest shadow-xl hover:-translate-y-1 transition-all"
             >
-              Contact Our Experts
+              Browse Technical Guides
             </Link>
-            <a
-              href="tel:+14025089991"
+            <Link
+              to="/services"
               className="bg-white border border-gray-200 text-gray-700 px-10 py-5 rounded-2xl font-bold uppercase tracking-widest hover:border-secondary hover:text-secondary transition-all shadow-sm"
             >
-              Call Us Now
-            </a>
+              Hardware Registry
+            </Link>
           </div>
         </div>
       </div>

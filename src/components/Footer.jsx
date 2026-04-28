@@ -1,127 +1,180 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { FaEnvelope, FaMapMarkerAlt, FaCogs } from 'react-icons/fa';
+import React from "react";
+import {
+  Settings,
+  Mail,
+  MessageCircle,
+  Phone,
+  ArrowRight,
+} from "lucide-react";
+import { Link } from "react-router-dom";
 
-const Footer = () => {
-  const coreDrivers = [
-    { name: 'Chipset Drivers', slug: 'chipset-drivers' },
-    { name: 'Graphics Support', slug: 'graphics-drivers' },
-    { name: 'Audio & Sound', slug: 'audio-drivers' },
-    { name: 'Network & Wi-Fi', slug: 'network-drivers' },
-    { name: 'Storage Controllers', slug: 'storage-controller' },
-  ];
-
-  const quickLinks = [
-    { name: 'About Ecosystem', path: '/about' },
-    { name: 'How It Works', path: '/#process' },
-    { name: 'Support FAQ', path: '/#faq' },
-    { name: 'Technical Support', path: '/contact' },
-  ];
-
-  const policies = [
-    { name: 'Privacy Policy', path: '/privacy-policy' },
-    { name: 'Terms of Service', path: '/terms-of-service' },
-    { name: 'Cookie Policy', path: '/cookie-policy' },
-  ];
-
+export default function Footer() {
   return (
-    <footer className="bg-[#05070a] text-white pt-20 pb-10 overflow-hidden relative font-poppins">
-      {/* Decorative Blur Background */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-blue-600/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
+    <>
+      {/* Top CTA */}
+      <section className="bg-[#F7FAFF] px-6 py-5 font-[Poppins]">
+        <div className="max-w-[1600px] mx-auto rounded-xl bg-gradient-to-r from-[#064CD9] to-[#1557E8] px-8 py-6 flex flex-col md:flex-row items-center justify-between gap-6 overflow-hidden">
+          <div className="flex items-center gap-8">
+            <img
+              src="/images/support-agent.png"
+              alt="Hardware documentation"
+              className="hidden md:block w-[250px] object-contain"
+            />
 
-      <div className="container mx-auto px-6 lg:px-12 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+            <div>
+              <h2 className="text-white text-[26px] font-semibold leading-tight">
+                Need Technical Documentation?
+              </h2>
+              <p className="text-white/85 text-[14px] leading-6 mt-1 max-w-[520px] font-medium">
+                Our hardware registry is updated daily with the latest architectural specifications
+                and installation protocols for modern devices.
+              </p>
+            </div>
+          </div>
 
-          <div className="space-y-6">
-            <Link to="/" className="flex items-center gap-2 group">
-              <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center group-hover:rotate-12 transition-transform duration-300 shadow-lg shadow-blue-600/20">
-                <FaCogs className="text-white text-xl" />
+          <Link to="/guides" className="bg-white text-[#1557E8] px-7 py-3 rounded-lg text-[14px] font-semibold flex items-center gap-2 hover:shadow-lg transition">
+            Browse Archive
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-[#061B3D] text-white px-6 pt-9 pb-5 font-[Poppins]">
+        <div className="max-w-[1600px] mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-8 pb-8 border-b border-white/10">
+
+            {/* Brand */}
+            <div className="lg:col-span-1">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-9 h-9 rounded-lg bg-[#1557E8] flex items-center justify-center">
+                  <Settings className="w-5 h-5 text-white" />
+                </div>
+
+                <div>
+                  <h3 className="text-[18px] font-semibold leading-none">
+                    DriverZenith
+                  </h3>
+                  <p className="text-[9px] text-white/60 mt-1">
+                    Technical Hardware Registry
+                  </p>
+                </div>
               </div>
-              <span className="text-2xl font-extrabold tracking-tighter uppercase italic leading-none">
-                YourPC<span className="text-blue-600">Driver</span>
-              </span>
-            </Link>
-            <p className="text-slate-400 text-sm leading-relaxed font-medium">
-              Leading the way in hardware communication standards. We provide technical diagnostics and verified driver solutions for peak system performance.
-            </p>
 
+              <p className="text-[12px] leading-6 text-white/65 font-medium max-w-[210px]">
+                Comprehensive technical resource for hardware-software communication protocols
+                and system optimization documentation.
+              </p>
+            </div>
+
+            <FooterColumn
+              title="Quick Links"
+              links={[
+                { name: "Home", path: "/" },
+                { name: "About", path: "/about" },
+                { name: "Services", path: "/services" },
+                { name: "Blog", path: "/blog" },
+                { name: "Guides", path: "/guides" },
+                { name: "FAQ", path: "/faq" },
+                { name: "Contact", path: "/contact" }
+              ]}
+            />
+
+            <FooterColumn
+              title="Technical Guides"
+              links={[
+                { name: "Installation Manuals", path: "/guide/fix-driver-not-installed" },
+                { name: "Update Protocols", path: "/guide/fix-driver-not-installed" },
+                { name: "Hardware Recognition", path: "/guide/fix-usb-driver-issues" },
+                { name: "Legacy Support", path: "/guide/fix-audio-driver-problems" },
+                { name: "Network Security", path: "/guide/fix-wifi-network-issues" },
+                { name: "Display Optimization", path: "/guide/fix-graphics-driver-issues" },
+              ]}
+            />
+
+            <FooterColumn
+              title="Hardware Archive"
+              links={[
+                { name: "Printer Drivers", path: "/service/printer-drivers" },
+                { name: "Network Drivers", path: "/service/network-drivers" },
+                { name: "Audio Drivers", path: "/service/audio-drivers" },
+                { name: "Graphics Drivers", path: "/service/graphics-drivers" },
+                { name: "Bluetooth Drivers", path: "/service/bluetooth-drivers" },
+                { name: "USB Support", path: "/service/usb-support" },
+              ]}
+            />
+
+            <FooterColumn
+              title="Information"
+              links={[
+                { name: "Privacy Policy", path: "/privacy-policy" },
+                { name: "Terms of Service", path: "/terms-of-service" },
+                { name: "Refund Policy", path: "/refund-policy" },
+                { name: "Cookie Policy", path: "/cookie-policy" },
+                { name: "Disclaimer", path: "/disclaimer" },
+              ]}
+            />
+
+            {/* Contact */}
+            <div>
+              <h4 className="text-[14px] font-semibold mb-4">Resource Center</h4>
+
+              <div className="space-y-3 text-[12px] text-white/70 font-medium">
+                <p className="flex items-start gap-2">
+                  <Mail className="w-4 h-4 mt-0.5 text-white" />
+                  Registry: support@driverzenith.net
+                </p>
+
+                <p className="flex items-start gap-2">
+                  <MessageCircle className="w-4 h-4 mt-0.5 text-white" />
+                  Wiki: Community Driven
+                </p>
+
+                <p className="flex items-start gap-2">
+                  <Phone className="w-4 h-4 mt-0.5 text-white" />
+                  Updates: 24/7 Monitoring
+                </p>
+              </div>
+            </div>
           </div>
 
-          <div>
-            <h4 className="text-white font-bold text-base mb-8 uppercase tracking-widest border-l-4 border-blue-600 pl-4">Core Drivers</h4>
-            <ul className="space-y-4">
-              {coreDrivers.map((link) => (
-                <li key={link.slug}>
-                  <Link to={`/service/${link.slug}`} className="text-slate-400 hover:text-blue-600 transition-colors text-sm font-medium flex items-center gap-2 group">
-                    <span className="w-1.5 h-1.5 bg-blue-600/40 rounded-full group-hover:bg-blue-600 transition-colors"></span>
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+          {/* Bottom */}
+          <div className="pt-5 flex flex-col md:flex-row justify-between items-center gap-4 text-[12px] text-white/55">
+            <p>© 2024 DriverZenith. All rights reserved.</p>
+
+            <div className="flex items-center gap-6">
+              <Link to="/privacy-policy" className="hover:text-white transition">
+                Privacy Policy
+              </Link>
+              <span className="text-white/25">|</span>
+              <Link to="/terms-of-service" className="hover:text-white transition">
+                Terms of Use
+              </Link>
+            </div>
           </div>
-
-          <div>
-            <h4 className="text-white font-bold text-base mb-8 uppercase tracking-widest border-l-4 border-blue-600 pl-4">Quick Links</h4>
-            <ul className="space-y-4">
-              {quickLinks.map((link) => (
-                <li key={link.name}>
-                  {link.path.startsWith('/#') ? (
-                    <a href={link.path} className="text-slate-400 hover:text-blue-600 transition-colors text-sm font-medium flex items-center gap-2 group">
-                      <span className="w-1.5 h-1.5 bg-blue-600/40 rounded-full group-hover:bg-blue-600 transition-colors"></span>
-                      {link.name}
-                    </a>
-                  ) : (
-                    <Link to={link.path} className="text-slate-400 hover:text-blue-600 transition-colors text-sm font-medium flex items-center gap-2 group">
-                      <span className="w-1.5 h-1.5 bg-blue-600/40 rounded-full group-hover:bg-blue-600 transition-colors"></span>
-                      {link.name}
-                    </Link>
-                  )}
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-white font-bold text-base mb-8 uppercase tracking-widest border-l-4 border-blue-600 pl-4">System Support</h4>
-            <ul className="space-y-6">
-
-              <li className="flex gap-4">
-                <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center text-blue-500 border border-white/10 shadow-sm">
-                  <FaEnvelope size={14} />
-                </div>
-                <div>
-                  <p className="text-slate-500 text-[10px] font-bold uppercase tracking-widest mb-1">Email Support</p>
-                  <p className="text-white text-sm font-bold tracking-tight">support@yourpcdriver.shop</p>
-                </div>
-              </li>
-              <li className="flex gap-4">
-                <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center text-blue-500 border border-white/10 shadow-sm">
-                  <FaMapMarkerAlt size={14} />
-                </div>
-                <div>
-                  <p className="text-slate-500 text-[10px] font-bold uppercase tracking-widest mb-1">Operations</p>
-                  <p className="text-white text-sm font-bold tracking-tight">Tech Corridor, CA, USA</p>
-                </div>
-              </li>
-            </ul>
-          </div>
-
         </div>
-
-        <div className="pt-10 border-t border-white/5 text-center flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="text-slate-500 text-xs font-medium">
-            © {new Date().getFullYear()} <span className="text-white font-bold tracking-tight uppercase">YourPCDriver</span>. Technical Integrity Guaranteed.
-          </p>
-          <div className="flex gap-8">
-            {policies.map(policy => (
-              <Link key={policy.path} to={policy.path} className="text-slate-500 hover:text-white text-[10px] uppercase font-bold tracking-[2px] transition-colors">{policy.name}</Link>
-            ))}
-          </div>
-        </div>
-      </div>
-    </footer>
+      </footer>
+    </>
   );
-};
+}
 
-export default Footer;
+function FooterColumn({ title, links }) {
+  return (
+    <div>
+      <h4 className="text-[14px] font-semibold mb-4">{title}</h4>
+
+      <ul className="space-y-2.5">
+        {links.map((link, index) => (
+          <li key={index}>
+            <Link
+              to={link.path}
+              className="text-[12px] text-white/65 font-medium hover:text-white transition"
+            >
+              {link.name}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}   
