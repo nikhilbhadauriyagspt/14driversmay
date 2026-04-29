@@ -41,15 +41,7 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex items-start gap-4">
-                <div className="w-10 h-10 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
-                  <FaGlobe size={16} />
-                </div>
-                <div>
-                  <h4 className="font-bold text-slate-900 text-sm">Global Registry</h4>
-                  <p className="text-slate-600 text-sm font-medium mt-1">Available in 150+ Countries</p>
-                </div>
-              </div>
+
             </div>
 
             {/* Form */}
