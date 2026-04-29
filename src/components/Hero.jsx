@@ -74,8 +74,10 @@ export default function Hero() {
     <section className="relative w-full h-[100vh] min-h-[600px] flex items-center overflow-visible bg-[#F6FAFF]">
       {/* Background Image */}
       <img
-        src="/banner/banner_01.png"
+        src="/banner/banner_01.webp"
         alt="Driver help hero"
+        fetchpriority="high"
+        loading="eager"
         className="absolute inset-0 w-full h-full object-cover object-center"
       />
 
@@ -127,6 +129,7 @@ export default function Hero() {
                 }}
                 onFocus={() => setShowSearchBox(true)}
                 placeholder="Search your driver issue..."
+                aria-label="Search your driver issue"
                 className="flex-1 h-full outline-none text-[16px] text-[#0F1B3D] placeholder:text-[#8A96AB] bg-transparent"
               />
 
@@ -190,9 +193,9 @@ export default function Hero() {
                 <Settings className="w-5 h-5 text-[#1C9CFF]" />
               </div>
               <div>
-                <h4 className="text-white text-[16px] font-bold leading-tight">
+                <h2 className="text-white text-[16px] font-bold leading-tight">
                   Live Issue Detector
-                </h4>
+                </h2>
                 <p className="text-white/60 text-[12px]">Real-time fixes</p>
               </div>
             </div>
@@ -241,9 +244,9 @@ function IssueCard({ icon, title, status, color }) {
         {React.cloneElement(icon, { className: "w-5 h-5" })}
       </div>
       <div className="overflow-hidden">
-        <h5 className="text-white text-[14px] font-bold truncate">
+        <h3 className="text-white text-[14px] font-bold truncate">
           {title}
-        </h5>
+        </h3>
         <p className={`${color} text-[11px] font-medium mt-0.5`}>{status}</p>
       </div>
     </div>

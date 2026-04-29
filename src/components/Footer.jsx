@@ -16,9 +16,11 @@ export default function Footer() {
         <div className="max-w-[1600px] mx-auto rounded-xl bg-gradient-to-r from-[#064CD9] to-[#1557E8] px-8 py-6 flex flex-col md:flex-row items-center justify-between gap-6 overflow-hidden">
           <div className="flex items-center gap-8">
             <img
-              src="/images/support-agent.png"
+              src="/images/support-agent.webp"
               alt="Hardware documentation"
-              className="hidden md:block w-[250px] object-contain"
+              width={250}
+              height={180}
+              className="hidden md:block w-[250px] h-auto object-contain"
             />
 
             <div>
@@ -122,7 +124,7 @@ export default function Footer() {
               <div className="space-y-3 text-[12px] text-white/70 font-medium">
                 <p className="flex items-start gap-2">
                   <Mail className="w-4 h-4 mt-0.5 text-white" />
-                  Registry: support@driverzenith.net
+                  Registry: info@driverzenith.net
                 </p>
 
                 <p className="flex items-start gap-2">

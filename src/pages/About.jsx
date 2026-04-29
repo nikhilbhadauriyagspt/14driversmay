@@ -52,8 +52,10 @@ const About = () => {
             <div className="relative">
               <div className="absolute -inset-4 bg-blue-600/5 rounded-[40px] rotate-3" />
               <img 
-                src="/projects/service-main.jpg" 
+                src="/banner/about.webp" 
                 alt="Our Workspace" 
+                width={600}
+                height={500}
                 className="rounded-[32px] shadow-2xl relative z-10 w-full h-[500px] object-cover"
               />
               <div className="absolute bottom-10 -right-10 hidden md:block bg-white p-6 rounded-2xl shadow-xl border border-slate-50 z-20">

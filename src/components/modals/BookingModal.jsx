@@ -73,6 +73,7 @@ const BookingModal = () => {
         <button
           onClick={closeBookingModal}
           className="absolute top-6 right-6 w-10 h-10 flex items-center justify-center rounded-full bg-slate-50 text-slate-400 hover:text-blue-600 hover:bg-blue-50 transition-all z-10"
+          aria-label="Close modal"
         >
           <FaTimes size={18} />
         </button>

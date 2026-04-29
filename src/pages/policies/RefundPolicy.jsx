@@ -38,7 +38,7 @@ const RefundPolicy = () => {
           <section>
             <h2 className="text-2xl font-bold text-gray-900 mb-4 uppercase">RETURN PROCESS</h2>
             <p>
-              To return an item, please email customer service at <a href="mailto:support@driverzenith.net" className="text-primary font-bold">support@driverzenith.net</a> to obtain
+              To return an item, please email customer service at <a href="mailto:info@driverzenith.net" className="text-primary font-bold">info@driverzenith.net</a> to obtain
               an Return Merchandise Authorization (RMA) number. After receiving an RMA number, place
               the item securely in its original packaging and include your proof of purchase, then mail your
               return to the following address:
@@ -80,7 +80,7 @@ const RefundPolicy = () => {
             </p>
             <div className="bg-primary text-white p-8 rounded-2xl shadow-xl mt-4">
               <p className="font-bold text-xl mb-2">+1-402-508-9991</p>
-              <a href="mailto:support@driverzenith.net" className="text-secondary font-bold text-lg hover:underline">support@driverzenith.net</a>
+              <a href="mailto:info@driverzenith.net" className="text-secondary font-bold text-lg hover:underline">info@driverzenith.net</a>
             </div>
           </section>
         </div>

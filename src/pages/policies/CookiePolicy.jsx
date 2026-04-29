@@ -129,7 +129,7 @@ const CookiePolicy = () => {
               1267 Filer Ave E<br />
               Twin Falls, ID 83301<br />
               United States<br />
-              Email: <a href="mailto:support@driverzenith.net" className="text-primary">support@driverzenith.net</a>
+              Email: <a href="mailto:info@driverzenith.net" className="text-primary">info@driverzenith.net</a>
             </address>
           </section>
         </div>

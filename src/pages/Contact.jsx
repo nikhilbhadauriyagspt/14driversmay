@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
-import { 
+import {
   FaPhoneAlt, FaEnvelope, FaPaperPlane, FaGlobe
 } from "react-icons/fa";
 
@@ -28,7 +28,7 @@ const Contact = () => {
       <section className="py-16">
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-10">
-            
+
             {/* Contact Info */}
             <div className="space-y-4">
               <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex items-start gap-4">
@@ -37,7 +37,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-bold text-slate-900 text-sm">Technical Inquiry</h4>
-                  <p className="text-slate-600 text-sm font-medium mt-1">support@driverzenith.net</p>
+                  <p className="text-slate-600 text-sm font-medium mt-1">info@driverzenith.net</p>
                 </div>
               </div>
 
@@ -57,7 +57,7 @@ const Contact = () => {
               <h2 className="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
                 <FaPaperPlane className="text-blue-600 size={18}" /> Submit Technical Inquiry
               </h2>
-              
+
               <form className="space-y-5">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                   <div className="space-y-1.5">

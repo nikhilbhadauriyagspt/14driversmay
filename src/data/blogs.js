@@ -20,7 +20,7 @@ export const blogsData = [
       <h4>4. Hardware Abstraction Layers (HAL)</h4>
       <p>The HAL acts as a bridge, allowing the same operating system to run on different hardware configurations by providing a consistent interface.</p>
     `,
-    image: '/projects/device-driver-1.jpg'
+    image: '/projects/device-driver-1.webp'
   },
   {
     id: 2,
@@ -43,7 +43,7 @@ export const blogsData = [
       <h4>4. Driver Rollback Procedures</h4>
       <p>When new documentation is incompatible with legacy hardware, reverting to a previously verified version is the standard technical resolution.</p>
     `,
-    image: '/projects/what-is-a-computer-device-driver.png'
+    image: '/projects/what-is-a-computer-device-driver.webp'
   },
   {
     id: 3,
@@ -66,6 +66,6 @@ export const blogsData = [
       <h4>4. Legacy BIOS Compatibility</h4>
       <p>CSM (Compatibility Support Module) allows modern hardware to run legacy documentation protocols, though it is being phased out for full UEFI support.</p>
     `,
-    image: '/projects/device-driver.png'
+    image: '/projects/device-driver.webp'
   }
 ];

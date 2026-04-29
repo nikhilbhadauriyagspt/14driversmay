@@ -167,9 +167,9 @@ export default function CommonProblems() {
               </div>
             </div>
 
-            <h4 className="text-[15px] font-semibold text-[#0F1B3D] mb-1">
+            <h3 className="text-[15px] font-semibold text-[#0F1B3D] mb-1">
               {item.title}
-            </h4>
+            </h3>
 
             <p className="text-[13px] text-[#6B7280] leading-relaxed">
               {item.desc}
@@ -180,7 +180,10 @@ export default function CommonProblems() {
 
       {/* Button */}
       <div className="text-center mt-10">
-        <button className="bg-blue-600 text-white px-8 py-3 rounded-lg text-[14px] font-semibold hover:bg-blue-700 transition flex items-center gap-2 mx-auto">
+        <button 
+          aria-label="View all common issues"
+          className="bg-blue-600 text-white px-8 py-3 rounded-lg text-[14px] font-semibold hover:bg-blue-700 transition flex items-center gap-2 mx-auto"
+        >
           View All Issues →
         </button>
       </div>

@@ -38,7 +38,7 @@ const TermsOfService = () => {
               DriverZenith specializes in expert computer driver support and hardware diagnostics. We provide technical solutions to optimize system performance and ensure hardware-software synchronization.
             </p>
             <p>
-              You can contact us by email at <a href="mailto:support@driverzenith.net" className="text-blue-600 font-bold">support@driverzenith.net</a>, or by
+              You can contact us by email at <a href="mailto:info@driverzenith.net" className="text-blue-600 font-bold">info@driverzenith.net</a>, or by
               mail to 1267 Filer Ave E, Twin Falls, ID 83301, United States.
             </p>
             <p>
@@ -93,7 +93,7 @@ const TermsOfService = () => {
               <p className="text-lg font-bold">Twin Falls, ID 83301</p>
               <p className="text-lg font-bold">United States</p>
               <p className="mt-4">
-                <a href="mailto:support@driverzenith.net" className="text-blue-400 hover:underline">support@driverzenith.net</a>
+                <a href="mailto:info@driverzenith.net" className="text-blue-400 hover:underline">info@driverzenith.net</a>
               </p>
             </address>
           </section>

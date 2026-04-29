@@ -3,7 +3,7 @@ export const guidesData = [
     slug: "fix-driver-not-installed",
     title: "How to Fix Driver Not Installed Error",
     desc: "A complete step-by-step guide to identifying and installing missing drivers on your Windows system.",
-    img: "/guide/guide-driver-not-installed.png",
+    img: "/guide/guide-driver-not-installed.webp",
     content: {
       introduction: "The 'Driver Not Installed' error is one of the most common issues Windows users face when connecting new hardware. Without the correct driver, your operating system cannot communicate with the device.",
       reasons: [
@@ -36,7 +36,7 @@ export const guidesData = [
     slug: "fix-printer-driver-issues",
     title: "Resolving Common Printer Driver Problems",
     desc: "Is your printer not responding? Follow this guide to fix driver conflicts and connectivity issues.",
-    img: "/guide/guide-printer-driver.png",
+    img: "/guide/guide-printer-driver.webp",
     content: {
       introduction: "Printer driver issues can manifest as 'Printer Offline' status, partial printing, or a total lack of response from the device despite being connected.",
       reasons: [
@@ -65,7 +65,7 @@ export const guidesData = [
     slug: "fix-audio-driver-problems",
     title: "Troubleshooting Audio and Sound Driver Issues",
     desc: "Fix 'No Audio Output Device is installed' and other sound-related errors on your PC.",
-    img: "/guide/guide-audio-driver.png",
+    img: "/guide/guide-audio-driver.webp",
     content: {
       introduction: "Audio problems can range from a complete lack of sound to crackling noise or low volume levels. Most are software-driven.",
       reasons: [
@@ -94,7 +94,7 @@ export const guidesData = [
     slug: "fix-wifi-network-issues",
     title: "How to Fix WiFi and Network Connection Problems",
     desc: "Step-by-step guide to repairing wireless adapter drivers and restoring network connectivity.",
-    img: "/guide/guide-network-driver.png",
+    img: "/guide/guide-network-driver.webp",
     content: {
       introduction: "Network issues are critical. A corrupted Wi-Fi driver can prevent you from downloading the fix itself, often requiring a second device.",
       reasons: [
@@ -123,7 +123,7 @@ export const guidesData = [
     slug: "fix-usb-driver-issues",
     title: "Fixing 'USB Device Not Recognized' Errors",
     desc: "Solve USB 3.0/3.1 port recognition issues and driver malfunctions for your external devices.",
-    img: "/guide/guide-usb-driver.png",
+    img: "/guide/guide-usb-driver.webp",
     content: {
       introduction: "USB errors are frustrating because they often involve the motherboard's chipset drivers or power delivery systems.",
       reasons: [
@@ -152,7 +152,7 @@ export const guidesData = [
     slug: "fix-graphics-driver-issues",
     title: "Optimizing and Fixing Graphics Driver Problems",
     desc: "Fix screen flickering, low FPS, and display errors by properly managing your GPU drivers.",
-    img: "/guide/guide-graphics-driver.png",
+    img: "/guide/guide-graphics-driver.webp",
     content: {
       introduction: "Graphics drivers control everything you see. Outdated GPU software can cause crashes in games and visual artifacts in apps.",
       reasons: [

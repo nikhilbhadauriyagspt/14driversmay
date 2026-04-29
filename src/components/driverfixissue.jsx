@@ -159,8 +159,10 @@ export default function DriverTypesAndFix() {
                         {/* Image */}
                         <div className="hidden md:block">
                             <img
-                                src="/images/fix-driver-monitor.png"
+                                src="/images/fix-driver-monitor.webp"
                                 alt="How to fix driver issues"
+                                width={270}
+                                height={200}
                                 className="w-full h-auto object-contain"
                             />
                         </div>

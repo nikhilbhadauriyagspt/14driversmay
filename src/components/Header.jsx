@@ -193,6 +193,7 @@ const Header = () => {
             <div className="relative" ref={searchRef}>
               <button
                 onClick={() => setShowSearchBox(!showSearchBox)}
+                aria-label="Toggle search box"
                 className={`w-10 h-10 rounded-full flex items-center justify-center transition-all ${showSearchBox ? 'bg-blue-600 text-white' : 'bg-slate-50 text-slate-500 hover:bg-slate-100'}`}
               >
                 <FaSearch size={14} />
@@ -207,6 +208,7 @@ const Header = () => {
                       value={searchTerm}
                       onChange={(e) => setSearchTerm(e.target.value)}
                       placeholder="Search hardware components..."
+                      aria-label="Search hardware components"
                       className="w-full bg-slate-50 border-none rounded-lg px-4 py-2 text-sm outline-none focus:ring-2 focus:ring-blue-500/20"
                     />
                   </div>
@@ -240,6 +242,7 @@ const Header = () => {
           {/* Mobile Toggle */}
           <button
             onClick={() => setIsOpen(!isOpen)}
+            aria-label={isOpen ? "Close menu" : "Open menu"}
             className="lg:hidden w-10 h-10 rounded-full bg-slate-50 text-slate-900 flex items-center justify-center"
           >
             {isOpen ? <FaTimes /> : <FaBars />}
@@ -254,7 +257,13 @@ const Header = () => {
         <div className={`absolute right-0 top-0 h-full w-[80%] bg-white shadow-2xl transition-transform duration-500 p-8 flex flex-col ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
           <div className="flex justify-between items-center mb-10">
             <span className="text-xl font-black text-slate-900 uppercase">YourPC<span className="text-blue-600">Driver</span></span>
-            <button onClick={() => setIsOpen(false)} className="w-10 h-10 bg-slate-50 rounded-full flex items-center justify-center"><FaTimes /></button>
+            <button 
+              onClick={() => setIsOpen(false)} 
+              aria-label="Close menu"
+              className="w-10 h-10 bg-slate-50 rounded-full flex items-center justify-center"
+            >
+              <FaTimes />
+            </button>
           </div>
 
           <div className="space-y-8 overflow-y-auto pr-4">

@@ -12,6 +12,32 @@ export default defineConfig({
       },
     }),
   ],
+  build: {
+    minify: 'esbuild',
+    sourcemap: false,
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            if (id.includes('react')) {
+              return 'vendor-core';
+            }
+            if (id.includes('lucide-react') || id.includes('react-icons')) {
+              return 'vendor-icons';
+            }
+            if (id.includes('swiper') || id.includes('aos')) {
+              return 'vendor-libs';
+            }
+            return 'vendor'; // all other dependencies
+          }
+        },
+      },
+    },
+    chunkSizeWarningLimit: 1000,
+  },
+  esbuild: {
+    drop: ['console', 'debugger'],
+  },
   css: {
     postcss: {
       plugins: [

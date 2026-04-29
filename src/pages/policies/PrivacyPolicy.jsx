@@ -33,7 +33,7 @@ const PrivacyPolicy = () => {
               <li>Connect with our technical architects for hardware issue resolutions or system audits.</li>
             </ul>
             <p className="mt-6">
-              <strong>Questions or concerns?</strong> Reading this Privacy Notice will help you understand your privacy rights and choices. We are responsible for making decisions about how your personal information is processed. If you do not agree with our policies and practices, please do not use our Services. If you still have any questions or concerns, please contact us at <a href="mailto:support@driverzenith.net" className="text-blue-600">support@driverzenith.net</a>.
+              <strong>Questions or concerns?</strong> Reading this Privacy Notice will help you understand your privacy rights and choices. We are responsible for making decisions about how your personal information is processed. If you do not agree with our policies and practices, please do not use our Services. If you still have any questions or concerns, please contact us at <a href="mailto:info@driverzenith.net" className="text-blue-600">info@driverzenith.net</a>.
             </p>
           </section>
 
@@ -87,7 +87,7 @@ const PrivacyPolicy = () => {
 
           <section id="contact" className="space-y-6">
             <h3 className="text-xl font-bold text-slate-900">4. How can you contact us?</h3>
-            <p>If you have questions or comments about this notice, you may email us at <strong>support@driverzenith.net</strong> or contact us by post at:</p>
+            <p>If you have questions or comments about this notice, you may email us at <strong>info@driverzenith.net</strong> or contact us by post at:</p>
             <address className="not-italic bg-slate-900 text-white p-10 rounded-[3rem] shadow-xl relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-blue-600/20 rounded-bl-full"></div>
               <p className="font-black text-xl mb-2 italic">DriverZenith HQ</p>

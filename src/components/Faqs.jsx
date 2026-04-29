@@ -72,7 +72,7 @@ export default function FAQHelpSection() {
                     {/* Help Card Right */}
                     <div className="relative rounded-2xl bg-[#F3F7FF] min-h-[175px] overflow-hidden px-6 py-6 flex items-center justify-end">
                         <img
-                            src="/images/support-agent.png"
+                            src="/images/support-agent.webp"
                             alt="Information"
                             className="absolute left-3 bottom-0 w-[260px] h-auto object-contain"
                         />

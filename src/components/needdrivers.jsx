@@ -6,32 +6,32 @@ export default function WhenNeedDrivers() {
         {
             title: "After Windows\nUpdate",
             desc: "Ensure all system components remain compatible with the latest OS version.",
-            img: "/needdriver/need-windows-update.png",
+            img: "/needdriver/need-windows-update_thumb.webp",
         },
         {
             title: "After Connecting\na New Device",
             desc: "Enable the operating system to recognize and communicate with new hardware.",
-            img: "/needdriver/need-new-device.png",
+            img: "/needdriver/need-new-device_thumb.webp",
         },
         {
             title: "When Hardware\nStops Working",
             desc: "Restore functionality when a device suddenly becomes unresponsive or laggy.",
-            img: "/needdriver/need-hardware-stop.png",
+            img: "/needdriver/need-hardware-stop_thumb.webp",
         },
         {
             title: "When Printer / Scanner\nis Not Detected",
             desc: "Establish a secure connection for seamless document printing and scanning.",
-            img: "/needdriver/need-printer-scanner.png",
+            img: "/needdriver/need-printer-scanner_thumb.webp",
         },
         {
             title: "When Audio or Wi-Fi\nStops Working",
             desc: "Fix connectivity or sound output issues caused by corrupted driver files.",
-            img: "/needdriver/need-audio-wifi.png",
+            img: "/needdriver/need-audio-wifi_thumb.webp",
         },
         {
             title: "When You See\nDriver Errors",
             desc: "Resolve specific error codes or 'Device Not Recognized' notifications instantly.",
-            img: "/needdriver/need-driver-errors.png",
+            img: "/needdriver/need-driver-errors_thumb.webp",
         },
     ];
 
@@ -68,6 +68,8 @@ export default function WhenNeedDrivers() {
                                 <img
                                     src={item.img}
                                     alt={item.title.replace("\n", " ")}
+                                    width={220}
+                                    height={155}
                                     className="w-full h-full object-cover"
                                 />
                             </div>
@@ -75,7 +77,7 @@ export default function WhenNeedDrivers() {
                             <h3 className="mt-4 text-[17px] font-semibold text-[#0F1B3D] leading-snug whitespace-pre-line">
                                 {item.title}
                             </h3>
-                            <p className="mt-2 text-[12px] text-[#6B7280] leading-relaxed line-clamp-3 px-1">
+                            <p className="mt-2 text-[12px] text-[#4B5563] leading-relaxed line-clamp-3 px-1">
                                 {item.desc}
                             </p>
                         </div>

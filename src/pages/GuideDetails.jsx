@@ -162,7 +162,7 @@ const GuideDetails = () => {
                       <h4 className="text-[14px] font-bold text-[#0F1B3D] leading-tight group-hover:text-blue-600 transition line-clamp-2">
                         {item.title}
                       </h4>
-                      <p className="text-[11px] text-[#5B6478] mt-1 font-semibold uppercase tracking-wider">Read More</p>
+                      <p className="text-[11px] text-[#5B6478] mt-1 font-semibold uppercase tracking-wider">View Full Guide</p>
                     </div>
                   </Link>
                 ))}

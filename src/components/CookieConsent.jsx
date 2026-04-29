@@ -3,14 +3,15 @@ import { Link } from 'react-router-dom';
 import { ShieldCheck, X } from 'lucide-react';
 
 const CookieConsent = () => {
-    const [isVisible, setIsVisible] = useState(false);
-
-    useEffect(() => {
-        const consent = localStorage.getItem('cookieConsent');
-        if (!consent) {
-            setIsVisible(true);
+    const [isVisible, setIsVisible] = useState(() => {
+        // Check localStorage synchronously to avoid useEffect delay
+        try {
+            const consent = localStorage.getItem('cookieConsent');
+            return !consent;
+        } catch (e) {
+            return true;
         }
-    }, []);
+    });
 
     const handleAccept = () => {
         localStorage.setItem('cookieConsent', 'accepted');
@@ -66,6 +67,7 @@ const CookieConsent = () => {
                 <button 
                     onClick={() => setIsVisible(false)}
                     className="absolute top-4 right-4 text-slate-400 hover:text-slate-600 transition"
+                    aria-label="Close"
                 >
                     <X size={18} />
                 </button>
