@@ -21,6 +21,7 @@ import { BookingProvider } from './context/BookingContext';
 import { SettingsProvider } from './context/SettingsContext';
 import BookingModal from './components/modals/BookingModal';
 import QuickSupportFAB from './components/QuickSupportFAB';
+import CookieConsent from './components/CookieConsent';
 import './App.css';
 
 const AppContent = () => {
@@ -32,6 +33,7 @@ const AppContent = () => {
     <div className="App overflow-x-hidden">
       {!hideHeaderFooter && <Header />}
       <BookingModal />
+      <CookieConsent />
       <Routes>
 
         <Route path="/" element={<Home />} />

@@ -7,7 +7,7 @@ import FAQ from '../components/Faqs';
 import CommonProblems from '../components/commanissue';
 import WhenNeedDrivers from '../components/needdrivers';
 import Driverfixisuue from '../components/driverfixissue';
-import Guides from '../components/Guides';
+import Guides from '../components/guides';
 import Stats from '../components/stact';
 
 const Home = () => {
