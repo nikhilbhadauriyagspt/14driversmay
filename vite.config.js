@@ -19,16 +19,14 @@ export default defineConfig({
       output: {
         manualChunks(id) {
           if (id.includes('node_modules')) {
-            if (id.includes('react')) {
+            // Core React dependencies that are used everywhere
+            if (
+              id.includes('react-dom') ||
+              id.includes('react-router-dom') ||
+              (id.includes('react/') || id === 'react')
+            ) {
               return 'vendor-core';
             }
-            if (id.includes('lucide-react') || id.includes('react-icons')) {
-              return 'vendor-icons';
-            }
-            if (id.includes('swiper') || id.includes('aos')) {
-              return 'vendor-libs';
-            }
-            return 'vendor'; // all other dependencies
           }
         },
       },

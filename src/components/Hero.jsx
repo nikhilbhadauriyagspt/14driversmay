@@ -90,7 +90,7 @@ export default function Hero() {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 border border-blue-100 shadow-sm text-[#1557E8] text-[12px] font-extrabold mb-6">
             <ShieldCheck className="w-4 h-4" />
-            TECHNICAL DATABASE & HARDWARE WIKI
+            Driver Issue Fix Guides
           </div>
 
           {/* Sliding Heading */}
@@ -106,7 +106,7 @@ export default function Hero() {
 
           {/* Text */}
           <p className="mt-4 text-[17px] leading-[1.6] text-[#24324F] font-medium max-w-xl">
-            Step-by-step solutions for driver installation, update, and
+            Step-by-step guide for driver installation, update, and
             troubleshooting for all your hardware devices.
           </p>
 

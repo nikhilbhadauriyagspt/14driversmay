@@ -7,6 +7,7 @@ import { SettingsProvider } from './context/SettingsContext';
 import BookingModal from './components/modals/BookingModal';
 import QuickSupportFAB from './components/QuickSupportFAB';
 import CookieConsent from './components/CookieConsent';
+import ScrollToTop from './components/ScrollToTop';
 import './App.css';
 
 // Lazy load pages for code splitting
@@ -67,8 +68,8 @@ const AppContent = () => {
           {/* Catch-all for blogs */}
           <Route path="/blog/:id" element={<BlogDetails />} />
         </Routes>
+        {!hideHeaderFooter && <Footer />}
       </Suspense>
-      {!hideHeaderFooter && <Footer />}
     </div>
   );
 };
@@ -78,6 +79,7 @@ function App() {
     <SettingsProvider>
       <BookingProvider>
         <Router>
+          <ScrollToTop />
           <AppContent />
         </Router>
       </BookingProvider>

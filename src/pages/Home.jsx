@@ -21,7 +21,7 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>DriverZenith | Technical Hardware Documentation & Architectural Registry</title>
+        <title>Fix Driver Issues | WiFi, Audio, USB & Printer Solutions</title>
         <meta name="description" content="Technical repository for hardware specifications, driver-level architectural data, and system optimization documentation for the global technical community." />
         <link rel="canonical" href="https://www.driverzenith.net/" />
       </Helmet>

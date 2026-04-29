@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
-import { 
-  FaRocket, FaShieldAlt, FaUsers, FaGlobe, FaAward, 
+import {
+  FaRocket, FaShieldAlt, FaUsers, FaGlobe, FaAward,
   FaChevronRight, FaCogs, FaCheckCircle, FaLaptopCode
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -19,17 +19,17 @@ const About = () => {
         <div className="absolute top-0 left-0 w-full h-full opacity-10">
           <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:40px_40px]" />
         </div>
-        
+
         <div className="max-w-[1200px] mx-auto px-6 relative z-10">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-600/20 border border-blue-500/30 text-blue-400 text-[12px] font-bold uppercase tracking-widest mb-8">
-             Technical Knowledge Base
+            Technical Knowledge Base
           </div>
           <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
             Mapping Global <br />
             <span className="text-blue-500">Hardware Protocols</span>
           </h1>
           <p className="text-white/70 text-lg font-medium leading-relaxed max-w-2xl mx-auto mb-10">
-            DriverZenith is a comprehensive technical repository providing architectural documentation 
+            DriverZenith is a comprehensive technical repository providing architectural documentation
             and hardware-software interaction data for the global technical community.
           </p>
         </div>
@@ -51,9 +51,9 @@ const About = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <div className="relative">
               <div className="absolute -inset-4 bg-blue-600/5 rounded-[40px] rotate-3" />
-              <img 
-                src="/banner/about.webp" 
-                alt="Our Workspace" 
+              <img
+                src="/banner/about.webp"
+                alt="Our Workspace"
                 width={600}
                 height={500}
                 className="rounded-[32px] shadow-2xl relative z-10 w-full h-[500px] object-cover"
@@ -74,22 +74,22 @@ const About = () => {
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8 leading-tight">
                 Why the Technical Community Trusts <br />
-                <span className="text-blue-600 font-extrabold">DriverWiki</span>
+                <span className="text-blue-600 font-extrabold">Driver Zenith</span>
               </h2>
               <div className="space-y-8">
-                <FeatureRow 
-                  icon={<FaShieldAlt />} 
-                  title="Verified Technical Data" 
+                <FeatureRow
+                  icon={<FaShieldAlt />}
+                  title="Verified Technical Data"
                   desc="Every specification in our database is cross-referenced with official manufacturer documentation for accuracy."
                 />
-                <FeatureRow 
-                  icon={<FaRocket />} 
-                  title="Architectural Insights" 
+                <FeatureRow
+                  icon={<FaRocket />}
+                  title="Architectural Insights"
                   desc="We provide deep technical data on hardware-software communication to enhance system stability."
                 />
-                <FeatureRow 
-                  icon={<FaUsers />} 
-                  title="Community Contribution" 
+                <FeatureRow
+                  icon={<FaUsers />}
+                  title="Community Contribution"
                   desc="A global network of technical contributors sharing verified hardware IDs and registry data."
                 />
               </div>
@@ -107,19 +107,19 @@ const About = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <ValueCard 
-              icon={<FaGlobe />} 
-              title="Global Documentation" 
+            <ValueCard
+              icon={<FaGlobe />}
+              title="Global Documentation"
               desc="Providing multilingual hardware databases for users across 150+ countries."
             />
-            <ValueCard 
-              icon={<FaLaptopCode />} 
-              title="Technical Innovation" 
+            <ValueCard
+              icon={<FaLaptopCode />}
+              title="Technical Innovation"
               desc="Constantly updating our diagnostic repository to identify the newest hardware protocols."
             />
-            <ValueCard 
-              icon={<FaCogs />} 
-              title="System Integrity" 
+            <ValueCard
+              icon={<FaCogs />}
+              title="System Integrity"
               desc="Focusing on verified data cycles to ensure that system stability is never compromised."
             />
           </div>

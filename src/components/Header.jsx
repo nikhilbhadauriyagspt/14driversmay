@@ -139,7 +139,7 @@ const Header = () => {
               onMouseLeave={() => setActiveDropdown(null)}
             >
               <button className={`flex items-center gap-1.5 px-5 py-2 text-[13px] font-bold tracking-wide rounded-full transition-all ${activeDropdown === 'drivers' ? 'bg-blue-50 text-blue-600' : 'text-slate-600'}`}>
-                Hardware Index <FaChevronDown size={8} className={`transition-transform duration-300 ${activeDropdown === 'drivers' ? 'rotate-180' : ''}`} />
+                services <FaChevronDown size={8} className={`transition-transform duration-300 ${activeDropdown === 'drivers' ? 'rotate-180' : ''}`} />
               </button>
 
               <div className={`absolute left-0 right-0 top-full pt-4 transition-all duration-300 ${activeDropdown === 'drivers' ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible translate-y-2'}`}>
@@ -257,8 +257,8 @@ const Header = () => {
         <div className={`absolute right-0 top-0 h-full w-[80%] bg-white shadow-2xl transition-transform duration-500 p-8 flex flex-col ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
           <div className="flex justify-between items-center mb-10">
             <span className="text-xl font-black text-slate-900 uppercase">YourPC<span className="text-blue-600">Driver</span></span>
-            <button 
-              onClick={() => setIsOpen(false)} 
+            <button
+              onClick={() => setIsOpen(false)}
               aria-label="Close menu"
               className="w-10 h-10 bg-slate-50 rounded-full flex items-center justify-center"
             >

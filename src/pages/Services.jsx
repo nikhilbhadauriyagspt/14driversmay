@@ -43,11 +43,11 @@ const ServicesPage = () => {
               <span className="text-blue-600 text-[10px] font-bold uppercase tracking-[2px]">Official Driver Index v4.2</span>
             </div>
             <h1 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight tracking-tight">
-              Full Technical <br />
-              <span className="text-blue-600">Hardware Index</span>
+              Full Guide <br />
+              <span className="text-blue-600">For Your Driver</span>
             </h1>
             <p className="text-lg text-slate-500 font-medium leading-relaxed mb-10">
-              Browse our comprehensive repository of hardware-software translators. We provide detailed specifications and diagnostic support for every essential system layer.
+              Browse our comprehensive repository of hardware-software translators. We provide detailed specifications for every essential system layer.
             </p>
             <div className="flex flex-wrap gap-6">
               <div className="flex items-center gap-3 text-slate-400 font-bold text-[10px] uppercase tracking-widest">
@@ -56,9 +56,7 @@ const ServicesPage = () => {
               <div className="flex items-center gap-3 text-slate-400 font-bold text-[10px] uppercase tracking-widest">
                 <Icons.FaCheck className="text-blue-600" /> Verified Protocols
               </div>
-              <div className="flex items-center gap-3 text-slate-400 font-bold text-[10px] uppercase tracking-widest">
-                <Icons.FaCheck className="text-blue-600" /> 24/7 Support Link
-              </div>
+
             </div>
           </div>
         </div>
@@ -70,7 +68,7 @@ const ServicesPage = () => {
           <div className="space-y-24">
             {categories.map((cat, catIdx) => (
               <div key={catIdx} className="relative" data-aos="fade-up">
-                
+
                 {/* Category Header */}
                 <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 border-b border-slate-50 pb-6">
                   <div className="max-w-xl">
@@ -93,12 +91,12 @@ const ServicesPage = () => {
                         <div className="w-11 h-11 bg-slate-50 text-slate-400 group-hover:bg-blue-600 group-hover:text-white rounded-2xl flex items-center justify-center text-lg mb-5 transition-all duration-500 border border-slate-50 group-hover:border-blue-600">
                           <IconComponent />
                         </div>
-                        
+
                         <h4 className="text-base font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors tracking-tight">{service.title}</h4>
                         <p className="text-slate-500 text-[12px] leading-relaxed mb-6 font-medium line-clamp-2">
                           {service.shortDesc}
                         </p>
-                        
+
                         <div className="mt-auto flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-slate-400 group-hover:text-blue-600 transition-colors">
                           Technical Specs <Icons.FaChevronRight size={7} />
                         </div>
@@ -112,34 +110,7 @@ const ServicesPage = () => {
         </div>
       </section>
 
-      {/* Global Action Section - Refined Font and Shadow */}
-      <section className="py-20 bg-slate-50">
-        <div className="container mx-auto px-6 lg:px-12">
-          <div className="bg-slate-900 rounded-[3rem] p-10 lg:p-16 relative overflow-hidden shadow-lg">
-            {/* Background Graphic */}
-            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[100px] translate-x-1/2 -translate-y-1/2"></div>
-            
-            <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-10 text-center lg:text-left">
-              <div className="max-w-2xl">
-                <h2 className="text-2xl md:text-3xl font-bold text-white mb-4 leading-tight">
-                  Can't identify your <span className="text-blue-500 font-extrabold">hardware issue?</span>
-                </h2>
-                <p className="text-slate-400 text-base font-medium leading-relaxed">
-                  Our system architects are available for direct diagnostic sessions to resolve complex driver conflicts and hardware recognition failures.
-                </p>
-              </div>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link to="/contact" className="px-8 py-4 bg-blue-600 text-white font-bold rounded-xl hover:bg-white hover:text-slate-900 transition-all text-xs shadow-md shadow-blue-600/10 whitespace-nowrap active:scale-95">
-                  Request Diagnostic Fix
-                </Link>
-                <Link to="/#about" className="px-8 py-4 bg-white/5 border border-white/10 text-white font-bold rounded-xl hover:bg-white/10 transition-all text-xs backdrop-blur-md">
-                  How We Support
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+
     </div>
   );
 };

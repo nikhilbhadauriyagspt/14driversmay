@@ -12,20 +12,21 @@ export default function Footer() {
   return (
     <>
       {/* Top CTA */}
-      <section className="bg-[#F7FAFF] px-6 py-5 font-[Poppins]">
-        <div className="max-w-[1600px] mx-auto rounded-xl bg-gradient-to-r from-[#064CD9] to-[#1557E8] px-8 py-6 flex flex-col md:flex-row items-center justify-between gap-6 overflow-hidden">
+      <section className="bg-[#F7FAFF] px-6 py-5 font-heading">
+        <div className="max-w-[1600px] mx-auto rounded-xl bg-gradient-to-r from-[#064CD9] to-[#1557E8] px-8 py-6 flex flex-col md:flex-row items-center justify-between gap-6 overflow-hidden min-h-[160px]">
           <div className="flex items-center gap-8">
             <img
               src="/images/support-agent.webp"
               alt="Hardware documentation"
               width={250}
               height={180}
-              className="hidden md:block w-[250px] h-auto object-contain"
+              className="hidden md:block w-[250px] aspect-[250/180] object-contain"
+              fetchPriority="high"
             />
 
             <div>
               <h2 className="text-white text-[26px] font-semibold leading-tight">
-                Need Technical Documentation?
+                Learn More About Driver's Issues?
               </h2>
               <p className="text-white/85 text-[14px] leading-6 mt-1 max-w-[520px] font-medium">
                 Our hardware registry is updated daily with the latest architectural specifications
@@ -34,7 +35,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <Link to="/guides" className="bg-white text-[#1557E8] px-7 py-3 rounded-lg text-[14px] font-semibold flex items-center gap-2 hover:shadow-lg transition">
+          <Link to="/guides" className="bg-white text-[#1557E8] px-7 py-3 rounded-lg text-[14px] font-semibold flex items-center gap-2 hover:shadow-lg transition shrink-0">
             Browse Archive
             <ArrowRight className="w-4 h-4" />
           </Link>
@@ -42,7 +43,7 @@ export default function Footer() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#061B3D] text-white px-6 pt-9 pb-5 font-[Poppins]">
+      <footer className="bg-[#061B3D] text-white px-6 pt-9 pb-5 font-heading">
         <div className="max-w-[1600px] mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-8 pb-8 border-b border-white/10">
 
@@ -64,7 +65,7 @@ export default function Footer() {
               </div>
 
               <p className="text-[12px] leading-6 text-white/65 font-medium max-w-[210px]">
-                Comprehensive technical resource for hardware-software communication protocols
+                Comprehensive resource for hardware-software communication protocols
                 and system optimization documentation.
               </p>
             </div>
@@ -75,7 +76,6 @@ export default function Footer() {
                 { name: "Home", path: "/" },
                 { name: "About", path: "/about" },
                 { name: "Services", path: "/services" },
-                { name: "Blog", path: "/blog" },
                 { name: "Guides", path: "/guides" },
                 { name: "FAQ", path: "/faq" },
                 { name: "Contact", path: "/contact" }
@@ -111,7 +111,6 @@ export default function Footer() {
               links={[
                 { name: "Privacy Policy", path: "/privacy-policy" },
                 { name: "Terms of Service", path: "/terms-of-service" },
-                { name: "Refund Policy", path: "/refund-policy" },
                 { name: "Cookie Policy", path: "/cookie-policy" },
                 { name: "Disclaimer", path: "/disclaimer" },
               ]}
@@ -124,38 +123,19 @@ export default function Footer() {
               <div className="space-y-3 text-[12px] text-white/70 font-medium">
                 <p className="flex items-start gap-2">
                   <Mail className="w-4 h-4 mt-0.5 text-white" />
-                  Registry: info@driverzenith.net
+                  <a href="mailto:info@driverzenith.net" className="text-white/70 hover:text-white transition">
+                    info@driverzenith.net
+                  </a>
                 </p>
 
-                <p className="flex items-start gap-2">
-                  <MessageCircle className="w-4 h-4 mt-0.5 text-white" />
-                  Wiki: Community Driven
-                </p>
 
-                <p className="flex items-start gap-2">
-                  <Phone className="w-4 h-4 mt-0.5 text-white" />
-                  Updates: 24/7 Monitoring
-                </p>
               </div>
             </div>
           </div>
 
-          {/* Bottom */}
-          <div className="pt-5 flex flex-col md:flex-row justify-between items-center gap-4 text-[12px] text-white/55">
-            <p>© 2024 DriverZenith. All rights reserved.</p>
 
-            <div className="flex items-center gap-6">
-              <Link to="/privacy-policy" className="hover:text-white transition">
-                Privacy Policy
-              </Link>
-              <span className="text-white/25">|</span>
-              <Link to="/terms-of-service" className="hover:text-white transition">
-                Terms of Use
-              </Link>
-            </div>
-          </div>
         </div>
-      </footer>
+      </footer >
     </>
   );
 }

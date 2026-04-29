@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { 
-  ChevronRight, 
-  ArrowLeft, 
-  CheckCircle2, 
-  AlertCircle, 
-  Clock, 
+import {
+  ChevronRight,
+  ArrowLeft,
+  CheckCircle2,
+  AlertCircle,
+  Clock,
   BookOpen,
   Share2
 } from "lucide-react";
@@ -26,8 +26,8 @@ const GuideDetails = () => {
       <div className="min-h-screen flex flex-col items-center justify-center bg-[#F7FAFF] px-6">
         <h2 className="text-2xl font-bold text-[#0F1B3D]">Guide Not Found</h2>
         <p className="text-[#5B6478] mt-2 mb-6">The guide you are looking for does not exist.</p>
-        <Link 
-          to="/" 
+        <Link
+          to="/"
           className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition"
         >
           Back to Home
@@ -60,9 +60,9 @@ const GuideDetails = () => {
           <article className="bg-white rounded-3xl border border-[#E6ECF8] shadow-sm overflow-hidden">
             {/* Header Image */}
             <div className="w-full h-[300px] md:h-[400px] bg-[#EEF4FF] flex items-center justify-center p-10 border-b border-[#E6ECF8]">
-              <img 
-                src={guide.img} 
-                alt={guide.title} 
+              <img
+                src={guide.img}
+                alt={guide.title}
                 className="max-w-full max-h-full object-contain"
               />
             </div>
@@ -77,10 +77,7 @@ const GuideDetails = () => {
                   <BookOpen className="w-4 h-4 text-blue-600" />
                   <span>Tutorial</span>
                 </div>
-                <div className="flex items-center gap-2 cursor-pointer hover:text-blue-600 transition">
-                  <Share2 className="w-4 h-4 text-blue-600" />
-                  <span>Share Guide</span>
-                </div>
+
               </div>
 
               <h1 className="text-[32px] md:text-[42px] font-bold text-[#0F1B3D] leading-[1.15] mb-6">
@@ -133,11 +130,11 @@ const GuideDetails = () => {
                 <p className="text-white/70 text-[14px] mb-8 max-w-md mx-auto relative z-10">
                   Our technical library contains hundreds of articles on hardware optimization and system stability.
                 </p>
-                <Link 
-                  to="/guides" 
+                <Link
+                  to="/guides"
                   className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-blue-700 transition relative z-10"
                 >
-                  Explore Technical Library
+                  Explore More Guides
                   <ArrowLeft className="w-5 h-5 rotate-180" />
                 </Link>
               </div>
@@ -150,9 +147,9 @@ const GuideDetails = () => {
               <h3 className="text-[18px] font-bold text-[#0F1B3D] mb-6">Related Documentation</h3>
               <div className="space-y-6">
                 {otherGuides.map((item, i) => (
-                  <Link 
-                    key={i} 
-                    to={`/guide/${item.slug}`} 
+                  <Link
+                    key={i}
+                    to={`/guide/${item.slug}`}
                     className="flex gap-4 group"
                   >
                     <div className="w-20 h-20 rounded-xl bg-[#EEF4FF] border border-[#E6ECF8] overflow-hidden shrink-0">

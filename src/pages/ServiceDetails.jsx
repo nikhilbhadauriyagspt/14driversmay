@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { 
-  FaCogs, FaDownload, FaShieldAlt, FaHistory, 
+import {
+  FaCogs, FaDownload, FaShieldAlt, FaHistory,
   FaChevronRight, FaCheckCircle, FaExclamationTriangle,
   FaTools, FaQuestionCircle, FaArrowLeft
 } from "react-icons/fa";
@@ -31,7 +31,7 @@ const ServiceDetails = () => {
   return (
     <div className="bg-[#F7FAFF] min-h-screen font-[Poppins]">
       <Helmet>
-        <title>{service.title} | Technical Documentation & Hardware Guide | DriverZenith</title>
+        <title>{service.title} | Hardware Guide | DriverZenith</title>
         <meta name="description" content={`Technical specifications and installation documentation for ${service.title}. Learn about hardware requirements and system compatibility.`} />
       </Helmet>
 
@@ -40,20 +40,18 @@ const ServiceDetails = () => {
         <div className="absolute top-0 left-0 w-full h-full opacity-10">
           <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:40px_40px]" />
         </div>
-        
+
         <div className="max-w-[1600px] mx-auto px-6 lg:px-12 relative z-10">
           <div className="flex flex-col lg:flex-row items-center gap-12">
             <div className="lg:w-3/5 text-center lg:text-start">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-600/20 border border-blue-500/30 text-blue-400 text-[12px] font-bold uppercase tracking-widest mb-8">
-                <FaCogs /> Technical Wiki & Database
-              </div>
+
               <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
                 {service.title} <span className="text-blue-500">Documentation</span>
               </h1>
               <p className="text-white/70 text-lg md:text-xl font-medium leading-relaxed max-w-2xl mb-10">
                 Detailed technical analysis and configuration data for {service.title}. Optimized for Windows 10 & 11 hardware architectures.
               </p>
-              
+
               <div className="flex flex-wrap justify-center lg:justify-start gap-4">
                 <Link to="/guides" className="bg-blue-600 text-white px-8 py-4 rounded-xl font-bold text-sm hover:bg-blue-700 transition shadow-lg shadow-blue-600/20 flex items-center gap-3">
                   <BookOpen className="w-4 h-4" /> View Installation Guides
@@ -63,7 +61,7 @@ const ServiceDetails = () => {
                 </Link>
               </div>
             </div>
-            
+
             <div className="lg:w-2/5 flex justify-center">
               <div className="relative">
                 <div className="absolute -inset-4 bg-blue-500/20 rounded-full blur-3xl animate-pulse" />
@@ -80,7 +78,7 @@ const ServiceDetails = () => {
       <section className="py-20">
         <div className="max-w-[1600px] mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_400px] gap-12">
-            
+
             {/* Main Content */}
             <div className="space-y-12">
               <div className="bg-white rounded-[32px] border border-[#E6ECF8] p-8 md:p-12 shadow-sm">
@@ -169,8 +167,9 @@ const ServiceDetails = () => {
           </div>
         </div>
       </section>
-      
-      <style dangerouslySetInnerHTML={{ __html: `
+
+      <style dangerouslySetInnerHTML={{
+        __html: `
         @keyframes spin-slow {
           from { transform: rotate(0deg); }
           to { transform: rotate(360deg); }

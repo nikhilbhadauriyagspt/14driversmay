@@ -16,7 +16,7 @@ const RefundPolicy = () => {
 
       <div className="container mx-auto px-4 max-w-4xl">
         <h1 className="text-4xl md:text-5xl font-heading font-bold text-gray-900 mb-4 uppercase">Return Policy</h1>
-        <p className="text-gray-500 mb-12 italic">Last updated February 06, 2026</p>
+        <p className="text-gray-500 mb-12 italic">Last updated Apr 30, 2026</p>
 
         <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed space-y-8">
           <section>

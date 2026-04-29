@@ -10,20 +10,11 @@ import {
 
 export default function FeatureStrip() {
     const features = [
-        {
-            title: "Verified Data",
-            text: "Documentation sourced from official hardware registries.",
-            icon: ShieldCheck,
-        },
+
         {
             title: "Technical Manuals",
             text: "Comprehensive guides for all hardware architectures.",
             icon: CheckCircle2,
-        },
-        {
-            title: "Universal Support",
-            text: "Covers legacy and modern system environments.",
-            icon: Monitor,
         },
         {
             title: "System Analysis",
@@ -45,7 +36,7 @@ export default function FeatureStrip() {
     return (
         <section className="bg-[#F7FAFF] px-6 py-5 font-[Poppins]">
             <div className="max-w-[1600px] mx-auto rounded-2xl bg-[#EEF7FF] border border-[#DDEBFF] px-7 py-5 shadow-sm">
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
                     {features.map((item, index) => {
                         const Icon = item.icon;
 
