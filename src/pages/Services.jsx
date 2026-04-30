@@ -85,7 +85,8 @@ const ServicesPage = () => {
                     return (
                       <Link
                         key={service.id}
-                        to={`/service/${service.slug}`}
+                        to={`/driver/${
+service.slug}`}
                         className="group p-7 bg-white border border-slate-100 rounded-[2rem] hover:border-blue-200 hover:shadow-[0_15px_30px_-15px_rgba(0,0,0,0.05)] transition-all duration-500 flex flex-col items-start"
                       >
                         <div className="w-11 h-11 bg-slate-50 text-slate-400 group-hover:bg-blue-600 group-hover:text-white rounded-2xl flex items-center justify-center text-lg mb-5 transition-all duration-500 border border-slate-50 group-hover:border-blue-600">

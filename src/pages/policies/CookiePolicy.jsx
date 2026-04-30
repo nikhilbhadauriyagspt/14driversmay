@@ -10,21 +10,21 @@ const CookiePolicy = () => {
   return (
     <div className="bg-white min-h-screen pt-32 pb-24">
       <Helmet>
-        <title>Cookie Policy - DriverZenith</title>
-        <meta name="description" content="Cookie Policy for DriverZenith. Understand how we use cookies and tracking technologies." />
-        <link rel="canonical" href="https://www.driverzenith.net/cookie-policy" />
+        <title>Cookie Policy - Mister PC Driver</title>
+        <meta name="description" content="Cookie Policy for Mister PC Driver. Understand how we use cookies and tracking technologies." />
+        <link rel="canonical" href="https://www.misterpcdriver.com/cookie-policy" />
       </Helmet>
 
       <div className="container mx-auto px-4 max-w-5xl">
-        <h1 className="text-4xl md:text-5xl font-heading font-bold text-gray-900 mb-4 uppercase">Cookie Policy for Driver Zenith</h1>
+        <h1 className="text-4xl md:text-5xl font-heading font-bold text-gray-900 mb-4 uppercase">Cookie Policy for Mister PC Driver</h1>
         <p className="text-gray-500 mb-12 italic">Last Updated: February 06, 2026</p>
 
         <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed space-y-8">
           <section>
             <p>
-              This Cookie Policy explains how Driver Zenith (“<strong>Company</strong>,” “<strong>we</strong>,” “<strong>us</strong>,” or “<strong>our</strong>”) uses
+              This Cookie Policy explains how Mister PC Driver (“<strong>Company</strong>,” “<strong>we</strong>,” “<strong>us</strong>,” or “<strong>our</strong>”) uses
               cookies and similar tracking technologies when you visit our website
-              <a href="http://driverzenith.net/" className="text-primary hover:text-secondary"> http://driverzenith.net/</a> (the “<strong>Website</strong>”). This policy should be read together with our
+              <a href="http://misterpcdriver.com/" className="text-primary hover:text-secondary"> http://misterpcdriver.com/</a> (the “<strong>Website</strong>”). This policy should be read together with our
               <a href="privacy-policy.php" className="text-primary hover:underline font-bold"> PRIVACY POLICY</a> and <a href="terms-of-service.php" className="text-primary hover:underline font-bold">TERMS OF SERVICE</a>.
             </p>
           </section>
@@ -42,7 +42,7 @@ const CookiePolicy = () => {
 
           <section>
             <h2 className="text-2xl font-bold text-gray-900 mb-4 uppercase">2. How We Use Cookies</h2>
-            <p>Driver Zenith uses cookies and similar technologies to:</p>
+            <p>Mister PC Driver uses cookies and similar technologies to:</p>
             <ul className="list-disc pl-10 space-y-2">
               <li>Ensure the Website functions properly</li>
               <li>Maintain security and prevent fraudulent activity</li>
@@ -111,7 +111,7 @@ const CookiePolicy = () => {
             <h2 className="text-2xl font-bold text-gray-900 mb-4 uppercase">6. Do Not Track Signals</h2>
             <p>
               Some browsers offer a “Do Not Track” (DNT) feature. At this time, there is no uniform
-              industry standard for recognizing DNT signals, and Driver Zenith does not currently
+              industry standard for recognizing DNT signals, and Mister PC Driver does not currently
               respond to such signals <a href="privacy-policy.php" className="text-primary hover:underline font-bold">PRIVACY POLICY</a>.
             </p>
           </section>
@@ -127,7 +127,7 @@ const CookiePolicy = () => {
             <address className="not-italic bg-gray-50 p-8 rounded-2xl border border-gray-100 mt-4 leading-relaxed font-bold">
               Henan Yunyue Network Technology Co. Ltd.<br />
               Room 0903, Building 2, Longshang New Residence, Jinshan Street, Kuancheng Manchu Autonomous County, Chengde City, Hebei Province, JS, 320500, China<br />
-              Email: info@driverzenith.net
+              Email: info@misterpcdriver.com
             </address>
           </section>
         </div>

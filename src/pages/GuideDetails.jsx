@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useParams, Link, useNavigate } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import {
   ChevronRight,
@@ -7,14 +7,12 @@ import {
   CheckCircle2,
   AlertCircle,
   Clock,
-  BookOpen,
-  Share2
+  BookOpen
 } from "lucide-react";
 import { guidesData } from "../data/guidesData";
 
 const GuideDetails = () => {
   const { slug } = useParams();
-  const navigate = useNavigate();
   const guide = guidesData.find((g) => g.slug === slug);
 
   useEffect(() => {
@@ -24,11 +22,11 @@ const GuideDetails = () => {
   if (!guide) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center bg-[#F7FAFF] px-6">
-        <h2 className="text-2xl font-bold text-[#0F1B3D]">Guide Not Found</h2>
-        <p className="text-[#5B6478] mt-2 mb-6">The guide you are looking for does not exist.</p>
+        <h2 className="text-xl font-bold text-[#07153A]">Guide Not Found</h2>
+        <p className="text-[#667085] mt-2 mb-6">The guide you are looking for does not exist.</p>
         <Link
           to="/"
-          className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition"
+          className="bg-blue-600 text-white px-6 py-3 rounded-[10px] font-semibold hover:bg-blue-700 transition"
         >
           Back to Home
         </Link>
@@ -45,21 +43,21 @@ const GuideDetails = () => {
         <meta name="description" content={guide.desc} />
       </Helmet>
 
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
+      <div className="max-w-[1200px] mx-auto px-6 lg:px-10">
         {/* Breadcrumbs */}
-        <div className="flex items-center gap-2 text-[13px] font-medium text-[#5B6478] mb-8">
+        <div className="flex items-center gap-2 text-[12px] font-semibold text-[#667085] mb-10 uppercase tracking-wider">
           <Link to="/" className="hover:text-blue-600 transition">Home</Link>
-          <ChevronRight className="w-4 h-4" />
-          <span className="text-[#0F1B3D]">Guides</span>
-          <ChevronRight className="w-4 h-4" />
+          <ChevronRight size={14} className="text-slate-300" />
+          <Link to="/guides" className="hover:text-blue-600 transition">Guides</Link>
+          <ChevronRight size={14} className="text-slate-300" />
           <span className="text-blue-600 truncate">{guide.title}</span>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-10">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_340px] gap-8">
           {/* Main Content */}
-          <article className="bg-white rounded-3xl border border-[#E6ECF8] shadow-sm overflow-hidden">
+          <article className="bg-white rounded-[10px] border border-[#E6ECF8] overflow-hidden">
             {/* Header Image */}
-            <div className="w-full h-[300px] md:h-[400px] bg-[#EEF4FF] flex items-center justify-center p-10 border-b border-[#E6ECF8]">
+            <div className="w-full h-[280px] md:h-[350px] bg-white flex items-center justify-center p-8 border-b border-[#F0F4FA]">
               <img
                 src={guide.img}
                 alt={guide.title}
@@ -68,7 +66,7 @@ const GuideDetails = () => {
             </div>
 
             <div className="p-8 md:p-12">
-              <div className="flex flex-wrap items-center gap-6 mb-6 text-[13px] font-semibold text-[#5B6478]">
+              <div className="flex flex-wrap items-center gap-6 mb-8 text-[12px] font-bold text-[#667085] uppercase tracking-widest">
                 <div className="flex items-center gap-2">
                   <Clock className="w-4 h-4 text-blue-600" />
                   <span>5 Min Read</span>
@@ -77,102 +75,99 @@ const GuideDetails = () => {
                   <BookOpen className="w-4 h-4 text-blue-600" />
                   <span>Tutorial</span>
                 </div>
-
               </div>
 
-              <h1 className="text-[32px] md:text-[42px] font-bold text-[#0F1B3D] leading-[1.15] mb-6">
+              <h1 className="text-[30px] md:text-[38px] font-bold text-[#07153A] leading-tight mb-8">
                 {guide.title}
               </h1>
 
-              <p className="text-[17px] leading-[1.7] text-[#5B6478] font-medium mb-10 border-l-4 border-blue-600 pl-6 bg-blue-50/30 py-4 rounded-r-xl">
+              <div className="text-[16px] leading-relaxed text-[#5B6478] font-medium mb-12 p-6 bg-slate-50 border-l-4 border-blue-600 rounded-r-[10px]">
                 {guide.content.introduction}
-              </p>
+              </div>
 
-              {/* Common Reasons */}
-              <div className="mb-12">
-                <h2 className="text-[24px] font-bold text-[#0F1B3D] mb-6 flex items-center gap-3">
-                  <AlertCircle className="w-6 h-6 text-orange-500" />
-                  Why This Happens?
+              {/* Reasons Section */}
+              <div className="mb-14">
+                <h2 className="text-[22px] font-bold text-[#07153A] mb-6 flex items-center gap-3">
+                  <AlertCircle className="w-5 h-5 text-orange-500" />
+                  Common Causes
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {guide.content.reasons.map((reason, i) => (
-                    <div key={i} className="flex gap-3 p-4 bg-[#F8FAFC] rounded-xl border border-[#E6ECF8]">
-                      <div className="w-2 h-2 rounded-full bg-orange-500 mt-2 shrink-0" />
-                      <p className="text-[14px] text-[#5B6478] font-medium">{reason}</p>
+                    <div key={i} className="flex gap-3 p-4 bg-white rounded-[10px] border border-[#F0F4FA]">
+                      <div className="w-1.5 h-1.5 rounded-full bg-orange-500 mt-2 shrink-0" />
+                      <p className="text-[14px] text-[#667085] font-medium leading-relaxed">{reason}</p>
                     </div>
                   ))}
                 </div>
               </div>
 
-              {/* Steps */}
+              {/* Steps Section */}
               <div>
-                <h2 className="text-[24px] font-bold text-[#0F1B3D] mb-8 flex items-center gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-green-500" />
-                  Steps to Resolve
+                <h2 className="text-[22px] font-bold text-[#07153A] mb-8 flex items-center gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-green-500" />
+                  How to Fix
                 </h2>
-                <div className="space-y-8">
+                <div className="space-y-10">
                   {guide.content.steps.map((step, i) => (
-                    <div key={i} className="relative pl-14">
-                      <div className="absolute left-0 top-0 w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-[18px] shadow-lg shadow-blue-200">
+                    <div key={i} className="relative pl-12">
+                      <div className="absolute left-0 top-0 w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-[14px]">
                         {i + 1}
                       </div>
-                      <h3 className="text-[19px] font-bold text-[#0F1B3D] mb-2">{step.title}</h3>
-                      <p className="text-[15px] leading-[1.7] text-[#5B6478] font-medium">{step.text}</p>
+                      <h3 className="text-[18px] font-bold text-[#07153A] mb-3">{step.title}</h3>
+                      <p className="text-[15px] leading-relaxed text-[#5B6478] font-medium">{step.text}</p>
                     </div>
                   ))}
                 </div>
               </div>
 
-              {/* CTA */}
-              <div className="mt-16 p-8 bg-[#071F4A] rounded-2xl text-center relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-blue-600/10 rounded-full -mr-16 -mt-16 blur-3xl" />
-                <h4 className="text-white text-[20px] font-bold mb-4 relative z-10">Expand Your Knowledge</h4>
-                <p className="text-white/70 text-[14px] mb-8 max-w-md mx-auto relative z-10">
-                  Our technical library contains hundreds of articles on hardware optimization and system stability.
+              {/* Simple Footer CTA */}
+              <div className="mt-20 pt-10 border-t border-slate-100 flex flex-col md:flex-row items-center justify-between gap-6">
+                <p className="text-[14px] text-[#667085] font-medium text-center md:text-left">
+                   Want to learn more? Check out our other helpful guides.
                 </p>
                 <Link
                   to="/guides"
-                  className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-blue-700 transition relative z-10"
+                  className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-3 rounded-[10px] font-bold hover:bg-blue-700 transition"
                 >
-                  Explore More Guides
-                  <ArrowLeft className="w-5 h-5 rotate-180" />
+                  View All Guides
+                  <ArrowLeft className="w-4 h-4 rotate-180" />
                 </Link>
               </div>
             </div>
           </article>
 
-          {/* Sidebar */}
-          <aside className="space-y-8">
-            <div className="bg-white rounded-3xl border border-[#E6ECF8] p-8 shadow-sm">
-              <h3 className="text-[18px] font-bold text-[#0F1B3D] mb-6">Related Documentation</h3>
-              <div className="space-y-6">
+          {/* Simple Sidebar */}
+          <aside className="space-y-6">
+            <div className="bg-white rounded-[10px] border border-[#E6ECF8] p-6">
+              <h3 className="text-[16px] font-bold text-[#07153A] mb-6 uppercase tracking-wider">Related Guides</h3>
+              <div className="space-y-5">
                 {otherGuides.map((item, i) => (
                   <Link
                     key={i}
                     to={`/guide/${item.slug}`}
                     className="flex gap-4 group"
                   >
-                    <div className="w-20 h-20 rounded-xl bg-[#EEF4FF] border border-[#E6ECF8] overflow-hidden shrink-0">
-                      <img src={item.img} alt={item.title} className="w-full h-full object-contain group-hover:scale-110 transition duration-300" />
+                    <div className="w-16 h-16 rounded-[10px] bg-white border border-[#F0F4FA] overflow-hidden shrink-0 flex items-center justify-center p-2">
+                      <img src={item.img} alt={item.title} className="max-w-full max-h-full object-contain group-hover:scale-105 transition duration-300" />
                     </div>
                     <div>
-                      <h4 className="text-[14px] font-bold text-[#0F1B3D] leading-tight group-hover:text-blue-600 transition line-clamp-2">
+                      <h4 className="text-[13px] font-bold text-[#07153A] leading-snug group-hover:text-blue-600 transition line-clamp-2">
                         {item.title}
                       </h4>
-                      <p className="text-[11px] text-[#5B6478] mt-1 font-semibold uppercase tracking-wider">View Full Guide</p>
+                      <p className="text-[11px] text-blue-600 mt-1 font-bold uppercase tracking-widest">Read Now</p>
                     </div>
                   </Link>
                 ))}
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-blue-600 to-indigo-700 rounded-3xl p-8 text-white shadow-xl shadow-blue-200">
-              <h3 className="text-[22px] font-bold mb-4">Hardware Archive</h3>
-              <p className="text-white/80 text-[14px] leading-relaxed mb-6 font-medium">
-                Access our complete archive of technical specifications and hardware-software communication protocols.
+            <div className="bg-[#07153A] rounded-[10px] p-8 text-white">
+              <h3 className="text-[20px] font-bold mb-4">Hardware Topics</h3>
+              <p className="text-white/60 text-[14px] leading-relaxed mb-6 font-medium">
+                Browse our registry of hardware communication and installation protocols.
               </p>
-              <Link to="/services" className="block w-full bg-white text-blue-600 py-3 rounded-xl font-bold text-[14px] hover:bg-blue-50 transition shadow-lg text-center">
-                View Archive
+              <Link to="/drivers" className="block w-full bg-blue-600 text-white py-3 rounded-[10px] font-bold text-[14px] hover:bg-blue-700 transition text-center shadow-lg shadow-blue-600/20">
+                Browse Topics
               </Link>
             </div>
           </aside>

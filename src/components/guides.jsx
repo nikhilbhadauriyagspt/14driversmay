@@ -1,99 +1,73 @@
 import React from "react";
-import { ArrowRight, ChevronRight } from "lucide-react";
+import { ArrowRight, ChevronRight, BookOpen } from "lucide-react";
 import { Link } from "react-router-dom";
+import { guidesData } from "../data/guidesData";
 
 export default function PopularDriverGuides() {
-    const guides = [
-        {
-            title: "Fix Driver Not Installed",
-            desc: "Complete guide to install missing drivers easily.",
-            img: "/guide/guide-driver-not-installed_thumb.webp",
-            slug: "fix-driver-not-installed",
-        },
-        {
-            title: "Fix Printer Driver Issues",
-            desc: "Solve printer not working or printing problems.",
-            img: "/guide/guide-printer-driver_thumb.webp",
-            slug: "fix-printer-driver-issues",
-        },
-        {
-            title: "Fix Audio Driver Problems",
-            desc: "Fix no sound, audio not working or codec issues.",
-            img: "/guide/guide-audio-driver_thumb.webp",
-            slug: "fix-audio-driver-problems",
-        },
-        {
-            title: "Fix WiFi / Network Issues",
-            desc: "Fix WiFi not working or limited connection issues.",
-            img: "/guide/guide-network-driver_thumb.webp",
-            slug: "fix-wifi-network-issues",
-        },
-        {
-            title: "Fix USB Driver Issues",
-            desc: "Solve USB not recognized or device not working.",
-            img: "/guide/guide-usb-driver_thumb.webp",
-            slug: "fix-usb-driver-issues",
-        },
-        {
-            title: "Fix Graphics Driver Issues",
-            desc: "Update or reinstall graphics drivers for better performance.",
-            img: "/guide/guide-graphics-driver_thumb.webp",
-            slug: "fix-graphics-driver-issues",
-        },
-    ];
+    // Show first 11 guides on home page to perfectly fill 3 rows with 1 featured
+    const guides = guidesData.slice(0, 11).map((guide, index) => ({
+        ...guide,
+        featured: index === 0, // Make the first one featured
+        // Use thumb image if available (not in /images/ folder)
+        thumbImg: guide.img.includes('/images/')
+            ? guide.img
+            : guide.img.replace('.webp', '_thumb.webp')
+    }));
 
     return (
-        <section className="bg-[#F7FAFF] px-6 py-6 font-[Poppins]">
-            <div className="max-w-[1600px] mx-auto bg-white border border-[#E6ECF8] rounded-2xl px-10 py-8 shadow-sm">
+        <section className="bg-white px-6 py-20 font-sans">
+            <div className="max-w-[1600px] mx-auto">
                 {/* Header */}
-                <div className="relative text-start mb-8">
-                    <h2 className="text-[30px] font-semibold text-[#0F1B3D] leading-tight">
-                        Popular Driver Guides
-                    </h2>
-
-                    <p className="text-[14px] text-[#5B6478] mt-2 font-medium">
-                        Step-by-step articles to help you fix driver related problems.
-                    </p>
-
+                <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+                    <div>
+                        <div className="flex items-center gap-2 mb-3 text-blue-600 font-bold text-[12px] uppercase tracking-widest">
+                            <BookOpen className="w-4 h-4" /> Recommended Reading
+                        </div>
+                        <h2 className="text-[32px] md:text-[42px] font-bold text-slate-900 leading-tight">
+                            Most Read <span className="text-blue-600">Information Guides</span>
+                        </h2>
+                    </div>
                     <Link
                         to="/guides"
-                        className="hidden md:flex absolute right-0 top-2 items-center gap-2 text-[15px] font-semibold text-[#1557E8] hover:text-[#0F46C8]"
+                        className="flex items-center gap-2 text-[14px] font-bold text-slate-900 hover:text-blue-600 transition-colors border-b-2 border-slate-900 hover:border-blue-600 pb-1 w-fit"
                     >
-                        View All Guides
-                        <ArrowRight className="w-5 h-5" />
+                        View All Guides <ArrowRight className="w-4 h-4" />
                     </Link>
                 </div>
 
-                {/* Cards */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-7">
+                {/* Modern Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     {guides.map((guide, index) => (
-                        <div key={index} className="flex flex-col">
-                            <div className="w-full h-[155px] rounded-xl overflow-hidden bg-[#EEF4FF] border border-[#E6ECF8] shadow-sm group">
+                        <Link
+                            key={index}
+                            to={`/guide/${guide.slug}`}
+                            className={`group relative bg-slate-50 border border-slate-200 rounded-[10px] overflow-hidden transition-all duration-300 hover:border-blue-400 hover:shadow-xl hover:shadow-blue-900/5 ${guide.featured ? 'md:col-span-2' : ''}`}
+                        >
+                            <div className="relative h-[240px] overflow-hidden">
                                 <img
-                                    src={guide.img}
+                                    src={guide.thumbImg}
                                     alt={guide.title}
-                                    width={220}
-                                    height={155}
-                                    className="w-full h-full object-contain transition-transform group-hover:scale-105"
+                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                 />
+                                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent" />
+
+                                <div className="absolute bottom-0 left-0 p-6 w-full">
+                                    <h3 className="text-white text-[18px] md:text-[20px] font-bold mb-2 group-hover:text-blue-400 transition-colors">
+                                        {guide.title}
+                                    </h3>
+                                    <p className="text-slate-200 text-[13px] leading-snug line-clamp-2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                                        {guide.desc}
+                                    </p>
+                                </div>
                             </div>
 
-                            <h3 className="mt-4 text-[16px] font-semibold text-[#0F1B3D] leading-snug">
-                                {guide.title}
-                            </h3>
-
-                            <p className="mt-2 text-[13px] leading-[1.6] text-[#5B6478] font-medium line-clamp-2">
-                                {guide.desc}
-                            </p>
-
-                            <Link
-                                to={`/guide/${guide.slug}`}
-                                className="mt-4 flex items-center gap-1 text-[13px] font-bold text-[#1557E8] hover:text-[#0F46C8] transition-colors"
-                            >
-                                Read Guide: {guide.title}
-                                <ChevronRight className="w-4 h-4" />
-                            </Link>
-                        </div>
+                            <div className="p-4 bg-white flex justify-between items-center border-t border-slate-100">
+                                <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Guide Article</span>
+                                <div className="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-all">
+                                    <ChevronRight className="w-4 h-4" />
+                                </div>
+                            </div>
+                        </Link>
                     ))}
                 </div>
             </div>

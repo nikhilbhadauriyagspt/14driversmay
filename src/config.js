@@ -1,6 +1,4 @@
-export const CONFIG = {
-    API_BASE_URL: 'https://driverbackend.printiply.shop',
-    SUPPORT_EMAIL: 'info@driverzenith.net'
-}
-
-export default CONFIG;
+export const APP_CONFIG = {
+    NAME: 'Mister PC Driver',
+    SUPPORT_EMAIL: 'info@misterpcdriver.com'
+};

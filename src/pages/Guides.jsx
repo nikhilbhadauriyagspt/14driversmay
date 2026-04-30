@@ -12,56 +12,56 @@ const Guides = () => {
         <meta name="description" content="Browse our library of popular driver guides to fix printer, audio, wifi, and graphics driver issues on your Windows PC." />
       </Helmet>
 
-      <div className="max-w-[1600px] mx-auto px-6 lg:px-10">
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-100 shadow-sm text-blue-600 text-[12px] font-bold uppercase tracking-widest mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 text-blue-600 text-[12px] font-semibold uppercase tracking-widest mb-6">
             <BookOpen className="w-4 h-4" />
-            Knowledge Base
+            Information Library
           </div>
-          <h1 className="text-[40px] md:text-[50px] font-bold text-[#0F1B3D] tracking-tight mb-4">
-            Popular Driver <span className="text-blue-600">Guides</span>
+          <h1 className="text-[36px] md:text-[46px] font-bold text-[#07153A] tracking-tight mb-4">
+            Browse All <span className="text-blue-600 font-bold">Guides</span>
           </h1>
-          <p className="text-[#5B6478] text-[18px] max-w-2xl mx-auto font-medium leading-relaxed">
-            Step-by-step articles and tutorials to help you troubleshoot and fix hardware communication problems effectively.
+          <p className="text-[#667085] text-[16px] max-w-2xl mx-auto font-medium leading-relaxed">
+            Simple step-by-step articles to help you understand and resolve common hardware communication issues.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {guidesData.map((guide, index) => (
             <Link 
               key={index}
               to={`/guide/${guide.slug}`}
-              className="bg-white rounded-[32px] border border-[#E6ECF8] overflow-hidden group hover:shadow-2xl hover:shadow-blue-900/5 transition-all duration-500 hover:-translate-y-2 flex flex-col h-full"
+              className="bg-white rounded-[10px] border border-[#E6ECF8] overflow-hidden group hover:border-blue-400 transition-all duration-300 flex flex-col h-full"
             >
-              <div className="w-full h-[240px] bg-[#EEF4FF] border-b border-[#E6ECF8] p-8 flex items-center justify-center overflow-hidden">
+              <div className="w-full h-[220px] bg-white border-b border-[#F0F4FA] p-6 flex items-center justify-center overflow-hidden">
                 <img 
                   src={guide.img} 
                   alt={guide.title} 
-                  className="max-w-full max-h-full object-contain group-hover:scale-110 transition-transform duration-500"
+                  className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
 
-              <div className="p-8 flex flex-col flex-1">
-                <div className="flex items-center gap-4 mb-4 text-[12px] font-bold text-[#5B6478] uppercase tracking-wider">
+              <div className="p-6 flex flex-col flex-1">
+                <div className="flex items-center gap-3 mb-3 text-[11px] font-semibold text-[#667085] uppercase tracking-wider">
                   <span className="flex items-center gap-1.5">
-                    <Clock className="w-4 h-4 text-blue-600" />
+                    <Clock className="w-3.5 h-3.5 text-blue-600" />
                     5 Min
                   </span>
-                  <span className="w-1 h-1 rounded-full bg-gray-300" />
-                  <span>Tutorial</span>
+                  <span className="w-1 h-1 rounded-full bg-slate-300" />
+                  <span>Technical Guide</span>
                 </div>
 
-                <h2 className="text-[22px] font-bold text-[#0F1B3D] mb-4 group-hover:text-blue-600 transition-colors leading-tight">
+                <h2 className="text-[19px] font-bold text-[#07153A] mb-3 group-hover:text-blue-600 transition-colors leading-snug">
                   {guide.title}
                 </h2>
 
-                <p className="text-[#5B6478] text-[15px] leading-relaxed font-medium mb-8 line-clamp-2">
+                <p className="text-[#667085] text-[14px] leading-relaxed font-medium mb-6 line-clamp-2">
                   {guide.desc}
                 </p>
 
-                <div className="mt-auto flex items-center gap-2 text-[14px] font-bold text-blue-600 uppercase tracking-widest">
-                  Read Full Guide
-                  <ChevronRight className="w-4 h-4" />
+                <div className="mt-auto flex items-center gap-2 text-[13px] font-bold text-blue-600 uppercase tracking-widest">
+                  Read Article
+                  <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </div>
               </div>
             </Link>

@@ -1,12 +1,17 @@
 import React, { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import {
-  FaCogs, FaDownload, FaShieldAlt, FaHistory,
-  FaChevronRight, FaCheckCircle, FaExclamationTriangle,
-  FaTools, FaQuestionCircle, FaArrowLeft
-} from "react-icons/fa";
-import { BookOpen } from "lucide-react";
+import { 
+  ChevronRight, 
+  BookOpen, 
+  Info, 
+  AlertCircle, 
+  Cpu, 
+  ArrowLeft,
+  ExternalLink,
+  Clock,
+  CheckCircle2
+} from "lucide-react";
 import { servicesData } from "../data/services";
 
 const ServiceDetails = () => {
@@ -19,165 +24,139 @@ const ServiceDetails = () => {
 
   if (!service) {
     return (
-      <div className="min-h-screen flex flex-col items-center justify-center bg-[#F7FAFF] p-6">
-        <h2 className="text-2xl font-bold text-[#0F1B3D]">Service Not Found</h2>
-        <Link to="/" className="mt-4 text-blue-600 font-bold hover:underline flex items-center gap-2">
-          <FaArrowLeft /> Back to Home
+      <div className="min-h-screen flex flex-col items-center justify-center bg-white p-6">
+        <h2 className="text-xl font-semibold text-slate-900">Resource not found</h2>
+        <Link to="/" className="mt-4 text-blue-600 text-sm font-medium hover:underline flex items-center gap-1">
+          <ArrowLeft size={16} /> Return to Home
         </Link>
       </div>
     );
   }
 
   return (
-    <div className="bg-[#F7FAFF] min-h-screen font-[Poppins]">
+    <div className="bg-white min-h-screen font-sans text-slate-900 antialiased">
       <Helmet>
-        <title>{service.title} | Hardware Guide | DriverZenith</title>
-        <meta name="description" content={`Technical specifications and installation documentation for ${service.title}. Learn about hardware requirements and system compatibility.`} />
+        <title>{service.title} Guide | DriverZenith</title>
+        <meta name="description" content={`Information about ${service.title} and how it works.`} />
       </Helmet>
 
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 bg-[#071A3D] overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-full opacity-10">
-          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:40px_40px]" />
+      {/* Breadcrumbs */}
+      <nav className="pt-28 pb-6 px-6 border-b border-slate-100">
+        <div className="max-w-[1200px] mx-auto flex items-center gap-2 text-[13px] text-slate-500 font-medium">
+          <Link to="/" className="hover:text-blue-600 transition-colors">Home</Link>
+          <ChevronRight size={12} />
+          <Link to="/guides" className="hover:text-blue-600 transition-colors">Guides</Link>
+          <ChevronRight size={12} />
+          <span className="text-slate-900">{service.title}</span>
         </div>
+      </nav>
 
-        <div className="max-w-[1600px] mx-auto px-6 lg:px-12 relative z-10">
-          <div className="flex flex-col lg:flex-row items-center gap-12">
-            <div className="lg:w-3/5 text-center lg:text-start">
-
-              <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
-                {service.title} <span className="text-blue-500">Documentation</span>
+      <main className="max-w-[1200px] mx-auto px-6 py-12">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-16">
+          
+          {/* Main Content Column */}
+          <article className="max-w-3xl">
+            <header className="mb-12">
+              <div className="flex items-center gap-2 text-blue-600 font-bold text-[11px] uppercase tracking-wider mb-4">
+                <Cpu size={14} /> Part Information
+              </div>
+              <h1 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6 tracking-tight">
+                {service.title}
               </h1>
-              <p className="text-white/70 text-lg md:text-xl font-medium leading-relaxed max-w-2xl mb-10">
-                Detailed technical analysis and configuration data for {service.title}. Optimized for Windows 10 & 11 hardware architectures.
+              <div className="flex items-center gap-6 text-[13px] text-slate-500 border-y border-slate-50 py-4">
+                <div className="flex items-center gap-1.5">
+                  <Clock size={14} /> Updated Recently
+                </div>
+                <div className="flex items-center gap-1.5 text-emerald-600">
+                  <CheckCircle2 size={14} /> Verified Information
+                </div>
+              </div>
+            </header>
+
+            <section className="prose prose-slate prose-lg max-w-none">
+              <p className="text-lg text-slate-600 leading-relaxed mb-8">
+                {service.shortDesc}
               </p>
-
-              <div className="flex flex-wrap justify-center lg:justify-start gap-4">
-                <Link to="/guides" className="bg-blue-600 text-white px-8 py-4 rounded-xl font-bold text-sm hover:bg-blue-700 transition shadow-lg shadow-blue-600/20 flex items-center gap-3">
-                  <BookOpen className="w-4 h-4" /> View Installation Guides
-                </Link>
-                <Link to="/faq" className="bg-white/10 text-white border border-white/20 px-8 py-4 rounded-xl font-bold text-sm hover:bg-white/20 transition flex items-center gap-3">
-                  <FaQuestionCircle /> Technical FAQ
-                </Link>
-              </div>
-            </div>
-
-            <div className="lg:w-2/5 flex justify-center">
-              <div className="relative">
-                <div className="absolute -inset-4 bg-blue-500/20 rounded-full blur-3xl animate-pulse" />
-                <div className="w-64 h-64 md:w-80 md:h-80 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-3xl flex items-center justify-center text-8xl text-white shadow-2xl rotate-3 relative border border-white/10">
-                  <FaCogs className="animate-spin-slow" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Content Section */}
-      <section className="py-20">
-        <div className="max-w-[1600px] mx-auto px-6 lg:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_400px] gap-12">
-
-            {/* Main Content */}
-            <div className="space-y-12">
-              <div className="bg-white rounded-[32px] border border-[#E6ECF8] p-8 md:p-12 shadow-sm">
-                <h2 className="text-2xl md:text-3xl font-bold text-[#0F1B3D] mb-8 flex items-center gap-4">
-                  <FaShieldAlt className="text-blue-600" /> Technical Overview
-                </h2>
-                <div className="prose prose-lg max-w-none text-[#5B6478] font-medium leading-relaxed">
-                  <p className="mb-6">
-                    The <strong>{service.title}</strong> serves as a critical translation layer between the Windows operating system and your physical hardware components. Understanding its function is key to maintaining system stability and performance.
-                  </p>
-                  <p>
-                    This documentation repository provides data on verified software configurations and architectural requirements. We index technical information for multiple hardware versions to ensure broad compatibility across modern computing environments.
-                  </p>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
-                  <div className="p-6 rounded-2xl bg-[#F8FAFC] border border-[#E6ECF8]">
-                    <FaCheckCircle className="text-emerald-500 text-2xl mb-4" />
-                    <h4 className="font-bold text-[#0F1B3D] mb-2">Verified Data</h4>
-                    <p className="text-[12px] text-[#5B6478]">Specifications cross-referenced with manufacturer data.</p>
-                  </div>
-                  <div className="p-6 rounded-2xl bg-[#F8FAFC] border border-[#E6ECF8]">
-                    <FaHistory className="text-blue-500 text-2xl mb-4" />
-                    <h4 className="font-bold text-[#0F1B3D] mb-2">Version History</h4>
-                    <p className="text-[12px] text-[#5B6478]">Information on legacy and modern architecture support.</p>
-                  </div>
-                  <div className="p-6 rounded-2xl bg-[#F8FAFC] border border-[#E6ECF8]">
-                    <FaQuestionCircle className="text-orange-500 text-2xl mb-4" />
-                    <h4 className="font-bold text-[#0F1B3D] mb-2">Technical Insight</h4>
-                    <p className="text-[12px] text-[#5B6478]">Documentation for resolving common hardware conflicts.</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-white rounded-[32px] border border-[#E6ECF8] p-8 md:p-12 shadow-sm">
-                <h2 className="text-2xl md:text-3xl font-bold text-[#0F1B3D] mb-8">Installation Troubleshooting</h2>
-                <div className="space-y-6">
-                  {[
-                    { t: "Automatic Detection", d: "Use our cloud-based tool to automatically identify your hardware ID." },
-                    { t: "Manual Update Path", d: "Guide on using Windows Device Manager to force driver synchronization." },
-                    { t: "Rollback Procedures", d: "How to safely revert to a previous driver version if issues arise." }
-                  ].map((step, i) => (
-                    <div key={i} className="flex gap-6 items-start p-6 rounded-2xl hover:bg-blue-50 transition-colors group">
-                      <div className="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-lg shrink-0 group-hover:bg-blue-600 group-hover:text-white transition-all">
-                        {i + 1}
-                      </div>
-                      <div>
-                        <h4 className="font-bold text-[#0F1B3D] text-lg mb-1">{step.t}</h4>
-                        <p className="text-[#5B6478] text-[14px] font-medium">{step.d}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            {/* Sidebar */}
-            <aside className="space-y-8">
-              <div className="bg-[#071A3D] rounded-[32px] p-8 text-white relative overflow-hidden shadow-xl shadow-blue-900/10">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-blue-600/20 rounded-full -mr-16 -mt-16 blur-3xl" />
-                <BookOpen className="text-blue-400 text-4xl mb-6" />
-                <h3 className="text-2xl font-bold mb-4">Need More Info?</h3>
-                <p className="text-white/60 text-sm font-medium mb-8 leading-relaxed">
-                  Explore our comprehensive library of technical guides to better understand hardware-software interactions and system optimization.
+              
+              <h2 className="text-xl font-bold text-slate-900 mt-12 mb-4">What is it?</h2>
+              <div className="text-slate-600 leading-relaxed space-y-4">
+                <p>{service.longDesc}</p>
+                <p>
+                  This guide helps you understand how <strong>{service.title}</strong> helps your computer work and what to do if you have problems.
                 </p>
-                <Link to="/guides" className="w-full bg-blue-600 text-white py-4 rounded-xl font-bold text-sm hover:bg-blue-700 transition flex items-center justify-center gap-2">
-                  Browse Guides <FaChevronRight />
+              </div>
+
+              <h2 className="text-xl font-bold text-slate-900 mt-12 mb-6">Features</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 not-prose">
+                {service.features.map((feature, i) => (
+                  <div key={i} className="flex items-center gap-3 p-4 rounded-lg bg-slate-50 border border-slate-100 text-[14px] font-medium text-slate-700">
+                    <div className="w-1.5 h-1.5 rounded-full bg-blue-500" />
+                    {feature}
+                  </div>
+                ))}
+              </div>
+
+              <h2 className="text-xl font-bold text-slate-900 mt-12 mb-6">Common Problems</h2>
+              <div className="space-y-4 not-prose">
+                {service.issues.map((issue, i) => (
+                  <div key={i} className="p-6 rounded-xl border border-slate-100 bg-white shadow-sm flex gap-4">
+                    <div className="text-amber-500 shrink-0 mt-0.5">
+                      <AlertCircle size={20} />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-slate-900 text-[15px] mb-1">{issue.problem}</h4>
+                      <p className="text-slate-500 text-[14px] leading-relaxed">{issue.symptom}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            <footer className="mt-16 pt-8 border-t border-slate-100 flex items-center justify-between">
+              <Link to="/guides" className="text-[13px] font-semibold text-blue-600 hover:text-blue-700 flex items-center gap-1">
+                <BookOpen size={16} /> View more guides
+              </Link>
+              <button className="text-[13px] font-medium text-slate-400 flex items-center gap-1 hover:text-slate-600">
+                <Info size={14} /> Report a mistake
+              </button>
+            </footer>
+          </article>
+
+          {/* Sidebar / Navigation */}
+          <aside className="space-y-12">
+            <div className="sticky top-32">
+              <h3 className="text-[11px] font-bold text-slate-400 uppercase tracking-[0.1em] mb-6 px-3">
+                Other Guides
+              </h3>
+              <nav className="space-y-1">
+                {servicesData.filter(s => s.slug !== slug).slice(0, 8).map((s, i) => (
+                  <Link 
+                    key={i} 
+                    to={`/driver/${s.slug}`} 
+                    className="flex items-center justify-between px-3 py-2.5 rounded-md text-[13px] font-medium text-slate-600 hover:bg-slate-50 hover:text-blue-600 transition-all group"
+                  >
+                    {s.title}
+                    <ChevronRight size={14} className="text-slate-300 group-hover:text-blue-400 transition-all" />
+                  </Link>
+                ))}
+              </nav>
+
+              <div className="mt-12 p-6 rounded-2xl bg-slate-900 text-white">
+                <h4 className="text-sm font-bold mb-3 flex items-center gap-2">
+                  <BookOpen size={16} className="text-blue-400" /> Need help?
+                </h4>
+                <p className="text-[12px] text-slate-400 leading-relaxed mb-6">
+                  Can't find what you're looking for? Look at our full list of guides.
+                </p>
+                <Link to="/guides" className="inline-flex items-center gap-2 text-[12px] font-bold text-blue-400 hover:text-blue-300 transition-colors">
+                  All Guides <ExternalLink size={12} />
                 </Link>
               </div>
+            </div>
+          </aside>
 
-              <div className="bg-white rounded-[32px] border border-[#E6ECF8] p-8 shadow-sm">
-                <h4 className="text-[18px] font-bold text-[#0F1B3D] mb-6">Technical Topics</h4>
-                <div className="space-y-4">
-                  {servicesData.filter(s => s.slug !== slug).slice(0, 5).map((s, i) => (
-                    <Link key={i} to={`/service/${s.slug}`} className="flex items-center justify-between group p-3 rounded-xl hover:bg-gray-50 transition-all border border-transparent hover:border-gray-100">
-                      <span className="text-[#5B6478] text-[13px] font-bold group-hover:text-blue-600 transition-colors truncate pr-4">
-                        {s.title} Specs
-                      </span>
-                      <FaChevronRight className="text-gray-300 text-[10px] group-hover:text-blue-600 transition-all group-hover:translate-x-1" />
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            </aside>
-
-          </div>
         </div>
-      </section>
-
-      <style dangerouslySetInnerHTML={{
-        __html: `
-        @keyframes spin-slow {
-          from { transform: rotate(0deg); }
-          to { transform: rotate(360deg); }
-        }
-        .animate-spin-slow {
-          animation: spin-slow 15s linear infinite;
-        }
-      `}} />
+      </main>
     </div>
   );
 };

@@ -4,7 +4,6 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import { BookingProvider } from './context/BookingContext';
 import { SettingsProvider } from './context/SettingsContext';
-import BookingModal from './components/modals/BookingModal';
 import QuickSupportFAB from './components/QuickSupportFAB';
 import CookieConsent from './components/CookieConsent';
 import ScrollToTop from './components/ScrollToTop';
@@ -42,13 +41,12 @@ const AppContent = () => {
   return (
     <div className="App overflow-x-hidden">
       {!hideHeaderFooter && <Header />}
-      <BookingModal />
       <CookieConsent />
       <Suspense fallback={<PageLoader />}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/services" element={<Services />} />
+          <Route path="/drivers" element={<Services />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/faq" element={<FAQPage />} />
           <Route path="/guides" element={<Guides />} />
@@ -60,7 +58,7 @@ const AppContent = () => {
           <Route path="/disclaimer" element={<Disclaimer />} />
 
           {/* Dynamic route for all Drivers */}
-          <Route path="/service/:slug" element={<ServiceDetails />} />
+          <Route path="/driver/:slug" element={<ServiceDetails />} />
 
           {/* Dynamic route for all Guides */}
           <Route path="/guide/:slug" element={<GuideDetails />} />

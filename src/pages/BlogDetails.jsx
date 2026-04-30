@@ -16,7 +16,7 @@ const BlogDetails = () => {
     return (
       <div className="min-h-screen flex items-center justify-center bg-light">
         <Helmet>
-          <title>Blog Not Found - DriverZenith</title>
+          <title>Blog Not Found - Mister PC Driver</title>
         </Helmet>
         <div className="text-center">
           <h2 className="text-4xl font-bold text-primary mb-6">Blog Post Not Found</h2>
@@ -31,9 +31,9 @@ const BlogDetails = () => {
   return (
     <article className="bg-white min-h-screen pt-32 pb-24">
       <Helmet>
-        <title>{blog.title} - DriverZenith Blog</title>
+        <title>{blog.title} - Mister PC Driver Blog</title>
         <meta name="description" content={blog.shortDesc} />
-        <link rel="canonical" href={`https://www.driverzenith.net/blog/${blog.id}`} />
+        <link rel="canonical" href={`https://www.misterpcdriver.com/blog/${blog.id}`} />
       </Helmet>
 
       <div className="container mx-auto px-4 max-w-4xl">
@@ -88,7 +88,7 @@ const BlogDetails = () => {
               Browse Technical Guides
             </Link>
             <Link
-              to="/services"
+              to="/drivers"
               className="bg-white border border-gray-200 text-gray-700 px-10 py-5 rounded-2xl font-bold uppercase tracking-widest hover:border-secondary hover:text-secondary transition-all shadow-sm"
             >
               Hardware Registry
@@ -101,5 +101,3 @@ const BlogDetails = () => {
 };
 
 export default BlogDetails;
-
-

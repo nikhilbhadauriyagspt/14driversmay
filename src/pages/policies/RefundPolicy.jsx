@@ -11,7 +11,7 @@ const RefundPolicy = () => {
       <Helmet>
         <title>Return Policy - DriverZenith</title>
         <meta name="description" content="Official Return Policy for DriverZenith. Details on returns, process, and refunds." />
-        <link rel="canonical" href="https://www.driverzenith.net/refund-policy" />
+        <link rel="canonical" href="https://www.misterpcdriver.com/refund-policy" />
       </Helmet>
 
       <div className="container mx-auto px-4 max-w-4xl">
@@ -38,7 +38,7 @@ const RefundPolicy = () => {
           <section>
             <h2 className="text-2xl font-bold text-gray-900 mb-4 uppercase">RETURN PROCESS</h2>
             <p>
-              To return an item, please email customer service at <a href="mailto:info@driverzenith.net" className="text-primary font-bold">info@driverzenith.net</a> to obtain
+              To return an item, please email customer service at <a href="mailto:info@misterpcdriver.com" className="text-primary font-bold">info@misterpcdriver.com</a> to obtain
               an Return Merchandise Authorization (RMA) number. After receiving an RMA number, place
               the item securely in its original packaging and include your proof of purchase, then mail your
               return to the following address:
@@ -80,7 +80,7 @@ const RefundPolicy = () => {
             </p>
             <div className="bg-primary text-white p-8 rounded-2xl shadow-xl mt-4">
               <p className="font-bold text-xl mb-2">+1-402-508-9991</p>
-              <a href="mailto:info@driverzenith.net" className="text-secondary font-bold text-lg hover:underline">info@driverzenith.net</a>
+              <a href="mailto:info@misterpcdriver.com" className="text-secondary font-bold text-lg hover:underline">info@misterpcdriver.com</a>
             </div>
           </section>
         </div>

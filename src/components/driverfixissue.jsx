@@ -1,175 +1,95 @@
 import React from "react";
 import {
-    Printer,
-    Wifi,
-    Volume2,
-    Monitor,
-    Bluetooth,
-    Usb,
-    ScanLine,
-    Cpu,
-    HardDrive,
-    Touchpad,
-    ArrowRight,
-    Wrench,
-    Library,
-    Video,
-    ShieldCheck,
-    Search,
-    ShieldAlert,
-    Tv,
+    Printer, Wifi, Volume2, Monitor, Bluetooth, Usb, ScanLine,
+    Cpu, HardDrive, Touchpad, Video, ShieldCheck, Search,
+    ShieldAlert, Tv, ArrowRight
 } from "lucide-react";
 
 export default function DriverTypesAndFix() {
+
     const drivers = [
-        { title: "Printer\nDrivers", icon: Printer },
-        { title: "Network\nDrivers", icon: Wifi },
-        { title: "Audio\nDrivers", icon: Volume2 },
-        { title: "Graphics\nDrivers", icon: Monitor },
-        { title: "Bluetooth\nDrivers", icon: Bluetooth },
-        { title: "USB\nDrivers", icon: Usb },
-        { title: "Scanner\nDrivers", icon: ScanLine },
-        { title: "Chipset\nDrivers", icon: Cpu },
-        { title: "Storage\nDrivers", icon: HardDrive },
-        { title: "Touchpad\nDrivers", icon: Touchpad },
-        { title: "Webcam\nDrivers", icon: Video },
-        { title: "BIOS\nFirmware", icon: ShieldCheck },
-        { title: "Scanner\nSupport", icon: Search },
-        { title: "Security\nDrivers", icon: ShieldAlert },
-        { title: "Monitor\nDrivers", icon: Tv },
+        { title: "Printer", icon: Printer },
+        { title: "Network", icon: Wifi },
+        { title: "Audio", icon: Volume2 },
+        { title: "Graphics", icon: Monitor },
+        { title: "Bluetooth", icon: Bluetooth },
+        { title: "USB", icon: Usb },
+        { title: "Scanner", icon: ScanLine },
+        { title: "Chipset", icon: Cpu },
+        { title: "Storage", icon: HardDrive },
+        { title: "Touchpad", icon: Touchpad },
+        { title: "Webcam", icon: Video },
+        { title: "BIOS", icon: ShieldCheck },
+        { title: "Search", icon: Search },
+        { title: "Security", icon: ShieldAlert },
+        { title: "Monitor", icon: Tv },
     ];
 
     const steps = [
-        {
-            title: "Identify the Issue",
-            text: "Understand what’s not working.",
-        },
-        {
-            title: "Check Device Connection",
-            text: "Ensure the device is properly connected.",
-        },
-        {
-            title: "Review System Settings",
-            text: "Check Device Manager and system settings.",
-        },
-        {
-            title: "Check Driver Status",
-            text: "See if driver is missing, outdated or corrupted.",
-        },
-        {
-            title: "Update or Reinstall Driver",
-            text: "Download and install the correct driver.",
-        },
-        {
-            title: "Restart and Test Device",
-            text: "Restart your system and test the device.",
-        },
+        "Identify the issue clearly",
+        "Check device connection",
+        "Review system settings",
+        "Understand driver status",
+        "Update or reinstall if needed",
+
     ];
 
     return (
-        <section className="bg-[#F7FAFF] px-6 py-6 font-[Poppins]">
-            <div className="max-w-[1600px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <section className="bg-[#F8FAFF] py-20 px-6 font-[Poppins]">
+            <div className="max-w-[1600px] mx-auto grid lg:grid-cols-2 gap-16 items-start">
 
-                {/* LEFT CARD */}
-                <div className="bg-white border border-[#E6ECF8] rounded-2xl px-8 py-9 shadow-sm">
-                    {/* Decorative Badge */}
-                    <div className="flex justify-center mb-6">
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 shadow-sm">
-                            <span className="flex h-2 w-2 rounded-full bg-blue-600 animate-pulse"></span>
-                            <span className="text-[10px] font-bold text-blue-600 uppercase tracking-widest">Supported Hardware</span>
-                        </div>
-                    </div>
+                {/* LEFT SIDE */}
+                <div>
+                    <p className="text-blue-600 text-[11px] font-semibold uppercase tracking-[0.18em] mb-3">
+                        Learning Flow
+                    </p>
 
-                    <div className="text-center mb-9">
-                        <div className="flex items-center justify-center gap-3 mb-2">
-                            <Library className="w-7 h-7 text-[#1557E8]" />
-                            <h2 className="text-[30px] md:text-[34px] font-bold text-[#0F1B3D] leading-tight">
-                                Technical <span className="text-[#1557E8]">Data Covered</span>
-                            </h2>
-                        </div>
-                        <p className="text-[15px] text-[#5B6478] mt-2 font-medium">
-                            Comprehensive documentation for all critical system hardware components.
-                        </p>
-                    </div>
+                    <h2 className="text-[34px] md:text-[42px] font-semibold text-[#0F1B3D] leading-tight">
+                        Understand How Issues Are Explored
+                    </h2>
 
-                    <div className="grid grid-cols-5 gap-x-7 gap-y-8">
-                        {drivers.map((item, index) => {
-                            const Icon = item.icon;
+                    <p className="text-[#5B6478] text-[15px] mt-3 max-w-[520px]">
+                        Follow a simple structured approach to understand how driver-related
+                        topics are explained step by step.
+                    </p>
 
-                            return (
-                                <div key={index} className="flex flex-col items-center text-center">
-                                    <div className="w-[50px] h-[50px] rounded-xl bg-[#F1F6FF] flex items-center justify-center mb-3">
-                                        <Icon className="w-6 h-6 text-[#1557E8]" strokeWidth={2.4} />
-                                    </div>
+                    {/* TIMELINE */}
+                    <div className="mt-8 space-y-5">
+                        {steps.map((step, index) => (
+                            <div key={index} className="flex items-start gap-4">
 
-                                    <h3 className="text-[13px] font-semibold text-[#0F1B3D] ">
-                                        {item.title}
-                                    </h3>
-                                </div>
-                            );
-                        })}
-                    </div>
-
-
-                </div>
-
-                {/* RIGHT CARD */}
-                <div className="bg-white border border-[#E6ECF8] rounded-2xl px-8 py-9 shadow-sm overflow-hidden">
-                    {/* Decorative Badge */}
-                    <div className="flex justify-center mb-6">
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 shadow-sm">
-                            <span className="flex h-2 w-2 rounded-full bg-blue-600 animate-pulse"></span>
-                            <span className="text-[10px] font-bold text-blue-600 uppercase tracking-widest">Repair Guide</span>
-                        </div>
-                    </div>
-
-                    <div className="text-center mb-8">
-                        <div className="flex items-center justify-center gap-3 mb-2">
-                            <Wrench className="w-7 h-7 text-[#1557E8]" />
-                            <h2 className="text-[30px] md:text-[34px] font-bold text-[#0F1B3D] leading-tight">
-                                How to <span className="text-[#1557E8]">Fix Driver Issues</span>
-                            </h2>
-                        </div>
-                        <p className="text-[15px] text-[#5B6478] mt-2 font-medium">
-                            Follow these simple steps to resolve driver problems effectively.
-                        </p>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-[1fr_270px] gap-6 items-center">
-                        {/* Steps */}
-                        <div className="space-y-4">
-                            {steps.map((step, index) => (
-                                <div key={index} className="flex gap-4 items-start">
-                                    <div className="w-7 h-7 shrink-0 rounded-full bg-[#1557E8] text-white flex items-center justify-center text-[13px] font-bold">
+                                <div className="flex flex-col items-center">
+                                    <div className="w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center text-[13px] font-medium">
                                         {index + 1}
                                     </div>
-
-                                    <div>
-                                        <h3 className="text-[15px] font-semibold text-[#0F1B3D] leading-tight">
-                                            {step.title}
-                                        </h3>
-                                        <p className="text-[12px] text-[#5B6478] mt-1 font-medium leading-relaxed">
-                                            {step.text}
-                                        </p>
-                                    </div>
+                                    {index !== steps.length - 1 && (
+                                        <div className="w-[2px] h-8 bg-blue-100 mt-1" />
+                                    )}
                                 </div>
-                            ))}
-                        </div>
 
-                        {/* Image */}
-                        <div className="hidden md:block">
-                            <img
-                                src="/images/fix-driver-monitor.webp"
-                                alt="How to fix driver issues"
-                                width={270}
-                                height={200}
-                                className="w-full h-auto object-contain"
-                            />
-                        </div>
+                                <div>
+                                    <p className="text-[15px] font-medium text-[#0F1B3D]">
+                                        {step}
+                                    </p>
+                                    <p className="text-[13px] text-[#6B7280] mt-1">
+                                        Simple explanation to help you understand this step clearly.
+                                    </p>
+                                </div>
+                            </div>
+                        ))}
                     </div>
 
 
                 </div>
+                {/* RIGHT SIDE */}
+                <div className="flex flex-col items-center justify-center h-full w-full">
+                    <img src="/images/fix-driver-monitor.webp" className="w-full h-full object-contain" alt="" />
+
+
+                </div>
+
+
+
 
             </div>
         </section>

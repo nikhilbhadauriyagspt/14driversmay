@@ -9,6 +9,7 @@ import WhenNeedDrivers from '../components/needdrivers';
 import Driverfixisuue from '../components/driverfixissue';
 import Guides from '../components/guides';
 import Stats from '../components/stact';
+import DriverCategoryMarquee from '../components/drivercategorymarquee';
 
 const Home = () => {
   useEffect(() => {
@@ -23,10 +24,11 @@ const Home = () => {
       <Helmet>
         <title>Fix Driver Issues | WiFi, Audio, USB & Printer Solutions</title>
         <meta name="description" content="Technical repository for hardware specifications, driver-level architectural data, and system optimization documentation for the global technical community." />
-        <link rel="canonical" href="https://www.driverzenith.net/" />
+        <link rel="canonical" href="https://www.misterpcdriver.com/" />
       </Helmet>
 
       <Hero />
+      <DriverCategoryMarquee />
       <CommonProblems />
       <WhenNeedDrivers />
       <Driverfixisuue />

@@ -1,72 +1,32 @@
 import React from "react";
 import {
   Settings,
-  Mail,
-  MessageCircle,
-  Phone,
-  ArrowRight,
+  Mail
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function Footer() {
+  const currentYear = new Date().getFullYear();
+
   return (
     <>
-      {/* Top CTA */}
-      <section className="bg-[#F7FAFF] px-6 py-5 font-heading">
-        <div className="max-w-[1600px] mx-auto rounded-xl bg-gradient-to-r from-[#064CD9] to-[#1557E8] px-8 py-6 flex flex-col md:flex-row items-center justify-between gap-6 overflow-hidden min-h-[160px]">
-          <div className="flex items-center gap-8">
-            <img
-              src="/images/support-agent.webp"
-              alt="Hardware documentation"
-              width={250}
-              height={180}
-              className="hidden md:block w-[250px] aspect-[250/180] object-contain"
-              fetchPriority="high"
-            />
-
-            <div>
-              <h2 className="text-white text-[26px] font-semibold leading-tight">
-                Learn More About Driver's Issues?
-              </h2>
-              <p className="text-white/85 text-[14px] leading-6 mt-1 max-w-[520px] font-medium">
-                Our hardware registry is updated daily with the latest architectural specifications
-                and installation protocols for modern devices.
-              </p>
-            </div>
-          </div>
-
-          <Link to="/guides" className="bg-white text-[#1557E8] px-7 py-3 rounded-lg text-[14px] font-semibold flex items-center gap-2 hover:shadow-lg transition shrink-0">
-            Browse Archive
-            <ArrowRight className="w-4 h-4" />
-          </Link>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="bg-[#061B3D] text-white px-6 pt-9 pb-5 font-heading">
+      {/* Main Footer - Professional & Clean */}
+      <footer className="bg-[#040B1D] text-white px-6 pt-20 pb-10 font-[Poppins] border-t border-white/5">
         <div className="max-w-[1600px] mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-8 pb-8 border-b border-white/10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-12 pb-16">
 
-            {/* Brand */}
-            <div className="lg:col-span-1">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-9 h-9 rounded-lg bg-[#1557E8] flex items-center justify-center">
-                  <Settings className="w-5 h-5 text-white" />
-                </div>
+            {/* Brand Section */}
+            <div className="lg:col-span-2">
+              <Link to="/" className="flex items-center gap-3 mb-6">
+                <img
+                  src="/logo/logo.avif"
+                  alt="DriverZenith"
+                  className="h-10 w-auto object-contain bg-white py-1 px-2 rounded-full"
+                />
+              </Link>
 
-                <div>
-                  <h3 className="text-[18px] font-semibold leading-none">
-                    DriverZenith
-                  </h3>
-                  <p className="text-[9px] text-white/60 mt-1">
-                    Technical Hardware Registry
-                  </p>
-                </div>
-              </div>
-
-              <p className="text-[12px] leading-6 text-white/65 font-medium max-w-[210px]">
-                Comprehensive resource for hardware-software communication protocols
-                and system optimization documentation.
+              <p className="text-[14px] leading-relaxed text-white/50 font-medium max-w-[280px] mb-8">
+                Your resource for understanding hardware drivers and device communication.
               </p>
             </div>
 
@@ -75,7 +35,6 @@ export default function Footer() {
               links={[
                 { name: "Home", path: "/" },
                 { name: "About", path: "/about" },
-                { name: "Services", path: "/services" },
                 { name: "Guides", path: "/guides" },
                 { name: "FAQ", path: "/faq" },
                 { name: "Contact", path: "/contact" }
@@ -83,59 +42,58 @@ export default function Footer() {
             />
 
             <FooterColumn
-              title="Technical Guides"
+              title="Guides"
               links={[
-                { name: "Installation Manuals", path: "/guide/fix-driver-not-installed" },
-                { name: "Update Protocols", path: "/guide/fix-driver-not-installed" },
-                { name: "Hardware Recognition", path: "/guide/fix-usb-driver-issues" },
-                { name: "Legacy Support", path: "/guide/fix-audio-driver-problems" },
-                { name: "Network Security", path: "/guide/fix-wifi-network-issues" },
-                { name: "Display Optimization", path: "/guide/fix-graphics-driver-issues" },
+                { name: "Installation Guides", path: "/guide/fix-driver-not-installed" },
+                { name: "Update Information", path: "/guide/fix-driver-not-installed" },
+                { name: "Hardware Connection", path: "/guide/fix-usb-driver-issues" },
+                { name: "Audio Problems", path: "/guide/fix-audio-driver-problems" },
+                { name: "WiFi & Network", path: "/guide/fix-wifi-network-issues" },
+                { name: "Graphics & Display", path: "/guide/fix-graphics-driver-issues" },
               ]}
             />
 
             <FooterColumn
-              title="Hardware Archive"
+              title="Driver Topics"
               links={[
-                { name: "Printer Drivers", path: "/service/printer-drivers" },
-                { name: "Network Drivers", path: "/service/network-drivers" },
-                { name: "Audio Drivers", path: "/service/audio-drivers" },
-                { name: "Graphics Drivers", path: "/service/graphics-drivers" },
-                { name: "Bluetooth Drivers", path: "/service/bluetooth-drivers" },
-                { name: "USB Support", path: "/service/usb-support" },
+                { name: "Printer Drivers", path: "/driver/printer-drivers" },
+                { name: "Network Drivers", path: "/driver/network-drivers" },
+                { name: "Audio Drivers", path: "/driver/audio-drivers" },
+                { name: "Graphics Drivers", path: "/driver/graphics-drivers" },
+                { name: "Bluetooth Drivers", path: "/driver/bluetooth-drivers" },
+                { name: "USB Support", path: "/driver/usb-support" },
               ]}
             />
 
-            <FooterColumn
-              title="Information"
-              links={[
-                { name: "Privacy Policy", path: "/privacy-policy" },
-                { name: "Terms of Service", path: "/terms-of-service" },
-                { name: "Cookie Policy", path: "/cookie-policy" },
-                { name: "Disclaimer", path: "/disclaimer" },
-              ]}
-            />
+            <div className="space-y-10">
+              <FooterColumn
+                title="Policies"
+                links={[
+                  { name: "Privacy Policy", path: "/privacy-policy" },
+                  { name: "Terms of Service", path: "/terms-of-service" },
+                  { name: "Cookie Policy", path: "/cookie-policy" },
+                  { name: "Disclaimer", path: "/disclaimer" },
+                ]}
+              />
 
-            {/* Contact */}
-            <div>
-              <h4 className="text-[14px] font-semibold mb-4">Resource Center</h4>
-
-              <div className="space-y-3 text-[12px] text-white/70 font-medium">
-                <p className="flex items-start gap-2">
-                  <Mail className="w-4 h-4 mt-0.5 text-white" />
-                  <a href="mailto:info@driverzenith.net" className="text-white/70 hover:text-white transition">
-                    info@driverzenith.net
-                  </a>
-                </p>
-
-
+              <div>
+                <h4 className="text-[14px] font-bold text-blue-500 uppercase tracking-widest mb-4">Email Us</h4>
+                <a href="mailto:info@misterpcdriver.com" className="flex items-center gap-2 text-[14px] text-white/60 hover:text-white transition-colors">
+                  <Mail className="w-4 h-4" />
+                  info@misterpcdriver.com
+                </a>
               </div>
             </div>
           </div>
 
-
+          {/* Bottom Bar */}
+          <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-6">
+            <p className="text-[13px] text-white/30 font-medium text-center md:text-left">
+              © {currentYear} Mister PC Driver. All information is for educational purposes.
+            </p>
+          </div>
         </div>
-      </footer >
+      </footer>
     </>
   );
 }
@@ -143,14 +101,14 @@ export default function Footer() {
 function FooterColumn({ title, links }) {
   return (
     <div>
-      <h4 className="text-[14px] font-semibold mb-4">{title}</h4>
+      <h4 className="text-[14px] font-bold text-blue-500 uppercase tracking-widest mb-6">{title}</h4>
 
-      <ul className="space-y-2.5">
+      <ul className="space-y-4">
         {links.map((link, index) => (
           <li key={index}>
             <Link
               to={link.path}
-              className="text-[12px] text-white/65 font-medium hover:text-white transition"
+              className="text-[14px] text-white/50 font-medium hover:text-white hover:translate-x-1 inline-block transition-all duration-300"
             >
               {link.name}
             </Link>
@@ -159,4 +117,4 @@ function FooterColumn({ title, links }) {
       </ul>
     </div>
   );
-}   
+}

@@ -1,191 +1,89 @@
 import React from "react";
 import {
-  Download,
-  RefreshCcw,
-  Monitor,
-  XCircle,
-  Printer,
-  Volume2,
-  Wifi,
-  Bluetooth,
-  Usb,
-  MonitorSmartphone,
-  Video,
-  Scan,
-  Cpu,
-  ShieldAlert,
-  Zap,
+  Download, RefreshCcw, Monitor, XCircle, Printer, Volume2, Wifi,
+  Bluetooth, Usb, MonitorSmartphone, Video, Scan, Cpu, ShieldAlert, Zap, ArrowRight
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function CommonProblems() {
-  const problems = [
-    {
-      title: "Driver Not Installed",
-      desc: "Device not working because driver is missing.",
-      icon: <Download />,
-      color: "text-blue-500",
-      bg: "bg-blue-100",
-    },
-    {
-      title: "Outdated Drivers",
-      desc: "Old drivers causing errors or performance issues.",
-      icon: <RefreshCcw />,
-      color: "text-orange-500",
-      bg: "bg-orange-100",
-    },
-    {
-      title: "Device Not Detected",
-      desc: "Connected device not showing in the system.",
-      icon: <Monitor />,
-      color: "text-green-500",
-      bg: "bg-green-100",
-    },
-    {
-      title: "Driver Update Failed",
-      desc: "Update process fails or won’t complete.",
-      icon: <XCircle />,
-      color: "text-red-500",
-      bg: "bg-red-100",
-    },
-    {
-      title: "Printer Driver Issues",
-      desc: "Printer not working or not responding.",
-      icon: <Printer />,
-      color: "text-indigo-500",
-      bg: "bg-indigo-100",
-    },
-    {
-      title: "Audio Not Working",
-      desc: "Sound issues due to driver problems.",
-      icon: <Volume2 />,
-      color: "text-pink-500",
-      bg: "bg-pink-100",
-    },
-    {
-      title: "Network / WiFi Issues",
-      desc: "Wi-Fi or LAN not working properly.",
-      icon: <Wifi />,
-      color: "text-blue-500",
-      bg: "bg-blue-100",
-    },
-    {
-      title: "Bluetooth Problems",
-      desc: "Bluetooth not connecting or pairing.",
-      icon: <Bluetooth />,
-      color: "text-purple-500",
-      bg: "bg-purple-100",
-    },
-    {
-      title: "USB Not Recognized",
-      desc: "USB device not detected or not working.",
-      icon: <Usb />,
-      color: "text-teal-500",
-      bg: "bg-teal-100",
-    },
-    {
-      title: "Graphics / Display Issues",
-      desc: "Screen flickering, lag or display problems.",
-      icon: <MonitorSmartphone />,
-      color: "text-orange-500",
-      bg: "bg-orange-100",
-    },
-    {
-      title: "Webcam Offline",
-      desc: "Camera not found or black screen on calls.",
-      icon: <Video />,
-      color: "text-purple-500",
-      bg: "bg-purple-100",
-    },
-    {
-      title: "Scanner Errors",
-      desc: "Scanner protocols not responding or TWAIN errors.",
-      icon: <Scan />,
-      color: "text-fuchsia-500",
-      bg: "bg-fuchsia-100",
-    },
-    {
-      title: "Chipset Logic",
-      desc: "Motherboard component communication failures.",
-      icon: <Cpu />,
-      color: "text-cyan-500",
-      bg: "bg-cyan-100",
-    },
-    {
-      title: "BIOS / Firmware",
-      desc: "Low-level startup errors and incompatibility.",
-      icon: <ShieldAlert />,
-      color: "text-red-500",
-      bg: "bg-red-100",
-    },
-    {
-      title: "Input Latency",
-      desc: "Keyboard or touchpad lag and unresponsive gestures.",
-      icon: <Zap />,
-      color: "text-yellow-500",
-      bg: "bg-yellow-100",
-    },
+  const issues = [
+    ["Driver Not Installed", "Required driver file missing.", "Fresh OS setup or new device added.", <Download />, "from-sky-50 to-blue-50 text-sky-600", "fix-driver-not-installed"],
+    ["Outdated Drivers", "Old driver can create errors.", "System update or older software version.", <RefreshCcw />, "from-orange-50 to-amber-50 text-orange-500", "fix-driver-update-failed"],
+    ["Device Not Detected", "Device not visible in system.", "Loose connection or driver mismatch.", <Monitor />, "from-emerald-50 to-teal-50 text-emerald-600", "fix-device-not-detected"],
+    ["Driver Update Failed", "Update may stop midway.", "Low storage or version conflict.", <XCircle />, "from-rose-50 to-red-50 text-rose-500", "fix-driver-update-failed"],
+    ["Printer Driver Issues", "Printer may not respond.", "Queue, connection, or driver setting.", <Printer />, "from-violet-50 to-purple-50 text-violet-600", "fix-printer-driver-issues"],
+    ["Audio Not Working", "Sound output may stop.", "Muted output or audio driver issue.", <Volume2 />, "from-pink-50 to-rose-50 text-pink-500", "fix-audio-driver-problems"],
+    ["Network / WiFi Issues", "Wi-Fi or LAN may fail.", "Adapter setting or router conflict.", <Wifi />, "from-cyan-50 to-sky-50 text-cyan-600", "fix-wifi-network-issues"],
+    ["Bluetooth Problems", "Bluetooth may not pair.", "Disabled service or pairing conflict.", <Bluetooth />, "from-indigo-50 to-blue-50 text-indigo-500", "fix-bluetooth-driver-problems"],
+    ["USB Not Recognized", "USB device may not appear.", "Port, cable, or controller issue.", <Usb />, "from-teal-50 to-emerald-50 text-teal-600", "fix-usb-driver-issues"],
+    ["Graphics / Display Issues", "Screen may flicker or lag.", "Resolution or display adapter conflict.", <MonitorSmartphone />, "from-purple-50 to-fuchsia-50 text-purple-600", "fix-graphics-driver-issues"],
+    ["Webcam Offline", "Camera may show black screen.", "Privacy permission or webcam driver.", <Video />, "from-rose-50 to-pink-50 text-rose-500", "fix-webcam-driver-issues"],
+    ["Scanner Errors", "Scanner may fail to respond.", "App setting, connection, or driver mismatch.", <Scan />, "from-lime-50 to-green-50 text-lime-600", "fix-scanner-driver-problems"],
+    ["Chipset Logic", "Components may not sync.", "Missing or incompatible chipset driver.", <Cpu />, "from-blue-50 to-indigo-50 text-blue-600", "update-chipset-drivers"],
+    ["BIOS / Firmware", "Startup issues may appear.", "Firmware mismatch or older BIOS.", <ShieldAlert />, "from-amber-50 to-yellow-50 text-amber-600", "guide-bios-firmware-updates"],
+    ["Input Latency", "Keyboard or touchpad may lag.", "Input driver or background load.", <Zap />, "from-yellow-50 to-orange-50 text-yellow-600", "fix-input-latency-drivers"],
   ];
 
   return (
-    <section className="bg-[#F7FAFF] py-20 px-6 font-[Poppins]">
-      <div className="max-w-[1600px] mx-auto text-center mb-14 relative">
-        {/* Decorative Badge */}
-        <div className="flex justify-center mb-6">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-blue-100 shadow-sm">
-            <span className="flex h-2 w-2 rounded-full bg-blue-600 animate-pulse"></span>
-            <span className="text-[10px] font-bold text-blue-600 uppercase tracking-widest">Diagnostic Library</span>
-          </div>
-        </div>
+    <section className="relative overflow-hidden bg-[#F6F9FF] py-20 px-4 font-[Poppins]">
+      <div className="absolute top-[-120px] left-[-120px] w-[360px] h-[360px] bg-blue-100/60 rounded-full blur-3xl" />
+      <div className="absolute bottom-[-120px] right-[-120px] w-[360px] h-[360px] bg-purple-100/60 rounded-full blur-3xl" />
 
-        {/* Heading with lines */}
-        <div className="flex items-center justify-center gap-6 mb-3">
-          <div className="hidden md:block h-[1px] w-16 bg-gradient-to-r from-transparent to-blue-200" />
-          <h2 className="text-[32px] md:text-[38px] font-bold text-[#0F1B3D] tracking-tight">
-            Common Driver <span className="text-blue-600">Problems</span>
+      <div className="relative max-w-[1600px] mx-auto">
+        <div className="text-center mb-14">
+          <div className="inline-flex items-center gap-2 bg-white/80 border border-blue-100 px-4 py-2 rounded-full shadow-sm mb-5">
+            <span className="w-2 h-2 rounded-full bg-blue-500" />
+            <span className="text-[11px] text-blue-600 font-medium tracking-[0.16em] uppercase">
+              Driver Issue Library
+            </span>
+          </div>
+
+          <h2 className="text-[#07153A] text-[34px] md:text-[46px] font-semibold leading-tight">
+            Explore Common Driver Issues
           </h2>
-          <div className="hidden md:block h-[1px] w-16 bg-gradient-to-l from-transparent to-blue-200" />
+
+          <p className="max-w-[760px] mx-auto mt-4 text-[#667085] text-[15px] leading-relaxed">
+            Clean and easy guide-based information about common driver problems,
+            why they may appear, and what users should understand first.
+          </p>
         </div>
 
-        <p className="max-w-2xl mx-auto text-[#6B7280] text-[16px] font-medium leading-relaxed">
-          Detailed technical documentation for common hardware communication protocols. 
-          Identify the specific architecture and view documented troubleshooting steps.
-        </p>
-      </div>
-
-      {/* Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5 max-w-[1600px] mx-auto">
-        {problems.map((item, i) => (
-          <div
-            key={i}
-            className="bg-white border border-[#E6ECF8] rounded-xl p-5 hover:shadow-md transition"
-          >
-            <div
-              className={`w-10 h-10 flex items-center justify-center rounded-lg ${item.bg} mb-4`}
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-5 gap-5">
+          {issues.map(([title, desc, reason, icon, style, slug], index) => (
+            <Link
+              key={index}
+              to={`/guide/${slug}`}
+              className="group bg-white/85 backdrop-blur border border-white rounded-[10px] p-5  hover:-translate-y-1 transition-all duration-300 block relative overflow-hidden"
             >
-              <div className={`${item.color}`}>
-                {React.cloneElement(item.icon, { size: 20 })}
+              <div className={`w-12 h-12 rounded-2xl bg-gradient-to-br ${style} flex items-center justify-center mb-4`}>
+                {React.cloneElement(icon, { size: 23, strokeWidth: 2 })}
               </div>
-            </div>
 
-            <h3 className="text-[15px] font-semibold text-[#0F1B3D] mb-1">
-              {item.title}
-            </h3>
+              <h3 className="text-[#101828] text-[15px] font-[600] mt-1 mb-2 leading-snug">
+                {title}
+              </h3>
 
-            <p className="text-[13px] text-[#6B7280] leading-relaxed">
-              {item.desc}
-            </p>
-          </div>
-        ))}
-      </div>
+              <p className="text-[#667085] text-[13px] leading-relaxed">
+                {desc}
+              </p>
 
-      {/* Button */}
-      <div className="text-center mt-10">
-        <button 
-          aria-label="View all common issues"
-          className="bg-blue-600 text-white px-8 py-3 rounded-lg text-[14px] font-semibold hover:bg-blue-700 transition flex items-center gap-2 mx-auto"
-        >
-          View All Issues →
-        </button>
+              <div className="mt-4 pt-4 border-t border-[#EEF2F7] relative">
+                <div className="group-hover:opacity-0 transition-opacity duration-300">
+                  <p className="text-[#475467] text-[12.5px] leading-relaxed line-clamp-2">
+                    <span className="font-medium text-[#344054]">Why:</span>{" "}
+                    {reason}
+                  </p>
+                </div>
+                
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0">
+                  <span className="text-blue-600 font-bold text-[13px] uppercase tracking-widest flex items-center gap-2">
+                    Read Full Guide <ArrowRight size={14} />
+                  </span>
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
       </div>
     </section>
   );
