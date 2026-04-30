@@ -9,6 +9,9 @@ export default function Hero() {
           src='/banner/banner_01.avif'
           className="w-full h-full object-cover object-center"
           alt="Hero Banner"
+          fetchPriority="high"
+          loading="eager"
+          decoding="sync"
         />
       </Link>
     </section>

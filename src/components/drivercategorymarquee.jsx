@@ -82,25 +82,6 @@ export default function DriverCategoryMarquee() {
                     </div>
                 </div>
             </div>
-
-            <style>{`
-        @keyframes driverMarquee {
-          from {
-            transform: translateX(0);
-          }
-          to {
-            transform: translateX(-50%);
-          }
-        }
-
-        .animate-driverMarquee {
-          animation: driverMarquee 28s linear infinite;
-        }
-
-        .animate-driverMarquee:hover {
-          animation-play-state: paused;
-        }
-      `}</style>
         </section>
     );
 }

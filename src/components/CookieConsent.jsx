@@ -38,13 +38,13 @@ const CookieConsent = () => {
                         <div className="w-10 h-10 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600">
                             <ShieldCheck size={20} />
                         </div>
-                        <h3 className="text-[17px] font-bold text-slate-900">Cookie Consent</h3>
+                        <h3 className="text-[17px] font-bold text-slate-900">Privacy Preference</h3>
                     </div>
 
                     <p className="text-[14px] text-slate-500 font-medium leading-relaxed mb-6">
-                        We use cookies to enhance your experience and analyze technical documentation traffic. 
-                        By clicking "Accept", you agree to our storage of cookies on your device. 
-                        Read our <Link to="/cookie-policy" className="text-blue-600 hover:underline">Cookie Policy</Link> for details.
+                        We use data files to enhance your experience and analyze site traffic. 
+                        By clicking "Accept", you agree to our storage of these identifiers on your device. 
+                        Read our <Link to="/cookie-policy" className="text-blue-600 hover:underline">Policy</Link> for details.
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-3">

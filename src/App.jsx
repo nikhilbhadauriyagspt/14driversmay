@@ -9,8 +9,9 @@ import CookieConsent from './components/CookieConsent';
 import ScrollToTop from './components/ScrollToTop';
 import './App.css';
 
-// Lazy load pages for code splitting
-const Home = lazy(() => import('./pages/Home'));
+import Home from './pages/Home';
+
+// Lazy load other pages for code splitting
 const About = lazy(() => import('./pages/About'));
 const Services = lazy(() => import('./pages/Services'));
 const Blog = lazy(() => import('./pages/Blog'));
