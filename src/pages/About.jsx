@@ -9,8 +9,8 @@ const About = () => {
   return (
     <div className="bg-white min-h-screen font-[Poppins]">
       <Helmet>
-        <title>About Us | DriverZenith - Step-by-Step Fix Guides</title>
-        <meta name="description" content="Learn how DriverZenith helps you solve hardware driver issues with easy-to-follow manuals and guides." />
+        <title>About Us | Mister PC Driver - Step-by-Step Fix Guides</title>
+        <meta name="description" content="Learn how Mister PC Driver helps you solve hardware driver issues with easy-to-follow manuals and guides." />
       </Helmet>
 
       {/* Hero Section */}
@@ -24,7 +24,7 @@ const About = () => {
             <span className="text-blue-600">Driver Issues</span>
           </h1>
           <p className="text-slate-600 text-base md:text-lg font-medium leading-relaxed max-w-2xl mx-auto mb-8">
-            DriverZenith is a collection of simple, step-by-step guides designed to help you 
+            Mister PC Driver is a collection of simple, step-by-step guides designed to help you 
             troubleshoot and install hardware drivers on your own.
           </p>
         </div>

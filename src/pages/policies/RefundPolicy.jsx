@@ -9,8 +9,8 @@ const RefundPolicy = () => {
   return (
     <div className="bg-white min-h-screen pt-32 pb-24">
       <Helmet>
-        <title>Return Policy - DriverZenith</title>
-        <meta name="description" content="Official Return Policy for DriverZenith. Details on returns, process, and refunds." />
+        <title>Return Policy - Mister PC Driver</title>
+        <meta name="description" content="Official Return Policy for Mister PC Driver. Details on returns, process, and refunds." />
         <link rel="canonical" href="https://www.misterpcdriver.com/refund-policy" />
       </Helmet>
 
@@ -44,7 +44,7 @@ const RefundPolicy = () => {
               return to the following address:
             </p>
             <address className="not-italic bg-gray-50 p-8 rounded-2xl border border-gray-100 mt-6 leading-relaxed font-bold">
-              DriverZenith<br />
+              Mister PC Driver<br />
               Attn: Returns<br />
               RMA #<br />
               1267 Filer Ave E<br />

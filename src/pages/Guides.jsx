@@ -8,7 +8,7 @@ const Guides = () => {
   return (
     <div className="bg-[#F7FAFF] min-h-screen pt-28 pb-20 font-[Poppins]">
       <Helmet>
-        <title>Popular Driver Guides | Step-by-Step Fixes | DriverZenith</title>
+        <title>Popular Driver Guides | Step-by-Step Fixes | Mister PC Driver</title>
         <meta name="description" content="Browse our library of popular driver guides to fix printer, audio, wifi, and graphics driver issues on your Windows PC." />
       </Helmet>
 

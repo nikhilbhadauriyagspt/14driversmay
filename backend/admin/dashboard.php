@@ -31,7 +31,7 @@ if (isset($_GET['logout'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard - DriverZenith</title>
+    <title>Admin Dashboard - Mister PC Driver</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
@@ -41,7 +41,7 @@ if (isset($_GET['logout'])) {
 <body class="bg-slate-50 min-h-screen">
     <nav class="bg-white border-b border-slate-100 py-4 px-12 sticky top-0 z-50">
         <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-xl font-bold text-slate-900 tracking-tight">DriverZenith <span class="text-blue-600">Admin</span></h1>
+            <h1 class="text-xl font-bold text-slate-900 tracking-tight">Mister PC Driver <span class="text-blue-600">Admin</span></h1>
             <div class="flex items-center gap-6">
                 <span class="text-slate-400 text-xs font-bold uppercase tracking-widest italic">Logged as: <?php echo $_SESSION['admin_user']; ?></span>
                 <a href="?logout=1" class="bg-slate-900 text-white px-6 py-2 rounded-xl text-xs font-bold hover:bg-red-600 transition-all">Sign Out</a>

@@ -20,7 +20,7 @@ export default function Footer() {
               <Link to="/" className="flex items-center gap-3 mb-6">
                 <img
                   src="/logo/logo.avif"
-                  alt="DriverZenith"
+                  alt="Mister PC Driver"
                   className="h-10 w-auto object-contain bg-white py-1 px-2 rounded-full"
                 />
               </Link>

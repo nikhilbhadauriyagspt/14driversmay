@@ -220,7 +220,7 @@ const Header = () => {
         <Link to="/" className="flex items-center gap-2 group shrink-0">
           <img
             src="/logo/logo.avif"
-            alt="DriverZenith"
+            alt="Mister PC Driver"
             className="h-10 w-auto object-contain bg-white py-1 px-2 rounded-full"
           />
         </Link>
@@ -419,7 +419,7 @@ const Header = () => {
             <Link to="/" onClick={() => setIsOpen(false)} className="flex items-center">
               <img
                 src="/logo/logo.avif"
-                alt="DriverZenith"
+                alt="Mister PC Driver"
                 className="h-9 w-auto object-contain"
               />
             </Link>

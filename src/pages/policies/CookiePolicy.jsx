@@ -24,8 +24,8 @@ const CookiePolicy = () => {
             <p>
               This Cookie Policy explains how Mister PC Driver (“<strong>Company</strong>,” “<strong>we</strong>,” “<strong>us</strong>,” or “<strong>our</strong>”) uses
               cookies and similar tracking technologies when you visit our website
-              <a href="http://misterpcdriver.com/" className="text-primary hover:text-secondary"> http://misterpcdriver.com/</a> (the “<strong>Website</strong>”). This policy should be read together with our
-              <a href="privacy-policy.php" className="text-primary hover:underline font-bold"> PRIVACY POLICY</a> and <a href="terms-of-service.php" className="text-primary hover:underline font-bold">TERMS OF SERVICE</a>.
+              <a href="https://www.misterpcdriver.com/" className="text-primary hover:text-secondary"> https://www.misterpcdriver.com/</a> (the “<strong>Website</strong>”). This policy should be read together with our
+              <a href="/privacy-policy" className="text-primary hover:underline font-bold"> PRIVACY POLICY</a> and <a href="/terms-of-service" className="text-primary hover:underline font-bold">TERMS OF SERVICE</a>.
             </p>
           </section>
 
@@ -52,7 +52,7 @@ const CookiePolicy = () => {
             </ul>
             <p>
               Cookies may collect technical information such as IP address, browser type, device
-              information, and browsing behavior, as described in our <a href="privacy-policy.php" className="text-primary hover:underline font-bold">PRIVACY POLICY</a>.
+              information, and browsing behavior, as described in our <a href="/privacy-policy" className="text-primary hover:underline font-bold">PRIVACY POLICY</a>.
             </p>
           </section>
 
@@ -81,7 +81,7 @@ const CookiePolicy = () => {
                   We may allow trusted third-party service providers to place cookies on our Website for
                   analytics or advertising purposes. These cookies may be used to deliver relevant
                   advertisements and measure campaign effectiveness, subject to applicable laws and user
-                  consent where required <a href="privacy-policy.php" className="text-primary hover:underline font-bold">PRIVACY POLICY</a>.
+                  consent where required <a href="/privacy-policy" className="text-primary hover:underline font-bold">PRIVACY POLICY</a>.
                 </p>
               </div>
             </div>
@@ -96,7 +96,7 @@ const CookiePolicy = () => {
             </p>
             <p>
               You can learn more about Google’s data practices by visiting Google’s Privacy & Terms page
-              or opt out using Google’s opt-out tools, as referenced in our <a href="privacy-policy.php" className="text-primary hover:underline font-bold">PRIVACY POLICY</a>.
+              or opt out using Google’s opt-out tools, as referenced in our <a href="/privacy-policy" className="text-primary hover:underline font-bold">PRIVACY POLICY</a>.
             </p>
           </section>
 
@@ -112,7 +112,7 @@ const CookiePolicy = () => {
             <p>
               Some browsers offer a “Do Not Track” (DNT) feature. At this time, there is no uniform
               industry standard for recognizing DNT signals, and Mister PC Driver does not currently
-              respond to such signals <a href="privacy-policy.php" className="text-primary hover:underline font-bold">PRIVACY POLICY</a>.
+              respond to such signals <a href="/privacy-policy" className="text-primary hover:underline font-bold">PRIVACY POLICY</a>.
             </p>
           </section>
 

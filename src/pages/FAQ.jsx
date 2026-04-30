@@ -19,8 +19,8 @@ const FAQPage = () => {
       icon: <FaQuestionCircle />,
       items: [
         {
-          q: "What is DriverZenith?",
-          a: "DriverZenith is a professional technical resource portal dedicated to helping users find, install, and troubleshoot hardware drivers for Windows systems. We provide step-by-step guides and verified software links to ensure system stability."
+          q: "What is Mister PC Driver?",
+          a: "Mister PC Driver is a professional technical resource portal dedicated to helping users find, install, and troubleshoot hardware drivers for Windows systems. We provide step-by-step guides and verified software links to ensure system stability."
         },
         {
           q: "How often should I update my drivers?",
@@ -73,7 +73,7 @@ const FAQPage = () => {
       icon: <FaShieldAlt />,
       items: [
         {
-          q: "Is there a cost for using DriverZenith?",
+          q: "Is there a cost for using Mister PC Driver?",
           a: "Access to our technical documentation, hardware registry, and guide library is completely free. We are a community-focused resource dedicated to hardware transparency."
         },
         {
@@ -95,7 +95,7 @@ const FAQPage = () => {
   return (
     <div className="bg-[#F8FAFC] min-h-screen pt-28 pb-20 font-[Poppins]">
       <Helmet>
-        <title>FAQ | Frequently Asked Questions | DriverZenith</title>
+        <title>FAQ | Frequently Asked Questions | Mister PC Driver</title>
         <meta name="description" content="Find answers to common questions about driver installations, hardware fixes, and system optimization." />
       </Helmet>
 

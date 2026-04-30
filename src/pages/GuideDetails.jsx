@@ -39,7 +39,7 @@ const GuideDetails = () => {
   return (
     <div className="bg-[#F7FAFF] min-h-screen pt-24 pb-20 font-[Poppins]">
       <Helmet>
-        <title>{guide.title} | DriverZenith Guide</title>
+        <title>{guide.title} | Mister PC Driver Guide</title>
         <meta name="description" content={guide.desc} />
       </Helmet>
 

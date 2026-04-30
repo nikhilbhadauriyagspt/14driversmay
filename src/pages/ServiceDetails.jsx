@@ -36,7 +36,7 @@ const ServiceDetails = () => {
   return (
     <div className="bg-white min-h-screen font-sans text-slate-900 antialiased">
       <Helmet>
-        <title>{service.title} Guide | DriverZenith</title>
+        <title>{service.title} Guide | Mister PC Driver</title>
         <meta name="description" content={`Information about ${service.title} and how it works.`} />
       </Helmet>
 

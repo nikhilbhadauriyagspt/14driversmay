@@ -9,8 +9,8 @@ const PrivacyPolicy = () => {
   return (
     <div className="bg-white min-h-screen pt-32 pb-24 font-poppins">
       <Helmet>
-        <title>Privacy Policy | DriverZenith Official Standards</title>
-        <meta name="description" content="Detailed Privacy Policy for DriverZenith. Understand how we collect, use, and protect your technical data." />
+        <title>Privacy Policy | Mister PC Driver Official Standards</title>
+        <meta name="description" content="Detailed Privacy Policy for Mister PC Driver. Understand how we collect, use, and protect your technical data." />
       </Helmet>
 
       <div className="container mx-auto px-4 max-w-5xl">
@@ -20,13 +20,13 @@ const PrivacyPolicy = () => {
         <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed space-y-8">
           <section>
             <p>
-              This Privacy Notice for Mister Pc Driver ("<strong>we</strong>," "<strong>us</strong>," or "<strong>our</strong>"), describes how and why we
+              This Privacy Notice for Mister PC Driver ("<strong>we</strong>," "<strong>us</strong>," or "<strong>our</strong>"), describes how and why we
               might access, collect, store, use, and/or share ("<strong>process</strong>") your personal information when
               you use our services ("<strong>Services</strong>"), including when you:
             </p>
             <ul className="list-disc pl-6 space-y-2">
-              <li>Visit our website at <a href="http://misterpcdriver.com/" className="text-primary hover:text-secondary">http://misterpcdriver.com/</a> or any website of ours that links to this Privacy Notice</li>
-              <li>Use Mister Pc Driver. At Mister Pc Driver, we focus on technical accuracy and timely service. Our business is built on providing diagnostic clarity and performing repairs that aim to extend the lifecycle of your household appliances. We serve residential clients with a commitment to maintaining standard operating procedures.</li>
+              <li>Visit our website at <a href="https://www.misterpcdriver.com/" className="text-primary hover:text-secondary">https://www.misterpcdriver.com/</a> or any website of ours that links to this Privacy Notice</li>
+              <li>Use Mister PC Driver. At Mister PC Driver, we focus on technical accuracy and timely service. Our business is built on providing diagnostic clarity and performing repairs that aim to extend the lifecycle of your household appliances. We serve residential clients with a commitment to maintaining standard operating procedures.</li>
               <li>Engage with us in other related ways, including any marketing or events</li>
             </ul>
             <p>
@@ -319,7 +319,7 @@ const PrivacyPolicy = () => {
           <section id="contact">
             <h3 className="text-xl font-bold text-gray-900 border-b pb-2 mb-4">13. HOW CAN YOU CONTACT US ABOUT THIS NOTICE?</h3>
             <p>If you have questions or comments about this notice, you may email us at <strong>info@misterpcdriver.com</strong> or contact us by post at:</p>
-
+            <p>Email: <strong>info@misterpcdriver.com</strong></p>
           </section>
 
           <section id="review">
