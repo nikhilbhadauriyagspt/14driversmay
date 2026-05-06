@@ -20,21 +20,21 @@ import { Link } from "react-router-dom";
 
 export default function DriverCategoryMarquee() {
     const drivers = [
-        { title: "Printer", icon: Printer, slug: "fix-printer-driver-issues" },
-        { title: "Network", icon: Wifi, slug: "fix-wifi-network-issues" },
-        { title: "Audio", icon: Volume2, slug: "fix-audio-driver-problems" },
-        { title: "Graphics", icon: Monitor, slug: "fix-graphics-driver-issues" },
-        { title: "Bluetooth", icon: Bluetooth, slug: "fix-bluetooth-driver-problems" },
-        { title: "USB", icon: Usb, slug: "fix-usb-driver-issues" },
-        { title: "Scanner", icon: ScanLine, slug: "fix-scanner-driver-problems" },
-        { title: "Chipset", icon: Cpu, slug: "update-chipset-drivers" },
-        { title: "Storage", icon: HardDrive, slug: "fix-device-not-detected" },
-        { title: "Touchpad", icon: Touchpad, slug: "fix-input-latency-drivers" },
-        { title: "Webcam", icon: Video, slug: "fix-webcam-driver-issues" },
+        { title: "Printer", icon: Printer, slug: "understand-printer-driver-topics" },
+        { title: "Network", icon: Wifi, slug: "understand-wifi-network-topics" },
+        { title: "Audio", icon: Volume2, slug: "understand-audio-driver-topics" },
+        { title: "Graphics", icon: Monitor, slug: "understand-graphics-driver-topics" },
+        { title: "Bluetooth", icon: Bluetooth, slug: "understand-bluetooth-driver-topics" },
+        { title: "USB", icon: Usb, slug: "understand-usb-driver-topics" },
+        { title: "Scanner", icon: ScanLine, slug: "understand-scanner-driver-topics" },
+        { title: "Chipset", icon: Cpu, slug: "guide-chipset-drivers" },
+        { title: "Storage", icon: HardDrive, slug: "understand-device-not-detected" },
+        { title: "Touchpad", icon: Touchpad, slug: "understand-input-latency-drivers" },
+        { title: "Webcam", icon: Video, slug: "understand-webcam-driver-topics" },
         { title: "BIOS", icon: ShieldCheck, slug: "guide-bios-firmware-updates" },
         { title: "Search", icon: Search, slug: "" },
         { title: "Security", icon: ShieldAlert, slug: "" },
-        { title: "Monitor", icon: Tv, slug: "fix-graphics-driver-issues" },
+        { title: "Monitor", icon: Tv, slug: "understand-graphics-driver-topics" },
     ];
 
     const marqueeItems = [...drivers, ...drivers];
