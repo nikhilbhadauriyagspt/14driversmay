@@ -1,15 +1,15 @@
 export const guidesData = [
   {
-    slug: "fix-driver-not-installed",
-    title: "How to Fix Driver Not Installed Error",
-    desc: "A complete step-by-step guide to identifying and installing missing drivers on your Windows system.",
+    slug: "understand-driver-not-installed",
+    title: "Understanding Driver Not Installed Errors",
+    desc: "A complete step-by-step guide to identifying missing drivers on your Windows system.",
     img: "/guide/guide-driver-not-installed.webp",
     content: {
-      introduction: "The 'Driver Not Installed' error is one of the most common issues Windows users face when connecting new hardware. Without the correct driver, your operating system cannot communicate with the device.",
+      introduction: "The 'Driver Not Installed' message is one of the most common topics Windows users encounter when connecting new hardware. Without the correct driver, your operating system cannot communicate with the device.",
       reasons: [
-        "Windows Update failed to find a compatible driver automatically.",
-        "The driver was never installed for the new hardware.",
-        "A previous installation was interrupted or corrupted.",
+        "Windows Update did not find a compatible driver automatically.",
+        "The driver was never added for the new hardware.",
+        "A previous process was interrupted or incomplete.",
         "The hardware is too old or too new for the current OS version."
       ],
       steps: [
@@ -22,23 +22,23 @@ export const guidesData = [
           text: "Go to Settings > Update & Security > Windows Update. Click 'Check for updates'. Often, Windows finds missing drivers in 'Optional updates'."
         },
         {
-          title: "Download from Manufacturer Website",
+          title: "Look on Manufacturer Website",
           text: "Find the model number of your device. Go to the manufacturer's official support website (e.g., HP, Dell, NVIDIA) and search for the latest drivers."
         },
         {
-          title: "Manual Installation",
+          title: "Manual Process",
           text: "If you have the driver file, right-click the device in Device Manager, select 'Update driver', and choose 'Browse my computer for drivers'."
         }
       ]
     }
   },
   {
-    slug: "fix-printer-driver-issues",
-    title: "Resolving Common Printer Driver Problems",
-    desc: "Is your printer not responding? Follow this guide to fix driver conflicts and connectivity issues.",
+    slug: "understand-printer-driver-topics",
+    title: "Understanding Common Printer Driver Topics",
+    desc: "Is your printer not responding? Follow this guide to understand driver data and connectivity.",
     img: "/guide/guide-printer-driver.webp",
     content: {
-      introduction: "Printer driver issues can manifest as 'Printer Offline' status, partial printing, or a total lack of response from the device despite being connected.",
+      introduction: "Printer driver topics can manifest as 'Printer Offline' status, partial printing, or a total lack of response from the device despite being connected.",
       reasons: [
         "Outdated printer software causing compatibility lags.",
         "Corrupted print spooler service files.",
@@ -62,16 +62,16 @@ export const guidesData = [
     }
   },
   {
-    slug: "fix-audio-driver-problems",
-    title: "Troubleshooting Audio and Sound Driver Issues",
-    desc: "Fix 'No Audio Output Device is installed' and other sound-related errors on your PC.",
+    slug: "understand-audio-driver-topics",
+    title: "Understanding Audio and Sound Driver Topics",
+    desc: "Learn about 'No Audio Output Device is installed' and other sound-related topics on your PC.",
     img: "/guide/guide-audio-driver.webp",
     content: {
-      introduction: "Audio problems can range from a complete lack of sound to crackling noise or low volume levels. Most are software-driven.",
+      introduction: "Audio topics can range from a complete lack of sound to crackling noise or low volume levels. Most are software-driven.",
       reasons: [
         "Audio services disabled in Windows.",
         "Incorrect playback device selected in settings.",
-        "Realtek or other audio driver corruption.",
+        "Realtek or other audio driver data corruption.",
         "Windows Update overwriting working audio drivers."
       ],
       steps: [
@@ -91,12 +91,12 @@ export const guidesData = [
     }
   },
   {
-    slug: "fix-wifi-network-issues",
-    title: "How to Fix WiFi and Network Connection Problems",
-    desc: "Step-by-step guide to repairing wireless adapter drivers and restoring network connectivity.",
+    slug: "understand-wifi-network-topics",
+    title: "Understanding WiFi and Network Connection Topics",
+    desc: "Step-by-step guide to understanding wireless adapter drivers and network connectivity.",
     img: "/guide/guide-network-driver.webp",
     content: {
-      introduction: "Network issues are critical. A corrupted Wi-Fi driver can prevent you from downloading the fix itself, often requiring a second device.",
+      introduction: "Network topics are critical. A corrupted Wi-Fi driver can prevent you from downloading the data itself, often requiring a second device.",
       reasons: [
         "Power Management settings turning off the Wi-Fi card.",
         "Outdated drivers incompatible with new router security protocols (WPA3).",
@@ -120,12 +120,12 @@ export const guidesData = [
     }
   },
   {
-    slug: "fix-usb-driver-issues",
-    title: "Fixing 'USB Device Not Recognized' Errors",
-    desc: "Solve USB 3.0/3.1 port recognition issues and driver malfunctions for your external devices.",
+    slug: "understand-usb-driver-topics",
+    title: "Understanding 'USB Device Not Recognized' Topics",
+    desc: "Identify USB 3.0/3.1 port recognition and driver data for your external devices.",
     img: "/guide/guide-usb-driver.webp",
     content: {
-      introduction: "USB errors are frustrating because they often involve the motherboard's chipset drivers or power delivery systems.",
+      introduction: "USB topics are interesting because they often involve the motherboard's chipset drivers or power delivery systems.",
       reasons: [
         "USB Selective Suspend setting is enabled.",
         "Generic USB Hub drivers are corrupted.",
@@ -149,14 +149,14 @@ export const guidesData = [
     }
   },
   {
-    slug: "fix-graphics-driver-issues",
-    title: "Optimizing and Fixing Graphics Driver Problems",
-    desc: "Fix screen flickering, low FPS, and display errors by properly managing your GPU drivers.",
+    slug: "understand-graphics-driver-topics",
+    title: "Understanding Graphics Driver Data",
+    desc: "Identify screen flickering, low FPS, and display topics by properly managing your GPU drivers.",
     img: "/guide/guide-graphics-driver.webp",
     content: {
       introduction: "Graphics drivers control everything you see. Outdated GPU software can cause crashes in games and visual artifacts in apps.",
       reasons: [
-        "Incomplete installation of NVIDIA/AMD/Intel software.",
+        "Incomplete data for NVIDIA/AMD/Intel software.",
         "Conflicting drivers from a previous GPU upgrade.",
         "Overheating causing driver resets.",
         "High-resolution display protocols not supported by old drivers."
@@ -172,18 +172,18 @@ export const guidesData = [
         },
         {
           title: "Check Display Cable and Port",
-          text: "Sometimes a driver error is triggered by a faulty HDMI or DisplayPort cable. Try a different port if possible."
+          text: "Sometimes an error is triggered by a faulty HDMI or DisplayPort cable. Try a different port if possible."
         }
       ]
     }
   },
   {
-    slug: "fix-bluetooth-driver-problems",
-    title: "Resolving Bluetooth Pairing and Connection Issues",
-    desc: "Fix missing Bluetooth icon, pairing failures, and driver errors on your Windows PC.",
+    slug: "understand-bluetooth-driver-topics",
+    title: "Understanding Bluetooth Pairing and Connection Topics",
+    desc: "Identify missing Bluetooth icon, pairing failures, and driver topics on your Windows PC.",
     img: "/needdriver/need-audio-wifi.webp",
     content: {
-      introduction: "Bluetooth is essential for connecting wireless peripherals like headphones, mice, and keyboards. Driver issues can make the Bluetooth toggle disappear entirely from your settings.",
+      introduction: "Bluetooth is essential for connecting wireless peripherals like headphones, mice, and keyboards. Driver topics can make the Bluetooth toggle disappear entirely from your settings.",
       reasons: [
         "Bluetooth service is disabled in Windows Services.",
         "Outdated or incompatible Bluetooth radio drivers.",
@@ -207,12 +207,12 @@ export const guidesData = [
     }
   },
   {
-    slug: "fix-webcam-driver-issues",
-    title: "How to Fix Webcam and Camera Not Working",
-    desc: "Troubleshoot 'Camera not found' errors and black screen issues in Zoom, Teams, and other apps.",
+    slug: "understand-webcam-driver-topics",
+    title: "Understanding Webcam and Camera Topics",
+    desc: "Identify 'Camera not found' and black screen topics in Zoom, Teams, and other apps.",
     img: "/images/fix-driver-monitor.webp",
     content: {
-      introduction: "Webcam issues are often caused by privacy settings or outdated drivers, especially after a Windows update.",
+      introduction: "Webcam topics are often caused by privacy settings or outdated drivers, especially after a Windows update.",
       reasons: [
         "Camera privacy settings blocking access.",
         "Outdated or corrupted webcam drivers.",
@@ -236,9 +236,9 @@ export const guidesData = [
     }
   },
   {
-    slug: "fix-scanner-driver-problems",
-    title: "Troubleshooting Scanner Connectivity and Driver Errors",
-    desc: "Fix scanner not detected, 'Busy' status, and communication errors with your multifunction printer.",
+    slug: "understand-scanner-driver-topics",
+    title: "Understanding Scanner Connectivity and Driver Topics",
+    desc: "Identify scanner not detected, 'Busy' status, and communication topics with your multifunction printer.",
     img: "/needdriver/need-printer-scanner.webp",
     content: {
       introduction: "Scanners often require specific WIA (Windows Image Acquisition) or TWAIN drivers to communicate with scanning software.",
@@ -265,17 +265,17 @@ export const guidesData = [
     }
   },
   {
-    slug: "update-chipset-drivers",
-    title: "Guide to Updating Chipset and Motherboard Drivers",
-    desc: "Improve system stability, USB speed, and power management by updating your motherboard's chipset drivers.",
+    slug: "guide-chipset-drivers",
+    title: "Guide to Chipset and Motherboard Drivers",
+    desc: "Understand system stability, USB speed, and power management by learning about your motherboard's chipset drivers.",
     img: "/needdriver/need-new-device.webp",
     content: {
       introduction: "Chipset drivers tell Windows how to communicate with the motherboard's core components, including USB controllers and power management systems.",
       reasons: [
-        "System instability or frequent blue screens.",
+        "System instability or frequent error screens.",
         "Slow data transfer over USB ports.",
         "New hardware components not being recognized properly.",
-        "Power management (Sleep/Hibernate) issues."
+        "Power management (Sleep/Hibernate) topics."
       ],
       steps: [
         {
@@ -283,11 +283,11 @@ export const guidesData = [
           text: "Type 'msinfo32' in Windows search. Look for 'BaseBoard Manufacturer' and 'BaseBoard Product'."
         },
         {
-          title: "Download Official Chipset Drivers",
+          title: "Look for Official Chipset Drivers",
           text: "Visit the manufacturer's site (Intel, AMD, ASUS, etc.) and search for the 'Chipset' category."
         },
         {
-          title: "Run the Installer",
+          title: "Installer Process",
           text: "Chipset drivers usually come as an executable. Run it and restart your system to apply changes."
         }
       ]
@@ -295,16 +295,16 @@ export const guidesData = [
   },
   {
     slug: "guide-bios-firmware-updates",
-    title: "Safe Way to Update BIOS and System Firmware",
-    desc: "Learn the critical steps to update your BIOS/UEFI safely to support new hardware and fix security vulnerabilities.",
+    title: "Guide to BIOS and System Firmware Topics",
+    desc: "Learn the critical steps to understand BIOS/UEFI and support new hardware and security.",
     img: "/needdriver/need-windows-update.webp",
     content: {
-      introduction: "BIOS/UEFI is the first software your PC runs. Updating it can improve compatibility with new CPUs and RAM, but it must be done carefully.",
+      introduction: "BIOS/UEFI is the first software your PC runs. Understanding it can improve compatibility with new CPUs and RAM, but it must be done carefully.",
       reasons: [
         "Support for a newer generation of processors.",
-        "Fixing critical security vulnerabilities.",
+        "Addressing critical security topics.",
         "Improving system boot times and stability.",
-        "Resolving hardware compatibility issues."
+        "Resolving hardware compatibility topics."
       ],
       steps: [
         {
@@ -316,23 +316,23 @@ export const guidesData = [
           text: "Download the BIOS file from the official site. Many motherboards require the file to be on a FAT32 formatted USB drive."
         },
         {
-          title: "Use Built-in Flash Utility",
+          title: "Use Built-in Utility",
           text: "Enter BIOS (usually by pressing Del or F2 during boot) and use the 'EZ Flash' or 'M-Flash' tool to select the update file."
         }
       ]
     }
   },
   {
-    slug: "fix-driver-update-failed",
-    title: "Solving 'Driver Update Failed' and Installation Errors",
-    desc: "How to handle 'Access Denied', 'Incompatible Hardware', and other common driver installation failures.",
+    slug: "understand-driver-update-topics",
+    title: "Understanding 'Driver Update Failed' and Data Topics",
+    desc: "Learn about 'Access Denied', 'Incompatible Hardware', and other common driver data topics.",
     img: "/needdriver/need-driver-errors.webp",
     content: {
-      introduction: "A failed driver update can leave your device in an 'Unknown' state or cause system crashes. Understanding the error code is key to the fix.",
+      introduction: "A failed driver update can leave your device in an 'Unknown' state or cause system crashes. Understanding the code is key to the topic.",
       reasons: [
         "Digital signature verification failure.",
         "Conflicting remnants of old drivers.",
-        "Antivirus software blocking the installation.",
+        "Antivirus software blocking the process.",
         "Insufficient system permissions."
       ],
       steps: [
@@ -345,19 +345,19 @@ export const guidesData = [
           text: "In advanced startup options, you can temporarily disable signature enforcement if installing a verified legacy driver."
         },
         {
-          title: "Run as Administrator",
+          title: "Administrator Permissions",
           text: "Right-click the driver installer and select 'Run as administrator' to ensure it has the necessary permissions."
         }
       ]
     }
   },
   {
-    slug: "fix-input-latency-drivers",
-    title: "Fixing Keyboard and Touchpad Lag and Latency",
-    desc: "Resolve slow response times, ghosting, and laggy cursor movements on your laptop or PC.",
+    slug: "understand-input-latency-drivers",
+    title: "Understanding Keyboard and Touchpad Lag Topics",
+    desc: "Identify slow response times, ghosting, and laggy cursor movements on your laptop or PC.",
     img: "/needdriver/need-hardware-stop.webp",
     content: {
-      introduction: "Input lag can be extremely frustrating, especially when it affects your productivity or gaming experience. Often, it's caused by outdated HID (Human Interface Device) drivers or background processes.",
+      introduction: "Input lag can be extremely frustrating, especially when it affects your productivity or experience. Often, it's caused by outdated HID (Human Interface Device) drivers or background processes.",
       reasons: [
         "Outdated chipset or HID drivers.",
         "Power management settings putting devices to sleep.",
@@ -381,17 +381,17 @@ export const guidesData = [
     }
   },
   {
-    slug: "fix-device-not-detected",
-    title: "What to Do When Windows Doesn't Detect Your Device",
-    desc: "A comprehensive guide to troubleshooting hardware that doesn't show up in Device Manager.",
+    slug: "understand-device-not-detected",
+    title: "Understanding When Windows Doesn't Detect Your Device",
+    desc: "A comprehensive guide to identifying hardware that doesn't show up in Device Manager.",
     img: "/images/fix-driver-monitor.webp",
     content: {
-      introduction: "When a device isn't detected at all, it's often a connection issue or a missing parent driver (like a USB controller or chipset driver) rather than just the device driver itself.",
+      introduction: "When a device isn't detected at all, it's often a connection topic or a missing parent driver (like a USB controller or chipset driver) rather than just the device driver itself.",
       reasons: [
         "Loose physical connection or faulty cable.",
         "Disabled port in BIOS/UEFI.",
         "Missing motherboard chipset drivers.",
-        "Faulty hardware or power supply issues."
+        "Faulty hardware or power supply topics."
       ],
       steps: [
         {

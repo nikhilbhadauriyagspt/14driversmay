@@ -29,10 +29,10 @@ const TermsOfService = () => {
               the "<strong>Services</strong>").
             </p>
             <p>
-              Charmliora was founded on the principle that household repairs should be handled with
-              the same level of precision as industrial maintenance. We recognize that modern appliances
-              are complex electronic systems that require specialized knowledge and calibrated tools for
-              effective servicing.
+              Charmliora was founded on the principle that technical documentation should be handled with
+              the same level of precision as scientific research. We recognize that modern hardware drivers
+              are complex software systems that require specialized knowledge for
+              effective understanding.
             </p>
             <p>
               You can contact us by email at <a href="mailto:info@charmliora.co" className="text-primary">info@charmliora.co</a></p>

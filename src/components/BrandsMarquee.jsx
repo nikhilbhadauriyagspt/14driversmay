@@ -3,14 +3,14 @@ import { Sparkles, CheckCircle } from "lucide-react";
 
 const InfoMarquee = () => {
   const messages = [
-    "Simple guides for common driver issues",
-    "Learn about audio, WiFi, display, USB and printer drivers",
-    "Understand system problems in easy language",
+    "Simple guides for common driver topics",
+    "Learn about audio, WiFi, display, USB and printer basics",
+    "Understand system topics in easy language",
     "No tech support — only educational driver information",
-    "Helpful tips for driver errors, missing devices and connection issues",
+    "Helpful tips for driver data, device info and connection topics",
     "Explore guides for laptop and desktop driver basics",
-    "Easy learning for software driver problems",
-    "Read clear steps before changing system settings"
+    "Easy learning for software driver topics",
+    "Read clear steps to understand system settings"
   ];
 
   return (

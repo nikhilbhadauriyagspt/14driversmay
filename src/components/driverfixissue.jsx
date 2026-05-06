@@ -106,7 +106,7 @@ export default function DriverTypesAndFix() {
                     {/* Floating Card Right */}
                     <div className="absolute z-20 right-[0px] top-[300px] bg-white/95 border border-slate-100 rounded-[14px] px-8 py-5 max-w-[270px]">
                         <p className="text-[#00428f] text-[17px] leading-7 font-bold">
-                            Learn Driver Issues Clearly
+                            Understand Driver Topics Clearly
                         </p>
                     </div>
 

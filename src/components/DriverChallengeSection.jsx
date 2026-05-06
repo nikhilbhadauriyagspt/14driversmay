@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 
 const DriverChallengeSection = () => {
     const points = [
-        "Learn why WiFi, audio, display or printer drivers may stop working properly",
-        "Understand missing driver, outdated driver and device not detected issues",
-        "Explore simple driver guides before changing system settings",
+        "Learn why WiFi, audio, display or printer driver data is important",
+        "Understand missing driver, outdated driver and device recognition topics",
+        "Explore simple driver guides to understand system settings",
     ];
 
     return (
@@ -34,15 +34,14 @@ const DriverChallengeSection = () => {
                 {/* Right Content */}
                 <div>
                     <h2 className="text-[38px] md:text-[48px] font-extrabold leading-[1.15] text-[#063c8d] mb-7">
-                        Understand Driver Issues <br />
+                        Understand Driver Topics <br />
                         for your Computer
                     </h2>
 
                     <p className="text-[16px] leading-[1.8] text-black max-w-[620px] mb-8">
                         Software drivers help your computer communicate with hardware like
-                        sound, display, WiFi, USB devices and printers. When drivers are
-                        missing, outdated or not working correctly, your system may show
-                        errors or device problems.
+                        sound, display, WiFi, USB devices and printers. Our guides explain
+                        how these systems work and how they relate to your computer's performance.
                     </p>
 
                     <div className="space-y-7 mb-10">

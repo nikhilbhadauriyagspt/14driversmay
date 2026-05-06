@@ -7,56 +7,56 @@ export default function WhenNeedDrivers() {
         {
             title: "New Hardware",
             problem: "You just plugged in a new mouse, camera, or printer.",
-            why: "Our guide helps your PC see and talk to the new part.",
+            why: "Our guide helps you understand how your PC sees the new part.",
             img: "/needdriver/need-new-device_thumb.webp",
             avif: "/needdriver/need-new-device_thumb.avif",
             png: "/needdriver/need-new-device.png",
-            path: "/guide/fix-driver-not-installed"
+            path: "/guide/understand-driver-not-installed"
         },
         {
             title: "After Updates",
             problem: "Your computer just finished a big Windows update.",
-            why: "Read this if things feel slow or stop working after the update.",
+            why: "Read this to understand changes in system behavior after the update.",
             img: "/needdriver/need-windows-update_thumb.webp",
             avif: "/needdriver/need-windows-update_thumb.avif",
             png: "/needdriver/need-windows-update.png",
-            path: "/guide/fix-driver-update-failed"
+            path: "/guide/understand-driver-update-topics"
         },
         {
-            title: "Suddenly Stopped",
-            problem: "A part was working fine, but now it has stopped.",
-            why: "Our guide shows you how to fix parts that suddenly quit.",
+            title: "Hardware Topics",
+            problem: "A part was working fine, but now its behavior has changed.",
+            why: "Our guide explains why hardware communication might change.",
             img: "/needdriver/need-hardware-stop_thumb.webp",
             avif: "/needdriver/need-hardware-stop_thumb.avif",
             png: "/needdriver/need-hardware-stop.png",
-            path: "/guide/fix-device-not-detected"
+            path: "/guide/understand-device-not-detected"
         },
         {
-            title: "Printer Errors",
-            problem: "Your PC cannot find your printer or scanner anymore.",
-            why: "We show you how to help your PC find the printer again.",
+            title: "Printer Info",
+            problem: "Your PC shows a printer or scanner recognition topic.",
+            why: "We show you how to understand printer and scanner data.",
             img: "/needdriver/need-printer-scanner_thumb.webp",
             avif: "/needdriver/need-printer-scanner_thumb.avif",
             png: "/needdriver/need-printer-scanner.png",
-            path: "/guide/fix-printer-driver-issues"
+            path: "/guide/understand-printer-driver-topics"
         },
         {
-            title: "No Connection",
-            problem: "Your WiFi or internet is not connecting at all.",
-            why: "Read this to fix your connection and get back online fast.",
+            title: "Network Basics",
+            problem: "Your WiFi or internet connection basics have changed.",
+            why: "Read this to understand wireless adapter and network data.",
             img: "/needdriver/need-audio-wifi_thumb.webp",
             avif: "/needdriver/need-audio-wifi_thumb.avif",
             png: "/needdriver/need-audio-wifi.png",
-            path: "/guide/fix-wifi-network-issues"
+            path: "/guide/understand-wifi-network-topics"
         },
         {
-            title: "Error Boxes",
-            problem: "You see an error box saying 'Part not found'.",
-            why: "Our guide explains what those error boxes mean for your PC.",
+            title: "System Data",
+            problem: "You see a system box with driver information.",
+            why: "Our guide explains what system data means for your PC hardware.",
             img: "/needdriver/need-driver-errors_thumb.webp",
             avif: "/needdriver/need-driver-errors_thumb.avif",
             png: "/needdriver/need-driver-errors.png",
-            path: "/guide/fix-driver-update-failed"
+            path: "/guide/understand-driver-update-topics"
         },
     ];
 
@@ -67,10 +67,10 @@ export default function WhenNeedDrivers() {
                 <div className="mb-16 border-l-4 border-blue-600 pl-8">
                     <h2 className="text-[32px] md:text-[40px] font-bold text-slate-900 leading-tight">
                         Common Situations:<br />
-                        <span className="text-blue-600">When you should read these guides</span>
+                        <span className="text-blue-600">When to read these information guides</span>
                     </h2>
                     <p className="mt-4 text-[16px] text-slate-500 font-medium max-w-xl">
-                        Computer parts use "Drivers" to talk to your PC. Read our information guides if you face any of these common problems.
+                        Computer parts use "Drivers" to talk to your PC. Read our information guides to understand these common technical topics.
                     </p>
                 </div>
 

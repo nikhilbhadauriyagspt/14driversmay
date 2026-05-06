@@ -7,52 +7,52 @@ export default function FAQHelpSection() {
 
     const faqs = [
         {
-            q: "Why is my driver not installed?",
-            a: "This usually happens when Windows cannot find a matching driver in its local database. You may need to manually download the specific driver package from the manufacturer's official support website."
+            q: "Why is a driver not installed?",
+            a: "This usually happens when Windows does not have a matching driver in its local database. You can learn about specific driver packages on the manufacturer's official support website."
         },
         {
-            q: "How do I know if my driver is outdated?",
-            a: "Signs of an outdated driver include system lag, frequent crashes, or hardware (like WiFi or Sound) performing poorly. You can check the 'Driver Date' in Device Manager to see how old it is."
+            q: "How can I identify if a driver is outdated?",
+            a: "Signs of an outdated driver include system lag or hardware (like WiFi or Sound) performing poorly. You can identify the 'Driver Date' in Device Manager to see how old it is."
         },
         {
-            q: "Why is my device not detected?",
-            a: "A device might not be detected due to a faulty cable, a disabled port in BIOS, or missing motherboard chipset drivers. Try a different port or 'Scan for hardware changes' in Device Manager."
+            q: "Why might a device not be detected?",
+            a: "A device might not be detected due to a faulty cable, a disabled port in BIOS, or missing motherboard chipset drivers. Identifying the connection type is a good first step."
         },
         {
-            q: "Is it safe to update drivers?",
-            a: "Yes, provided you download them from official sources. Official drivers are tested for stability and security. Avoid third-party 'driver updater' software that isn't from your PC manufacturer."
+            q: "Is it safe to learn about driver updates?",
+            a: "Yes, learning about drivers from official sources is a key part of system maintenance. Official drivers are tested for stability. Our guides provide information on these topics."
         },
         {
-            q: "Why did my driver update fail?",
-            a: "Common reasons include insufficient disk space, an incompatible driver version, or background security software blocking the installation. Try running the installer as an Administrator."
+            q: "Why might a driver update fail?",
+            a: "Common reasons include insufficient disk space, an incompatible version, or background security software. Understanding system permissions can help identify the cause."
         },
         {
-            q: "What happens if I install the wrong driver?",
-            a: "Installing the wrong driver can cause hardware malfunctions or 'Blue Screen' errors. Windows usually allows you to 'Roll Back' to the previous driver version in Device Manager to fix this."
+            q: "What happens if a wrong driver is installed?",
+            a: "Installing an incorrect driver can cause hardware malfunctions. Windows allows you to 'Roll Back' to the previous driver version in Device Manager to return to a known state."
         },
         {
-            q: "How often should I check for updates?",
-            a: "Generally, if your system is running smoothly, you don't need to check often. However, checking every 3-6 months or after a major Windows update is a good practice for optimal performance."
+            q: "How often should I check driver information?",
+            a: "If your system is running smoothly, you don't need to check often. However, understanding your hardware status every 3-6 months is a good practice for system knowledge."
         },
         {
-            q: "Do I need to restart after an update?",
-            a: "Most driver installations require a system restart to fully initialize the new software and clear the old driver from memory. Always restart if prompted by the installer."
+            q: "Do I need to restart after a driver process?",
+            a: "Many driver processes require a system restart to fully initialize the software and clear the old data from memory. This is a standard part of system updates."
         },
         {
-            q: "Can a bad driver damage hardware?",
-            a: "While rare, a very poorly optimized driver can cause overheating or incorrect voltage levels. However, modern hardware has safety protocols to prevent permanent physical damage."
+            q: "Can a driver affect hardware?",
+            a: "A driver tells the hardware how to behave. While rare, a poorly optimized driver can affect hardware performance. Modern hardware has safety protocols to prevent damage."
         },
         {
-            q: "How do I uninstall a faulty driver?",
-            a: "Open Device Manager, right-click the specific hardware component, and select 'Uninstall device'. Check the box for 'Delete the driver software' if you want a clean removal."
+            q: "How do I remove a driver entry?",
+            a: "In Device Manager, you can right-click a specific hardware component and select 'Uninstall device' to remove its driver entry from the system."
         },
         {
             q: "What are OEM vs Generic drivers?",
-            a: "OEM drivers are customized by your laptop brand (like HP or Dell), while Generic drivers come directly from the component maker (like Intel or Realtek). OEM versions are often more stable."
+            a: "OEM drivers are customized by your laptop brand (like HP or Dell), while Generic drivers come directly from the component maker (like Intel or Realtek). Both provide the same basic communication."
         },
         {
-            q: "Can I update without internet?",
-            a: "Yes, if you have previously downloaded the driver setup file (.exe or .msi) on a USB drive. You can run the installer offline to update the system drivers."
+            q: "Can I learn about drivers without internet?",
+            a: "Yes, our offline-ready guides provide information that you can read any time to understand how your computer hardware works."
         },
     ];
 
@@ -69,7 +69,7 @@ export default function FAQHelpSection() {
                         Frequently Asked <span className="text-blue-600">Questions</span>
                     </h2>
                     <p className="mt-4 text-[#667085] text-[16px] max-w-xl mx-auto leading-relaxed">
-                        Find quick answers to common technical queries about drivers, system updates, and hardware troubleshooting.
+                        Find quick answers to common technical queries about drivers, system updates, and hardware documentation.
                     </p>
                 </div>
 

@@ -4,18 +4,18 @@ import { Link } from "react-router-dom";
 
 export default function CommonProblems() {
   const issues = [
-    { title: "WiFi and network issues", desc: "Fix connection drops and slow speeds.", image: "/guide/guide-network-driver.webp", avif: "/guide/guide-network-driver.avif", png: "/guide/guide-network-driver.png", icon: <Wifi />, slug: "fix-wifi-network-issues" },
-    { title: "Audio and sound problems", desc: "Restore speaker and microphone functions.", image: "/guide/guide-audio-driver.webp", avif: "/guide/guide-audio-driver.avif", png: "/guide/guide-audio-driver.png", icon: <Volume2 />, slug: "fix-audio-driver-problems" },
-    { title: "Graphics and display errors", desc: "Fix screen flickering and gaming lag.", image: "/guide/guide-graphics-driver.webp", avif: "/guide/guide-graphics-driver.avif", png: "/guide/guide-graphics-driver.png", icon: <Monitor />, slug: "fix-graphics-driver-issues" },
-    { title: "Printer connection guides", desc: "Get your printer back online and working.", image: "/guide/guide-printer-driver.webp", avif: "/guide/guide-printer-driver.avif", png: "/guide/guide-printer-driver.png", icon: <Printer />, slug: "fix-printer-driver-issues" },
-    { title: "USB device not recognized", desc: "Solve plug-and-play and port errors.", image: "/guide/guide-usb-driver.webp", avif: "/guide/guide-usb-driver.avif", png: "/guide/guide-usb-driver.png", icon: <Usb />, slug: "fix-usb-driver-issues" },
-    { title: "Missing system drivers", desc: "Help for driver not found errors.", image: "/guide/guide-driver-not-installed.webp", avif: "/guide/guide-driver-not-installed.avif", png: "/guide/guide-driver-not-installed.png", icon: <Download />, slug: "fix-driver-not-installed" },
-    { title: "Outdated drivers", desc: "Fix errors caused by old software.", image: "/guide/guide-driver-not-installed_thumb.webp", avif: "/guide/guide-driver-not-installed_thumb.avif", png: "/guide/guide-driver-not-installed.png", icon: <RefreshCcw />, slug: "fix-driver-update-failed" },
-    { title: "Update failed", desc: "Help when driver updates stop midway.", image: "/guide/guide-driver-not-installed.webp", avif: "/guide/guide-driver-not-installed.avif", png: "/guide/guide-driver-not-installed.png", icon: <XCircle />, slug: "fix-driver-update-failed" },
-    { title: "Bluetooth pairing help", desc: "Fix wireless device connection problems.", image: "/guide/guide-usb-driver_thumb.webp", avif: "/guide/guide-usb-driver_thumb.avif", png: "/guide/guide-usb-driver.png", icon: <Bluetooth />, slug: "fix-bluetooth-driver-problems" },
-    { title: "Webcam offline", desc: "Camera showing black screen or not found.", image: "/images/fix-driver-monitor.webp", avif: "/images/fix-driver-monitor.avif", png: "/images/fix-driver-monitor.png", icon: <Video />, slug: "fix-webcam-driver-issues" },
-    { title: "Scanner errors", desc: "Scanner failing to respond to requests.", image: "/guide/guide-printer-driver_thumb.webp", avif: "/guide/guide-printer-driver_thumb.avif", png: "/guide/guide-printer-driver.png", icon: <Scan />, slug: "fix-scanner-driver-problems" },
-    { title: "Chipset logic", desc: "Sync communication between PC parts.", image: "/guide/guide-audio-driver_thumb.webp", avif: "/guide/guide-audio-driver_thumb.avif", png: "/guide/guide-audio-driver.png", icon: <Cpu />, slug: "update-chipset-drivers" },
+    { title: "WiFi and network topics", desc: "Identify connection drops and slow speeds.", image: "/guide/guide-network-driver.webp", avif: "/guide/guide-network-driver.avif", png: "/guide/guide-network-driver.png", icon: <Wifi />, slug: "understand-wifi-network-topics" },
+    { title: "Audio and sound topics", desc: "Learn about speaker and microphone functions.", image: "/guide/guide-audio-driver.webp", avif: "/guide/guide-audio-driver.avif", png: "/guide/guide-audio-driver.png", icon: <Volume2 />, slug: "understand-audio-driver-topics" },
+    { title: "Graphics and display topics", desc: "Identify screen flickering and gaming lag.", image: "/guide/guide-graphics-driver.webp", avif: "/guide/guide-graphics-driver.avif", png: "/guide/guide-graphics-driver.png", icon: <Monitor />, slug: "understand-graphics-driver-topics" },
+    { title: "Printer connection guides", desc: "Understand why printers go offline.", image: "/guide/guide-printer-driver.webp", avif: "/guide/guide-printer-driver.avif", png: "/guide/guide-printer-driver.png", icon: <Printer />, slug: "understand-printer-driver-topics" },
+    { title: "USB device recognition", desc: "Understand plug-and-play and port topics.", image: "/guide/guide-usb-driver.webp", avif: "/guide/guide-usb-driver.avif", png: "/guide/guide-usb-driver.png", icon: <Usb />, slug: "understand-usb-driver-topics" },
+    { title: "Missing system drivers", desc: "Learn about driver not found topics.", image: "/guide/guide-driver-not-installed.webp", avif: "/guide/guide-driver-not-installed.avif", png: "/guide/guide-driver-not-installed.png", icon: <Download />, slug: "understand-driver-not-installed" },
+    { title: "Outdated drivers", desc: "Identify topics caused by old software.", image: "/guide/guide-driver-not-installed_thumb.webp", avif: "/guide/guide-driver-not-installed_thumb.avif", png: "/guide/guide-driver-not-installed.png", icon: <RefreshCcw />, slug: "understand-driver-update-topics" },
+    { title: "Update topics", desc: "Learn when driver updates stop midway.", image: "/guide/guide-driver-not-installed.webp", avif: "/guide/guide-driver-not-installed.avif", png: "/guide/guide-driver-not-installed.png", icon: <XCircle />, slug: "understand-driver-update-topics" },
+    { title: "Bluetooth pairing info", desc: "Identify wireless device connection topics.", image: "/guide/guide-usb-driver_thumb.webp", avif: "/guide/guide-usb-driver_thumb.avif", png: "/guide/guide-usb-driver.png", icon: <Bluetooth />, slug: "understand-bluetooth-driver-topics" },
+    { title: "Webcam topics", desc: "Camera showing black screen or not found.", image: "/images/fix-driver-monitor.webp", avif: "/images/fix-driver-monitor.avif", png: "/images/fix-driver-monitor.png", icon: <Video />, slug: "understand-webcam-driver-topics" },
+    { title: "Scanner topics", desc: "Scanner failing to respond to requests.", image: "/guide/guide-printer-driver_thumb.webp", avif: "/guide/guide-printer-driver_thumb.avif", png: "/guide/guide-printer-driver.png", icon: <Scan />, slug: "understand-scanner-driver-topics" },
+    { title: "Chipset logic", desc: "Communication between PC parts.", image: "/guide/guide-audio-driver_thumb.webp", avif: "/guide/guide-audio-driver_thumb.avif", png: "/guide/guide-audio-driver.png", icon: <Cpu />, slug: "guide-chipset-drivers" },
   ];
 
   return (
@@ -36,13 +36,13 @@ export default function CommonProblems() {
           </div>
 
           <h2 className="text-4xl md:text-6xl font-[900] text-white tracking-tight mb-6 drop-shadow-sm">
-            Explore common driver issues
+            Understand common driver topics
           </h2>
 
           <div className="w-20 h-1.5 bg-white/30 rounded-full mb-8"></div>
 
           <p className="text-blue-50 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed opacity-90">
-            Simple and clear information to help you identify hardware communication problems on your computer.
+            Simple and clear information to help you identify hardware communication on your computer.
           </p>
         </div>
 

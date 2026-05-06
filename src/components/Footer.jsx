@@ -55,12 +55,12 @@ export default function Footer() {
           <FooterColumn
             title="Guides"
             links={[
-              { name: "Installation Guides", path: "/guide/fix-driver-not-installed" },
-              { name: "Update Information", path: "/guide/fix-driver-not-installed" },
-              { name: "Hardware Connection", path: "/guide/fix-usb-driver-issues" },
-              { name: "Audio Problems", path: "/guide/fix-audio-driver-problems" },
-              { name: "WiFi & Network", path: "/guide/fix-wifi-network-issues" },
-              { name: "Graphics & Display", path: "/guide/fix-graphics-driver-issues" },
+              { name: "Information Guides", path: "/guide/understand-driver-not-installed" },
+              { name: "Update Topics", path: "/guide/understand-driver-update-topics" },
+              { name: "Hardware Topics", path: "/guide/understand-usb-driver-topics" },
+              { name: "Audio Topics", path: "/guide/understand-audio-driver-topics" },
+              { name: "WiFi & Network", path: "/guide/understand-wifi-network-topics" },
+              { name: "Graphics & Display", path: "/guide/understand-graphics-driver-topics" },
             ]}
           />
 
@@ -68,12 +68,12 @@ export default function Footer() {
             <FooterColumn
               title="Driver Topics"
               links={[
-                { name: "Printer Drivers", path: "/driver/printer-drivers" },
-                { name: "Network Drivers", path: "/driver/network-drivers" },
-                { name: "Audio Drivers", path: "/driver/audio-drivers" },
-                { name: "Graphics Drivers", path: "/driver/graphics-drivers" },
-                { name: "Bluetooth Drivers", path: "/driver/bluetooth-drivers" },
-                { name: "USB Support", path: "/driver/usb-support" },
+                { name: "Printer Information", path: "/driver/printer-information" },
+                { name: "Network Information", path: "/driver/network-information" },
+                { name: "Audio Information", path: "/driver/audio-information" },
+                { name: "Graphics Information", path: "/driver/graphics-information" },
+                { name: "Bluetooth Information", path: "/driver/bluetooth-information" },
+                { name: "USB Information", path: "/driver/usb-information" },
               ]}
             />
 

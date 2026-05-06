@@ -4,7 +4,6 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import { BookingProvider } from './context/BookingContext';
 import { SettingsProvider } from './context/SettingsContext';
-import QuickSupportFAB from './components/QuickSupportFAB';
 import CookieConsent from './components/CookieConsent';
 import ScrollToTop from './components/ScrollToTop';
 import './App.css';

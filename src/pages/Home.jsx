@@ -17,12 +17,12 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>Fix Driver Issues | WiFi, Audio, USB & Printer Solutions</title>
-        <meta name="description" content="Technical repository for hardware specifications, driver-level architectural data, and system optimization documentation for the global technical community." />
+        <title>Learn About Driver Issues | WiFi, Audio, USB & Printer Information</title>
+        <meta name="description" content="Technical repository for hardware specifications, driver-level architectural data, and system documentation for the global technical community." />
         <link rel="canonical" href="https://charmliora.co" />
       </Helmet>
 
-      <h1 className="sr-only">Fix Driver Issues with Step-by-Step Information Guides</h1>
+      <h1 className="sr-only">Understand Driver Topics with Step-by-Step Information Guides</h1>
       <Hero />
       <InfoMarquee />
       <DriverChallengeSection />
