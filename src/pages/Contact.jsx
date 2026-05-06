@@ -37,9 +37,9 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-bold text-slate-900 text-sm">Technical Inquiry</h4>
-                  <p className="text-slate-600 text-sm font-medium mt-1"> <a href="mailto:info@misterpcdriver.com" >
+                  <p className="text-slate-600 text-sm font-medium mt-1"> <a href="mailto:info@charmliora.co" >
 
-                    info@misterpcdriver.com
+                    info@charmliora.co
                   </a></p>
                 </div>
               </div>

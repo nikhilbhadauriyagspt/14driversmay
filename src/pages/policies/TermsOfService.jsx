@@ -35,7 +35,7 @@ const TermsOfService = () => {
               effective servicing.
             </p>
             <p>
-              You can contact us by email at <a href="mailto:info@misterpcdriver.com" className="text-primary">info@misterpcdriver.com</a></p>
+              You can contact us by email at <a href="mailto:info@charmliora.co" className="text-primary">info@charmliora.co</a></p>
             <p>
               These Legal Terms constitute a legally binding agreement made between you, whether
               personally or on behalf of an entity ("<strong>you</strong>"), and Charmliora, concerning your access to
@@ -110,7 +110,7 @@ const TermsOfService = () => {
             </ul>
             <p>solely for your personal, non-commercial use or internal business purpose.</p>
             <p>Except as set out in this section or elsewhere in our Legal Terms, no part of the Services and no Content or Marks may be copied, reproduced, aggregated, republished, uploaded, posted, publicly displayed, encoded, translated, transmitted, distributed, sold, licensed, or otherwise exploited for any commercial purpose whatsoever, without our express prior written permission.</p>
-            <p>If you wish to make any use of the Services, Content, or Marks other than as set out in this section or elsewhere in our Legal Terms, please address your request to: <a href="mailto:info@misterpcdriver.com" className="text-primary">info@misterpcdriver.com</a>. If we ever grant you the permission to post, reproduce, or publicly display any part of our Services or Content, you must identify us as the owners or licensors of the Services, Content, or Marks and ensure that any copyright or proprietary notice appears or is visible on posting, reproducing, or displaying our Content.</p>
+            <p>If you wish to make any use of the Services, Content, or Marks other than as set out in this section or elsewhere in our Legal Terms, please address your request to: <a href="mailto:info@charmliora.co" className="text-primary">info@charmliora.co</a>. If we ever grant you the permission to post, reproduce, or publicly display any part of our Services or Content, you must identify us as the owners or licensors of the Services, Content, or Marks and ensure that any copyright or proprietary notice appears or is visible on posting, reproducing, or displaying our Content.</p>
             <p>We reserve all rights not expressly granted to you in and to the Services, Content, and Marks.</p>
             <p>Any breach of these Intellectual Property Rights will constitute a material breach of our Legal Terms and your right to use our Services will terminate immediately.</p>
 
@@ -263,7 +263,7 @@ const TermsOfService = () => {
           <section id="contact">
             <h3 className="text-xl font-bold text-gray-900 border-b pb-2 mb-4 uppercase">20. CONTACT US</h3>
             <p>In order to resolve a complaint regarding the Services or to receive further information regarding use of the Services, please contact us at:</p>
-            <p>Email: <a href="mailto:info@misterpcdriver.com" className="text-primary">info@misterpcdriver.com</a></p>
+            <p>Email: <a href="mailto:info@charmliora.co" className="text-primary">info@charmliora.co</a></p>
           </section>
         </div>
       </div>

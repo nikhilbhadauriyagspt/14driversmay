@@ -127,7 +127,7 @@ const CookiePolicy = () => {
             <address className="not-italic bg-gray-50 p-8 rounded-2xl border border-gray-100 mt-4 leading-relaxed font-bold">
               Henan Yunyue Network Technology Co. Ltd.<br />
               Room 0903, Building 2, Longshang New Residence, Jinshan Street, Kuancheng Manchu Autonomous County, Chengde City, Hebei Province, JS, 320500, China<br />
-              Email: info@misterpcdriver.com
+              Email: info@charmliora.co
             </address>
           </section>
         </div>

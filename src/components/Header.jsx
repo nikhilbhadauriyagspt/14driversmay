@@ -328,7 +328,7 @@ const Header = () => {
                 to="/guides"
                 className="h-11 px-7 rounded-full bg-gradient-to-r from-[#087dcc] to-[#071b85] text-white text-[14px] font-semibold lg:flex items-center gap-2 hover:shadow-lg transition hidden"
               >
-                Read Guides
+                Learn More
               </Link>
 
               <button
@@ -545,7 +545,7 @@ const Header = () => {
             className="mt-auto w-full bg-gradient-to-r from-[#087dcc] to-[#071b85] text-white py-4 rounded-full font-semibold flex items-center justify-center gap-3"
           >
             <FaBookOpen />
-            Read Guides
+            Learn More
           </Link>
         </div>
       </div>

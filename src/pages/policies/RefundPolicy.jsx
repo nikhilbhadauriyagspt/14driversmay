@@ -38,7 +38,7 @@ const RefundPolicy = () => {
           <section>
             <h2 className="text-2xl font-bold text-gray-900 mb-4 uppercase">RETURN PROCESS</h2>
             <p>
-              To return an item, please email customer service at <a href="mailto:info@misterpcdriver.com" className="text-primary font-bold">info@misterpcdriver.com</a> to obtain
+              To return an item, please email customer service at <a href="mailto:info@charmliora.co" className="text-primary font-bold">info@charmliora.co</a> to obtain
               an Return Merchandise Authorization (RMA) number. After receiving an RMA number, place
               the item securely in its original packaging and include your proof of purchase, then mail your
               return to the following address:
@@ -80,7 +80,7 @@ const RefundPolicy = () => {
             </p>
             <div className="bg-primary text-white p-8 rounded-2xl shadow-xl mt-4">
               <p className="font-bold text-xl mb-2">+1-402-508-9991</p>
-              <a href="mailto:info@misterpcdriver.com" className="text-secondary font-bold text-lg hover:underline">info@misterpcdriver.com</a>
+              <a href="mailto:info@charmliora.co" className="text-secondary font-bold text-lg hover:underline">info@charmliora.co</a>
             </div>
           </section>
         </div>

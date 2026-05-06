@@ -111,7 +111,7 @@ export default function PopularDriverGuides() {
 
                                     <div className="mt-6 flex justify-center">
                                         <span className="inline-flex items-center gap-2 text-[13px] font-bold text-[#087dcc]">
-                                            Read Guide <ArrowRight className="w-4 h-4" />
+                                            Learn More<ArrowRight className="w-4 h-4" />
                                         </span>
                                     </div>
                                 </Link>

@@ -21,7 +21,7 @@ export default function Footer() {
               <img
                 src="/logo/logo.avif"
                 alt="Charmliora"
-                className="h-12 w-auto object-contain"
+                className="h-12 w-auto object-contain brightness-0 invert"
               />
             </Link>
 
@@ -32,11 +32,11 @@ export default function Footer() {
             <div className="mt-10">
               <h3 className="text-[22px] font-extrabold mb-5">Email Us</h3>
               <a
-                href="mailto:info@misterpcdriver.com"
+                href="mailto:info@charmliora.co"
                 className="flex items-center gap-2 text-[15px] text-white hover:text-cyan-200 transition"
               >
                 <Mail className="w-4 h-4" />
-                info@misterpcdriver.com
+                info@charmliora.co
               </a>
             </div>
           </div>
