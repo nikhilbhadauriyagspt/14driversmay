@@ -26,7 +26,7 @@ const PrivacyPolicy = () => {
             </p>
             <ul className="list-disc pl-6 space-y-2">
               <li>Visit our website at <a href="https://charmliora.co/" className="text-primary hover:text-secondary">https://charmliora.co/</a> or any website of ours that links to this Privacy Notice</li>
-              <li>Use Charmliora. At Charmliora, we focus on technical accuracy and timely service. Our business is built on providing diagnostic clarity and performing repairs that aim to extend the lifecycle of your household appliances. We serve residential clients with a commitment to maintaining standard operating procedures.</li>
+              <li>Use Charmliora. At Charmliora, we focus on technical accuracy and informational clarity. Our platform is built on providing documentation on how hardware drivers and device communication work. We serve the technical community with a commitment to maintaining accurate documentation.</li>
               <li>Engage with us in other related ways, including any marketing or events</li>
             </ul>
             <p>

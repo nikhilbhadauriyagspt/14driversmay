@@ -143,7 +143,7 @@ const TermsOfService = () => {
               <li>Circumvent, disable, or otherwise interfere with security-related features of the Services, including features that prevent or restrict the use or copying of any Content or enforce limitations on the use of the Services and/or the Content contained therein.</li>
               <li>Disparage, tarnish, or otherwise harm, in our opinion, us and/or the Services.</li>
               <li>Use any information obtained from the Services in order to harass, abuse, or harm another person.</li>
-              <li>Make improper use of our support services or submit false reports of abuse or misconduct.</li>
+              <li>Make improper use of our contact services or submit false reports of abuse or misconduct.</li>
               <li>Use the Services in a manner inconsistent with any applicable laws or regulations.</li>
               <li>Engage in unauthorized framing of or linking to the Services.</li>
               <li>Upload or transmit (or attempt to upload or to transmit) viruses, Trojan horses, or other material, including excessive use of capital letters and spamming (continuous posting of repetitive text), that interferes with any party’s uninterrupted use and enjoyment of the Services or modifies, impairs, disrupts, alters, or interferes with the use, features, functions, operation, or maintenance of the Services.</li>
