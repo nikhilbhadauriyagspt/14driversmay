@@ -318,8 +318,8 @@ const PrivacyPolicy = () => {
 
           <section id="contact">
             <h3 className="text-xl font-bold text-gray-900 border-b pb-2 mb-4">13. HOW CAN YOU CONTACT US ABOUT THIS NOTICE?</h3>
-            <p>If you have questions or comments about this notice, you may email us at <strong>info@charmliora.co</strong> or contact us by post at:</p>
-            <p>Email: <strong>info@charmliora.co</strong></p>
+            <p>If you have questions or comments about this notice, you may email us at <a href="mailto:info@charmliora.co" className="text-primary font-bold">info@charmliora.co</a> or contact us by post at:</p>
+            <p>Email: <a href="mailto:info@charmliora.co" className="text-primary font-bold">info@charmliora.co</a></p>
           </section>
 
           <section id="review">
