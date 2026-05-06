@@ -9,6 +9,8 @@ export default function WhenNeedDrivers() {
             problem: "You just plugged in a new mouse, camera, or printer.",
             why: "Our guide helps your PC see and talk to the new part.",
             img: "/needdriver/need-new-device_thumb.webp",
+            avif: "/needdriver/need-new-device_thumb.avif",
+            png: "/needdriver/need-new-device.png",
             path: "/guide/fix-driver-not-installed"
         },
         {
@@ -16,6 +18,8 @@ export default function WhenNeedDrivers() {
             problem: "Your computer just finished a big Windows update.",
             why: "Read this if things feel slow or stop working after the update.",
             img: "/needdriver/need-windows-update_thumb.webp",
+            avif: "/needdriver/need-windows-update_thumb.avif",
+            png: "/needdriver/need-windows-update.png",
             path: "/guide/fix-driver-update-failed"
         },
         {
@@ -23,6 +27,8 @@ export default function WhenNeedDrivers() {
             problem: "A part was working fine, but now it has stopped.",
             why: "Our guide shows you how to fix parts that suddenly quit.",
             img: "/needdriver/need-hardware-stop_thumb.webp",
+            avif: "/needdriver/need-hardware-stop_thumb.avif",
+            png: "/needdriver/need-hardware-stop.png",
             path: "/guide/fix-device-not-detected"
         },
         {
@@ -30,6 +36,8 @@ export default function WhenNeedDrivers() {
             problem: "Your PC cannot find your printer or scanner anymore.",
             why: "We show you how to help your PC find the printer again.",
             img: "/needdriver/need-printer-scanner_thumb.webp",
+            avif: "/needdriver/need-printer-scanner_thumb.avif",
+            png: "/needdriver/need-printer-scanner.png",
             path: "/guide/fix-printer-driver-issues"
         },
         {
@@ -37,6 +45,8 @@ export default function WhenNeedDrivers() {
             problem: "Your WiFi or internet is not connecting at all.",
             why: "Read this to fix your connection and get back online fast.",
             img: "/needdriver/need-audio-wifi_thumb.webp",
+            avif: "/needdriver/need-audio-wifi_thumb.avif",
+            png: "/needdriver/need-audio-wifi.png",
             path: "/guide/fix-wifi-network-issues"
         },
         {
@@ -44,6 +54,8 @@ export default function WhenNeedDrivers() {
             problem: "You see an error box saying 'Part not found'.",
             why: "Our guide explains what those error boxes mean for your PC.",
             img: "/needdriver/need-driver-errors_thumb.webp",
+            avif: "/needdriver/need-driver-errors_thumb.avif",
+            png: "/needdriver/need-driver-errors.png",
             path: "/guide/fix-driver-update-failed"
         },
     ];
@@ -68,11 +80,15 @@ export default function WhenNeedDrivers() {
                         <div key={index} className="flex flex-col sm:flex-row bg-slate-50 border border-slate-200 rounded-[10px] overflow-hidden hover:border-blue-300 transition-colors group">
                             {/* Left Side: Image */}
                             <div className="sm:w-[220px] h-[200px] sm:h-auto shrink-0 overflow-hidden bg-slate-200">
-                                <img
-                                    src={item.img}
-                                    alt={item.title}
-                                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                                />
+                                <picture>
+                                    <source srcSet={item.avif} type="image/avif" />
+                                    <source srcSet={item.img} type="image/webp" />
+                                    <img
+                                        src={item.png}
+                                        alt={item.title}
+                                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    />
+                                </picture>
                             </div>
 
                             {/* Right Side: Content */}

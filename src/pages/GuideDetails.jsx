@@ -39,7 +39,7 @@ const GuideDetails = () => {
   return (
     <div className="bg-[#F7FAFF] min-h-screen pt-24 pb-20 font-[Poppins]">
       <Helmet>
-        <title>{guide.title} | Mister PC Driver Guide</title>
+        <title>{guide.title} | Charmliora Guide</title>
         <meta name="description" content={guide.desc} />
       </Helmet>
 
@@ -123,7 +123,7 @@ const GuideDetails = () => {
               {/* Simple Footer CTA */}
               <div className="mt-20 pt-10 border-t border-slate-100 flex flex-col md:flex-row items-center justify-between gap-6">
                 <p className="text-[14px] text-[#667085] font-medium text-center md:text-left">
-                   Want to learn more? Check out our other helpful guides.
+                  Want to learn more? Check out our other helpful guides.
                 </p>
                 <Link
                   to="/guides"

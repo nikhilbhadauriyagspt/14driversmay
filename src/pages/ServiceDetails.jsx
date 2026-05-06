@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { 
-  ChevronRight, 
-  BookOpen, 
-  Info, 
-  AlertCircle, 
-  Cpu, 
+import {
+  ChevronRight,
+  BookOpen,
+  Info,
+  AlertCircle,
+  Cpu,
   ArrowLeft,
   ExternalLink,
   Clock,
@@ -36,7 +36,7 @@ const ServiceDetails = () => {
   return (
     <div className="bg-white min-h-screen font-sans text-slate-900 antialiased">
       <Helmet>
-        <title>{service.title} Guide | Mister PC Driver</title>
+        <title>{service.title} Guide | Charmliora</title>
         <meta name="description" content={`Information about ${service.title} and how it works.`} />
       </Helmet>
 
@@ -53,7 +53,7 @@ const ServiceDetails = () => {
 
       <main className="max-w-[1200px] mx-auto px-6 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-16">
-          
+
           {/* Main Content Column */}
           <article className="max-w-3xl">
             <header className="mb-12">
@@ -77,7 +77,7 @@ const ServiceDetails = () => {
               <p className="text-lg text-slate-600 leading-relaxed mb-8">
                 {service.shortDesc}
               </p>
-              
+
               <h2 className="text-xl font-bold text-slate-900 mt-12 mb-4">What is it?</h2>
               <div className="text-slate-600 leading-relaxed space-y-4">
                 <p>{service.longDesc}</p>
@@ -130,9 +130,9 @@ const ServiceDetails = () => {
               </h3>
               <nav className="space-y-1">
                 {servicesData.filter(s => s.slug !== slug).slice(0, 8).map((s, i) => (
-                  <Link 
-                    key={i} 
-                    to={`/driver/${s.slug}`} 
+                  <Link
+                    key={i}
+                    to={`/driver/${s.slug}`}
                     className="flex items-center justify-between px-3 py-2.5 rounded-md text-[13px] font-medium text-slate-600 hover:bg-slate-50 hover:text-blue-600 transition-all group"
                   >
                     {s.title}

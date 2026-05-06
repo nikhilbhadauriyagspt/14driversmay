@@ -8,7 +8,7 @@ const Guides = () => {
   return (
     <div className="bg-[#F7FAFF] min-h-screen pt-28 pb-20 font-[Poppins]">
       <Helmet>
-        <title>Popular Driver Guides | Step-by-Step Fixes | Mister PC Driver</title>
+        <title>Popular Driver Guides | Step-by-Step Fixes | Charmliora</title>
         <meta name="description" content="Browse our library of popular driver guides to fix printer, audio, wifi, and graphics driver issues on your Windows PC." />
       </Helmet>
 
@@ -28,15 +28,15 @@ const Guides = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {guidesData.map((guide, index) => (
-            <Link 
+            <Link
               key={index}
               to={`/guide/${guide.slug}`}
               className="bg-white rounded-[10px] border border-[#E6ECF8] overflow-hidden group hover:border-blue-400 transition-all duration-300 flex flex-col h-full"
             >
               <div className="w-full h-[220px] bg-white border-b border-[#F0F4FA] p-6 flex items-center justify-center overflow-hidden">
-                <img 
-                  src={guide.img} 
-                  alt={guide.title} 
+                <img
+                  src={guide.img}
+                  alt={guide.title}
                   className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-500"
                 />
               </div>

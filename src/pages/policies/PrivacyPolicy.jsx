@@ -9,8 +9,8 @@ const PrivacyPolicy = () => {
   return (
     <div className="bg-white min-h-screen pt-32 pb-24 font-poppins">
       <Helmet>
-        <title>Privacy Policy | Mister PC Driver Official Standards</title>
-        <meta name="description" content="Detailed Privacy Policy for Mister PC Driver. Understand how we collect, use, and protect your technical data." />
+        <title>Privacy Policy | Charmliora Official Standards</title>
+        <meta name="description" content="Detailed Privacy Policy for Charmliora. Understand how we collect, use, and protect your technical data." />
       </Helmet>
 
       <div className="container mx-auto px-4 max-w-5xl">
@@ -20,13 +20,13 @@ const PrivacyPolicy = () => {
         <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed space-y-8">
           <section>
             <p>
-              This Privacy Notice for Mister PC Driver ("<strong>we</strong>," "<strong>us</strong>," or "<strong>our</strong>"), describes how and why we
+              This Privacy Notice for Charmliora ("<strong>we</strong>," "<strong>us</strong>," or "<strong>our</strong>"), describes how and why we
               might access, collect, store, use, and/or share ("<strong>process</strong>") your personal information when
               you use our services ("<strong>Services</strong>"), including when you:
             </p>
             <ul className="list-disc pl-6 space-y-2">
-              <li>Visit our website at <a href="https://www.misterpcdriver.com/" className="text-primary hover:text-secondary">https://www.misterpcdriver.com/</a> or any website of ours that links to this Privacy Notice</li>
-              <li>Use Mister PC Driver. At Mister PC Driver, we focus on technical accuracy and timely service. Our business is built on providing diagnostic clarity and performing repairs that aim to extend the lifecycle of your household appliances. We serve residential clients with a commitment to maintaining standard operating procedures.</li>
+              <li>Visit our website at <a href="https://charmliora.co/" className="text-primary hover:text-secondary">https://charmliora.co/</a> or any website of ours that links to this Privacy Notice</li>
+              <li>Use Charmliora. At Charmliora, we focus on technical accuracy and timely service. Our business is built on providing diagnostic clarity and performing repairs that aim to extend the lifecycle of your household appliances. We serve residential clients with a commitment to maintaining standard operating procedures.</li>
               <li>Engage with us in other related ways, including any marketing or events</li>
             </ul>
             <p>

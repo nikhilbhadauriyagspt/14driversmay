@@ -8,8 +8,8 @@ const Contact = () => {
   return (
     <div className="bg-[#F8FAFC] min-h-screen font-[Poppins]">
       <Helmet>
-        <title>Help Center | Mister PC Driver Technical Registry</title>
-        <meta name="description" content="Contact Mister PC Driver for technical documentation requests, hardware registry updates, or technical inquiries regarding system protocols." />
+        <title>Help Center | Charmliora Technical Registry</title>
+        <meta name="description" content="Contact Charmliora for technical documentation requests, hardware registry updates, or technical inquiries regarding system protocols." />
       </Helmet>
 
       {/* Simple Hero */}

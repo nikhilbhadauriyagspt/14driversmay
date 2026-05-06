@@ -1,76 +1,142 @@
-import React from "react";
-import { ArrowRight, ChevronRight, BookOpen } from "lucide-react";
+import React, { useRef } from "react";
+import { ArrowRight, ChevronLeft, ChevronRight, BookOpen } from "lucide-react";
 import { Link } from "react-router-dom";
 import { guidesData } from "../data/guidesData";
 
 export default function PopularDriverGuides() {
-    // Show first 11 guides on home page to perfectly fill 3 rows with 1 featured
-    const guides = guidesData.slice(0, 11).map((guide, index) => ({
+    const sliderRef = useRef(null);
+
+    const guides = guidesData.slice(0, 8).map((guide) => ({
         ...guide,
-        featured: index === 0, // Make the first one featured
-        // Use thumb image if available (not in /images/ folder)
-        thumbImg: guide.img.includes('/images/')
+        thumbImg: guide.img.includes("/images/")
             ? guide.img
-            : guide.img.replace('.webp', '_thumb.webp')
+            : guide.img.replace(".webp", "_thumb.webp"),
+        avifThumbImg: guide.img.includes("/images/")
+            ? guide.img.replace(".webp", ".avif")
+            : guide.img.replace(".webp", "_thumb.avif"),
+        pngFallback: guide.img.includes("/images/")
+            ? guide.img.replace(".webp", ".png")
+            : guide.img.replace(".webp", ".png"),
     }));
 
+    const slideLeft = () => {
+        sliderRef.current?.scrollBy({ left: -420, behavior: "smooth" });
+    };
+
+    const slideRight = () => {
+        sliderRef.current?.scrollBy({ left: 420, behavior: "smooth" });
+    };
+
     return (
-        <section className="bg-white px-6 py-20 font-sans">
-            <div className="max-w-[1600px] mx-auto">
-                {/* Header */}
-                <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
-                    <div>
-                        <div className="flex items-center gap-2 mb-3 text-blue-600 font-bold text-[12px] uppercase tracking-widest">
-                            <BookOpen className="w-4 h-4" /> Recommended Reading
+        <section className="w-full bg-white py-20 px-6 font-['Poppins'] overflow-hidden">
+            <div className="max-w-[1700px] mx-auto grid grid-cols-1 lg:grid-cols-[460px_1fr] gap-16 items-end">
+
+                {/* Left Person Area */}
+                <div className="relative hidden lg:flex items-end justify-center min-h-full">
+                    <picture className="relative z-10">
+                        <source srcSet="/about/slider_lady.avif" type="image/avif" />
+                        <source srcSet="/about/slider_lady.webp" type="image/webp" />
+                        <img
+                            src="/about/slider_lady.png"
+                            alt="Driver guide learning"
+                            className="max-h-[700px] object-cover"
+                        />
+                    </picture>
+                </div>
+
+                {/* Right Content */}
+                <div>
+                    <div className="flex items-end justify-between gap-6 mb-5">
+                        <div>
+                            <div className="flex items-center gap-2 mb-3 text-[#087dcc] font-bold text-[12px] uppercase tracking-widest">
+                                <BookOpen className="w-4 h-4" />
+                                Recommended Reading
+                            </div>
+
+                            <h2 className="text-[25px] md:text-[35px] font-extrabold leading-[1.08] text-[#063c8d]">
+                                Driver Guides
+                                we provide
+                            </h2>
+
+
                         </div>
-                        <h2 className="text-[32px] md:text-[42px] font-bold text-slate-900 leading-tight">
-                            Most Read <span className="text-blue-600">Information Guides</span>
-                        </h2>
+
+                        <div className="hidden md:flex items-center gap-4">
+                            <button
+                                onClick={slideLeft}
+                                aria-label="Slide left"
+                                className="w-12 h-12 rounded-full border border-[#087dcc] text-[#063c8d] flex items-center justify-center hover:bg-[#087dcc] hover:text-white transition"
+                            >
+                                <ChevronLeft className="w-5 h-5" />
+                            </button>
+
+                            <button
+                                onClick={slideRight}
+                                aria-label="Slide right"
+                                className="w-12 h-12 rounded-full border border-[#087dcc] text-[#063c8d] flex items-center justify-center hover:bg-[#087dcc] hover:text-white transition"
+                            >
+                                <ChevronRight className="w-5 h-5" />
+                            </button>
+                        </div>
                     </div>
+
+                    {/* Slider Cards - Converted to Marquee */}
+                    <div className="relative overflow-hidden group py-4">
+                        <div className="flex w-max animate-guideMarquee gap-8 px-4 group-hover:[animation-play-state:paused]">
+                            {[...guides, ...guides].map((guide, index) => (
+                                <Link
+                                    key={index}
+                                    to={`/guide/${guide.slug}`}
+                                    className="group/card w-[330px] md:w-[370px] bg-[#E8FBFF] rounded-[8px] p-6 border border-blue-100 transition-all duration-300 hover:-translate-y-2 shrink-0 flex flex-col"
+                                >
+                                    <div className="h-[200px] rounded-[8px] overflow-hidden mb-6 bg-white">
+                                        <picture>
+                                            <source srcSet={guide.avifThumbImg} type="image/avif" />
+                                            <source srcSet={guide.thumbImg} type="image/webp" />
+                                            <img
+                                                src={guide.pngFallback}
+                                                alt={guide.title}
+                                                className="w-full h-full object-cover transition-transform duration-700 group-hover/card:scale-110"
+                                            />
+                                        </picture>
+                                    </div>
+
+                                    <h3 className="text-center text-[18px] font-extrabold text-[#063c8d] mb-1 group-hover/card:text-[#087dcc] transition">
+                                        {guide.title}
+                                    </h3>
+
+                                    <p className="text-center text-[12px] leading-[1.7] text-black line-clamp-3">
+                                        {guide.desc}
+                                    </p>
+
+                                    <div className="mt-6 flex justify-center">
+                                        <span className="inline-flex items-center gap-2 text-[13px] font-bold text-[#087dcc]">
+                                            Read Guide <ArrowRight className="w-4 h-4" />
+                                        </span>
+                                    </div>
+                                </Link>
+                            ))}
+                        </div>
+                    </div>
+
                     <Link
                         to="/guides"
-                        className="flex items-center gap-2 text-[14px] font-bold text-slate-900 hover:text-blue-600 transition-colors border-b-2 border-slate-900 hover:border-blue-600 pb-1 w-fit"
+                        className="mt-8 inline-flex items-center gap-2 text-[14px] font-bold text-[#063c8d] hover:text-[#087dcc] border-b-2 border-[#063c8d] hover:border-[#087dcc] pb-1"
                     >
                         View All Guides <ArrowRight className="w-4 h-4" />
                     </Link>
                 </div>
-
-                {/* Modern Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    {guides.map((guide, index) => (
-                        <Link
-                            key={index}
-                            to={`/guide/${guide.slug}`}
-                            className={`group relative bg-slate-50 border border-slate-200 rounded-[10px] overflow-hidden transition-all duration-300 hover:border-blue-400 hover:shadow-xl hover:shadow-blue-900/5 ${guide.featured ? 'md:col-span-2' : ''}`}
-                        >
-                            <div className="relative h-[240px] overflow-hidden">
-                                <img
-                                    src={guide.thumbImg}
-                                    alt={guide.title}
-                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent" />
-
-                                <div className="absolute bottom-0 left-0 p-6 w-full">
-                                    <h3 className="text-white text-[18px] md:text-[20px] font-bold mb-2 group-hover:text-blue-400 transition-colors">
-                                        {guide.title}
-                                    </h3>
-                                    <p className="text-slate-200 text-[13px] leading-snug line-clamp-2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-                                        {guide.desc}
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div className="p-4 bg-white flex justify-between items-center border-t border-slate-100">
-                                <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Guide Article</span>
-                                <div className="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-all">
-                                    <ChevronRight className="w-4 h-4" />
-                                </div>
-                            </div>
-                        </Link>
-                    ))}
-                </div>
             </div>
+
+            <style>{`
+        @keyframes guideMarquee {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+        .animate-guideMarquee {
+          animation: guideMarquee 40s linear infinite;
+        }
+      `}</style>
         </section>
     );
 }

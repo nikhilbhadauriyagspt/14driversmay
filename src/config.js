@@ -1,4 +1,4 @@
 export const APP_CONFIG = {
-    NAME: 'Mister PC Driver',
+    NAME: 'Charmliora',
     SUPPORT_EMAIL: 'info@misterpcdriver.com'
 };

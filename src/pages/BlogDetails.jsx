@@ -16,7 +16,7 @@ const BlogDetails = () => {
     return (
       <div className="min-h-screen flex items-center justify-center bg-light">
         <Helmet>
-          <title>Blog Not Found - Mister PC Driver</title>
+          <title>Blog Not Found - Charmliora</title>
         </Helmet>
         <div className="text-center">
           <h2 className="text-4xl font-bold text-primary mb-6">Blog Post Not Found</h2>
@@ -31,9 +31,9 @@ const BlogDetails = () => {
   return (
     <article className="bg-white min-h-screen pt-32 pb-24">
       <Helmet>
-        <title>{blog.title} - Mister PC Driver Blog</title>
+        <title>{blog.title} - Charmliora Blog</title>
         <meta name="description" content={blog.shortDesc} />
-        <link rel="canonical" href={`https://www.misterpcdriver.com/blog/${blog.id}`} />
+        <link rel="canonical" href={`https://charmliora.co/blog/${blog.id}`} />
       </Helmet>
 
       <div className="container mx-auto px-4 max-w-4xl">

@@ -9,8 +9,8 @@ const About = () => {
   return (
     <div className="bg-white min-h-screen font-[Poppins]">
       <Helmet>
-        <title>About Us | Mister PC Driver - Step-by-Step Fix Guides</title>
-        <meta name="description" content="Learn how Mister PC Driver helps you solve hardware driver issues with easy-to-follow manuals and guides." />
+        <title>About Us | Charmliora - Step-by-Step Fix Guides</title>
+        <meta name="description" content="Learn how Charmliora helps you solve hardware driver issues with easy-to-follow manuals and guides." />
       </Helmet>
 
       {/* Hero Section */}
@@ -24,7 +24,7 @@ const About = () => {
             <span className="text-blue-600">Driver Issues</span>
           </h1>
           <p className="text-slate-600 text-base md:text-lg font-medium leading-relaxed max-w-2xl mx-auto mb-8">
-            Mister PC Driver is a collection of simple, step-by-step guides designed to help you 
+            Charmliora is a collection of simple, step-by-step guides designed to help you
             troubleshoot and install hardware drivers on your own.
           </p>
         </div>
@@ -39,8 +39,8 @@ const About = () => {
                 What We Do
               </h2>
               <p className="text-slate-600 text-base leading-relaxed mb-6">
-                Many people struggle with hardware like printers, WiFi, or sound not working 
-                correctly because of driver problems. We provide clear instructions to help 
+                Many people struggle with hardware like printers, WiFi, or sound not working
+                correctly because of driver problems. We provide clear instructions to help
                 you identify the issue and find the right solution yourself.
               </p>
               <div className="bg-blue-50 border-l-4 border-blue-600 p-6 rounded-r-xl mb-8">
@@ -48,29 +48,29 @@ const About = () => {
                   Important Note:
                 </p>
                 <p className="text-blue-800 text-sm mt-1">
-                  We are a documentation site. We provide guides and manuals only. 
+                  We are a documentation site. We provide guides and manuals only.
                   We do not provide direct technical support or remote assistance.
                 </p>
               </div>
             </div>
-            
+
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <SimpleCard 
+              <SimpleCard
                 icon={<FaBook className="text-blue-600" />}
                 title="Easy Guides"
                 desc="Simple steps for installing and updating drivers."
               />
-              <SimpleCard 
+              <SimpleCard
                 icon={<FaSearch className="text-blue-600" />}
                 title="Problem Solving"
                 desc="Guides to help you fix common hardware errors."
               />
-              <SimpleCard 
+              <SimpleCard
                 icon={<FaTools className="text-blue-600" />}
                 title="Universal Fixes"
                 desc="Covers printers, audio, graphics, and more."
               />
-              <SimpleCard 
+              <SimpleCard
                 icon={<FaCheckCircle className="text-blue-600" />}
                 title="Free Access"
                 desc="All our fix manuals are free to read and follow."
@@ -89,15 +89,15 @@ const About = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <ValueItem 
+            <ValueItem
               title="Step-by-Step"
               desc="Our guides are broken down into small, manageable steps so you don't get lost."
             />
-            <ValueItem 
+            <ValueItem
               title="Verified Steps"
               desc="We research the most effective ways to solve driver issues before writing our guides."
             />
-            <ValueItem 
+            <ValueItem
               title="No Hidden Steps"
               desc="We show you exactly where to go and what to click to get your hardware working."
             />
@@ -110,17 +110,17 @@ const About = () => {
         <div className="max-w-[1200px] mx-auto px-6">
           <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-12 text-center">How to Use This Site</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            <StepItem 
+            <StepItem
               number="01"
               title="Search Your Issue"
               desc="Type your hardware name or the error you're seeing into our search bar."
             />
-            <StepItem 
+            <StepItem
               number="02"
               title="Read the Guide"
               desc="Follow our easy, step-by-step instructions written in plain language."
             />
-            <StepItem 
+            <StepItem
               number="03"
               title="Fix Your Device"
               desc="Apply the steps to your computer and get your hardware back to work."
@@ -134,8 +134,8 @@ const About = () => {
         <div className="max-w-[1000px] mx-auto px-6 text-center">
           <h2 className="text-2xl md:text-3xl font-bold mb-6">Our Simple Goal</h2>
           <p className="text-lg text-blue-100 leading-relaxed">
-            We believe that you shouldn't need to be a computer expert to fix basic hardware problems. 
-            Our goal is to give every user the confidence to manage their own PC drivers 
+            We believe that you shouldn't need to be a computer expert to fix basic hardware problems.
+            Our goal is to give every user the confidence to manage their own PC drivers
             without needing to pay for expensive technical support.
           </p>
         </div>
@@ -177,7 +177,7 @@ const About = () => {
             </div>
             <div className="md:w-1/2 bg-slate-50 p-8 rounded-3xl border border-slate-100">
               <p className="text-slate-500 italic text-center">
-                "Our guides are designed to be used by anyone, from students to seniors. 
+                "Our guides are designed to be used by anyone, from students to seniors.
                 We keep it simple so you can get things done."
               </p>
             </div>

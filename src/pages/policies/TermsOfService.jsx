@@ -9,9 +9,9 @@ const TermsOfService = () => {
   return (
     <div className="bg-white min-h-screen pt-32 pb-24 font-poppins">
       <Helmet>
-        <title>Terms of Service - Mister PC Driver</title>
-        <meta name="description" content="Official Terms of Service for Mister PC Driver. Agreement to our legal terms and conditions." />
-        <link rel="canonical" href="https://www.misterpcdriver.com/terms-of-service" />
+        <title>Terms of Service - Charmliora</title>
+        <meta name="description" content="Official Terms of Service for Charmliora. Agreement to our legal terms and conditions." />
+        <link rel="canonical" href="https://charmliora.co/terms-of-service" />
       </Helmet>
 
       <div className="container mx-auto px-4 max-w-5xl">
@@ -24,12 +24,12 @@ const TermsOfService = () => {
             <h2 className="text-2xl font-bold text-gray-900 mb-4 uppercase">AGREEMENT TO OUR LEGAL TERMS</h2>
 
             <p>
-              We operate the website <a href="https://www.misterpcdriver.com/" className="text-primary hover:text-secondary">https://www.misterpcdriver.com/</a> (the "<strong>Site</strong>"), as well as any other related
+              We operate the website <a href="https://charmliora.co/" className="text-primary hover:text-secondary">https://charmliora.co/</a> (the "<strong>Site</strong>"), as well as any other related
               products and services that refer or link to these legal terms (the "<strong>Legal Terms</strong>") (collectively,
               the "<strong>Services</strong>").
             </p>
             <p>
-              Mister PC Driver was founded on the principle that household repairs should be handled with
+              Charmliora was founded on the principle that household repairs should be handled with
               the same level of precision as industrial maintenance. We recognize that modern appliances
               are complex electronic systems that require specialized knowledge and calibrated tools for
               effective servicing.
@@ -38,7 +38,7 @@ const TermsOfService = () => {
               You can contact us by email at <a href="mailto:info@misterpcdriver.com" className="text-primary">info@misterpcdriver.com</a></p>
             <p>
               These Legal Terms constitute a legally binding agreement made between you, whether
-              personally or on behalf of an entity ("<strong>you</strong>"), and Mister PC Driver, concerning your access to
+              personally or on behalf of an entity ("<strong>you</strong>"), and Charmliora, concerning your access to
               and use of the Services. You agree that by accessing the Services, you have read,
               understood, and agreed to be bound by all of these Legal Terms. <strong>IF YOU DO NOT AGREE
                 WITH ALL OF THESE LEGAL TERMS, THEN YOU ARE EXPRESSLY PROHIBITED FROM USING THE
@@ -200,7 +200,7 @@ const TermsOfService = () => {
 
           <section id="privacy">
             <h3 className="text-xl font-bold text-gray-900 border-b pb-2 mb-4 uppercase">8. PRIVACY POLICY</h3>
-            <p>We care about data privacy and security. Please review our Privacy Policy: <a href="https://www.misterpcdriver.com/privacy-policy" className="text-primary hover:underline">https://www.misterpcdriver.com/privacy-policy</a>. By using the Services, you agree to be bound by our Privacy Policy, which is incorporated into these Legal Terms. Please be advised the Services are hosted in the United States. If you access the Services from any other region of the world with laws or other requirements governing personal data collection, use, or disclosure that differ from applicable laws in the United States, then through your continued use of the Services, you are transferring your data to the United States, and you expressly consent to have your data transferred to and processed in the United States.</p>
+            <p>We care about data privacy and security. Please review our Privacy Policy: <a href="https://charmliora.co/privacy-policy" className="text-primary hover:underline">https://charmliora.co/privacy-policy</a>. By using the Services, you agree to be bound by our Privacy Policy, which is incorporated into these Legal Terms. Please be advised the Services are hosted in the United States. If you access the Services from any other region of the world with laws or other requirements governing personal data collection, use, or disclosure that differ from applicable laws in the United States, then through your continued use of the Services, you are transferring your data to the United States, and you expressly consent to have your data transferred to and processed in the United States.</p>
           </section>
 
           <section id="termination">
