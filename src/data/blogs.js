@@ -24,24 +24,24 @@ export const blogsData = [
   },
   {
     id: 2,
-    title: 'Hardware Troubleshooting Documentation',
+    title: 'Hardware Technical Documentation',
     date: 'Jan 20, 2026',
     author: 'Admin',
-    shortDesc: 'A guide to reading system error codes and hardware recognition logs.',
+    shortDesc: 'A guide to reading system status codes and hardware recognition logs.',
     longDesc: `
-      <p>Identifying hardware errors requires systematic analysis of system logs and error codes. Here is a technical overview of common diagnostic data:</p>
+      <p>Identifying hardware communication protocols requires systematic analysis of system logs and status codes. Here is a technical overview of common system data:</p>
       
       <h4>1. Device Manager Status Codes</h4>
-      <p>Error codes like Code 10 or Code 43 indicate specific communication failures between the hardware registry and the physical component.</p>
+      <p>Status codes like Code 10 or Code 43 indicate specific communication topics between the hardware registry and the physical component.</p>
       
       <h4>2. Hardware Interrupts (IRQ)</h4>
-      <p>Technical conflicts often arise when two hardware components attempt to use the same interrupt request line. Modern BIOS/UEFI manages this automatically.</p>
+      <p>Technical topics often arise when two hardware components attempt to use the same interrupt request line. Modern BIOS/UEFI manages this automatically.</p>
       
       <h4>3. Data Packet Integrity</h4>
-      <p>Network and USB drivers rely on precise data packet timing. Architectural latency can cause these protocols to fail, requiring a reset of the communication stack.</p>
+      <p>Network and USB drivers rely on precise data packet timing. Architectural latency can cause these protocols to change behavior, requiring a verification of the communication stack.</p>
 
       <h4>4. Driver Rollback Procedures</h4>
-      <p>When new documentation is incompatible with legacy hardware, reverting to a previously verified version is the standard technical resolution.</p>
+      <p>When new documentation is incompatible with legacy hardware, reverting to a previously verified version is the standard technical approach.</p>
     `,
     image: '/projects/what-is-a-computer-device-driver.webp'
   },

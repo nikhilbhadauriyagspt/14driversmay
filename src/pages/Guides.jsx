@@ -8,8 +8,8 @@ const Guides = () => {
   return (
     <div className="bg-[#F7FAFF] min-h-screen pt-28 pb-20 font-[Poppins]">
       <Helmet>
-        <title>Popular Driver Guides | Step-by-Step Fixes | Charmliora</title>
-        <meta name="description" content="Browse our library of popular driver guides to fix printer, audio, wifi, and graphics driver issues on your Windows PC." />
+        <title>Popular Driver Documentation | Technical Guides | Charmliora</title>
+        <meta name="description" content="Browse our library of technical driver guides to understand printer, audio, wifi, and graphics driver topics on your Windows PC." />
       </Helmet>
 
       <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
@@ -19,10 +19,10 @@ const Guides = () => {
             Information Library
           </div>
           <h1 className="text-[36px] md:text-[46px] font-bold text-[#07153A] tracking-tight mb-4">
-            Browse All <span className="text-blue-600 font-bold">Guides</span>
+            Technical <span className="text-blue-600 font-bold">Documentation</span>
           </h1>
           <p className="text-[#667085] text-[16px] max-w-2xl mx-auto font-medium leading-relaxed">
-            Simple step-by-step articles to help you understand and resolve common hardware communication issues.
+            Simple step-by-step articles to help you understand common hardware communication topics.
           </p>
         </div>
 

@@ -15,38 +15,38 @@ const FAQPage = () => {
 
   const faqCategories = [
     {
-      category: "General Questions",
+      category: "General Documentation",
       icon: <FaQuestionCircle />,
       items: [
         {
           q: "What is Charmliora?",
-          a: "Charmliora is a professional technical resource portal dedicated to helping users find, install, and troubleshoot hardware drivers for Windows systems. We provide step-by-step guides and verified software links to ensure system stability."
+          a: "Charmliora is a professional technical resource portal dedicated to helping users understand hardware driver data for Windows systems. We provide step-by-step information guides and verified documentation links to ensure system knowledge."
         },
         {
-          q: "How often should I update my drivers?",
-          a: "It is recommended to check for driver updates every 1-3 months, or immediately if you experience hardware performance issues, system crashes, or after a major Windows update."
+          q: "How often should I check for driver information?",
+          a: "It is recommended to understand driver topics every 1-3 months, or immediately if you experience hardware performance changes, or after a major Windows update."
         },
         {
-          q: "Are the drivers safe to download?",
-          a: "Yes. Every driver indexed in our database undergoes a strict security verification process. we only provide links to stable, malware-free official releases or verified mirror sites."
+          q: "Is the documentation safe to read?",
+          a: "Yes. Every information guide indexed in our database undergoes a strict verification process. we only provide data related to stable, verified official releases."
         }
       ]
     },
     {
-      category: "Installation & Fixes",
+      category: "Driver Topics",
       icon: <FaTools />,
       items: [
         {
-          q: "How do I fix 'Device Not Recognized' error?",
-          a: "This usually happens due to a corrupted or missing driver. Try unplugging the device, uninstalling the existing driver from Device Manager, and then reinstalling the latest version from our database."
+          q: "How can I understand 'Device Not Recognized' messages?",
+          a: "This usually happens due to missing driver data. Try identifying the device in Device Manager and then reading the latest documentation from our database."
         },
         {
-          q: "Can I install Windows 10 drivers on Windows 11?",
-          a: "In most cases, yes, as Windows 11 shares the same core architecture. However, we always recommend downloading the specific Windows 11 version if available for better optimization."
+          q: "Can I learn about Windows 10 drivers on Windows 11?",
+          a: "In most cases, yes, as Windows 11 shares the same core architecture. However, we always recommend reading the specific Windows 11 documentation if available."
         },
         {
-          q: "What is a 'Clean Install' of a driver?",
-          a: "A clean install involves completely removing the old driver files using tools like DDU (for graphics) before installing the new ones to prevent file conflicts."
+          q: "What is a 'Clean Installation' protocol?",
+          a: "A clean installation involves completely removing the old data using tools like DDU (for graphics) before installing the new software to prevent system conflicts."
         }
       ]
     },
@@ -55,16 +55,16 @@ const FAQPage = () => {
       icon: <FaMicrochip />,
       items: [
         {
-          q: "Why is my printer showing as 'Offline'?",
-          a: "This is often a communication error between the spooler service and the driver. Restarting the 'Print Spooler' in services.msc and updating the printer driver usually fixes this."
+          q: "Why is a printer showing as 'Offline'?",
+          a: "This is often a communication topic between the spooler service and the driver data. Understanding the 'Print Spooler' in services.msc and the printer documentation usually identifies the cause."
         },
         {
-          q: "Fixing WiFi 'No Internet, Secured' message?",
-          a: "This can be caused by an outdated network adapter driver. Resetting the network stack (netsh winsock reset) and updating the driver typically restores connectivity."
+          q: "Understanding WiFi 'No Internet' messages?",
+          a: "This can be caused by an outdated network adapter entry. Understanding the network stack (netsh winsock reset) and the documentation typically restores connectivity knowledge."
         },
         {
-          q: "How to fix audio crackling or no sound?",
-          a: "Ensure the correct playback device is selected. If the issue persists, reinstall the Realtek High Definition Audio driver or the specific driver for your sound card."
+          q: "How to understand audio or sound topics?",
+          a: "Ensure the correct playback device is selected in system data. If the topic persists, read the Realtek High Definition Audio documentation or the specific data for your sound card."
         }
       ]
     },

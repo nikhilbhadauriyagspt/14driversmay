@@ -46,6 +46,7 @@ export default function Footer() {
             links={[
               { name: "Home", path: "/" },
               { name: "About", path: "/about" },
+              { name: "Drivers", path: "/drivers" },
               { name: "Guides", path: "/guides" },
               { name: "FAQ", path: "/faq" },
               { name: "Contact", path: "/contact" },
@@ -57,10 +58,10 @@ export default function Footer() {
             links={[
               { name: "Information Guides", path: "/guide/understand-driver-not-installed" },
               { name: "Update Topics", path: "/guide/understand-driver-update-topics" },
-              { name: "Hardware Topics", path: "/guide/understand-usb-driver-topics" },
-              { name: "Audio Topics", path: "/guide/understand-audio-driver-topics" },
-              { name: "WiFi & Network", path: "/guide/understand-wifi-network-topics" },
-              { name: "Graphics & Display", path: "/guide/understand-graphics-driver-topics" },
+              { name: "Scanner Topics", path: "/guide/understand-scanner-driver-topics" },
+              { name: "Webcam Topics", path: "/guide/understand-webcam-driver-topics" },
+              { name: "BIOS & Firmware", path: "/guide/guide-bios-firmware-updates" },
+              { name: "Chipset Guide", path: "/guide/guide-chipset-drivers" },
             ]}
           />
 
@@ -68,16 +69,14 @@ export default function Footer() {
             <FooterColumn
               title="Driver Topics"
               links={[
-                { name: "Printer Information", path: "/driver/printer-information" },
-                { name: "Network Information", path: "/driver/network-information" },
-                { name: "Audio Information", path: "/driver/audio-information" },
-                { name: "Graphics Information", path: "/driver/graphics-information" },
-                { name: "Bluetooth Information", path: "/driver/bluetooth-information" },
-                { name: "USB Information", path: "/driver/usb-information" },
+                { name: "Printer Information", path: "/guide/understand-printer-driver-topics" },
+                { name: "Network Information", path: "/guide/understand-wifi-network-topics" },
+                { name: "Audio Information", path: "/guide/understand-audio-driver-topics" },
+                { name: "Graphics Information", path: "/guide/understand-graphics-driver-topics" },
+                { name: "Bluetooth Information", path: "/guide/understand-bluetooth-driver-topics" },
+                { name: "USB Information", path: "/guide/understand-usb-driver-topics" },
               ]}
             />
-
-
           </div>
           {/* Policies */}
           <div className="">

@@ -105,7 +105,7 @@ const GuideDetails = () => {
               <div>
                 <h2 className="text-[22px] font-bold text-[#07153A] mb-8 flex items-center gap-3">
                   <CheckCircle2 className="w-5 h-5 text-green-500" />
-                  How to Fix
+                  Documentation Details
                 </h2>
                 <div className="space-y-10">
                   {guide.content.steps.map((step, i) => (

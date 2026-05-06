@@ -96,25 +96,25 @@ const Header = () => {
           name: "Chipset",
           desc: "Helps all parts talk to each other",
           icon: <FaMicrochip />,
-          slug: "chipset-drivers",
+          slug: "guide-chipset-drivers",
         },
         {
           name: "Graphics",
           desc: "Identify screen, video, or game topics",
           icon: <FaDesktop />,
-          slug: "graphics-information",
+          slug: "understand-graphics-driver-topics",
         },
         {
           name: "Audio",
           desc: "Identify sound, mic, or speaker topics",
           icon: <FaVolumeUp />,
-          slug: "audio-information",
+          slug: "understand-audio-driver-topics",
         },
         {
           name: "Network",
           desc: "Identify WiFi or internet topics",
           icon: <FaWifi />,
-          slug: "network-information",
+          slug: "understand-wifi-network-topics",
         },
       ],
     },
@@ -128,25 +128,25 @@ const Header = () => {
           name: "Bluetooth",
           desc: "Wireless mouse or headphones info",
           icon: <FaBluetooth />,
-          slug: "bluetooth-information",
+          slug: "understand-bluetooth-driver-topics",
         },
         {
           name: "USB Ports",
           desc: "Identify topics with USB plug points",
           icon: <FaUsb />,
-          slug: "usb-information",
+          slug: "understand-usb-driver-topics",
         },
         {
           name: "Touchpad & Keys",
           desc: "Identify typing or mouse pad topics",
           icon: <FaKeyboard />,
-          slug: "input-information",
+          slug: "understand-input-latency-drivers",
         },
         {
           name: "Storage",
           desc: "Understand hard drive data",
           icon: <FaDatabase />,
-          slug: "storage-controller",
+          slug: "understand-device-not-detected",
         },
       ],
     },
@@ -160,19 +160,19 @@ const Header = () => {
           name: "Printer",
           desc: "Identify printing or paper topics",
           icon: <FaPrint />,
-          slug: "printer-information",
+          slug: "understand-printer-driver-topics",
         },
         {
           name: "Scanner",
           desc: "How to copy paper photos to PC",
           icon: <FaSearchPlus />,
-          slug: "scanner-information",
+          slug: "understand-scanner-driver-topics",
         },
         {
           name: "Webcam",
           desc: "Identify camera or video call topics",
           icon: <FaVideo />,
-          slug: "webcam-information",
+          slug: "understand-webcam-driver-topics",
         },
       ],
     },
@@ -186,19 +186,19 @@ const Header = () => {
           name: "BIOS / UEFI",
           desc: "Helps the computer start up",
           icon: <FaCode />,
-          slug: "bios-uefi-firmware",
+          slug: "guide-bios-firmware-updates",
         },
         {
           name: "Security",
           desc: "Keep your computer safe and clean",
           icon: <FaShieldAlt />,
-          slug: "security-drivers",
+          slug: "understand-driver-update-topics",
         },
         {
           name: "Monitor",
           desc: "Change brightness and colors",
           icon: <FaTv />,
-          slug: "monitor-calibration",
+          slug: "understand-graphics-driver-topics",
         },
       ],
     },
@@ -275,7 +275,7 @@ const Header = () => {
                           {cat.items.map((item, i) => (
                             <Link
                               key={i}
-                              to={`/driver/${item.slug}`}
+                              to={`/guide/${item.slug}`}
                               onClick={() => setActiveDropdown(null)}
                               className="flex items-start gap-3 p-3 rounded-xl hover:bg-white transition"
                             >
@@ -519,7 +519,7 @@ const Header = () => {
                     {cat.items.map((item, i) => (
                       <Link
                         key={i}
-                        to={`/driver/${item.slug}`}
+                        to={`/guide/${item.slug}`}
                         onClick={() => setIsOpen(false)}
                         className="flex items-center gap-3"
                       >

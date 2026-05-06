@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function Hero() {
   return (
     <section className="relative w-full h-full pt-0">
-      <Link to="/guides" className="relative block cursor-pointer group">
+      <div className="relative block cursor-pointer group">
         <picture>
           <source srcSet="/banner/banner_01.avif" type="image/avif" />
           <source srcSet="/banner/banner_01.webp" type="image/webp" />
@@ -29,7 +29,7 @@ export default function Hero() {
             Browse All Guides
           </div>
         </div>
-      </Link>
+      </div>
     </section>
   );
 }
