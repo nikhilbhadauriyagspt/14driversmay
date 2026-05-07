@@ -1,1 +1,3 @@
-/*    /index.html   200
+/*  /index.html  200
+# Force WWW to Non-WWW (Netlify handles this better in UI, but this is a fallback)
+# Note: Domain settings should be managed in Netlify Dashboard for best results.
