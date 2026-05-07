@@ -91,14 +91,14 @@ export default function PopularDriverGuides() {
                                 to={`/guide/${guide.slug}`}
                                 className="group grid grid-cols-[140px_1fr] md:grid-cols-[180px_1fr] border border-slate-200 bg-white hover:bg-[#F7FBFF] transition overflow-hidden"
                             >
-                                <div className="h-[150px] md:h-[170px] bg-slate-100 overflow-hidden">
+                                <div className="h-[150px] md:h-full bg-slate-100 overflow-hidden">
                                     <picture>
                                         <source srcSet={guide.avifThumbImg} type="image/avif" />
                                         <source srcSet={guide.thumbImg} type="image/webp" />
                                         <img
                                             src={guide.pngFallback}
                                             alt={guide.title}
-                                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                            className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700"
                                         />
                                     </picture>
                                 </div>
@@ -137,7 +137,7 @@ export default function PopularDriverGuides() {
                                         <img
                                             src={guide.pngFallback}
                                             alt={guide.title}
-                                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                            className="w-full h-full object-contain  group-hover:scale-105 transition-transform duration-700"
                                         />
                                     </picture>
                                 </div>

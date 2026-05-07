@@ -93,10 +93,10 @@ const DriverInfoShowcase = () => {
             {/* Background Image */}
             <div className="absolute inset-0">
                 <picture>
-                    <source srcSet="/about/driver-bg.avif" type="image/avif" />
-                    <source srcSet="/about/driver-bg.webp" type="image/webp" />
+                    <source srcSet="/about/DRIVER_BGG.avif" type="image/avif" />
+                    <source srcSet="/about/DRIVER_BGG.webp" type="image/webp" />
                     <img
-                        src="/about/driver-bg.png"
+                        src="/about/DRIVER_BGG.png"
                         alt="Driver learning background"
                         className="w-full h-full object-cover opacity-25"
                     />
@@ -111,10 +111,10 @@ const DriverInfoShowcase = () => {
                     <div className="flex justify-center lg:justify-start">
                         <div className="rounded-md border-[5px] border-white/40 w-full">
                             <picture>
-                                <source srcSet="/about/driver-bg.avif" type="image/avif" />
-                                <source srcSet="/about/driver-bg.webp" type="image/webp" />
+                                <source srcSet="/about/DRIVER_BGG.avif" type="image/avif" />
+                                <source srcSet="/about/DRIVER_BGG.webp" type="image/webp" />
                                 <img
-                                    src="/about/driver-bg.png"
+                                    src="/about/DRIVER_BGG.png"
                                     alt="Learning about driver topics"
                                     className="w-full h-[300px] object-cover"
                                 />
