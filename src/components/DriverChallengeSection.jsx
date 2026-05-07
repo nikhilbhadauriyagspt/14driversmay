@@ -115,8 +115,8 @@ const DriverChallengeSection = () => {
 
                     <div className="relative z-10 rounded-[20px] bg-white p-5  border border-blue-100">
                         <picture>
-                            <source srcSet="/about/aboutmain_01.png" type="image/avif" />
-                            <source srcSet="/about/aboutmain_01.png" type="image/webp" />
+                            <source srcSet="/about/aboutmain_01.avif" type="image/avif" />
+                            <source srcSet="/about/aboutmain_01.webp" type="image/webp" />
                             <img
                                 src="/about/aboutmain_01.png"
                                 alt="Learning about software drivers"

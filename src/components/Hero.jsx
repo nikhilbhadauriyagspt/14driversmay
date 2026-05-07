@@ -6,8 +6,8 @@ export default function Hero() {
     <section className="relative w-full h-full pt-16">
       <div className="relative block cursor-pointer group">
         <picture>
-          <source srcSet="/banner/banner_01.png" type="image/avif" />
-          <source srcSet="/banner/banner_01.png" type="image/webp" />
+          <source srcSet="/banner/banner_01.avif" type="image/avif" />
+          <source srcSet="/banner/banner_01.webp" type="image/webp" />
           <img
             src='/banner/banner_01.png'
             className="w-full h-full object-cover object-center min-h-[300px] md:min-h-[450px]"

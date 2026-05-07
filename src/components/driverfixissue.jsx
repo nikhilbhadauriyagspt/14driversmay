@@ -92,11 +92,15 @@ const DriverInfoShowcase = () => {
         <section className="relative w-full overflow-hidden bg-[#0C66E5] py-24 px-4 font-['Poppins']">
             {/* Background Image */}
             <div className="absolute inset-0">
-                <img
-                    src="/about/driver-bg.png"
-                    alt="Driver learning background"
-                    className="w-full h-full object-cover opacity-25"
-                />
+                <picture>
+                    <source srcSet="/about/driver-bg.avif" type="image/avif" />
+                    <source srcSet="/about/driver-bg.webp" type="image/webp" />
+                    <img
+                        src="/about/driver-bg.png"
+                        alt="Driver learning background"
+                        className="w-full h-full object-cover opacity-25"
+                    />
+                </picture>
                 <div className="absolute inset-0 bg-[#0C66E5]/90" />
             </div>
 
@@ -106,11 +110,15 @@ const DriverInfoShowcase = () => {
                     {/* Left Image */}
                     <div className="flex justify-center lg:justify-start">
                         <div className="rounded-md border-[5px] border-white/40 w-full">
-                            <img
-                                src="/about/driver-bg.png"
-                                alt="Learning about driver topics"
-                                className="w-full h-[300px] object-cover"
-                            />
+                            <picture>
+                                <source srcSet="/about/driver-bg.avif" type="image/avif" />
+                                <source srcSet="/about/driver-bg.webp" type="image/webp" />
+                                <img
+                                    src="/about/driver-bg.png"
+                                    alt="Learning about driver topics"
+                                    className="w-full h-[300px] object-cover"
+                                />
+                            </picture>
                         </div>
                     </div>
 
