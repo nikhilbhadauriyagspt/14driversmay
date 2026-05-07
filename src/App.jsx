@@ -42,32 +42,34 @@ const AppContent = () => {
     <div className="App">
       {!hideHeaderFooter && <Header />}
       <CookieConsent />
-      <Suspense fallback={<PageLoader />}>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/drivers" element={<Services />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/faq" element={<FAQPage />} />
-          <Route path="/guides" element={<Guides />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-          <Route path="/terms-of-service" element={<TermsOfService />} />
-          <Route path="/refund-policy" element={<RefundPolicy />} />
-          <Route path="/cookie-policy" element={<CookiePolicy />} />
-          <Route path="/disclaimer" element={<Disclaimer />} />
+      <main id="main-content">
+        <Suspense fallback={<PageLoader />}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/drivers" element={<Services />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/faq" element={<FAQPage />} />
+            <Route path="/guides" element={<Guides />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/terms-of-service" element={<TermsOfService />} />
+            <Route path="/refund-policy" element={<RefundPolicy />} />
+            <Route path="/cookie-policy" element={<CookiePolicy />} />
+            <Route path="/disclaimer" element={<Disclaimer />} />
 
-          {/* Dynamic route for all Drivers */}
-          <Route path="/driver/:slug" element={<ServiceDetails />} />
+            {/* Dynamic route for all Drivers */}
+            <Route path="/driver/:slug" element={<ServiceDetails />} />
 
-          {/* Dynamic route for all Guides */}
-          <Route path="/guide/:slug" element={<GuideDetails />} />
+            {/* Dynamic route for all Guides */}
+            <Route path="/guide/:slug" element={<GuideDetails />} />
 
-          {/* Catch-all for blogs */}
-          <Route path="/blog/:id" element={<BlogDetails />} />
-        </Routes>
-        {!hideHeaderFooter && <Footer />}
-      </Suspense>
+            {/* Catch-all for blogs */}
+            <Route path="/blog/:id" element={<BlogDetails />} />
+          </Routes>
+        </Suspense>
+      </main>
+      {!hideHeaderFooter && <Footer />}
     </div>
   );
 };

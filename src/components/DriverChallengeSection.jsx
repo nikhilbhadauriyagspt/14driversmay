@@ -120,6 +120,8 @@ const DriverChallengeSection = () => {
                             <img
                                 src="/about/aboutmain_01.png"
                                 alt="Learning about software drivers"
+                                width="620"
+                                height="620"
                                 className="w-full max-w-[620px] max-h-[620px] object-contain rounded-[20px]"
                             />
                         </picture>

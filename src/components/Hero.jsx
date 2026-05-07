@@ -10,6 +10,8 @@ export default function Hero() {
           <source srcSet="/banner/banner_01.webp" type="image/webp" />
           <img
             src='/banner/banner_01.png'
+            width="1920"
+            height="450"
             className="w-full h-full object-cover object-center min-h-[300px] md:min-h-[450px]"
             alt="Hero Banner"
             fetchPriority="high"

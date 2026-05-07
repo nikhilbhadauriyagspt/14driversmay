@@ -60,12 +60,12 @@ export default function FAQHelpSection() {
         <section className="w-full bg-[#F7FBFF] py-24 px-4 sm:px-6 font-[Poppins]">
             <div className="max-w-[1600px] mx-auto grid grid-cols-1 lg:grid-cols-[420px_1fr] gap-10">
                 {/* Left Panel */}
-                <div className="bg-[#0675DB] text-white p-8 md:p-10 rounded-[12px] h-fit lg:sticky lg:top-28">
+                <div className="bg-[#045fb4] text-white p-8 md:p-10 rounded-[12px] h-fit lg:sticky lg:top-28">
                     <div className="w-14 h-14 rounded-[8px] bg-white/15 flex items-center justify-center mb-7">
                         <HelpCircle size={28} />
                     </div>
 
-                    <p className="text-[12px] font-bold uppercase tracking-[0.24em] text-blue-100 mb-4">
+                    <p className="text-[12px] font-bold uppercase tracking-[0.24em] text-white mb-4">
                         Common Questions
                     </p>
 
@@ -73,7 +73,7 @@ export default function FAQHelpSection() {
                         Frequently Asked Questions
                     </h2>
 
-                    <p className="text-[15px] leading-[1.8] text-white/85 mb-8">
+                    <p className="text-[15px] leading-[1.8] text-white mb-8">
                         Find simple answers about driver information, system settings,
                         device recognition, and driver learning topics.
                     </p>
@@ -81,12 +81,12 @@ export default function FAQHelpSection() {
                     <div className="grid grid-cols-2 gap-4 mb-8">
                         <div className="border border-white/20 p-4 rounded-[8px]">
                             <p className="text-3xl font-black">12</p>
-                            <p className="text-[13px] text-white/75 mt-1">Questions</p>
+                            <p className="text-[13px] text-white mt-1">Questions</p>
                         </div>
 
                         <div className="border border-white/20 p-4 rounded-[8px]">
                             <p className="text-3xl font-black">Easy</p>
-                            <p className="text-[13px] text-white/75 mt-1">Answers</p>
+                            <p className="text-[13px] text-white mt-1">Answers</p>
                         </div>
                     </div>
 

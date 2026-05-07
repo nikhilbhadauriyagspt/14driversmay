@@ -8,10 +8,10 @@ export default function Footer() {
   return (
     <footer className="relative overflow-hidden bg-[#F7FBFF] font-['Poppins']">
       {/* Top CTA Strip */}
-      <div className="bg-[#0675DB] px-6 py-10">
+      <div className="bg-[#045fb4] px-6 py-10">
         <div className="max-w-[1600px] mx-auto flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
           <div>
-            <p className="text-[12px] font-black uppercase tracking-[0.24em] text-blue-100 mb-3">
+            <p className="text-[12px] font-black uppercase tracking-[0.24em] text-white mb-3">
               Driver Learning Resource
             </p>
             <h2 className="text-[28px] md:text-[38px] font-black text-white leading-tight">
@@ -38,6 +38,8 @@ export default function Footer() {
               <img
                 src="/logo/logo.avif"
                 alt="Lappy Learns Top"
+                width="210"
+                height="48"
                 className="h-12 w-auto object-contain"
               />
             </Link>

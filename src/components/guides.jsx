@@ -76,7 +76,7 @@ export default function PopularDriverGuides() {
                                 {featured.desc}
                             </p>
 
-                            <div className="inline-flex items-center gap-3 text-[#0675DB] font-black text-[14px] uppercase tracking-wider">
+                            <div className="inline-flex items-center gap-3 text-[#045fb4] font-black text-[14px] uppercase tracking-wider">
                                 Read Guide
                                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition" />
                             </div>

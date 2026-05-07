@@ -219,6 +219,8 @@ const Header = () => {
               <img
                 src="/logo/logo.avif"
                 alt="Lappy Learns Top"
+                width="210"
+                height="40"
                 className="h-[40px] w-auto object-contain"
               />
             </Link>
