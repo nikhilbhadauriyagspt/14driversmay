@@ -39,7 +39,7 @@ const AppContent = () => {
   const hideHeaderFooter = false;
 
   return (
-    <div className="App overflow-x-hidden">
+    <div className="App">
       {!hideHeaderFooter && <Header />}
       <CookieConsent />
       <Suspense fallback={<PageLoader />}>

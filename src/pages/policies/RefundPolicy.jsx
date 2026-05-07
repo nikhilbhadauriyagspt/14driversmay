@@ -9,9 +9,9 @@ const RefundPolicy = () => {
   return (
     <div className="bg-white min-h-screen pt-32 pb-24">
       <Helmet>
-        <title>Return Policy - Charmliora</title>
-        <meta name="description" content="Official Return Policy for Charmliora. Details on returns, process, and refunds." />
-        <link rel="canonical" href="https://charmliora.co/refund-policy" />
+        <title>Return Policy - Lappy Learns Top</title>
+        <meta name="description" content="Official Return Policy for Lappy Learns Top. Details on returns, process, and refunds." />
+        <link rel="canonical" href="https://lappylearnstop.co/refund-policy" />
       </Helmet>
 
       <div className="container mx-auto px-4 max-w-4xl">
@@ -38,13 +38,13 @@ const RefundPolicy = () => {
           <section>
             <h2 className="text-2xl font-bold text-gray-900 mb-4 uppercase">RETURN PROCESS</h2>
             <p>
-              To return an item, please email customer service at <a href="mailto:info@charmliora.co" className="text-primary font-bold">info@charmliora.co</a> to obtain
+              To return an item, please email customer service at <a href="mailto:info@lappylearnstop.co" className="text-primary font-bold">info@lappylearnstop.co</a> to obtain
               an Return Merchandise Authorization (RMA) number. After receiving an RMA number, place
               the item securely in its original packaging and include your proof of purchase, then mail your
               return to the following address:
             </p>
             <address className="not-italic bg-gray-50 p-8 rounded-2xl border border-gray-100 mt-6 leading-relaxed font-bold">
-              Charmliora<br />
+              Lappy Learns Top<br />
               Attn: Returns<br />
               RMA #<br />
               1267 Filer Ave E<br />
@@ -80,7 +80,7 @@ const RefundPolicy = () => {
             </p>
             <div className="bg-primary text-white p-8 rounded-2xl shadow-xl mt-4">
               <p className="font-bold text-xl mb-2">+1-402-508-9991</p>
-              <a href="mailto:info@charmliora.co" className="text-secondary font-bold text-lg hover:underline">info@charmliora.co</a>
+              <a href="mailto:info@lappylearnstop.co" className="text-secondary font-bold text-lg hover:underline">info@lappylearnstop.co</a>
             </div>
           </section>
         </div>

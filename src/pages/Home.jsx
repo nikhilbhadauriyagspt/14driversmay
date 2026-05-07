@@ -19,7 +19,7 @@ const Home = () => {
       <Helmet>
         <title>Learn About Driver Issues | WiFi, Audio, USB & Printer Information</title>
         <meta name="description" content="Technical repository for hardware specifications, driver-level architectural data, and system documentation for the global technical community." />
-        <link rel="canonical" href="https://charmliora.co" />
+        <link rel="canonical" href="https://lappylearnstop.co" />
       </Helmet>
 
       <h1 className="sr-only">Understand Driver Topics with Step-by-Step Information Guides</h1>

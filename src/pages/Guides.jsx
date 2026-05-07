@@ -6,68 +6,83 @@ import { guidesData } from "../data/guidesData";
 
 const Guides = () => {
   return (
-    <div className="bg-[#F7FAFF] min-h-screen pt-28 pb-20 font-[Poppins]">
+    <div className="bg-white min-h-screen pt-28 pb-24 font-[Poppins]">
       <Helmet>
-        <title>Popular Driver Documentation | Technical Guides | Charmliora</title>
-        <meta name="description" content="Browse our library of technical driver guides to understand printer, audio, wifi, and graphics driver topics on your Windows PC." />
+        <title>Popular Driver Documentation | Technical Guides | Lappy Learns Top</title>
+        <meta
+          name="description"
+          content="Browse our library of technical driver guides to understand printer, audio, wifi, and graphics driver topics on your Windows PC."
+        />
       </Helmet>
 
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 text-blue-600 text-[12px] font-semibold uppercase tracking-widest mb-6">
-            <BookOpen className="w-4 h-4" />
-            Information Library
-          </div>
-          <h1 className="text-[36px] md:text-[46px] font-bold text-[#07153A] tracking-tight mb-4">
-            Technical <span className="text-blue-600 font-bold">Documentation</span>
-          </h1>
-          <p className="text-[#667085] text-[16px] max-w-2xl mx-auto font-medium leading-relaxed">
-            Simple step-by-step articles to help you understand common hardware communication topics.
-          </p>
-        </div>
+      {/* Header */}
+      <section className="relative bg-[#F7FAFF] border-b border-blue-100 px-6 py-20 overflow-hidden">
+        <div className="absolute right-0 top-0 w-[32%] h-full bg-[#0C66E5]" />
+        <div className="relative z-10 max-w-[1600px] mx-auto">
+          <div className="max-w-[760px]">
+            <div className="inline-flex items-center gap-2 bg-white border border-blue-100 px-4 py-2 text-[#0C66E5] text-[12px] font-black uppercase tracking-widest mb-6">
+              <BookOpen className="w-4 h-4" />
+              Information Library
+            </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <h1 className="text-[42px] md:text-[68px] font-black text-slate-950 leading-[1.02] mb-6">
+              Technical <br />
+              <span className="text-[#0C66E5]">Documentation</span>
+            </h1>
+
+            <p className="text-slate-600 text-[16px] md:text-[18px] max-w-2xl font-medium leading-relaxed">
+              Simple step-by-step articles to help you understand common hardware communication topics.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Guides */}
+      <section className="px-6 lg:px-10 py-20">
+        <div className="max-w-[1500px] mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
           {guidesData.map((guide, index) => (
             <Link
               key={index}
               to={`/guide/${guide.slug}`}
-              className="bg-white rounded-[10px] border border-[#E6ECF8] overflow-hidden group hover:border-blue-400 transition-all duration-300 flex flex-col h-full"
+              className="group grid grid-cols-[120px_1fr] sm:grid-cols-[170px_1fr] bg-white border border-slate-200 hover:border-[#0C66E5] transition overflow-hidden"
             >
-              <div className="w-full h-[220px] bg-white border-b border-[#F0F4FA] p-6 flex items-center justify-center overflow-hidden">
+              <div className="bg-[#F7FAFF] border-r border-slate-200 p-4 flex items-center justify-center min-h-[190px]">
                 <img
                   src={guide.img}
                   alt={guide.title}
-                  className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                  className="max-w-full max-h-[135px] object-contain group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
 
-              <div className="p-6 flex flex-col flex-1">
-                <div className="flex items-center gap-3 mb-3 text-[11px] font-semibold text-[#667085] uppercase tracking-wider">
+              <div className="p-5 flex flex-col">
+                <div className="flex flex-wrap items-center gap-3 mb-4 text-[10px] font-black text-slate-500 uppercase tracking-wider">
                   <span className="flex items-center gap-1.5">
-                    <Clock className="w-3.5 h-3.5 text-blue-600" />
+                    <Clock className="w-3.5 h-3.5 text-[#0C66E5]" />
                     5 Min
                   </span>
                   <span className="w-1 h-1 rounded-full bg-slate-300" />
                   <span>Technical Guide</span>
                 </div>
 
-                <h2 className="text-[19px] font-bold text-[#07153A] mb-3 group-hover:text-blue-600 transition-colors leading-snug">
+                <h2 className="text-[19px] md:text-[21px] font-black text-slate-950 mb-3 group-hover:text-[#0C66E5] transition leading-snug">
                   {guide.title}
                 </h2>
 
-                <p className="text-[#667085] text-[14px] leading-relaxed font-medium mb-6 line-clamp-2">
+                <p className="text-slate-500 text-[14px] leading-relaxed font-medium mb-6 line-clamp-2">
                   {guide.desc}
                 </p>
 
-                <div className="mt-auto flex items-center gap-2 text-[13px] font-bold text-blue-600 uppercase tracking-widest">
-                  Read Article
-                  <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                <div className="mt-auto flex items-center justify-between pt-4 border-t border-slate-100">
+                  <span className="text-[12px] font-black text-[#0C66E5] uppercase tracking-widest">
+                    Read Article
+                  </span>
+                  <ChevronRight className="w-4 h-4 text-[#0C66E5] group-hover:translate-x-1 transition-transform" />
                 </div>
               </div>
             </Link>
           ))}
         </div>
-      </div>
+      </section>
     </div>
   );
 };

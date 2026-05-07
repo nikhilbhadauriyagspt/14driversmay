@@ -1,4 +1,4 @@
 export const APP_CONFIG = {
-    NAME: 'Charmliora',
-    SUPPORT_EMAIL: 'info@charmliora.co'
+    NAME: 'Lappy Learns Top',
+    SUPPORT_EMAIL: 'info@lappylearnstop.co'
 };

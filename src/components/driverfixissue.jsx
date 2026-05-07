@@ -1,123 +1,175 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
-    Monitor,
     Wifi,
     Volume2,
+    Monitor,
     Printer,
+    ArrowRight,
+    Bluetooth,
+    Usb,
+    Video,
     Cpu,
-    ShieldCheck,
+    HardDrive,
+    ScanLine,
+    ShieldCheck
 } from "lucide-react";
 
-export default function DriverTypesAndFix() {
-    const points = [
+const DriverInfoShowcase = () => {
+    const cards = [
         {
-            icon: Monitor,
-            title: "Display & Graphics",
-            text: "Learn how graphics drivers help screens show clear visuals, correct resolution, and smooth movement.",
-        },
-        {
+            title: "WiFi Topics",
+            desc: "Learn simple network and connection driver basics.",
             icon: Wifi,
-            title: "Network Connection",
-            text: "Understand how network drivers support Wi-Fi, ethernet, routers, and stable internet connectivity.",
+            link: "/guide/understand-wifi-network-topics",
         },
         {
+            title: "Audio Topics",
+            desc: "Understand speaker, sound and microphone driver data.",
             icon: Volume2,
-            title: "Audio & Sound",
-            text: "Explore how audio drivers work with speakers, headphones, microphones, and sound settings.",
+            link: "/guide/understand-audio-driver-topics",
         },
         {
+            title: "Display Topics",
+            desc: "Explore graphics, monitor and screen driver basics.",
+            icon: Monitor,
+            link: "/guide/understand-graphics-driver-topics",
+        },
+        {
+            title: "Printer Topics",
+            desc: "Read about printer connection and driver information.",
             icon: Printer,
-            title: "Printer Communication",
-            text: "Know how printer drivers help your device recognize printers and send print commands correctly.",
+            link: "/guide/understand-printer-driver-topics",
+        },
+        {
+            title: "Bluetooth Topics",
+            desc: "Identify missing Bluetooth icon and pairing failures.",
+            icon: Bluetooth,
+            link: "/guide/understand-bluetooth-driver-topics",
+        },
+        {
+            title: "USB Topics",
+            desc: "Identify USB 3.0/3.1 port recognition and driver data.",
+            icon: Usb,
+            link: "/guide/understand-usb-driver-topics",
+        },
+        {
+            title: "Webcam Topics",
+            desc: "Identify 'Camera not found' and black screen topics.",
+            icon: Video,
+            link: "/guide/understand-webcam-driver-topics",
+        },
+        {
+            title: "Chipset Topics",
+            desc: "Understand system stability and motherboard drivers.",
+            icon: Cpu,
+            link: "/guide/guide-chipset-drivers",
+        },
+        {
+            title: "Scanner Topics",
+            desc: "Identify scanner not detected and communication topics.",
+            icon: ScanLine,
+            link: "/guide/understand-scanner-driver-topics",
+        },
+        {
+            title: "Storage Topics",
+            desc: "Understand hard drive data and detection topics.",
+            icon: HardDrive,
+            link: "/guide/understand-device-not-detected",
+        },
+        {
+            title: "BIOS Topics",
+            desc: "Learn the critical steps to understand BIOS/UEFI.",
+            icon: ShieldCheck,
+            link: "/guide/guide-bios-firmware-updates",
         },
     ];
 
+    // Duplicate cards for seamless marquee
+    const marqueeCards = [...cards, ...cards];
+
     return (
-        <section className="relative w-full bg-white overflow-hidden font-['Poppins'] py-20 px-4 md:px-8">
-            <div className="max-w-[1600px] mx-auto grid lg:grid-cols-2 gap-10 items-center">
+        <section className="relative w-full overflow-hidden bg-[#0C66E5] py-24 px-4 font-['Poppins']">
+            {/* Background Image */}
+            <div className="absolute inset-0">
+                <img
+                    src="/about/driver-bg.png"
+                    alt="Driver learning background"
+                    className="w-full h-full object-cover opacity-25"
+                />
+                <div className="absolute inset-0 bg-[#0C66E5]/90" />
+            </div>
 
-                {/* LEFT CONTENT */}
-                <div className="relative z-10">
-                    <h2 className="text-[36px] md:text-[52px] leading-[1.08] font-extrabold text-[#00428f] max-w-[720px]">
-                        Why Learn About{" "}
-                        <span className="text-[#0783bd]">Device Drivers</span>,
-                        Because...
-                    </h2>
+            <div className="relative z-10 max-w-[1600px] mx-auto">
+                {/* Top Area */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20 px-4 md:px-0">
+                    {/* Left Image */}
+                    <div className="flex justify-center lg:justify-start">
+                        <div className="rounded-md border-[5px] border-white/40 w-full">
+                            <img
+                                src="/about/driver-bg.png"
+                                alt="Learning about driver topics"
+                                className="w-full h-[300px] object-cover"
+                            />
+                        </div>
+                    </div>
 
-                    <p className="mt-7 text-[15px] md:text-[16px] leading-8 text-[#111827] max-w-[720px]">
-                        Device drivers help your computer communicate with hardware like
-                        display, sound, printer, network, USB, and other connected devices.
-                        This guide explains driver topics in a simple and educational way.
-                    </p>
+                    {/* Right Content */}
+                    <div className="text-white">
+                        <span className="text-[14px] font-bold text-blue-100">
+                            Driver Learning Guides
+                        </span>
 
-                    <div className="mt-12 space-y-10">
-                        {points.map((item, index) => {
-                            const Icon = item.icon;
+                        <h2 className="text-[36px] md:text-[52px] font-black leading-[1.12] mt-4 mb-6">
+                            Learn About Device Drivers in a Simple Way
+                        </h2>
 
-                            return (
-                                <div key={index} className="flex items-start gap-6">
-                                    <div className="w-[62px] h-[62px] flex-shrink-0 rounded-2xl flex items-center justify-center text-[#006fc9]">
-                                        <Icon size={48} strokeWidth={1.8} />
-                                    </div>
-
-                                    <div>
-                                        <h3 className="text-[22px] md:text-[24px] font-extrabold text-[#00428f] leading-tight">
-                                            {item.title}
-                                        </h3>
-                                        <p className="mt-2 text-[15px] md:text-[16px] leading-7 text-[#111827] max-w-[520px]">
-                                            {item.text}
-                                        </p>
-                                    </div>
-                                </div>
-                            );
-                        })}
+                        <p className="text-white/85 text-[16px] leading-[1.8] max-w-[700px]">
+                            Explore educational information about WiFi, audio, display, USB,
+                            printer and other driver topics. This website is created for
+                            learning only, with clear explanations for everyday computer users.
+                        </p>
                     </div>
                 </div>
 
-                {/* RIGHT IMAGE SIDE */}
-                <div className="relative min-h-[650px] hidden lg:flex items-end justify-center overflow-hidden">
-                    {/* Light blue big oval background */}
-                    <div className="absolute right-[40px] top-[10px] w-[520px] h-[620px] rounded-t-full rounded-b-none bg-[#e9fbff]" />
+                {/* Marquee Cards */}
+                <div className="relative mt-16">
+                    <div className="flex w-max animate-driverMarquee gap-6 py-10">
+                        {marqueeCards.map((card, index) => {
+                            const Icon = card.icon;
 
-                    {/* Thin outline rectangle */}
-                    <div className="absolute right-[18px] bottom-[12px] w-[520px] h-[500px] border border-[#c9eef6]" />
+                            return (
+                                <Link
+                                    key={index}
+                                    to={card.link}
+                                    className="group relative w-[300px] md:w-[350px] min-h-[250px] border border-white/25 bg-white/5 backdrop-blur-sm p-8 text-center transition-all duration-300 hover:bg-white hover:-translate-y-2 flex-shrink-0"
+                                >
+                                    <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-20 h-20 bg-white text-[#0C66E5] flex items-center justify-center rounded-sm shadow-xl group-hover:bg-[#0C66E5] group-hover:text-white transition duration-300">
+                                        <Icon size={34} />
+                                    </div>
 
-                    {/* Dotted pattern */}
-                    <div className="absolute left-[20px] top-[135px] grid grid-cols-12 gap-[13px] opacity-35 z-0">
-                        {Array.from({ length: 96 }).map((_, i) => (
-                            <span
-                                key={i}
-                                className="w-[4px] h-[4px] rounded-full bg-[#006fc9]"
-                            />
-                        ))}
-                    </div>
+                                    <div className="pt-10">
+                                        <h3 className="text-[22px] font-black text-white group-hover:text-slate-950 mb-4 transition">
+                                            {card.title}
+                                        </h3>
 
-                    {/* Main person image */}
-                    <picture className="relative z-10">
-                        <source srcSet="/images/fix-driver-monitor1.avif" type="image/avif" />
-                        <source srcSet="/images/fix-driver-monitor1.webp" type="image/webp" />
-                        <img
-                            src="/images/fix-driver-monitor1.png"
-                            alt="Device driver learning guide"
-                            className="w-[560px] h-[650px] object-contain object-bottom"
-                        />
-                    </picture>
+                                        <p className="text-[15px] leading-[1.7] text-white/75 group-hover:text-slate-600 transition mb-7">
+                                            {card.desc}
+                                        </p>
 
-                    {/* Floating Card Right */}
-                    <div className="absolute z-20 right-[0px] top-[300px] bg-white/95 border border-slate-100 rounded-[14px] px-8 py-5 max-w-[270px]">
-                        <p className="text-[#00428f] text-[17px] leading-7 font-bold">
-                            Understand Driver Topics Clearly
-                        </p>
-                    </div>
-
-                    {/* Floating Card Bottom Left */}
-                    <div className="absolute z-20 left-[5px] bottom-[95px] bg-white/95 border border-slate-100 rounded-[14px] px-8 py-5 max-w-[250px]">
-                        <p className="text-[#00428f] text-[17px] leading-7 font-bold">
-                            Simple Hardware Guide
-                        </p>
+                                        <span className="inline-flex items-center justify-center gap-2 text-[14px] font-black text-white group-hover:text-[#0C66E5] transition">
+                                            Read More
+                                            <ArrowRight size={16} />
+                                        </span>
+                                    </div>
+                                </Link>
+                            );
+                        })}
                     </div>
                 </div>
             </div>
         </section>
     );
-}
+};
+
+export default DriverInfoShowcase;

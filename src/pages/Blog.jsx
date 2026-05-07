@@ -12,9 +12,9 @@ const Blog = () => {
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
-        <title>Our Blog - Charmliora</title>
+        <title>Our Blog - Lappy Learns Top</title>
         <meta name="description" content="Read our latest articles about appliance maintenance, repair tips, and industry news." />
-        <link rel="canonical" href="https://charmliora.co/blog" />
+        <link rel="canonical" href="https://lappylearnstop.co/blog" />
       </Helmet>
 
       <div className="relative bg-white py-32 overflow-hidden border-b border-gray-100">

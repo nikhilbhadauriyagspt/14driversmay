@@ -1,5 +1,8 @@
 import React from "react";
-import { ArrowRight, Wifi, Volume2, Monitor, Printer, Usb, Download, Cpu, ShieldAlert, Zap, Bluetooth, Video, Scan, RefreshCcw, XCircle } from "lucide-react";
+import {
+  ArrowRight, Wifi, Volume2, Monitor, Printer, Usb, Download,
+  Cpu, Bluetooth, Video, Scan, RefreshCcw, XCircle, BookOpen
+} from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function CommonProblems() {
@@ -19,82 +22,107 @@ export default function CommonProblems() {
   ];
 
   return (
-    <section className="relative bg-[#087dcc] py-24 px-6 overflow-hidden">
-      {/* Decorative Background Elements */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-white/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/3"></div>
-        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-blue-400/20 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/4"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.05)_0%,transparent_50%)]"></div>
-      </div>
+    <section className="relative bg-[#F6FAFF] py-24 px-4 sm:px-6 font-['Poppins']">
+      <div className="absolute top-0 left-0 w-full h-[360px] bg-[#0675DB]" />
+      <div className="absolute top-16 left-10 w-32 h-32 rounded-full bg-white/10 blur-2xl" />
+      <div className="absolute top-10 right-20 w-52 h-52 rounded-full bg-white/10 blur-3xl" />
 
-      <div className="max-w-[1600px] mx-auto relative z-10">
-        {/* Modern Header UI */}
-        <div className="flex flex-col items-center text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-[11px] font-bold uppercase tracking-[0.2em] mb-6 shadow-sm">
-            <span className="w-1.5 h-1.5 rounded-full bg-blue-200 animate-pulse"></span>
-            Information guides
+      <div className="relative z-10 max-w-[1600px] mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-[420px_1fr] gap-10 items-start">
+          {/* Left Sticky Intro */}
+          <div className="lg:sticky lg:top-[120px] self-start">
+            <div className="bg-white rounded-2xl p-8 md:p-10 border border-blue-100 shadow-none">
+              <div className="w-16 h-16 rounded-2xl bg-[#0675DB] text-white flex items-center justify-center mb-7">
+                <BookOpen size={28} />
+              </div>
+
+              <p className="text-[12px] font-black uppercase tracking-[0.25em] text-[#0675DB] mb-4">
+                Information Guides
+              </p>
+
+              <h2 className="text-[28px] md:text-[34px] font-black leading-[1.08] text-slate-950 mb-6">
+                Understand common driver topics
+              </h2>
+
+              <p className="text-[16px] leading-[1.8] text-slate-600 mb-8">
+                Simple and clear information to help you identify hardware
+                communication topics on your computer.
+              </p>
+
+              <div className="grid grid-cols-2 gap-4">
+                <div className="rounded-2xl bg-blue-50 p-5">
+                  <p className="text-3xl font-black text-[#0675DB]">12</p>
+                  <p className="text-sm font-semibold text-slate-600 mt-1">
+                    Guide Topics
+                  </p>
+                </div>
+
+                <div className="rounded-2xl bg-slate-50 p-5">
+                  <p className="text-3xl font-black text-slate-950">Easy</p>
+                  <p className="text-sm font-semibold text-slate-600 mt-1">
+                    Learning
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <h2 className="text-4xl md:text-6xl font-[900] text-white tracking-tight mb-6 drop-shadow-sm">
-            Understand common driver topics
-          </h2>
+          {/* Right Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+            {issues.map((issue, idx) => (
+              <Link
+                key={idx}
+                to={`/guide/${issue.slug}`}
+                className="group bg-white rounded-xl overflow-hidden border border-blue-100/70 shadow-sm hover:shadow-md transition-all duration-500"
+              >
+                <div className="relative h-[230px] bg-slate-100 overflow-hidden">
+                  <picture>
+                    <source srcSet={issue.avif} type="image/avif" />
+                    <source srcSet={issue.image} type="image/webp" />
+                    <img
+                      src={issue.png}
+                      alt={issue.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    />
+                  </picture>
 
-          <div className="w-20 h-1.5 bg-white/30 rounded-full mb-8"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/50 via-transparent to-transparent" />
 
-          <p className="text-blue-50 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed opacity-90">
-            Simple and clear information to help you identify hardware communication on your computer.
-          </p>
-        </div>
-
-        {/* Clean White Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-          {issues.map((issue, idx) => (
-            <Link
-              key={idx}
-              to={`/guide/${issue.slug}`}
-              className="group bg-white rounded-[15px] p-2.5 transition-all duration-500 flex flex-col"
-            >
-              {/* Image Frame */}
-              <div className="relative h-52 overflow-hidden rounded-[15px]">
-                <picture>
-                  <source srcSet={issue.avif} type="image/avif" />
-                  <source srcSet={issue.image} type="image/webp" />
-                  <img
-                    src={issue.png}
-                    alt={issue.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                </picture>
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent"></div>
-              </div>
-
-              {/* Content Area */}
-              <div className="p-7">
-                <div className="flex items-center gap-3.5 mb-4">
-                  <div className="w-10 h-10 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center shrink-0 shadow-sm border border-blue-100 group-hover:bg-[#087dcc] group-hover:text-white transition-colors duration-300">
-                    {React.cloneElement(issue.icon, { size: 18, strokeWidth: 2.5 })}
+                  <div className="absolute left-5 bottom-5 w-12 h-12 rounded-2xl bg-white text-[#0675DB] flex items-center justify-center shadow-lg">
+                    {React.cloneElement(issue.icon, {
+                      size: 21,
+                      strokeWidth: 2.5,
+                    })}
                   </div>
-                  <h3 className="text-[19px] font-bold text-slate-900 group-hover:text-[#087dcc] transition-colors leading-tight">
+
+                  <div className="absolute top-5 right-5 rounded-full bg-white/90 px-4 py-1.5 text-[11px] font-black uppercase tracking-wider text-[#0675DB]">
+                    Guide
+                  </div>
+                </div>
+
+                <div className="p-6">
+                  <h3 className="text-[20px] font-black text-slate-950 leading-tight mb-3 group-hover:text-[#0675DB] transition">
                     {issue.title}
                   </h3>
-                </div>
 
-                <p className="text-slate-500 text-sm leading-relaxed mb-6 line-clamp-2">
-                  {issue.desc}
-                </p>
+                  <p className="text-[14px] leading-relaxed text-slate-500 mb-6 line-clamp-2">
+                    {issue.desc}
+                  </p>
 
-                <div className="flex items-center gap-2 text-[#087dcc] font-black text-[11px] uppercase tracking-widest">
-                  <span>Learn more</span>
-                  <div className="w-6 h-6 rounded-full bg-blue-50 flex items-center justify-center transition-all group-hover:bg-[#087dcc] group-hover:text-white">
-                    <ArrowRight size={12} className="transition-transform group-hover:translate-x-0.5" />
+                  <div className="flex items-center justify-between pt-5 border-t border-slate-100">
+                    <span className="text-[12px] font-black uppercase tracking-[0.18em] text-[#0675DB]">
+                      Read Topic
+                    </span>
+
+                    <span className="w-9 h-9 rounded-full bg-blue-50 text-[#0675DB] flex items-center justify-center group-hover:bg-[#0675DB] group-hover:text-white transition">
+                      <ArrowRight size={16} />
+                    </span>
                   </div>
                 </div>
-              </div>
-            </Link>
-          ))}
+              </Link>
+            ))}
+          </div>
         </div>
-
-
       </div>
     </section>
   );

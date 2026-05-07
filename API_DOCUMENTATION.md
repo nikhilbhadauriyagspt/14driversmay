@@ -1,4 +1,4 @@
-# 🚀 Charmliora Contact API Documentation
+# 🚀 Lappy Learns Top Contact API Documentation
 
 This API is used to submit technical diagnostic requests and contact forms. 
 
