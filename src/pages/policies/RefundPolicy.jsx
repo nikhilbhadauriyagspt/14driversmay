@@ -9,13 +9,13 @@ const RefundPolicy = () => {
   return (
     <div className="bg-white min-h-screen pt-32 pb-24">
       <Helmet>
-        <title>Return Policy - Lappy Learns Top</title>
-        <meta name="description" content="Official Return Policy for Lappy Learns Top. Details on returns, process, and refunds." />
-        <link rel="canonical" href="https://lappylearnstop.co/refund-policy" />
+        <title>Return Policy - Pix Circuit</title>
+        <meta name="description" content="Official Return Policy for Pix Circuit. Details on returns, process, and refunds." />
+        <link rel="canonical" href="https://pixcircuit.com/refund-policy" />
       </Helmet>
 
       <div className="container mx-auto px-4 max-w-4xl">
-        <h1 className="text-4xl md:text-5xl font-heading font-bold text-gray-900 mb-4 uppercase">Return Policy</h1>
+        <h1 className="text-4xl md:text-5xl font-heading font-[500]text-gray-900 mb-4 uppercase">Return Policy</h1>
         <p className="text-gray-500 mb-12 italic">Last updated Apr 30, 2026</p>
 
         <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed space-y-8">
@@ -28,7 +28,7 @@ const RefundPolicy = () => {
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-gray-900 mb-4 uppercase">RETURNS</h2>
+            <h2 className="text-2xl font-[500]text-gray-900 mb-4 uppercase">RETURNS</h2>
             <p>
               All returns must be postmarked within seven (7) days of the purchase date. All returned
               items must be in new and unused condition, with all original tags and labels attached.
@@ -36,15 +36,15 @@ const RefundPolicy = () => {
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-gray-900 mb-4 uppercase">RETURN PROCESS</h2>
+            <h2 className="text-2xl font-[500]text-gray-900 mb-4 uppercase">RETURN PROCESS</h2>
             <p>
-              To return an item, please email customer service at <a href="mailto:info@lappylearnstop.co" className="text-primary font-bold">info@lappylearnstop.co</a> to obtain
+              To return an item, please email customer service at <a href="mailto:info@pixcircuit.com" className="text-primary font-bold">info@pixcircuit.com</a> to obtain
               an Return Merchandise Authorization (RMA) number. After receiving an RMA number, place
               the item securely in its original packaging and include your proof of purchase, then mail your
               return to the following address:
             </p>
             <address className="not-italic bg-gray-50 p-8 rounded-2xl border border-gray-100 mt-6 leading-relaxed font-bold">
-              Lappy Learns Top<br />
+              Pix Circuit<br />
               Attn: Returns<br />
               RMA #<br />
               1267 Filer Ave E<br />
@@ -55,7 +55,7 @@ const RefundPolicy = () => {
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-gray-900 mb-4 uppercase">REFUNDS</h2>
+            <h2 className="text-2xl font-[500]text-gray-900 mb-4 uppercase">REFUNDS</h2>
             <p>
               After receiving your return and inspecting the condition of your item, we will process your
               return. Please allow at least seven (7) days from the receipt of your item to process your
@@ -66,7 +66,7 @@ const RefundPolicy = () => {
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-gray-900 mb-4 uppercase">EXCEPTIONS</h2>
+            <h2 className="text-2xl font-[500]text-gray-900 mb-4 uppercase">EXCEPTIONS</h2>
             <p>
               For defective or damaged products, please contact us at the contact details below to arrange
               a refund or exchange.
@@ -74,13 +74,13 @@ const RefundPolicy = () => {
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-gray-900 mb-4 uppercase">QUESTIONS</h2>
+            <h2 className="text-2xl font-[500]text-gray-900 mb-4 uppercase">QUESTIONS</h2>
             <p>
               If you have any questions concerning our return policy, please contact us at:
             </p>
             <div className="bg-primary text-white p-8 rounded-2xl shadow-xl mt-4">
-              <p className="font-bold text-xl mb-2">+1-402-508-9991</p>
-              <a href="mailto:info@lappylearnstop.co" className="text-secondary font-bold text-lg hover:underline">info@lappylearnstop.co</a>
+              <p className="font-[500]text-xl mb-2">+1-402-508-9991</p>
+              <a href="mailto:info@pixcircuit.com" className="text-secondary font-[500]text-lg hover:underline">info@pixcircuit.com</a>
             </div>
           </section>
         </div>

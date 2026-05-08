@@ -1,127 +1,146 @@
 import React from "react";
 import {
-  ArrowRight, Wifi, Volume2, Monitor, Printer, Usb, Download,
-  Cpu, Bluetooth, Video, Scan, RefreshCcw, XCircle, BookOpen
+  ArrowRight,
+  Wifi,
+  Volume2,
+  Monitor,
+  Printer,
+  Usb,
+  Download,
+  Bluetooth,
+  Video,
+  Scan,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function CommonProblems() {
   const issues = [
-    { title: "WiFi and network topics", desc: "Identify connection drops and slow speeds.", image: "/guide/guide-network-driver.webp", avif: "/guide/guide-network-driver.avif", png: "/guide/guide-network-driver.png", icon: <Wifi />, slug: "understand-wifi-network-topics" },
-    { title: "Audio and sound topics", desc: "Learn about speaker and microphone functions.", image: "/guide/guide-audio-driver.webp", avif: "/guide/guide-audio-driver.avif", png: "/guide/guide-audio-driver.png", icon: <Volume2 />, slug: "understand-audio-driver-topics" },
-    { title: "Graphics and display topics", desc: "Identify screen flickering and gaming lag.", image: "/guide/guide-graphics-driver.webp", avif: "/guide/guide-graphics-driver.avif", png: "/guide/guide-graphics-driver.png", icon: <Monitor />, slug: "understand-graphics-driver-topics" },
-    { title: "Printer connection guides", desc: "Understand why printers go offline.", image: "/guide/guide-printer-driver.webp", avif: "/guide/guide-printer-driver.avif", png: "/guide/guide-printer-driver.png", icon: <Printer />, slug: "understand-printer-driver-topics" },
-    { title: "USB device recognition", desc: "Understand plug-and-play and port topics.", image: "/guide/guide-usb-driver.webp", avif: "/guide/guide-usb-driver.avif", png: "/guide/guide-usb-driver.png", icon: <Usb />, slug: "understand-usb-driver-topics" },
-    { title: "Missing system drivers", desc: "Learn about driver not found topics.", image: "/guide/guide-driver-not-installed.webp", avif: "/guide/guide-driver-not-installed.avif", png: "/guide/guide-driver-not-installed.png", icon: <Download />, slug: "understand-driver-not-installed" },
-    { title: "Outdated drivers", desc: "Identify topics caused by old software.", image: "/guide/guide-driver-not-installed_thumb.webp", avif: "/guide/guide-driver-not-installed_thumb.avif", png: "/guide/guide-driver-not-installed.png", icon: <RefreshCcw />, slug: "understand-driver-update-topics" },
-    { title: "Update topics", desc: "Learn when driver updates stop midway.", image: "/guide/guide-driver-not-installed.webp", avif: "/guide/guide-driver-not-installed.avif", png: "/guide/guide-driver-not-installed.png", icon: <XCircle />, slug: "understand-driver-update-topics" },
-    { title: "Bluetooth pairing info", desc: "Identify wireless device connection topics.", image: "/guide/guide-usb-driver_thumb.webp", avif: "/guide/guide-usb-driver_thumb.avif", png: "/guide/guide-usb-driver.png", icon: <Bluetooth />, slug: "understand-bluetooth-driver-topics" },
-    { title: "Webcam topics", desc: "Camera showing black screen or not found.", image: "/images/fix-driver-monitor.webp", avif: "/images/fix-driver-monitor.avif", png: "/images/fix-driver-monitor.png", icon: <Video />, slug: "understand-webcam-driver-topics" },
-    { title: "Scanner topics", desc: "Scanner failing to respond to requests.", image: "/guide/guide-printer-driver_thumb.webp", avif: "/guide/guide-printer-driver_thumb.avif", png: "/guide/guide-printer-driver.png", icon: <Scan />, slug: "understand-scanner-driver-topics" },
-    { title: "Chipset logic", desc: "Communication between PC parts.", image: "/guide/guide-audio-driver_thumb.webp", avif: "/guide/guide-audio-driver_thumb.avif", png: "/guide/guide-audio-driver.png", icon: <Cpu />, slug: "guide-chipset-drivers" },
+    {
+      title: "WiFi & Network Driver Topics",
+      desc: "Learn why wireless connections may drop, slow down, or fail to detect available networks.",
+      icon: <Wifi />,
+      slug: "understand-wifi-network-topics",
+    },
+    {
+      title: "Audio & Sound Driver Topics",
+      desc: "Understand speaker, headphone, and microphone issues caused by audio driver communication.",
+      icon: <Volume2 />,
+      slug: "understand-audio-driver-topics",
+    },
+    {
+      title: "Graphics & Display Driver Topics",
+      desc: "Explore screen flickering, display scaling, brightness, and visual performance related topics.",
+      icon: <Monitor />,
+      slug: "understand-graphics-driver-topics",
+    },
+    {
+      title: "Printer Driver Connection Guides",
+      desc: "Learn why printers may appear offline, fail to respond, or not show correctly on your device.",
+      icon: <Printer />,
+      slug: "understand-printer-driver-topics",
+    },
+    {
+      title: "USB Device Recognition Topics",
+      desc: "Understand why USB devices may not be detected, load slowly, or disconnect unexpectedly.",
+      icon: <Usb />,
+      slug: "understand-usb-driver-topics",
+    },
+    {
+      title: "Missing Driver Information",
+      desc: "Learn what it means when a system shows driver not found, unavailable, or unknown device notices.",
+      icon: <Download />,
+      slug: "understand-driver-not-installed",
+    },
+    {
+      title: "Bluetooth Pairing Topics",
+      desc: "Understand common wireless pairing, device visibility, and connection stability topics.",
+      icon: <Bluetooth />,
+      slug: "understand-bluetooth-driver-topics",
+    },
+    {
+      title: "Webcam Driver Topics",
+      desc: "Learn why a webcam may show a black screen, not open, or fail to appear in apps.",
+      icon: <Video />,
+      slug: "understand-webcam-driver-topics",
+    },
+    {
+      title: "Scanner Driver Topics",
+      desc: "Explore scanner detection, response, and communication topics in a simple educational format.",
+      icon: <Scan />,
+      slug: "understand-scanner-driver-topics",
+    },
+    {
+      title: "Driver Update Topics",
+      desc: "Understand why driver updates may pause, fail midway, or require careful compatibility checking.",
+      icon: <ArrowRight />,
+      slug: "understand-driver-update-topics",
+    },
   ];
 
   return (
-    <section className="relative bg-[#F6FAFF] py-24 px-4 sm:px-6 font-['Poppins']">
-      <div className="absolute top-0 left-0 w-full h-[360px] bg-[#0675DB]" />
-      <div className="absolute top-16 left-10 w-32 h-32 rounded-full bg-white/10 blur-2xl" />
-      <div className="absolute top-10 right-20 w-52 h-52 rounded-full bg-white/10 blur-3xl" />
-
-      <div className="relative z-10 max-w-[1600px] mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-[420px_1fr] gap-10 items-start">
-          {/* Left Sticky Intro */}
-          <div className="lg:sticky lg:top-[120px] self-start">
-            <div className="bg-white rounded-2xl p-8 md:p-10 border border-blue-100 shadow-none">
-              <div className="w-16 h-16 rounded-2xl bg-[#0675DB] text-white flex items-center justify-center mb-7">
-                <BookOpen size={28} />
-              </div>
-
-              <p className="text-[12px] font-black uppercase tracking-[0.25em] text-[#0675DB] mb-4">
-                Information Guides
-              </p>
-
-              <h2 className="text-[28px] md:text-[34px] font-black leading-[1.08] text-slate-950 mb-6">
-                Understand common driver topics
-              </h2>
-
-              <p className="text-[16px] leading-[1.8] text-slate-600 mb-8">
-                Simple and clear information to help you identify hardware
-                communication topics on your computer.
-              </p>
-
-              <div className="grid grid-cols-2 gap-4">
-                <div className="rounded-2xl bg-blue-50 p-5">
-                  <p className="text-3xl font-black text-[#0675DB]">12</p>
-                  <p className="text-sm font-semibold text-slate-600 mt-1">
-                    Guide Topics
-                  </p>
-                </div>
-
-                <div className="rounded-2xl bg-slate-50 p-5">
-                  <p className="text-3xl font-black text-slate-950">Easy</p>
-                  <p className="text-sm font-semibold text-slate-600 mt-1">
-                    Learning
-                  </p>
-                </div>
-              </div>
-            </div>
+    <section className="relative bg-white py-24 md:py-28 px-4 sm:px-6  overflow-hidden">
+      <div className="max-w-[1600px] mx-auto">
+        {/* Heading */}
+        <div className="text-center max-w-[800px] mx-auto mb-16">
+          <div className="flex items-center justify-center gap-3 mb-5">
+            <span className="w-12 h-[2px] bg-gradient-to-r from-[#CF00FE] to-[#005DE0]" />
+            <p className="text-[13px] font-[500]text-slate-400 uppercase tracking-[0.2em]">
+              Popular Topics
+            </p>
           </div>
 
-          {/* Right Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-            {issues.map((issue, idx) => (
-              <Link
-                key={idx}
-                to={`/guide/${issue.slug}`}
-                className="group bg-white rounded-xl overflow-hidden border border-blue-100/70 shadow-sm hover:shadow-md transition-all duration-500"
+          <h2 className="text-[30px] md:text-[40px] leading-[1.15] font-semibold text-slate-900">
+            Learn About Common Driver Issues
+          </h2>
+
+          <p className="mt-5 text-[15px] md:text-[16px] leading-[1.8] text-slate-500">
+            Explore clear educational guides about WiFi, sound, and other parts
+            that help your computer work correctly every day.
+          </p>
+        </div>
+
+        {/* Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-5 gap-6">
+          {issues.map((issue, idx) => (
+            <Link
+              key={idx}
+              to={`/guide/${issue.slug}`}
+              className={`group relative min-h-[320px] rounded-[12px] p-8 overflow-hidden transition-all duration-500 bg-[#F8FAFC] text-slate-900 hover:bg-gradient-to-br hover:from-[#CF00FE] hover:to-[#005DE0] hover:text-white ${idx === 9 ? "hidden 2xl:block" : "block"
+                }`}
+            >
+              {/* Background Icon Pattern - Only on Hover */}
+              <img
+                src="/about/bg-icon-box.avif"
+                alt=""
+                className="absolute top-6 right-2 w-[160px] opacity-0 group-hover:opacity-10 pointer-events-none transition-all duration-700 transform translate-x-4 group-hover:translate-x-0"
+              />
+
+              {/* Icon */}
+              <div
+                className="relative z-10 w-[56px] h-[56px] rounded-2xl flex items-center justify-center mb-7 transition-all duration-500 bg-white text-[#005DE0] group-hover:bg-white/20 group-hover:text-white"
               >
-                <div className="relative h-[230px] bg-slate-100 overflow-hidden">
-                  <picture>
-                    <source srcSet={issue.avif} type="image/avif" />
-                    <source srcSet={issue.image} type="image/webp" />
-                    <img
-                      src={issue.png}
-                      alt={issue.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                    />
-                  </picture>
+                {React.cloneElement(issue.icon, {
+                  size: 28,
+                  strokeWidth: 2,
+                })}
+              </div>
 
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/50 via-transparent to-transparent" />
+              <div className="relative z-10">
+                <h3 className="text-[18px] leading-[1.4] font-semibold mb-4">
+                  {issue.title}
+                </h3>
 
-                  <div className="absolute left-5 bottom-5 w-12 h-12 rounded-2xl bg-white text-[#0675DB] flex items-center justify-center shadow-lg">
-                    {React.cloneElement(issue.icon, {
-                      size: 21,
-                      strokeWidth: 2.5,
-                    })}
-                  </div>
+                <p className="text-[14px] leading-[1.6] mb-8 text-slate-500 group-hover:text-white/90 transition-colors duration-500">
+                  {issue.desc}
+                </p>
 
-                  <div className="absolute top-5 right-5 rounded-full bg-white/90 px-4 py-1.5 text-[11px] font-black uppercase tracking-wider text-[#0675DB]">
-                    Guide
-                  </div>
+                <div className="inline-flex items-center gap-2 text-[13px] font-[500] uppercase tracking-wider group-hover:text-white transition-colors duration-500">
+                  Read More
+                  <ArrowRight size={15} />
                 </div>
-
-                <div className="p-6">
-                  <h3 className="text-[20px] font-black text-slate-950 leading-tight mb-3 group-hover:text-[#0675DB] transition">
-                    {issue.title}
-                  </h3>
-
-                  <p className="text-[14px] leading-relaxed text-slate-500 mb-6 line-clamp-2">
-                    {issue.desc}
-                  </p>
-
-                  <div className="flex items-center justify-between pt-5 border-t border-slate-100">
-                    <span className="text-[12px] font-black uppercase tracking-[0.18em] text-[#0675DB]">
-                      Read Topic
-                    </span>
-
-                    <span className="w-9 h-9 rounded-full bg-blue-50 text-[#0675DB] flex items-center justify-center group-hover:bg-[#0675DB] group-hover:text-white transition">
-                      <ArrowRight size={16} />
-                    </span>
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
+              </div>
+            </Link>
+          ))}
         </div>
       </div>
     </section>

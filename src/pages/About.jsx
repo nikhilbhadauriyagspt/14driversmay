@@ -11,155 +11,158 @@ import { Link } from "react-router-dom";
 
 const About = () => {
   return (
-    <div className="bg-[#F7FBFF] min-h-screen font-[Poppins] overflow-hidden">
+    <div className="bg-white min-h-screen font-[Poppins]">
       <Helmet>
         <title>
-          About Us | Lappy Learns Top - Educational Driver Documentation
+          About Us | Pix Circuit - Educational Driver Documentation
         </title>
 
         <meta
           name="description"
-          content="Learn how Lappy Learns Top provides hardware driver information with easy-to-follow documentation and guides."
+          content="Learn how Pix Circuit provides hardware driver information with easy-to-follow documentation and guides."
         />
       </Helmet>
 
-      {/* HERO */}
-      <section className="relative pt-32 pb-24 px-6 overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="absolute top-0 left-0 w-[35%] h-full bg-white" />
-          <div className="absolute right-0 top-0 w-[28%] h-full bg-[#0675DB]" />
-        </div>
-
-        <div className="relative z-10 max-w-[1450px] mx-auto grid grid-cols-1 lg:grid-cols-[1fr_520px] gap-16 items-center">
-          {/* Left */}
+      {/* HERO SECTION */}
+      <section className="relative pt-32 pb-20 px-6 overflow-hidden bg-[#F8FAFC]">
+        <div className="max-w-[1600px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          {/* Left Content */}
           <div>
-            <div className="inline-flex items-center gap-2 px-4 py-2 border border-blue-100 bg-white text-[#0675DB] text-[12px] font-black uppercase tracking-[0.18em] mb-7">
-              Educational Resource
+            <div className="inline-flex items-center gap-3 mb-6">
+              <span className="h-[2px] w-10 bg-gradient-to-r from-[#CF00FE] to-[#005DE0]"></span>
+              <span className="text-[12px] font-semibold text-slate-400 uppercase tracking-[0.25em]">
+                Educational Resource
+              </span>
             </div>
 
-            <h1 className="text-[42px] md:text-[72px] font-black leading-[0.98] text-slate-950 mb-8">
-              Helping You <br />
-              Understand <span className="text-[#0675DB]">Driver Topics</span>
+            <h1 className="text-[30px] md:text-[40px] font-semibold leading-[1.2] text-slate-900 mb-8">
+              Helping You Understand <br />
+              Computer Parts Easily
             </h1>
 
-            <p className="text-[16px] md:text-[18px] leading-[1.9] text-slate-600 max-w-[760px] mb-10">
-              Lappy Learns Top is a collection of simple information guides designed
+            <p className="text-[16px] md:text-[18px] leading-[1.8] text-slate-500 max-w-[680px] mb-10">
+              Pix Circuit is a collection of simple information guides designed
               to help you understand hardware driver data and device
               communication topics in a clear way.
             </p>
 
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-5">
               <Link
                 to="/guides"
-                className="inline-flex items-center gap-3 bg-[#0675DB] text-white px-8 py-4 text-[14px] font-black hover:bg-[#045fb4] transition"
+                className="inline-flex items-center justify-center h-[56px] px-10 rounded-full btn-gradient text-white text-[15px] font-medium shadow-lg hover:shadow-xl transition-all"
               >
-                Browse Guides
-                <FaArrowRight className="text-[13px]" />
+                Browse Our Guides
+                <FaArrowRight size={14} className="ml-2" />
               </Link>
 
               <Link
                 to="/faq"
-                className="inline-flex items-center gap-3 border border-slate-300 bg-white text-slate-800 px-8 py-4 text-[14px] font-black hover:border-[#0675DB] hover:text-[#0675DB] transition"
+                className="inline-flex items-center justify-center h-[56px] px-10 rounded-full border border-slate-200 bg-white text-slate-700 text-[15px] font-medium hover:border-[#005DE0] hover:text-[#005DE0] transition-all"
               >
                 Common Questions
               </Link>
             </div>
           </div>
 
-          {/* Right */}
+          {/* Right Image */}
           <div className="relative flex justify-center lg:justify-end">
-            <div className="absolute bottom-0 w-[420px] h-[420px] bg-[#DDEEFF]" />
-
-            <img
-              src="/about/aboutmain.png"
-              alt="Driver learning"
-              className="relative z-10 max-h-[700px] object-contain"
-            />
+            <div className="relative w-full max-w-[520px] rounded-[40px] overflow-hidden shadow-2xl">
+              <img
+                src="/about/aboutmain.avif"
+                alt="Driver learning"
+                className="w-full h-auto object-contain bg-white p-4"
+              />
+            </div>
           </div>
         </div>
       </section>
 
-      {/* INFO BLOCKS */}
-      <section className="px-6 pb-24">
-        <div className="max-w-[1450px] mx-auto grid grid-cols-1 lg:grid-cols-[420px_1fr] gap-10">
-          {/* Left Panel */}
-          <div className="bg-[#0675DB] text-white p-10 h-fit">
-            <p className="text-[12px] font-black uppercase tracking-[0.22em] text-blue-100 mb-5">
-              What We Do
-            </p>
+      {/* INFO BLOCKS - Minimal Grid */}
+      <section className="py-24 px-6 bg-white">
+        <div className="max-w-[1600px] mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
 
-            <h2 className="text-[38px] font-black leading-[1.08] mb-6">
-              Educational Documentation
+            {/* Left Header */}
+            <div className="lg:col-span-5">
+              <div className="inline-flex items-center gap-3 mb-6">
+                <span className="h-[2px] w-10 bg-gradient-to-r from-[#CF00FE] to-[#005DE0]"></span>
+                <span className="text-[12px] font-semibold text-slate-400 uppercase tracking-[0.25em]">
+                  What We Do
+                </span>
+              </div>
+
+              <h2 className="text-[30px] md:text-[40px] font-semibold leading-tight text-slate-900 mb-8">
+                Educational Information For Everyone
+              </h2>
+
+              <p className="text-[16px] leading-[1.8] text-slate-500 mb-10 max-w-[500px]">
+                We provide clear educational information about hardware drivers,
+                device communication and system settings in simple language.
+              </p>
+
+              <div className="p-8 rounded-2xl bg-slate-50 border border-slate-100 border-l-4 border-l-[#005DE0]">
+                <p className="text-[14px] font-bold text-slate-900 uppercase tracking-widest mb-3">
+                  Important Note
+                </p>
+                <p className="text-[15px] leading-[1.7] text-slate-600">
+                  We are an educational documentation website and do not provide
+                  technical support or repair services.
+                </p>
+              </div>
+            </div>
+
+            {/* Right Cards */}
+            <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <InfoCard
+                icon={<FaBook />}
+                title="Easy Guides"
+                desc="Simple information guides written in clear language."
+              />
+
+              <InfoCard
+                icon={<FaSearch />}
+                title="Easy Learning"
+                desc="Learn how to identify common hardware topics."
+              />
+
+              <InfoCard
+                icon={<FaTools />}
+                title="Simple Topics"
+                desc="Printer, WiFi, audio, graphics and more."
+              />
+
+              <InfoCard
+                icon={<FaCheckCircle />}
+                title="Free To Read"
+                desc="All educational information is free to read."
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* WHY SECTION - Clean Steps */}
+      <section className="bg-slate-50 py-24 px-6">
+        <div className="max-w-[1600px] mx-auto">
+          <div className="text-center max-w-[800px] mx-auto mb-20">
+            <div className="inline-flex items-center gap-3 mb-6">
+              <span className="h-[2px] w-10 bg-gradient-to-r from-[#CF00FE] to-[#005DE0]"></span>
+              <span className="text-[12px] font-semibold text-slate-400 uppercase tracking-[0.25em]">
+                Why Use Our Guides
+              </span>
+            </div>
+
+            <h2 className="text-[30px] md:text-[40px] font-semibold text-slate-900 mb-6">
+              Simple Learning Experience
             </h2>
 
-            <p className="text-[15px] leading-[1.9] text-white/85 mb-10">
-              We provide clear educational information about hardware drivers,
-              device communication and system settings in simple language.
-            </p>
-
-            <div className="border border-white/15 p-6">
-              <p className="text-[14px] font-black uppercase mb-2">
-                Important Note
-              </p>
-
-              <p className="text-[14px] leading-[1.8] text-white/80">
-                We are an educational documentation website and do not provide
-                technical support or repair services.
-              </p>
-            </div>
-          </div>
-
-          {/* Right Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            <InfoCard
-              icon={<FaBook />}
-              title="Easy Documentation"
-              desc="Simple information guides written in clear language."
-            />
-
-            <InfoCard
-              icon={<FaSearch />}
-              title="Topic Identification"
-              desc="Learn how to identify common hardware topics."
-            />
-
-            <InfoCard
-              icon={<FaTools />}
-              title="Universal Topics"
-              desc="Printer, WiFi, audio, graphics and more."
-            />
-
-            <InfoCard
-              icon={<FaCheckCircle />}
-              title="Free Learning"
-              desc="All educational information is free to read."
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* WHY SECTION */}
-      <section className="bg-white py-24 px-6">
-        <div className="max-w-[1450px] mx-auto">
-          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-14">
-            <div>
-              <p className="text-[12px] font-black uppercase tracking-[0.22em] text-[#0675DB] mb-4">
-                Why Use Our Guides
-              </p>
-
-              <h2 className="text-[38px] md:text-[58px] font-black leading-[1.05] text-slate-950">
-                Simple Learning <br />
-                Experience
-              </h2>
-            </div>
-
-            <p className="max-w-[620px] text-[16px] leading-[1.9] text-slate-600">
+            <p className="text-[16px] leading-[1.8] text-slate-500">
               We focus on making technical information easy for everyday users
-              to understand without complex language.
+              to understand without any confusion or complex language.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 border border-slate-200">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             <WhyCard
               number="01"
               title="Step-by-Step"
@@ -168,8 +171,8 @@ const About = () => {
 
             <WhyCard
               number="02"
-              title="Verified Data"
-              desc="We research technical information before publishing guides."
+              title="Simple Data"
+              desc="We research all information before publishing our guides."
             />
 
             <WhyCard
@@ -181,55 +184,63 @@ const About = () => {
         </div>
       </section>
 
-      {/* PROCESS */}
-      <section className="py-24 px-6">
-        <div className="max-w-[1450px] mx-auto">
+      {/* PROCESS - Steps Grid */}
+      <section className="py-24 px-6 bg-white">
+        <div className="max-w-[1600px] mx-auto">
           <div className="text-center mb-16">
-            <p className="text-[12px] font-black uppercase tracking-[0.22em] text-[#0675DB] mb-4">
-              How To Use
-            </p>
+            <div className="inline-flex items-center gap-3 mb-6">
+              <span className="h-[2px] w-10 bg-gradient-to-r from-[#CF00FE] to-[#005DE0]"></span>
+              <span className="text-[12px] font-semibold text-slate-400 uppercase tracking-[0.25em]">
+                How To Use
+              </span>
+            </div>
 
-            <h2 className="text-[38px] md:text-[58px] font-black leading-[1.05] text-slate-950">
+            <h2 className="text-[30px] md:text-[40px] font-semibold text-slate-900">
               Learn In 3 Simple Steps
             </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <StepCard
-              number="01"
+              number="1"
               title="Search Your Topic"
               desc="Find your hardware or driver information topic."
             />
 
             <StepCard
-              number="02"
+              number="2"
               title="Read The Guide"
               desc="Follow easy educational documentation and examples."
             />
 
             <StepCard
-              number="03"
-              title="Understand Devices"
+              number="3"
+              title="Understand Parts"
               desc="Learn how computer hardware communication works."
             />
           </div>
         </div>
       </section>
 
-      {/* DEVICE SECTION */}
-      <section className="bg-[#0675DB] py-24 px-6 text-white">
-        <div className="max-w-[1450px] mx-auto grid grid-cols-1 lg:grid-cols-[1fr_420px] gap-16 items-center">
-          <div>
-            <p className="text-[12px] font-black uppercase tracking-[0.22em] text-blue-100 mb-4">
-              Device Topics
-            </p>
+      {/* DEVICE LIST SECTION - Modern Minimal */}
+      <section className="bg-[#050A33] py-24 px-6 text-white overflow-hidden relative">
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#CF00FE] to-[#005DE0]"></div>
 
-            <h2 className="text-[40px] md:text-[62px] font-black leading-[1.02] mb-8">
-              Common Guides <br />
-              We Cover
+        <div className="max-w-[1600px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+          <div className="lg:col-span-7">
+            <div className="inline-flex items-center gap-3 mb-6">
+              <span className="h-[2px] w-10 bg-white/20"></span>
+              <span className="text-[12px] font-semibold text-white/50 uppercase tracking-[0.25em]">
+                Topics We Cover
+              </span>
+            </div>
+
+            <h2 className="text-[30px] md:text-[40px] font-semibold leading-tight mb-10">
+              Common Guides For <br />
+              Everyday Computer Use
             </h2>
 
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
               {[
                 "Printer & Scanners",
                 "WiFi & Bluetooth",
@@ -240,53 +251,59 @@ const About = () => {
               ].map((item, i) => (
                 <div
                   key={i}
-                  className="border border-white/15 px-5 py-5 text-[15px] font-semibold bg-white/[0.04]"
+                  className="group flex items-center gap-4 border border-white/10 p-5 rounded-xl bg-white/5 hover:bg-white/10 transition-all"
                 >
-                  {item}
+                  <div className="w-2 h-2 rounded-full bg-[#005DE0]"></div>
+                  <span className="text-[15px] font-medium text-white/80">{item}</span>
                 </div>
               ))}
             </div>
           </div>
 
-          <div className="bg-white text-slate-700 p-10">
-            <p className="text-[20px] leading-[1.9] font-medium">
-              “Our documentation is designed for everyone — from beginners to
-              everyday computer users.”
-            </p>
+          <div className="lg:col-span-5">
+            <div className="bg-white/5 border border-white/10 p-12 rounded-[32px] backdrop-blur-sm relative">
+              <div className="absolute -top-6 -left-6 w-12 h-12 bg-[#005DE0] rounded-full flex items-center justify-center text-2xl font-serif text-white">“</div>
+              <p className="text-[18px] md:text-[22px] leading-relaxed font-medium text-white/90">
+                Our documentation is designed for everyone — from beginners to
+                everyday computer users.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="bg-white py-24 px-6">
-        <div className="max-w-[1200px] mx-auto text-center">
-          <p className="text-[12px] font-black uppercase tracking-[0.22em] text-[#0675DB] mb-4">
-            Explore More
-          </p>
+      {/* FINAL CTA */}
+      <section className="bg-white py-24 px-6 text-center">
+        <div className="max-w-[1000px] mx-auto">
+          <div className="inline-flex items-center gap-3 mb-6">
+            <span className="h-[2px] w-10 bg-gradient-to-r from-[#CF00FE] to-[#005DE0]"></span>
+            <span className="text-[12px] font-semibold text-slate-400 uppercase tracking-[0.25em]">
+              Start Learning
+            </span>
+          </div>
 
-          <h2 className="text-[38px] md:text-[60px] font-black leading-[1.05] text-slate-950 mb-8">
-            Learn More About <br />
-            Driver Topics
+          <h2 className="text-[30px] md:text-[40px] font-semibold text-slate-900 mb-8">
+            Understand Your Computer Better Today
           </h2>
 
-          <p className="max-w-[760px] mx-auto text-[16px] leading-[1.9] text-slate-600 mb-10">
-            Browse educational guides created to help you understand hardware,
-            system settings and device communication.
+          <p className="max-w-[700px] mx-auto text-[16px] leading-[1.8] text-slate-500 mb-12">
+            Browse our library of simple guides created to help you understand hardware,
+            system settings and how your computer parts talk to each other.
           </p>
 
           <div className="flex flex-wrap justify-center gap-5">
             <Link
               to="/guides"
-              className="bg-[#0675DB] text-white px-9 py-4 text-[14px] font-black hover:bg-[#045fb4] transition"
+              className="inline-flex items-center justify-center h-[56px] px-12 rounded-full btn-gradient text-white text-[15px] font-medium shadow-lg transition-all"
             >
-              View All Guides
+              Explore All Guides
             </Link>
 
             <Link
               to="/faq"
-              className="border border-slate-300 text-slate-800 px-9 py-4 text-[14px] font-black hover:border-[#0675DB] hover:text-[#0675DB] transition"
+              className="inline-flex items-center justify-center h-[56px] px-12 rounded-full border border-slate-200 bg-white text-slate-700 text-[15px] font-medium hover:border-[#005DE0] hover:text-[#005DE0] transition-all"
             >
-              Common Questions
+              Read Common Questions
             </Link>
           </div>
         </div>
@@ -296,46 +313,48 @@ const About = () => {
 };
 
 const InfoCard = ({ icon, title, desc }) => (
-  <div className="bg-white border border-slate-200 p-8 hover:border-[#0675DB] transition">
-    <div className="text-[#0675DB] text-[28px] mb-5">{icon}</div>
+  <div className="bg-white border border-slate-100 p-8 rounded-2xl shadow-sm hover:shadow-md hover:border-[#005DE0]/30 transition-all group">
+    <div className="w-14 h-14 rounded-xl bg-slate-50 flex items-center justify-center text-[#005DE0] text-[24px] mb-6 group-hover:bg-blue-50 transition-colors">
+      {icon}
+    </div>
 
-    <h3 className="text-[20px] font-black text-slate-950 mb-3">
+    <h3 className="text-[20px] font-semibold text-slate-900 mb-3">
       {title}
     </h3>
 
-    <p className="text-[15px] leading-[1.8] text-slate-600">
+    <p className="text-[15px] leading-[1.7] text-slate-500">
       {desc}
     </p>
   </div>
 );
 
 const WhyCard = ({ number, title, desc }) => (
-  <div className="border-r border-slate-200 last:border-r-0 p-10 bg-white">
-    <span className="text-[14px] font-black text-[#0675DB]">
-      {number}
+  <div className="p-10 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-md transition-all">
+    <span className="text-[14px] font-bold text-[#005DE0] uppercase tracking-widest">
+      Step {number}
     </span>
 
-    <h3 className="text-[28px] font-black text-slate-950 mt-5 mb-4">
+    <h3 className="text-[24px] font-semibold text-slate-900 mt-4 mb-4">
       {title}
     </h3>
 
-    <p className="text-[15px] leading-[1.9] text-slate-600">
+    <p className="text-[15px] leading-[1.8] text-slate-500">
       {desc}
     </p>
   </div>
 );
 
 const StepCard = ({ number, title, desc }) => (
-  <div className="bg-white border border-slate-200 p-10 relative">
-    <span className="absolute top-0 right-0 bg-[#0675DB] text-white px-5 py-3 text-[14px] font-black">
+  <div className="bg-slate-50 p-10 rounded-[32px] relative group hover:bg-white hover:shadow-xl hover:shadow-blue-900/5 transition-all duration-500 border border-transparent hover:border-slate-100">
+    <div className="w-12 h-12 rounded-full bg-white shadow-sm flex items-center justify-center text-[18px] font-bold text-[#005DE0] mb-8 group-hover:bg-[#005DE0] group-hover:text-white transition-all">
       {number}
-    </span>
+    </div>
 
-    <h3 className="text-[30px] font-black text-slate-950 mb-5 mt-8">
+    <h3 className="text-[24px] font-semibold text-slate-900 mb-4">
       {title}
     </h3>
 
-    <p className="text-[15px] leading-[1.9] text-slate-600">
+    <p className="text-[15px] leading-[1.8] text-slate-500">
       {desc}
     </p>
   </div>

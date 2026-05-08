@@ -54,7 +54,7 @@ export default function FeatureStrip() {
 
                                 {/* Content */}
                                 <div className="relative z-10">
-                                    <h3 className="text-[19px] font-bold text-[#07153A] mb-3 group-hover:text-blue-600 transition-colors">
+                                    <h3 className="text-[19px] font-[500]text-[#07153A] mb-3 group-hover:text-blue-600 transition-colors">
                                         {item.title}
                                     </h3>
                                     <p className="text-[14px] leading-relaxed text-[#667085] font-medium">
@@ -64,7 +64,7 @@ export default function FeatureStrip() {
 
                                 {/* Bottom Accent */}
                                 <div className="absolute bottom-0 left-0 w-full h-1.5 bg-transparent group-hover:bg-blue-600 rounded-b-[24px] transition-all duration-500" />
-                                
+
                                 {/* Decorative Element */}
                                 <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                                     <ArrowRight className="w-5 h-5 text-blue-200" />

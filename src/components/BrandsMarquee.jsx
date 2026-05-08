@@ -13,36 +13,26 @@ const InfoMarquee = () => {
     "Read clear steps to understand system settings",
   ];
 
-  const icons = [BookOpen, Cpu, Wifi, CheckCircle, Sparkles];
-
   return (
-    <section className="relative w-full overflow-hidden bg-[#F5FAFF] border-y border-blue-100 py-5 font-['Poppins']">
-      {/* soft background */}
-      <div className="absolute inset-0 opacity-70">
-        <div className="absolute left-0 top-0 h-full w-[260px] bg-gradient-to-r from-blue-100/80 to-transparent" />
-        <div className="absolute right-0 top-0 h-full w-[260px] bg-gradient-to-l from-blue-100/80 to-transparent" />
-      </div>
-
+    <section className="relative w-full overflow-hidden bg-white border-y border-slate-100 py-6 ">
       <div className="relative flex overflow-hidden">
         <div className="flex w-max animate-marquee items-center whitespace-nowrap">
-          {[...messages, ...messages].map((msg, i) => {
-            const Icon = icons[i % icons.length];
+          {[...messages, ...messages].map((msg, i) => (
+            <div
+              key={i}
+              className="flex items-center group cursor-default"
+            >
+              {/* Decorative Gradient Line */}
+              <div className="mx-8 h-[1px] w-12 bg-gradient-to-r from-[#CF00FE]/40 to-[#005DE0]/40 group-hover:from-[#CF00FE] group-hover:to-[#005DE0] transition-all duration-500"></div>
 
-            return (
-              <div
-                key={i}
-                className="mx-3 flex items-center gap-3 rounded-full bg-white px-5 py-3 shadow-[0_8px_25px_rgba(37,99,235,0.08)] border border-blue-100"
-              >
-                <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#0675DB] text-white">
-                  <Icon size={16} />
-                </span>
+              <span className="text-[13px] md:text-[14px] font-medium text-slate-500 uppercase tracking-[0.15em] group-hover:text-slate-900 transition-colors">
+                {msg}
+              </span>
 
-                <span className="text-[14px] md:text-[15px] font-semibold text-slate-700">
-                  {msg}
-                </span>
-              </div>
-            );
-          })}
+              {/* Minimalist Dot Separator */}
+              <div className="ml-8 w-1.5 h-1.5 rounded-full border border-slate-200"></div>
+            </div>
+          ))}
         </div>
       </div>
 
@@ -53,7 +43,7 @@ const InfoMarquee = () => {
         }
 
         .animate-marquee {
-          animation: marquee 42s linear infinite;
+          animation: marquee 60s linear infinite;
         }
 
         .animate-marquee:hover {

@@ -6,29 +6,30 @@ import Hero from '../components/Hero';
 import FAQ from '../components/Faqs';
 import CommonProblems from '../components/commanissue';
 import WhenNeedDrivers from '../components/needdrivers';
-import Driverfixisuue from '../components/driverfixissue';
+import DriverFixIssue from '../components/driverfixissue.jsx';
 import Guides from '../components/guides';
 import Stats from '../components/stact';
 import DriverCategoryMarquee from '../components/drivercategorymarquee';
 import InfoMarquee from '../components/BrandsMarquee';
 import DriverChallengeSection from '../components/DriverChallengeSection';
+import WhyChooseUs from '../components/WhyChooseUs';
 
 const Home = () => {
   return (
     <>
       <Helmet>
-        <title>Lappy Learns Top | Driver Information Guides</title>
+        <title>Pix Circuit | Driver Information Guides</title>
         <meta name="description" content="Technical repository for hardware specifications, driver-level architectural data, and system documentation for the global technical community." />
-        <link rel="canonical" href="https://lappylearnstop.co" />
+        <link rel="canonical" href="https://pixcircuit.com" />
       </Helmet>
 
       <Hero />
       <InfoMarquee />
-      <DriverChallengeSection />
-      {/* <DriverCategoryMarquee /> */}
       <CommonProblems />
+      <DriverChallengeSection />
 
-      <Driverfixisuue />
+      <DriverFixIssue />
+      <WhyChooseUs />
       <Guides />
       <FAQ />
 

@@ -1,79 +1,92 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { FaEnvelope, FaPaperPlane, FaBookOpen } from "react-icons/fa";
+import { Mail, Send, BookOpen, ArrowRight } from "lucide-react";
 
 const Contact = () => {
   return (
     <div className="bg-white min-h-screen font-[Poppins]">
       <Helmet>
-        <title>Contact | Lappy Learns Top Driver Learning Resource</title>
+        <title>Contact | Pix Circuit Driver Learning Resource</title>
         <meta
           name="description"
-          content="Contact Lappy Learns Top for driver learning topics, guide suggestions, educational feedback, or general website questions."
+          content="Contact Pix Circuit for driver learning topics, guide suggestions, educational feedback, or general website questions."
         />
       </Helmet>
 
-      <section className="relative pt-32 pb-24 overflow-hidden bg-[#F7FBFF]">
-        <div className="absolute top-0 right-0 w-[38%] h-full bg-[#0C66E5]" />
-        <div className="absolute bottom-0 left-0 w-[280px] h-[280px] bg-blue-100 rounded-full blur-3xl" />
+      {/* HERO SECTION */}
+      <section className="relative pt-32 pb-20 px-6 overflow-hidden bg-[#F8FAFC]">
+        {/* Subtle Decorative Gradient */}
+        <div className="absolute top-0 right-0 w-[40%] h-full bg-[#005DE0]/5 -skew-x-12 transform origin-top-right"></div>
 
-        <div className="relative z-10 max-w-[1500px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-[1fr_480px] gap-12 items-center">
-          <div>
-            <div className="inline-flex items-center gap-2 bg-white border border-blue-100 px-4 py-2 text-[12px] font-black uppercase tracking-[0.2em] text-[#0C66E5] mb-6">
-              <FaBookOpen size={14} />
-              Learning Resource
+        <div className="relative z-10 max-w-[1600px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+          {/* Left Content */}
+          <div className="lg:col-span-7">
+            <div className="inline-flex items-center gap-3 mb-6">
+              <span className="h-[2px] w-10 bg-gradient-to-r from-[#CF00FE] to-[#005DE0]"></span>
+              <span className="text-[12px] font-semibold text-slate-400 uppercase tracking-[0.25em]">
+                Get In Touch
+              </span>
             </div>
 
-            <h1 className="text-[42px] md:text-[68px] font-black leading-[1.02] text-slate-950 mb-7">
-              Contact <span className="text-[#0C66E5]">Lappy Learns Top</span>
+            <h1 className="text-[30px] md:text-[40px] font-semibold leading-[1.2] text-slate-900 mb-8">
+              Contact Pix Circuit
             </h1>
 
-            <p className="text-[16px] md:text-[18px] leading-[1.8] text-slate-600 max-w-[720px]">
+            <p className="text-[16px] md:text-[18px] leading-[1.8] text-slate-500 max-w-[680px]">
               Share a driver learning topic, suggest a guide, or send a general
-              question about our educational driver information resources.
+              question about our simple computer information resources.
             </p>
           </div>
 
-          <div className="bg-white border border-blue-100 p-8">
-            <div className="w-14 h-14 bg-[#0C66E5] text-white flex items-center justify-center mb-6">
-              <FaEnvelope size={22} />
+          {/* Right Info Box */}
+          <div className="lg:col-span-5">
+            <div className="bg-white p-10 rounded-sm border border-slate-100 shadow-xl shadow-blue-900/5 group">
+              <div className="w-14 h-14 rounded-full bg-[#005DE0]/10 text-[#005DE0] flex items-center justify-center mb-8 group-hover:bg-[#005DE0] group-hover:text-white transition-all duration-500">
+                <Mail size={24} />
+              </div>
+
+              <h4 className="font-semibold text-slate-900 text-[22px] mb-3">
+                Email Address
+              </h4>
+
+              <p className="text-slate-500 text-[16px]">
+                <a
+                  href="mailto:info@pixcircuit.com"
+                  className="hover:text-[#005DE0] transition-colors"
+                >
+                  info@pixcircuit.com
+                </a>
+              </p>
             </div>
-
-            <h4 className="font-black text-slate-950 text-[24px] mb-3">
-              Learning Resource Contact
-            </h4>
-
-            <p className="text-slate-600 text-[16px] font-medium">
-              <a
-                href="mailto:info@lappylearnstop.co"
-                className="hover:text-[#0C66E5] transition"
-              >
-                info@lappylearnstop.co
-              </a>
-            </p>
           </div>
         </div>
       </section>
 
-      <section className="py-20 px-6 bg-white">
+      {/* CONTACT FORM SECTION */}
+      <section className="py-24 px-6 bg-white">
         <div className="max-w-[1200px] mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-[360px_1fr] gap-10">
-            <div className="bg-[#0C66E5] text-white p-8 h-fit">
-              <FaPaperPlane size={28} className="mb-6" />
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
 
-              <h2 className="text-[30px] font-black leading-tight mb-5">
-                Send a Learning Request
+            {/* Left Info Panel */}
+            <div className="lg:col-span-4 bg-[#050A33] p-10 rounded-sm relative overflow-hidden text-white flex flex-col justify-center">
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#CF00FE] to-[#005DE0]"></div>
+
+              <Send size={32} className="text-[#005DE0] mb-8" />
+
+              <h2 className="text-[26px] font-semibold leading-tight mb-6">
+                Send A Learning Request
               </h2>
 
-              <p className="text-white/80 text-[15px] leading-[1.8]">
-                Use this form to share your guide suggestion, feedback, or
-                learning topic.
+              <p className="text-white/60 text-[15px] leading-[1.8]">
+                Use this simple form to share your guide suggestion, feedback, or any computer part topic you want to learn about.
               </p>
             </div>
 
-            <div className="border border-slate-200 bg-[#F8FAFC] p-6 md:p-8">
-              <form className="space-y-5">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            {/* Right Form Area */}
+            <div className="lg:col-span-8 border border-slate-100 bg-slate-50 p-8 md:p-12 rounded-sm">
+              <form className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <Field label="Full Name">
                     <input
                       type="text"
@@ -91,24 +104,24 @@ const Contact = () => {
                   </Field>
                 </div>
 
-                <Field label="Topic">
+                <Field label="Learning Topic">
                   <input
                     type="text"
-                    placeholder="e.g. Audio driver learning guide"
+                    placeholder="e.g. WiFi or Printer learning guide"
                     className="inputBox"
                   />
                 </Field>
 
-                <Field label="Message">
+                <Field label="Your Message">
                   <textarea
                     rows="5"
-                    placeholder="Share your guide suggestion, feedback, or learning topic..."
+                    placeholder="Share your suggestion, feedback, or what you want to learn..."
                     className="inputBox resize-none"
                   />
                 </Field>
 
-                <button className="w-full bg-[#0C66E5] text-white py-4 font-black text-sm hover:bg-[#084db3] transition active:scale-[0.99]">
-                  Submit Request
+                <button className="w-full h-[56px] rounded-sm bg-[#050A33] text-white font-semibold text-[15px] hover:bg-[#005DE0] transition-all duration-300 active:scale-[0.99] shadow-lg shadow-blue-900/10">
+                  Submit Your Request
                 </button>
               </form>
             </div>
@@ -120,17 +133,18 @@ const Contact = () => {
         .inputBox {
           width: 100%;
           background: #ffffff;
-          border: 1px solid #dbeafe;
-          padding: 14px 16px;
-          font-size: 14px;
+          border: 1px solid #f1f5f9;
+          padding: 16px;
+          font-size: 15px;
           outline: none;
-          color: #0f172a;
-          transition: all 0.2s ease;
+          color: #1e293b;
+          border-radius: 2px;
+          transition: all 0.3s ease;
         }
 
         .inputBox:focus {
-          border-color: #0C66E5;
-          background: #ffffff;
+          border-color: #005DE0;
+          box-shadow: 0 0 0 4px rgba(0, 93, 224, 0.05);
         }
 
         .inputBox::placeholder {
@@ -142,8 +156,8 @@ const Contact = () => {
 };
 
 const Field = ({ label, children }) => (
-  <div className="space-y-2">
-    <label className="text-[11px] font-black text-slate-500 uppercase tracking-[0.18em]">
+  <div className="space-y-3">
+    <label className="text-[12px] font-semibold text-slate-400 uppercase tracking-[0.2em]">
       {label}
     </label>
     {children}

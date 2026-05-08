@@ -1,147 +1,111 @@
 import React from "react";
-import { Mail, BookOpen, ArrowRight } from "lucide-react";
+import { Mail, BookOpen, ArrowRight, ShieldCheck, Info, Globe } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative overflow-hidden bg-[#F7FBFF] font-['Poppins']">
-      {/* Top CTA Strip */}
-      <div className="bg-[#045fb4] px-6 py-10">
-        <div className="max-w-[1600px] mx-auto flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
-          <div>
-            <p className="text-[12px] font-black uppercase tracking-[0.24em] text-white mb-3">
-              Driver Learning Resource
-            </p>
-            <h2 className="text-[28px] md:text-[38px] font-black text-white leading-tight">
-              Learn driver topics in simple words
-            </h2>
-          </div>
+    <footer className="relative w-full bg-[#050A33] text-white pt-24 overflow-hidden">
 
-          <Link
-            to="/guides"
-            className="inline-flex w-fit items-center gap-3 bg-white text-[#0675DB] px-7 py-4 rounded-[6px] text-[14px] font-black hover:bg-blue-50 transition"
-          >
-            Browse Guides
-            <ArrowRight size={17} />
-          </Link>
-        </div>
-      </div>
+      {/* Background Decorative Elements */}
+      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#CF00FE] to-[#005DE0]"></div>
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-600/5 blur-[120px] rounded-full -mr-64 -mt-64"></div>
+      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-purple-600/5 blur-[100px] rounded-full -ml-48 -mb-48"></div>
 
-      {/* Main Footer */}
-      <div className="max-w-[1600px] mx-auto px-6 py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-[360px_1fr] gap-14">
-          {/* Brand Box */}
-          <div className="bg-white border border-blue-100 rounded-[10px] p-8">
-            <Link to="/" className="inline-flex items-center mb-6">
-              <img
-                src="/logo/logo.avif"
-                alt="Lappy Learns Top"
-                width="210"
-                height="48"
-                className="h-12 w-auto object-contain"
-              />
+      <div className="relative z-10 max-w-[1600px] mx-auto px-6">
+
+        {/* Top Section: Brand & Newsletter-style info */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-20">
+
+          <div className="lg:col-span-4">
+            <Link to="/" className="inline-block mb-8 group">
+              <div className="bg-white p-3 rounded-xl inline-block transition-transform duration-500 group-hover:scale-105">
+                <img
+                  src="/logo/logo.avif"
+                  alt="Pix Circuit"
+                  className="h-10 w-auto object-contain"
+                />
+              </div>
             </Link>
 
-            <p className="text-[15px] leading-7 text-slate-600 max-w-[320px]">
-              Your resource for understanding hardware drivers and device
-              communication.
+            <p className="text-white/60 text-[16px] leading-relaxed max-w-[360px] mb-10">
+              A simple place to learn about your computer parts and how they work together to help you every day.
             </p>
 
-            <div className="mt-8 pt-7 border-t border-slate-100">
-              <h3 className="text-[18px] font-black text-slate-950 mb-4">
-                Email Us
-              </h3>
-
-              <a
-                href="mailto:info@lappylearnstop.co"
-                className="inline-flex items-center gap-3 text-[15px] font-semibold text-[#0675DB] hover:text-[#045fb4] transition"
-              >
-                <span className="w-10 h-10 rounded-[6px] bg-blue-50 flex items-center justify-center">
-                  <Mail className="w-4 h-4" />
-                </span>
-                info@lappylearnstop.co
-              </a>
+            <div className="flex flex-col gap-4">
+              <div className="flex items-center gap-4 group cursor-pointer">
+                <div className="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-[#005DE0]/20 group-hover:border-[#005DE0]/40 transition-all duration-300">
+                  <Mail size={18} className="text-[#005DE0]" />
+                </div>
+                <div>
+                  <p className="text-white/40 text-[12px] uppercase tracking-widest font-semibold">Write To Us</p>
+                  <a href="mailto:info@pixcircuit.com" className="text-white font-medium hover:text-[#005DE0] transition-colors">info@pixcircuit.com</a>
+                </div>
+              </div>
             </div>
           </div>
 
-          {/* Links Area */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-10">
-            <FooterColumn
-              title="Quick Links"
-              links={[
-                { name: "Home", path: "/" },
-                { name: "About", path: "/about" },
-                { name: "Guides", path: "/guides" },
-                { name: "FAQ", path: "/faq" },
-                { name: "Contact", path: "/contact" },
-              ]}
-            />
+          <div className="lg:col-span-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
+              <FooterColumn
+                title="Quick Links"
+                links={[
+                  { name: "Home", path: "/" },
+                  { name: "About Us", path: "/about" },
+                  { name: "Our Guides", path: "/guides" },
+                  { name: "Common Questions", path: "/faq" },
+                  { name: "Contact Us", path: "/contact" },
+                ]}
+              />
 
-            <FooterColumn
-              title="Guides"
-              links={[
-                { name: "Information Guides", path: "/guide/understand-driver-not-installed" },
-                { name: "Update Topics", path: "/guide/understand-driver-update-topics" },
-                { name: "Scanner Topics", path: "/guide/understand-scanner-driver-topics" },
-                { name: "Webcam Topics", path: "/guide/understand-webcam-driver-topics" },
-                { name: "BIOS & Firmware", path: "/guide/guide-bios-firmware-updates" },
-                { name: "Chipset Guide", path: "/guide/guide-chipset-drivers" },
-              ]}
-            />
+              <FooterColumn
+                title="Easy Guides"
+                links={[
+                  { name: "Missing Drivers", path: "/guide/understand-driver-not-installed" },
+                  { name: "Update Topics", path: "/guide/understand-driver-update-topics" },
+                  { name: "Scanner Info", path: "/guide/understand-scanner-driver-topics" },
+                  { name: "Webcam Info", path: "/guide/understand-webcam-driver-topics" },
+                  { name: "BIOS Guides", path: "/guide/guide-bios-firmware-updates" },
+                ]}
+              />
 
-            <FooterColumn
-              title="Driver Topics"
-              links={[
-                { name: "Printer Information", path: "/guide/understand-printer-driver-topics" },
-                { name: "Network Information", path: "/guide/understand-wifi-network-topics" },
-                { name: "Audio Information", path: "/guide/understand-audio-driver-topics" },
-                { name: "Graphics Information", path: "/guide/understand-graphics-driver-topics" },
-                { name: "Bluetooth Information", path: "/guide/understand-bluetooth-driver-topics" },
-                { name: "USB Information", path: "/guide/understand-usb-driver-topics" },
-              ]}
-            />
+              <FooterColumn
+                title="Computer Parts"
+                links={[
+                  { name: "Printer Info", path: "/guide/understand-printer-driver-topics" },
+                  { name: "Internet & WiFi", path: "/guide/understand-wifi-network-topics" },
+                  { name: "Sound & Audio", path: "/guide/understand-audio-driver-topics" },
+                  { name: "Screen & Video", path: "/guide/understand-graphics-driver-topics" },
+                  { name: "USB Ports", path: "/guide/understand-usb-driver-topics" },
+                ]}
+              />
 
-            <FooterColumn
-              title="Policies"
-              links={[
-                { name: "Privacy Policy", path: "/privacy-policy" },
-                { name: "Terms of Service", path: "/terms-of-service" },
-                { name: "Cookie Policy", path: "/cookie-policy" },
-                { name: "Disclaimer", path: "/disclaimer" },
-              ]}
-            />
+              <FooterColumn
+                title="Our Policies"
+                links={[
+                  { name: "Privacy Policy", path: "/privacy-policy" },
+                  { name: "Terms of Use", path: "/terms-of-service" },
+                  { name: "Cookie Policy", path: "/cookie-policy" },
+                  { name: "Disclaimer", path: "/disclaimer" },
+                ]}
+              />
+            </div>
           </div>
         </div>
 
-        {/* Notice */}
-        <div className="mt-14 border border-blue-100 bg-white rounded-[8px] px-6 py-5 flex flex-col md:flex-row md:items-center gap-4 md:justify-between">
-          <div className="flex items-center gap-3">
-            <span className="w-10 h-10 rounded-[6px] bg-blue-50 text-[#0675DB] flex items-center justify-center">
-              <BookOpen size={18} />
-            </span>
-            <p className="text-[14px] text-slate-600">
-              All information is created for educational driver learning only.
-            </p>
+        {/* Bottom Credits */}
+        <div className="py-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+          <p className="text-white/40 text-[14px]">
+            © {currentYear} <span className="text-white font-medium">Pix Circuit</span>. Simple Computer Learning Site.
+          </p>
+
+          <div className="flex items-center gap-8">
+            <Link to="/guides" className="text-[14px] text-white/60 hover:text-white transition-colors flex items-center gap-2 group">
+              View All Guides <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+            </Link>
           </div>
-
-          <Link
-            to="/guides"
-            className="text-[14px] font-black text-[#0675DB] inline-flex items-center gap-2"
-          >
-            View Guide Library
-            <ArrowRight size={15} />
-          </Link>
         </div>
-      </div>
-
-      {/* Bottom Bar */}
-      <div className="bg-[#063c8d] py-6 px-6 text-center">
-        <p className="text-[14px] text-white">
-          © {currentYear} Lappy Learns Top. All information is for educational
-          purposes.
-        </p>
       </div>
     </footer>
   );
@@ -149,19 +113,18 @@ export default function Footer() {
 
 function FooterColumn({ title, links }) {
   return (
-    <div>
-      <h3 className="text-[18px] font-black text-slate-950 mb-6">
+    <div className="flex flex-col gap-6">
+      <h3 className="text-[14px] font-bold uppercase tracking-[0.2em] text-[#005DE0]">
         {title}
       </h3>
-
-      <ul className="space-y-4">
+      <ul className="flex flex-col gap-4">
         {links.map((link, index) => (
           <li key={index}>
             <Link
               to={link.path}
-              className="group inline-flex items-center gap-2 text-[15px] text-slate-600 hover:text-[#0675DB] transition"
+              className="text-white/50 text-[15px] hover:text-white transition-colors duration-300 flex items-center gap-2 group"
             >
-              <span className="w-1.5 h-1.5 rounded-full bg-blue-200 group-hover:bg-[#0675DB] transition" />
+              <span className="w-0 group-hover:w-2 h-[1px] bg-[#005DE0] transition-all duration-300"></span>
               {link.name}
             </Link>
           </li>

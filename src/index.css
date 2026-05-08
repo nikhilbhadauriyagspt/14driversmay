@@ -61,6 +61,34 @@ body {
   .custom-scrollbar::-webkit-scrollbar-thumb:hover {
     background: #cbd5e1;
   }
+
+  .btn-gradient {
+    position: relative;
+    background: linear-gradient(246.06deg, #CF00FE -19.26%, #005DE0 87.05%);
+    z-index: 1;
+    overflow: hidden;
+    transition: all 0.4s ease;
+  }
+
+  .btn-gradient::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(246.06deg, #005DE0 -19.26%, #CF00FE 87.05%);
+    transition: all 0.4s ease;
+    z-index: -1;
+  }
+
+  .btn-gradient:hover::before {
+    left: 0;
+  }
+
+  .repeating-bg {
+    background-image: repeating-linear-gradient(135deg, rgba(15, 23, 42, 0.055) 0px, rgba(15, 23, 42, 0.055) 1px, transparent 1px, transparent 7px);
+  }
 }
 
 @layer base {

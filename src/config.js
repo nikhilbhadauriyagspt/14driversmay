@@ -1,4 +1,4 @@
 export const APP_CONFIG = {
-    NAME: 'Lappy Learns Top',
-    SUPPORT_EMAIL: 'info@lappylearnstop.co'
+    NAME: 'Pix Circuit',
+    SUPPORT_EMAIL: 'info@pixcircuit.com'
 };

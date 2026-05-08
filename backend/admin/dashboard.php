@@ -28,30 +28,34 @@ if (isset($_GET['logout'])) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard - Lappy Learns Top</title>
+    <title>Admin Dashboard - Pix Circuit</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Poppins', sans-serif; }
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
     </style>
 </head>
+
 <body class="bg-slate-50 min-h-screen">
     <nav class="bg-white border-b border-slate-100 py-4 px-12 sticky top-0 z-50">
         <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-xl font-bold text-slate-900 tracking-tight">Lappy Learns Top <span class="text-blue-600">Admin</span></h1>
+            <h1 class="text-xl font-[500]text-slate-900 ">Pix Circuit <span class="text-blue-600">Admin</span></h1>
             <div class="flex items-center gap-6">
-                <span class="text-slate-400 text-xs font-bold uppercase tracking-widest italic">Logged as: <?php echo $_SESSION['admin_user']; ?></span>
-                <a href="?logout=1" class="bg-slate-900 text-white px-6 py-2 rounded-xl text-xs font-bold hover:bg-red-600 transition-all">Sign Out</a>
+                <span class="text-slate-400 text-xs font-[500]uppercase tracking-widest italic">Logged as: <?php echo $_SESSION['admin_user']; ?></span>
+                <a href="?logout=1" class="bg-slate-900 text-white px-6 py-2 rounded-xl text-xs font-[500]hover:bg-red-600 transition-all">Sign Out</a>
             </div>
         </div>
     </nav>
 
     <div class="container mx-auto px-6 lg:px-12 py-12">
         <div class="mb-12">
-            <h2 class="text-3xl font-bold text-slate-900 mb-2">Technical Submissions</h2>
+            <h2 class="text-3xl font-[500]text-slate-900 mb-2">Technical Submissions</h2>
             <p class="text-slate-400 font-medium">Review system diagnostic requests from multiple platforms.</p>
         </div>
 
@@ -70,15 +74,15 @@ if (isset($_GET['logout'])) {
                     </thead>
                     <tbody class="divide-y divide-slate-50">
                         <?php if ($result && $result->num_rows > 0): ?>
-                            <?php while($row = $result->fetch_assoc()): ?>
+                            <?php while ($row = $result->fetch_assoc()): ?>
                                 <tr class="hover:bg-blue-50/30 transition-colors">
                                     <td class="px-6 py-6">
                                         <div class="flex items-center gap-2">
                                             <div class="w-2 h-2 rounded-full bg-emerald-500"></div>
-                                            <span class="text-xs font-black text-slate-900 uppercase tracking-tighter"><?php echo $row['site_origin']; ?></span>
+                                            <span class="text-xs font-black text-slate-900 uppercase er"><?php echo $row['site_origin']; ?></span>
                                         </div>
                                     </td>
-                                    <td class="px-6 py-6 text-sm font-bold text-slate-900"><?php echo $row['first_name'] . ' ' . $row['last_name']; ?></td>
+                                    <td class="px-6 py-6 text-sm font-[500]text-slate-900"><?php echo $row['first_name'] . ' ' . $row['last_name']; ?></td>
                                     <td class="px-6 py-6 text-sm font-medium text-blue-600"><?php echo $row['email']; ?></td>
                                     <td class="px-6 py-6">
                                         <span class="px-3 py-1 bg-slate-100 text-slate-600 rounded-full text-[9px] font-black uppercase tracking-wider border border-slate-200/50">
@@ -88,7 +92,7 @@ if (isset($_GET['logout'])) {
                                     <td class="px-6 py-6 text-xs text-slate-500 font-medium max-w-xs leading-relaxed">
                                         <?php echo nl2br(htmlspecialchars($row['message'])); ?>
                                     </td>
-                                    <td class="px-6 py-6 text-xs font-bold text-slate-400 whitespace-nowrap italic">
+                                    <td class="px-6 py-6 text-xs font-[500]text-slate-400 whitespace-nowrap italic">
                                         <?php echo date('M d, Y • H:i', strtotime($row['created_at'])); ?>
                                     </td>
                                 </tr>
@@ -104,5 +108,5 @@ if (isset($_GET['logout'])) {
         </div>
     </div>
 </body>
-</html>
 
+</html>

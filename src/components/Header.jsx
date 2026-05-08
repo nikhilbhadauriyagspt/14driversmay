@@ -21,7 +21,8 @@ import {
   FaSearchPlus,
   FaDatabase,
 } from "react-icons/fa";
-import { servicesData } from "../data/services";
+import { X, Search, BookOpen, ArrowRight } from "lucide-react";
+import { guidesData } from "../data/guidesData";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -54,10 +55,10 @@ const Header = () => {
       return;
     }
 
-    const results = servicesData.filter(
-      (service) =>
-        service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.shortDesc.toLowerCase().includes(searchTerm.toLowerCase())
+    const results = guidesData.filter(
+      (guide) =>
+        guide.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        guide.desc.toLowerCase().includes(searchTerm.toLowerCase())
     );
 
     setSearchResults(results);
@@ -203,22 +204,23 @@ const Header = () => {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 w-full z-[100] transition-all duration-300 ${scrolled ? "shadow-[0_10px_30px_rgba(0,0,0,0.12)]" : ""
+        className={`fixed top-0 left-0 w-full z-[100] transition-all duration-300 ${scrolled ? "shadow-[0_10px_30px_rgba(0,0,0,0.08)]" : ""
           }`}
       >
-        <div className="relative w-full h-[70px] bg-[#0C66E5] overflow-visible">
+        <div className="relative w-full h-[70px] bg-white overflow-visible border-b border-slate-100">
+          <div className="absolute inset-0 repeating-bg opacity-60 pointer-events-none"></div>
+
           <div
             className="absolute left-0 top-0 h-full w-[31%] min-w-[420px] bg-white flex items-center pl-[8%] pr-16 z-20"
             style={{
               clipPath: "polygon(0 0, 82% 0, 100% 100%, 0% 100%)",
-              backgroundImage:
-                "repeating-linear-gradient(135deg, rgba(15,23,42,0.055) 0px, rgba(15,23,42,0.055) 1px, transparent 1px, transparent 7px)",
             }}
           >
-            <Link to="/" className="flex items-center">
+            <div className="absolute inset-0 repeating-bg pointer-events-none opacity-60"></div>
+            <Link to="/" className="flex items-center relative z-10">
               <img
                 src="/logo/logo.avif"
-                alt="Lappy Learns Top"
+                alt="Pix Circuit"
                 width="210"
                 height="40"
                 className="h-[40px] w-auto object-contain"
@@ -226,9 +228,9 @@ const Header = () => {
             </Link>
           </div>
 
-          <div className="max-w-[1600px] mx-auto h-full flex items-center justify-end pl-[430px] pr-8">
-            <nav className="hidden lg:flex items-center gap-8 text-white">
-              <Link to="/" className="text-[16px] font-bold hover:text-white/80">
+          <div className="max-w-[1600px] mx-auto h-full flex items-center justify-end pl-[430px] pr-8 relative z-10">
+            <nav className="hidden lg:flex items-center gap-7 2xl:gap-12 text-slate-700">
+              <Link to="/" className="text-[15px] font-medium hover:text-[#005DE0] transition-colors">
                 Home
               </Link>
 
@@ -237,28 +239,28 @@ const Header = () => {
                 onMouseEnter={() => setActiveDropdown("guides")}
                 onMouseLeave={() => setActiveDropdown(null)}
               >
-                <button className="flex items-center gap-1 text-[16px] font-bold text-white hover:text-white/80">
+                <button className="flex items-center gap-1 text-[15px] font-medium text-slate-700 hover:text-[#005DE0] transition-colors">
                   Driver Guides +
                 </button>
 
                 <div
-                  className={`absolute left-1/2 -translate-x-1/2 top-full pt-8 w-[1250px] transition-all duration-300 ${activeDropdown === "guides"
+                  className={`absolute left-1/2 -translate-x-1/2 top-full pt-8 w-[1150px] 2xl:w-[1250px] transition-all duration-300 ${activeDropdown === "guides"
                     ? "opacity-100 visible translate-y-0"
                     : "opacity-0 invisible translate-y-4"
                     }`}
                 >
-                  <div className="bg-white rounded-[18px] shadow-[0_30px_90px_rgba(15,23,42,0.22)] border border-slate-100 overflow-hidden">
+                  <div className="bg-white rounded-sm shadow-[0_30px_90px_rgba(15,23,42,0.15)] border border-slate-100 overflow-hidden">
                     <div className="grid grid-cols-[320px_1fr]">
-                      <div className="bg-[#F4F9FF] p-10 border-r border-slate-100 text-center">
-                        <div className="w-24 h-24 rounded-full bg-white shadow-sm flex items-center justify-center mx-auto mb-6 text-[#0675DB]">
-                          <FaBookOpen size={40} />
+                      <div className="bg-[#F8FAFC] p-10 border-r border-slate-100 text-center">
+                        <div className="w-20 h-20 rounded-full bg-white shadow-sm flex items-center justify-center mx-auto mb-6 text-[#005DE0]">
+                          <BookOpen size={36} />
                         </div>
 
-                        <h3 className="text-2xl font-black text-slate-900 mb-3">
-                          Driver Learning Center
+                        <h3 className="text-[22px] font-semibold text-slate-900 mb-3">
+                          Learning Center
                         </h3>
 
-                        <p className="text-sm text-slate-500 leading-relaxed mb-7">
+                        <p className="text-[14px] text-slate-500 leading-relaxed mb-8">
                           Explore simple educational guides about computer driver
                           and device topics.
                         </p>
@@ -266,19 +268,19 @@ const Header = () => {
                         <Link
                           to="/guides"
                           onClick={() => setActiveDropdown(null)}
-                          className="inline-flex items-center justify-center h-12 px-7 rounded-md bg-[#0675DB] text-white text-sm font-bold hover:bg-[#045fb4] transition"
+                          className="inline-flex items-center justify-center h-12 px-7 rounded-sm btn-gradient text-white text-[14px] font-medium transition-all"
                         >
-                          VIEW ALL GUIDES →
+                          VIEW ALL GUIDES
                         </Link>
                       </div>
 
                       <div className="grid grid-cols-4 divide-x divide-slate-100 p-8">
                         {driverCategories.map((cat, idx) => (
                           <div key={idx} className="px-5">
-                            <h4 className={`text-[17px] font-black mb-1 ${cat.color}`}>
+                            <h4 className={`text-[16px] font-semibold mb-1 ${cat.color}`}>
                               {cat.title}
                             </h4>
-                            <p className="text-[12px] text-slate-400 mb-6">
+                            <p className="text-[11px] text-slate-400 mb-6 uppercase tracking-wider">
                               {cat.subtitle}
                             </p>
 
@@ -291,16 +293,16 @@ const Header = () => {
                                   className="group flex items-start gap-3"
                                 >
                                   <div
-                                    className={`w-10 h-10 rounded-lg ${cat.bgColor} ${cat.color} flex items-center justify-center shrink-0 text-[16px]`}
+                                    className={`w-9 h-9 rounded-md ${cat.bgColor} ${cat.color} flex items-center justify-center shrink-0 text-[15px]`}
                                   >
                                     {item.icon}
                                   </div>
 
                                   <div>
-                                    <p className="text-[14px] font-black text-slate-900 group-hover:text-[#0675DB] transition">
+                                    <p className="text-[14px] font-semibold text-slate-900 group-hover:text-[#005DE0] transition">
                                       {item.name}
                                     </p>
-                                    <p className="text-[12px] text-slate-500 leading-tight mt-1">
+                                    <p className="text-[11px] text-slate-500 leading-tight mt-1">
                                       {item.desc}
                                     </p>
                                   </div>
@@ -311,7 +313,7 @@ const Header = () => {
                             <Link
                               to="/guides"
                               onClick={() => setActiveDropdown(null)}
-                              className="inline-block mt-7 text-[13px] font-bold text-[#0675DB]"
+                              className="inline-block mt-7 text-[13px] font-medium text-[#005DE0] hover:underline"
                             >
                               View all →
                             </Link>
@@ -323,46 +325,48 @@ const Header = () => {
                 </div>
               </div>
 
-              <Link to="/faq" className="text-[16px] font-bold hover:text-white/80">
+              <Link to="/faq" className="text-[15px] font-medium hover:text-[#005DE0] transition-colors">
                 FAQ
               </Link>
 
-              <Link to="/about" className="text-[16px] font-bold hover:text-white/80">
+              <Link to="/about" className="text-[15px] font-medium hover:text-[#005DE0] transition-colors">
                 About
               </Link>
             </nav>
 
-            <div className="hidden lg:flex items-center gap-7 ml-10">
-              <button
+            <div className="hidden lg:flex items-center gap-6 ml-10">
+              <div
                 onClick={() => setShowSearchBox(true)}
-                aria-label="Open search"
-                className="w-[50px] h-[50px] rounded-full border-2 border-dashed border-white/80 text-white flex items-center justify-center hover:bg-white hover:text-[#0675DB] transition"
+                className="relative flex items-center cursor-pointer group"
               >
-                <FaSearch size={23} />
-              </button>
+                <div className="absolute left-10 w-8 h-8 rounded-full btn-gradient flex items-center justify-center text-white z-10 shadow-sm transition-transform group-hover:scale-105">
+                  <Search size={14} />
+                </div>
+                <div className="h-[46px] w-[260px] pl-12 pr-6 rounded-full border border-slate-200 bg-white flex items-center text-slate-400 font-medium text-[13px] group-hover:border-[#005DE0] group-hover:shadow-md transition-all">
+                  Search guides...
+                </div>
+              </div>
 
               <Link
                 to="/guides"
-                className="h-[50px] px-9 bg-white rounded-md text-[#0675DB] font-black text-[14px] flex items-center justify-center gap-3 hover:bg-slate-100 transition"
+                className="h-[46px] px-8 btn-gradient rounded-full text-white font-semibold text-[14px] flex items-center justify-center gap-2 transition-all shadow-lg hover:shadow-xl"
               >
                 Learn More
-                <span className="text-xl">→</span>
+                <ArrowRight size={16} />
               </Link>
-
-
             </div>
 
             <div className="lg:hidden ml-auto flex items-center gap-3">
               <button
                 onClick={() => setShowSearchBox(true)}
-                className="w-11 h-11 rounded-full border border-white/70 text-white flex items-center justify-center"
+                className="w-10 h-10 rounded-full btn-gradient text-white flex items-center justify-center transition-all shadow-md"
               >
-                <FaSearch />
+                <Search size={18} />
               </button>
 
               <button
                 onClick={() => setIsOpen(true)}
-                className="w-11 h-11 rounded-full bg-white text-[#0675DB] flex items-center justify-center"
+                className="w-10 h-10 rounded-full bg-slate-50 text-slate-600 flex items-center justify-center border border-slate-100"
               >
                 <FaBars />
               </button>
@@ -371,77 +375,89 @@ const Header = () => {
         </div>
       </header>
 
-      {/* Search Overlay */}
+      {/* Search Overlay Redesign */}
       <div
-        ref={searchRef}
         className={`fixed inset-0 z-[200] bg-white transition-all duration-500 flex flex-col ${showSearchBox
-          ? "opacity-100 visible translate-y-0"
-          : "opacity-0 invisible -translate-y-full"
+          ? "opacity-100 visible"
+          : "opacity-0 invisible translate-y-10"
           }`}
       >
-        <div className="max-w-[1050px] mx-auto w-full px-6 pt-20 pb-10 flex flex-col h-full">
+        <div className="max-w-[1200px] mx-auto w-full px-6 pt-24 pb-10 flex flex-col h-full overflow-hidden">
+
           <button
             onClick={() => {
               setShowSearchBox(false);
               setSearchTerm("");
             }}
-            className="absolute top-8 right-8 w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:text-slate-950"
+            className="absolute top-8 right-8 w-12 h-12 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 hover:text-slate-900 hover:bg-slate-100 transition-all"
           >
-            <FaTimes size={20} />
+            <X size={24} />
           </button>
 
-          <p className="text-center text-[12px] tracking-[0.35em] uppercase font-black text-[#0675DB] mb-4">
-            Search Driver Guides
-          </p>
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-3 mb-6">
+              <span className="h-[2px] w-10 bg-gradient-to-r from-[#CF00FE] to-[#005DE0]"></span>
+              <span className="text-[12px] font-semibold text-slate-400 uppercase tracking-[0.25em]">
+                Search Knowledge Base
+              </span>
+            </div>
 
-          <h2 className="text-center text-3xl md:text-5xl font-black text-slate-950 mb-10">
-            Find the right topic to learn
-          </h2>
+            <h2 className="text-[30px] md:text-[40px] font-semibold text-slate-900 leading-tight">
+              What do you want to learn?
+            </h2>
+          </div>
 
-          <div className="relative max-w-[800px] mx-auto w-full mb-10">
-            <FaSearch className="absolute left-6 top-1/2 -translate-y-1/2 text-slate-400" />
-            <input
-              autoFocus={showSearchBox}
-              type="text"
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              placeholder="Search driver guides (e.g. WiFi, Printer, Graphics)..."
-              className="w-full h-[68px] rounded-full border border-slate-200 bg-white pl-14 pr-36 text-lg font-semibold outline-none focus:border-[#0675DB] shadow-sm"
-            />
-            <button className="absolute right-2 top-2 h-[52px] px-9 rounded-full bg-[#0675DB] text-white font-black">
-              Search
+          <div className="relative max-w-[800px] mx-auto w-full mb-12 flex gap-4">
+            <div className="relative flex-1">
+              <div className="absolute left-5 top-1/2 -translate-y-1/2 text-[#005DE0]">
+                <Search size={22} />
+              </div>
+              <input
+                autoFocus={showSearchBox}
+                type="text"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                placeholder="Search guides (e.g. WiFi, Printer, Audio)..."
+                className="w-full h-[64px] rounded-sm border border-slate-200 bg-white pl-14 pr-6 text-[18px] outline-none focus:border-[#005DE0] focus:ring-4 focus:ring-blue-50/50 transition-all shadow-sm"
+              />
+            </div>
+            <button className="h-[64px] px-10 rounded-sm btn-gradient text-white font-semibold text-[14px] transition-all shadow-lg shadow-blue-900/10 active:scale-95">
+              SEARCH
             </button>
           </div>
 
-          <div className="flex-1 overflow-y-auto">
+          <div className="flex-1 overflow-y-auto custom-scrollbar px-2">
             {searchTerm ? (
               searchResults.length > 0 ? (
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {searchResults.map((res) => (
-                    <div
-                      key={res.id}
+                  {searchResults.map((res, idx) => (
+                    <Link
+                      key={idx}
+                      to={`/guide/${res.slug}`}
                       onClick={() => {
-                        navigate(`/driver/${res.slug}`);
                         setShowSearchBox(false);
                         setSearchTerm("");
                       }}
-                      className="group p-5 rounded-2xl border border-slate-100 hover:border-blue-100 hover:bg-blue-50/40 transition cursor-pointer"
+                      className="group p-6 rounded-sm border border-slate-100 bg-slate-50/50 hover:bg-white hover:border-[#005DE0]/30 hover:shadow-xl hover:shadow-blue-900/5 transition-all duration-300"
                     >
-                      <h4 className="text-lg font-black text-slate-900 group-hover:text-[#0675DB]">
+                      <h4 className="text-[17px] font-semibold text-slate-900 group-hover:text-[#005DE0] transition-colors">
                         {res.title}
                       </h4>
-                      <p className="text-sm text-slate-500 line-clamp-1 mt-1">
-                        {res.shortDesc}
+                      <p className="text-[13px] text-slate-500 line-clamp-1 mt-2">
+                        {res.desc}
                       </p>
-                    </div>
+                      <div className="mt-4 flex items-center gap-2 text-[11px] font-bold text-[#005DE0] opacity-0 group-hover:opacity-100 transition-opacity uppercase tracking-widest">
+                        Read Guide <ArrowRight size={12} />
+                      </div>
+                    </Link>
                   ))}
                 </div>
               ) : (
                 <div className="text-center py-20">
-                  <h3 className="text-xl font-black text-slate-900 mb-2">
+                  <h3 className="text-[20px] font-semibold text-slate-900 mb-2">
                     No guides found
                   </h3>
-                  <p className="text-slate-500">
+                  <p className="text-slate-500 text-[15px]">
                     Try searching for something else like "Audio" or "Network".
                   </p>
                 </div>
@@ -461,7 +477,7 @@ const Header = () => {
                   <button
                     key={tag}
                     onClick={() => setSearchTerm(tag)}
-                    className="px-6 py-3 rounded-full bg-white border border-slate-200 text-slate-700 font-bold hover:bg-[#0675DB] hover:text-white transition"
+                    className="px-6 py-3 rounded-full bg-slate-50 border border-slate-100 text-slate-600 text-[14px] font-medium hover:bg-[#005DE0] hover:text-white hover:border-[#005DE0] transition-all"
                   >
                     {tag}
                   </button>
@@ -472,75 +488,79 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu Redesign */}
       <div className={`lg:hidden fixed inset-0 z-[150] ${isOpen ? "visible" : "invisible"}`}>
         <div
           onClick={() => setIsOpen(false)}
-          className={`absolute inset-0 bg-slate-950/60 transition-opacity ${isOpen ? "opacity-100" : "opacity-0"
+          className={`absolute inset-0 bg-slate-950/40 backdrop-blur-sm transition-opacity ${isOpen ? "opacity-100" : "opacity-0"
             }`}
         />
 
         <div
-          className={`absolute right-0 top-0 h-full w-[86%] bg-white p-6 transition-transform duration-500 ${isOpen ? "translate-x-0" : "translate-x-full"
+          className={`absolute right-0 top-0 h-full w-[85%] bg-white transition-transform duration-500 shadow-2xl ${isOpen ? "translate-x-0" : "translate-x-full"
             }`}
         >
-          <div className="flex justify-between items-center mb-8">
-            <img src="/logo/logo.avif" alt="Lappy Learns Top" className="h-10" />
+          <div className="flex justify-between items-center p-6 border-b border-slate-50">
+            <img src="/logo/logo.avif" alt="Pix Circuit" className="h-9" />
 
             <button
               onClick={() => setIsOpen(false)}
-              className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center"
+              className="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-400"
             >
-              <FaTimes />
+              <X size={20} />
             </button>
           </div>
 
-          <div className="space-y-3">
+          <div className="p-6 space-y-2">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 to={link.path}
                 onClick={() => setIsOpen(false)}
-                className="block p-4 rounded-xl bg-slate-50 text-slate-900 font-black"
+                className="block p-4 rounded-sm bg-slate-50 text-slate-900 font-semibold text-[15px] hover:bg-[#005DE0] hover:text-white transition-all"
               >
                 {link.name}
               </Link>
             ))}
           </div>
 
-          <div className="mt-7 space-y-5 overflow-y-auto max-h-[58vh]">
-            {driverCategories.map((cat, idx) => (
-              <div key={idx}>
-                <h4 className={`text-xs font-black uppercase mb-3 ${cat.color}`}>
-                  {cat.title}
-                </h4>
+          <div className="px-6 pb-6 overflow-y-auto max-h-[60vh] custom-scrollbar">
+            <div className="space-y-8">
+              {driverCategories.map((cat, idx) => (
+                <div key={idx}>
+                  <h4 className={`text-[11px] font-bold uppercase tracking-[0.2em] mb-4 ${cat.color}`}>
+                    {cat.title}
+                  </h4>
 
-                <div className="space-y-2">
-                  {cat.items.map((item, i) => (
-                    <Link
-                      key={i}
-                      to={`/guide/${item.slug}`}
-                      onClick={() => setIsOpen(false)}
-                      className="flex items-center gap-3 p-3 rounded-xl bg-slate-50"
-                    >
-                      <span className={`${cat.color}`}>{item.icon}</span>
-                      <span className="font-bold text-slate-700 text-sm">
-                        {item.name}
-                      </span>
-                    </Link>
-                  ))}
+                  <div className="grid grid-cols-1 gap-2">
+                    {cat.items.map((item, i) => (
+                      <Link
+                        key={i}
+                        to={`/guide/${item.slug}`}
+                        onClick={() => setIsOpen(false)}
+                        className="flex items-center gap-4 p-4 rounded-sm bg-slate-50 hover:bg-white border border-transparent hover:border-slate-100 transition-all group"
+                      >
+                        <span className={`${cat.color} group-hover:scale-110 transition-transform`}>{item.icon}</span>
+                        <span className="font-medium text-slate-700 text-[14px]">
+                          {item.name}
+                        </span>
+                      </Link>
+                    ))}
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
 
-          <Link
-            to="/guides"
-            onClick={() => setIsOpen(false)}
-            className="mt-6 w-full bg-[#0675DB] text-white py-4 rounded-md font-black flex items-center justify-center"
-          >
-            Learn More →
-          </Link>
+          <div className="absolute bottom-0 left-0 w-full p-6 bg-white border-t border-slate-50">
+            <Link
+              to="/guides"
+              onClick={() => setIsOpen(false)}
+              className="w-full h-[56px] btn-gradient text-white rounded-sm font-semibold flex items-center justify-center gap-2 shadow-lg"
+            >
+              Explore All Guides <ArrowRight size={18} />
+            </Link>
+          </div>
         </div>
       </div>
     </>

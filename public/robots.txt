@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://lappylearnstop.co/sitemap.xml
+Sitemap: https://pixcircuit.com/sitemap.xml

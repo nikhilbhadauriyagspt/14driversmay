@@ -42,7 +42,7 @@ const ServiceDetails = () => {
   return (
     <div className="bg-[#F7FBFF] min-h-screen font-[Poppins] text-slate-900 overflow-hidden">
       <Helmet>
-        <title>{service.title} Guide | Lappy Learns Top</title>
+        <title>{service.title} Guide | Pix Circuit</title>
 
         <meta
           name="description"
@@ -93,12 +93,12 @@ const ServiceDetails = () => {
               </p>
 
               <div className="flex flex-wrap gap-5 mt-10">
-                <div className="flex items-center gap-2 text-[13px] font-bold text-slate-600">
+                <div className="flex items-center gap-2 text-[13px] font-[500]text-slate-600">
                   <Clock size={15} className="text-[#0C66E5]" />
                   Updated Recently
                 </div>
 
-                <div className="flex items-center gap-2 text-[13px] font-bold text-emerald-600">
+                <div className="flex items-center gap-2 text-[13px] font-[500]text-emerald-600">
                   <CheckCircle2 size={15} />
                   Verified Information
                 </div>
@@ -252,7 +252,7 @@ const ServiceDetails = () => {
                 View More Guides
               </Link>
 
-              <button className="text-[14px] font-bold text-slate-500 hover:text-[#0C66E5] transition">
+              <button className="text-[14px] font-[500]text-slate-500 hover:text-[#0C66E5] transition">
                 Report a mistake
               </button>
             </div>
@@ -287,7 +287,7 @@ const ServiceDetails = () => {
                       to={`/driver/${s.slug}`}
                       className="group border border-slate-100 bg-[#F8FBFF] px-5 py-4 flex items-center justify-between hover:border-[#0C66E5] transition"
                     >
-                      <span className="text-[14px] font-bold text-slate-700 group-hover:text-[#0C66E5] transition leading-[1.5]">
+                      <span className="text-[14px] font-[500]text-slate-700 group-hover:text-[#0C66E5] transition leading-[1.5]">
                         {s.title}
                       </span>
 

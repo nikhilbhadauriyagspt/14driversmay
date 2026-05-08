@@ -8,7 +8,7 @@ import {
   AlertCircle,
   Clock,
   BookOpen,
-  ArrowUpRight,
+  ArrowRight,
 } from "lucide-react";
 import { guidesData } from "../data/guidesData";
 
@@ -22,8 +22,8 @@ const GuideDetails = () => {
 
   if (!guide) {
     return (
-      <div className="min-h-screen flex flex-col items-center justify-center bg-[#F7FBFF] px-6">
-        <h2 className="text-3xl font-black text-slate-950">
+      <div className="min-h-screen flex flex-col items-center justify-center bg-white px-6">
+        <h2 className="text-[30px] md:text-[40px] font-semibold text-slate-900">
           Guide Not Found
         </h2>
 
@@ -33,7 +33,7 @@ const GuideDetails = () => {
 
         <Link
           to="/"
-          className="bg-[#0C66E5] text-white px-7 py-4 font-black hover:bg-[#084db3] transition"
+          className="inline-flex items-center justify-center h-[56px] px-10 rounded-full btn-gradient text-white text-[15px] font-medium shadow-lg"
         >
           Back to Home
         </Link>
@@ -43,118 +43,101 @@ const GuideDetails = () => {
 
   const otherGuides = guidesData
     .filter((g) => g.slug !== slug)
-    .slice(0, 4);
+    .slice(0, 3);
 
   return (
-    <div className="bg-[#F7FBFF] min-h-screen pt-24 pb-24 font-[Poppins] overflow-hidden">
+    <div className="bg-white min-h-screen pt-24 pb-24 font-[Poppins]">
       <Helmet>
-        <title>{guide.title} | Lappy Learns Top Guide</title>
+        <title>{guide.title} | Pix Circuit Guide</title>
         <meta name="description" content={guide.desc} />
       </Helmet>
 
-      {/* HERO */}
-      <section className="relative bg-white border-b border-blue-100 overflow-hidden">
-        <div className="absolute right-0 top-0 h-full w-[30%] bg-[#0C66E5]" />
-        <div className="absolute left-0 bottom-0 w-[280px] h-[280px] rounded-full bg-blue-100 blur-3xl" />
+      {/* HERO SECTION - Simple & Informative */}
+      <section className="relative bg-[#F8FAFC] py-20 px-6 overflow-hidden">
+        {/* Decorative Background Element */}
+        <div className="absolute top-0 right-0 w-[40%] h-full bg-[#005DE0]/5 -skew-x-12 transform origin-top-right"></div>
 
-        <div className="relative z-10 max-w-[1450px] mx-auto px-6 py-16">
-          {/* Breadcrumb */}
-          <div className="flex flex-wrap items-center gap-2 text-[12px] font-black uppercase tracking-wider text-slate-500 mb-10">
-            <Link to="/" className="hover:text-[#0C66E5] transition">
-              Home
-            </Link>
-
-            <ChevronRight size={13} />
-
-            <Link
-              to="/guides"
-              className="hover:text-[#0C66E5] transition"
-            >
-              Guides
-            </Link>
-
-            <ChevronRight size={13} />
-
-            <span className="text-[#0C66E5] truncate">
-              {guide.title}
-            </span>
+        <div className="relative z-10 max-w-[1600px] mx-auto">
+          {/* Breadcrumb - Clean & Simple */}
+          <div className="flex items-center gap-3 text-[11px] font-semibold text-slate-400 uppercase tracking-widest mb-10">
+            <Link to="/" className="hover:text-[#005DE0] transition-colors">Home</Link>
+            <ChevronRight size={14} className="text-slate-300" />
+            <Link to="/guides" className="hover:text-[#005DE0] transition-colors">Guides</Link>
+            <ChevronRight size={14} className="text-slate-300" />
+            <span className="text-[#005DE0] truncate">{guide.title}</span>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_460px] gap-14 items-center">
-            {/* Left */}
-            <div>
-              <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-100 px-4 py-2 text-[#0C66E5] text-[11px] font-black uppercase tracking-[0.18em] mb-6">
-                <BookOpen size={13} />
-                Learning Documentation
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+            {/* Left Content */}
+            <div className="lg:col-span-7">
+              <div className="inline-flex items-center gap-3 mb-6">
+                <span className="h-[2px] w-10 bg-gradient-to-r from-[#CF00FE] to-[#005DE0]"></span>
+                <span className="text-[12px] font-semibold text-slate-400 uppercase tracking-[0.25em]">
+                  Learning Article
+                </span>
               </div>
 
-              <h1 className="text-[40px] md:text-[72px] font-black leading-[0.98] text-slate-950 mb-8">
+              <h1 className="text-[30px] md:text-[40px] font-semibold leading-[1.2] text-slate-900 mb-8">
                 {guide.title}
               </h1>
 
-              <p className="text-[16px] md:text-[18px] leading-[1.9] text-slate-600 max-w-[760px]">
+              <p className="text-[16px] md:text-[18px] leading-[1.8] text-slate-500 max-w-[700px]">
                 {guide.content.introduction}
               </p>
 
-              <div className="flex flex-wrap gap-5 mt-10">
-                <div className="flex items-center gap-2 text-[13px] font-bold text-slate-600">
-                  <Clock size={15} className="text-[#0C66E5]" />
+              <div className="flex flex-wrap gap-6 mt-10">
+                <div className="flex items-center gap-2 text-[14px] font-medium text-slate-600">
+                  <Clock size={16} className="text-[#005DE0]" />
                   5 Min Read
                 </div>
 
-                <div className="flex items-center gap-2 text-[13px] font-bold text-emerald-600">
-                  <CheckCircle2 size={15} />
-                  Educational Resource
+                <div className="flex items-center gap-2 text-[14px] font-medium text-[#10B981]">
+                  <CheckCircle2 size={16} />
+                  Verified Guide
                 </div>
               </div>
             </div>
 
-            {/* Right Image */}
-            <div className="bg-white border border-blue-100 p-10">
-              <img
-                src={guide.img}
-                alt={guide.title}
-                className="w-full h-[320px] object-contain"
-              />
+            {/* Right Side Image - Clean Frame */}
+            <div className="lg:col-span-5">
+              <div className="bg-white p-10 rounded-sm border border-slate-100 shadow-xl shadow-blue-900/5">
+                <img
+                  src={guide.img}
+                  alt={guide.title}
+                  className="w-full h-auto max-h-[300px] object-contain"
+                />
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* MAIN */}
-      <section className="max-w-[1450px] mx-auto px-6 py-20">
-        <div className="grid grid-cols-1 xl:grid-cols-[1fr_340px] gap-10">
-          {/* LEFT CONTENT */}
-          <div className="space-y-10">
-            {/* Causes */}
-            <div className="bg-white border border-blue-100 p-8 md:p-10">
-              <div className="flex items-center justify-between mb-10">
-                <div>
-                  <p className="text-[11px] font-black uppercase tracking-[0.18em] text-[#0C66E5] mb-2">
-                    Information
-                  </p>
+      {/* ARTICLE CONTENT */}
+      <section className="max-w-[1600px] mx-auto px-6 py-24">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
 
-                  <h2 className="text-[34px] font-black text-slate-950">
-                    Common Causes
-                  </h2>
-                </div>
+          {/* Main Content Area */}
+          <div className="lg:col-span-8 space-y-20">
 
-                <div className="hidden md:flex text-[70px] font-black text-blue-50">
-                  01
-                </div>
+            {/* Reasons Section */}
+            <div className="space-y-10">
+              <div className="inline-flex items-center gap-3">
+                <span className="h-[2px] w-10 bg-gradient-to-r from-[#CF00FE] to-[#005DE0]"></span>
+                <h2 className="text-[24px] md:text-[30px] font-semibold text-slate-900">
+                  Common Reasons
+                </h2>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {guide.content.reasons.map((reason, i) => (
                   <div
                     key={i}
-                    className="border border-slate-100 bg-[#F8FBFF] p-5 flex gap-4"
+                    className="p-6 rounded-sm bg-slate-50 border border-slate-100 flex gap-4 hover:bg-white hover:shadow-lg transition-all"
                   >
-                    <div className="w-10 h-10 bg-orange-100 text-orange-500 flex items-center justify-center shrink-0">
-                      <AlertCircle size={18} />
+                    <div className="w-10 h-10 rounded-full bg-[#005DE0]/10 text-[#005DE0] flex items-center justify-center shrink-0">
+                      <AlertCircle size={20} />
                     </div>
-
-                    <p className="text-[15px] leading-[1.8] text-slate-600 font-medium">
+                    <p className="text-[15px] leading-relaxed text-slate-600">
                       {reason}
                     </p>
                   </div>
@@ -162,40 +145,30 @@ const GuideDetails = () => {
               </div>
             </div>
 
-            {/* Steps */}
-            <div className="bg-white border border-blue-100 p-8 md:p-10">
-              <div className="flex items-center justify-between mb-12">
-                <div>
-                  <p className="text-[11px] font-black uppercase tracking-[0.18em] text-[#0C66E5] mb-2">
-                    Learning Steps
-                  </p>
-
-                  <h2 className="text-[34px] font-black text-slate-950">
-                    Documentation Details
-                  </h2>
-                </div>
-
-                <div className="hidden md:flex text-[70px] font-black text-blue-50">
-                  02
-                </div>
+            {/* Steps Section */}
+            <div className="space-y-10">
+              <div className="inline-flex items-center gap-3">
+                <span className="h-[2px] w-10 bg-gradient-to-r from-[#CF00FE] to-[#005DE0]"></span>
+                <h2 className="text-[24px] md:text-[30px] font-semibold text-slate-900">
+                  Helpful Steps To Take
+                </h2>
               </div>
 
-              <div className="space-y-8">
+              <div className="space-y-6">
                 {guide.content.steps.map((step, i) => (
                   <div
                     key={i}
-                    className="grid grid-cols-[70px_1fr] gap-6 border border-slate-100 bg-[#F8FBFF] p-6"
+                    className="flex flex-col md:flex-row gap-8 p-10 rounded-sm bg-white border border-slate-100 hover:shadow-xl hover:shadow-blue-900/5 transition-all"
                   >
-                    <div className="w-14 h-14 bg-[#0C66E5] text-white flex items-center justify-center text-[18px] font-black">
+                    <div className="w-14 h-14 rounded-full bg-[#005DE0] text-white flex items-center justify-center text-[20px] font-bold shrink-0">
                       {i + 1}
                     </div>
 
                     <div>
-                      <h3 className="text-[22px] font-black text-slate-950 mb-3">
+                      <h3 className="text-[22px] font-semibold text-slate-900 mb-4">
                         {step.title}
                       </h3>
-
-                      <p className="text-[15px] leading-[1.9] text-slate-600 font-medium">
+                      <p className="text-[16px] leading-[1.8] text-slate-500">
                         {step.text}
                       </p>
                     </div>
@@ -204,107 +177,89 @@ const GuideDetails = () => {
               </div>
             </div>
 
-            {/* CTA */}
-            <div className="bg-[#0C66E5] text-white p-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
-              <div>
-                <p className="text-[11px] font-black uppercase tracking-[0.18em] text-blue-100 mb-3">
-                  Continue Reading
-                </p>
+            {/* Bottom CTA Strip */}
+            <div className="bg-[#050A33] p-12 rounded-sm relative overflow-hidden text-white">
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#CF00FE] to-[#005DE0]"></div>
 
-                <h3 className="text-[34px] font-black leading-tight mb-4">
-                  Explore More Guides
-                </h3>
+              <div className="flex flex-col md:flex-row items-center justify-between gap-10">
+                <div className="text-center md:text-left">
+                  <h3 className="text-[24px] md:text-[30px] font-semibold mb-4">
+                    Want to learn more?
+                  </h3>
+                  <p className="text-white/60 text-[16px] max-w-[450px]">
+                    Browse our full library of simple guides to understand your computer better.
+                  </p>
+                </div>
 
-                <p className="text-white/80 text-[15px] leading-[1.8] max-w-[620px]">
-                  Browse additional educational topics related to hardware and
-                  device communication.
-                </p>
+                <Link
+                  to="/guides"
+                  className="inline-flex items-center justify-center h-[56px] px-10 rounded-sm btn-gradient text-white text-[15px] font-medium shadow-lg"
+                >
+                  View All Guides
+                  <ArrowRight size={18} className="ml-2" />
+                </Link>
               </div>
-
-              <Link
-                to="/guides"
-                className="bg-white text-[#0C66E5] px-8 py-4 text-[14px] font-black hover:bg-blue-50 transition inline-flex items-center gap-2"
-              >
-                View All Guides
-                <ArrowUpRight size={16} />
-              </Link>
             </div>
           </div>
 
-          {/* SIDEBAR */}
-          <aside className="space-y-8">
-            {/* Related */}
-            <div className="bg-white border border-blue-100 p-7">
-              <div className="flex items-center justify-between mb-8">
-                <div>
-                  <p className="text-[11px] font-black uppercase tracking-[0.18em] text-[#0C66E5] mb-2">
-                    More Reading
-                  </p>
+          {/* SIDEBAR AREA */}
+          <aside className="lg:col-span-4 space-y-10">
 
-                  <h3 className="text-[24px] font-black text-slate-950">
-                    Related Guides
-                  </h3>
-                </div>
+            {/* Related Guides List */}
+            <div className="p-8 rounded-sm bg-slate-50 border border-slate-100">
+              <h3 className="text-[20px] font-semibold text-slate-900 mb-8 flex items-center gap-3">
+                <div className="w-1 h-6 bg-[#005DE0]"></div>
+                Related Reading
+              </h3>
 
-                <div className="text-[50px] font-black text-blue-50">
-                  +
-                </div>
-              </div>
-
-              <div className="space-y-4">
+              <div className="space-y-5">
                 {otherGuides.map((item, i) => (
                   <Link
                     key={i}
                     to={`/guide/${item.slug}`}
-                    className="group border border-slate-100 bg-[#F8FBFF] p-4 flex gap-4 hover:border-[#0C66E5] transition"
+                    className="group flex gap-4 items-center p-3 rounded-sm hover:bg-white hover:shadow-md transition-all border border-transparent hover:border-slate-100"
                   >
-                    <div className="w-20 h-20 bg-white border border-slate-100 flex items-center justify-center shrink-0 p-2">
+                    <div className="w-16 h-16 rounded-sm bg-white p-2 border border-slate-50 flex items-center justify-center shrink-0">
                       <img
                         src={item.img}
                         alt={item.title}
-                        className="max-w-full max-h-full object-contain group-hover:scale-105 transition duration-300"
+                        className="max-w-full max-h-full object-contain group-hover:scale-110 transition-transform duration-500"
                       />
                     </div>
 
-                    <div>
-                      <h4 className="text-[14px] font-black text-slate-950 leading-[1.5] group-hover:text-[#0C66E5] transition line-clamp-2">
+                    <div className="flex-1">
+                      <h4 className="text-[14px] font-semibold text-slate-900 leading-tight group-hover:text-[#005DE0] transition-colors line-clamp-2">
                         {item.title}
                       </h4>
-
-                      <p className="text-[11px] text-[#0C66E5] mt-2 font-black uppercase tracking-[0.14em]">
-                        Read Guide
-                      </p>
                     </div>
                   </Link>
                 ))}
               </div>
             </div>
 
-            {/* Bottom Box */}
-            <div className="bg-white border border-blue-100 p-8">
-              <BookOpen
-                size={30}
-                className="text-[#0C66E5] mb-6"
-              />
+            {/* Simple Info Box */}
+            <div className="p-10 rounded-sm bg-[#050A33] text-white relative overflow-hidden group">
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#CF00FE] to-[#005DE0]"></div>
 
-              <h3 className="text-[28px] font-black leading-tight text-slate-950 mb-5">
-                Hardware Topics
+              <BookOpen size={40} className="text-[#005DE0] mb-8 group-hover:scale-110 transition-transform duration-500" />
+
+              <h3 className="text-[24px] font-semibold mb-6">
+                Easy Computer Learning
               </h3>
 
-              <p className="text-slate-600 text-[15px] leading-[1.9] mb-8">
-                Browse our educational driver documentation and hardware
-                communication topics.
+              <p className="text-white/60 text-[15px] leading-relaxed mb-10">
+                A simple place to learn about computer parts and how they work.
               </p>
 
               <Link
-                to="/drivers"
-                className="inline-flex items-center gap-2 bg-[#0C66E5] text-white px-7 py-4 text-[14px] font-black hover:bg-[#084db3] transition"
+                to="/"
+                className="text-[13px] font-semibold uppercase tracking-widest text-[#005DE0] flex items-center gap-2 group/link"
               >
-                Browse Topics
-                <ArrowUpRight size={15} />
+                Back To Home <ArrowRight size={14} className="group-hover/link:translate-x-1 transition-transform" />
               </Link>
             </div>
           </aside>
+
         </div>
       </section>
     </div>

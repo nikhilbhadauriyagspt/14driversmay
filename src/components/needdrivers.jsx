@@ -65,7 +65,7 @@ export default function WhenNeedDrivers() {
             <div className="max-w-[1600px] mx-auto">
                 {/* Clean Header */}
                 <div className="mb-16 border-l-4 border-blue-600 pl-8">
-                    <h2 className="text-[32px] md:text-[40px] font-bold text-slate-900 leading-tight">
+                    <h2 className="text-[32px] md:text-[40px] font-[500]text-slate-900 leading-tight">
                         Common Situations:<br />
                         <span className="text-blue-600">When to read these information guides</span>
                     </h2>
@@ -97,7 +97,7 @@ export default function WhenNeedDrivers() {
                                     <div className="flex items-center justify-between mb-3">
                                         <div className="flex items-center gap-2">
                                             <div className="w-2 h-2 rounded-full bg-blue-600"></div>
-                                            <h3 className="text-[18px] font-bold text-slate-900">{item.title}</h3>
+                                            <h3 className="text-[18px] font-[500]text-slate-900">{item.title}</h3>
                                         </div>
                                     </div>
 
@@ -105,7 +105,7 @@ export default function WhenNeedDrivers() {
                                         <div className="flex gap-3">
                                             <AlertCircle className="w-4 h-4 text-slate-400 shrink-0 mt-0.5" />
                                             <div>
-                                                <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-0.5">The Problem</p>
+                                                <p className="text-[10px] font-[500]text-slate-400 uppercase tracking-wider mb-0.5">The Problem</p>
                                                 <p className="text-[13px] text-slate-600 leading-snug font-medium">{item.problem}</p>
                                             </div>
                                         </div>
@@ -113,14 +113,14 @@ export default function WhenNeedDrivers() {
                                         <div className="flex gap-3 pt-3 border-t border-slate-200">
                                             <CheckCircle2 className="w-4 h-4 text-blue-500 shrink-0 mt-0.5" />
                                             <div>
-                                                <p className="text-[10px] font-bold text-blue-500 uppercase tracking-wider mb-0.5">Our Guide Helps</p>
+                                                <p className="text-[10px] font-[500]text-blue-500 uppercase tracking-wider mb-0.5">Our Guide Helps</p>
                                                 <p className="text-[13px] text-slate-800 leading-snug font-semibold">{item.why}</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
 
-                                <Link to={item.path} className="mt-6 flex items-center gap-2 text-[13px] font-bold text-blue-600 hover:text-blue-700 transition-all">
+                                <Link to={item.path} className="mt-6 flex items-center gap-2 text-[13px] font-[500]text-blue-600 hover:text-blue-700 transition-all">
                                     Read Full Guide <ArrowRight className="w-4 h-4" />
                                 </Link>
                             </div>

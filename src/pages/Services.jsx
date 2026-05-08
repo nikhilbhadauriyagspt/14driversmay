@@ -56,12 +56,12 @@ const ServicesPage = () => {
             </p>
 
             <div className="flex flex-wrap gap-5 mt-10">
-              <div className="flex items-center gap-2 text-[13px] font-bold text-slate-600">
+              <div className="flex items-center gap-2 text-[13px] font-[500]text-slate-600">
                 <Icons.FaCheckCircle className="text-[#0C66E5]" />
                 14 Learning Categories
               </div>
 
-              <div className="flex items-center gap-2 text-[13px] font-bold text-slate-600">
+              <div className="flex items-center gap-2 text-[13px] font-[500]text-slate-600">
                 <Icons.FaCheckCircle className="text-[#0C66E5]" />
                 Educational Information
               </div>

@@ -3,7 +3,7 @@ export const guidesData = [
     slug: "understand-driver-not-installed",
     title: "Understanding Driver Not Installed Errors",
     desc: "A complete step-by-step guide to identifying missing drivers on your Windows system.",
-    img: "/guide/guide-driver-not-installed.webp",
+    img: "/guide/guide-driver-not-installed.avif",
     content: {
       introduction: "The 'Driver Not Installed' message is one of the most common topics Windows users encounter when connecting new hardware. Without the correct driver, your operating system cannot communicate with the device.",
       reasons: [
@@ -36,7 +36,7 @@ export const guidesData = [
     slug: "understand-printer-driver-topics",
     title: "Understanding Common Printer Driver Topics",
     desc: "Is your printer not responding? Follow this guide to understand driver data and connectivity.",
-    img: "/guide/guide-printer-driver.webp",
+    img: "/guide/guide-printer-driver.avif",
     content: {
       introduction: "Printer driver topics can manifest as 'Printer Offline' status, partial printing, or a total lack of response from the device despite being connected.",
       reasons: [
@@ -65,7 +65,7 @@ export const guidesData = [
     slug: "understand-audio-driver-topics",
     title: "Understanding Audio and Sound Driver Topics",
     desc: "Learn about 'No Audio Output Device is installed' and other sound-related topics on your PC.",
-    img: "/guide/guide-audio-driver.webp",
+    img: "/guide/guide-audio-driver.avif",
     content: {
       introduction: "Audio topics can range from a complete lack of sound to crackling noise or low volume levels. Most are software-driven.",
       reasons: [
@@ -94,7 +94,7 @@ export const guidesData = [
     slug: "understand-wifi-network-topics",
     title: "Understanding WiFi and Network Connection Topics",
     desc: "Step-by-step guide to understanding wireless adapter drivers and network connectivity.",
-    img: "/guide/guide-network-driver.webp",
+    img: "/guide/guide-network-driver.avif",
     content: {
       introduction: "Network topics are critical. A corrupted Wi-Fi driver can prevent you from downloading the data itself, often requiring a second device.",
       reasons: [
@@ -123,7 +123,7 @@ export const guidesData = [
     slug: "understand-usb-driver-topics",
     title: "Understanding 'USB Device Not Recognized' Topics",
     desc: "Identify USB 3.0/3.1 port recognition and driver data for your external devices.",
-    img: "/guide/guide-usb-driver.webp",
+    img: "/guide/guide-usb-driver.avif",
     content: {
       introduction: "USB topics are interesting because they often involve the motherboard's chipset drivers or power delivery systems.",
       reasons: [
@@ -152,7 +152,7 @@ export const guidesData = [
     slug: "understand-graphics-driver-topics",
     title: "Understanding Graphics Driver Data",
     desc: "Identify screen flickering, low FPS, and display topics by properly managing your GPU drivers.",
-    img: "/guide/guide-graphics-driver.webp",
+    img: "/guide/guide-graphics-driver.avif",
     content: {
       introduction: "Graphics drivers control everything you see. Outdated GPU software can cause crashes in games and visual artifacts in apps.",
       reasons: [
@@ -181,7 +181,7 @@ export const guidesData = [
     slug: "understand-bluetooth-driver-topics",
     title: "Understanding Bluetooth Pairing and Connection Topics",
     desc: "Identify missing Bluetooth icon, pairing failures, and driver topics on your Windows PC.",
-    img: "/needdriver/need-audio-wifi.webp",
+    img: "/needdriver/need-audio-wifi.avif",
     content: {
       introduction: "Bluetooth is essential for connecting wireless peripherals like headphones, mice, and keyboards. Driver topics can make the Bluetooth toggle disappear entirely from your settings.",
       reasons: [
@@ -210,7 +210,7 @@ export const guidesData = [
     slug: "understand-webcam-driver-topics",
     title: "Understanding Webcam and Camera Topics",
     desc: "Identify 'Camera not found' and black screen topics in Zoom, Teams, and other apps.",
-    img: "/images/fix-driver-monitor.webp",
+    img: "/images/fix-driver-monitor.avif",
     content: {
       introduction: "Webcam topics are often caused by privacy settings or outdated drivers, especially after a Windows update.",
       reasons: [
@@ -239,7 +239,7 @@ export const guidesData = [
     slug: "understand-scanner-driver-topics",
     title: "Understanding Scanner Connectivity and Driver Topics",
     desc: "Identify scanner not detected, 'Busy' status, and communication topics with your multifunction printer.",
-    img: "/needdriver/need-printer-scanner.webp",
+    img: "/needdriver/need-printer-scanner.avif",
     content: {
       introduction: "Scanners often require specific WIA (Windows Image Acquisition) or TWAIN drivers to communicate with scanning software.",
       reasons: [
@@ -268,7 +268,7 @@ export const guidesData = [
     slug: "guide-chipset-drivers",
     title: "Guide to Chipset and Motherboard Drivers",
     desc: "Understand system stability, USB speed, and power management by learning about your motherboard's chipset drivers.",
-    img: "/needdriver/need-new-device.webp",
+    img: "/needdriver/need-new-device.avif",
     content: {
       introduction: "Chipset drivers tell Windows how to communicate with the motherboard's core components, including USB controllers and power management systems.",
       reasons: [
@@ -297,7 +297,7 @@ export const guidesData = [
     slug: "guide-bios-firmware-updates",
     title: "Guide to BIOS and System Firmware Topics",
     desc: "Learn the critical steps to understand BIOS/UEFI and support new hardware and security.",
-    img: "/needdriver/need-windows-update.webp",
+    img: "/needdriver/need-windows-update.avif",
     content: {
       introduction: "BIOS/UEFI is the first software your PC runs. Understanding it can improve compatibility with new CPUs and RAM, but it must be done carefully.",
       reasons: [
@@ -326,7 +326,7 @@ export const guidesData = [
     slug: "understand-driver-update-topics",
     title: "Understanding 'Driver Update Failed' and Data Topics",
     desc: "Learn about 'Access Denied', 'Incompatible Hardware', and other common driver data topics.",
-    img: "/needdriver/need-driver-errors.webp",
+    img: "/needdriver/need-driver-errors.avif",
     content: {
       introduction: "A failed driver update can leave your device in an 'Unknown' state or cause system crashes. Understanding the code is key to the topic.",
       reasons: [
@@ -355,7 +355,7 @@ export const guidesData = [
     slug: "understand-input-latency-drivers",
     title: "Understanding Keyboard and Touchpad Lag Topics",
     desc: "Identify slow response times, ghosting, and laggy cursor movements on your laptop or PC.",
-    img: "/needdriver/need-hardware-stop.webp",
+    img: "/needdriver/need-hardware-stop.avif",
     content: {
       introduction: "Input lag can be extremely frustrating, especially when it affects your productivity or experience. Often, it's caused by outdated HID (Human Interface Device) drivers or background processes.",
       reasons: [
@@ -384,7 +384,7 @@ export const guidesData = [
     slug: "understand-device-not-detected",
     title: "Understanding When Windows Doesn't Detect Your Device",
     desc: "A comprehensive guide to identifying hardware that doesn't show up in Device Manager.",
-    img: "/images/fix-driver-monitor.webp",
+    img: "/images/fix-driver-monitor.avif",
     content: {
       introduction: "When a device isn't detected at all, it's often a connection topic or a missing parent driver (like a USB controller or chipset driver) rather than just the device driver itself.",
       reasons: [

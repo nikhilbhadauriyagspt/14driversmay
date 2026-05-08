@@ -19,8 +19,8 @@ const FAQPage = () => {
       icon: <FaQuestionCircle />,
       items: [
         {
-          q: "What is Lappy Learns Top?",
-          a: "Lappy Learns Top is a professional technical resource portal dedicated to helping users understand hardware driver data for Windows systems. We provide step-by-step information guides and verified documentation links to ensure system knowledge."
+          q: "What is Pix Circuit?",
+          a: "Pix Circuit is a professional technical resource portal dedicated to helping users understand hardware driver data for Windows systems. We provide step-by-step information guides and verified documentation links to ensure system knowledge."
         },
         {
           q: "How often should I check for driver information?",
@@ -73,7 +73,7 @@ const FAQPage = () => {
       icon: <FaShieldAlt />,
       items: [
         {
-          q: "Is there a cost for using Lappy Learns Top?",
+          q: "Is there a cost for using Pix Circuit?",
           a: "Access to our technical documentation, hardware registry, and guide library is completely free. We are a community-focused resource dedicated to hardware transparency."
         },
         {
@@ -95,14 +95,14 @@ const FAQPage = () => {
   return (
     <div className="bg-[#F8FAFC] min-h-screen pt-28 pb-20 font-[Poppins]">
       <Helmet>
-        <title>FAQ | Frequently Asked Questions | Lappy Learns Top</title>
+        <title>FAQ | Frequently Asked Questions | Pix Circuit</title>
         <meta name="description" content="Find answers to common questions about driver installations, hardware fixes, and system optimization." />
       </Helmet>
 
       <div className="max-w-[1200px] mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-3xl md:text-4xl font-bold text-[#0F1B3D] mb-4">Help Center & <span className="text-blue-600">FAQ</span></h1>
+          <h1 className="text-3xl md:text-4xl font-[500]text-[#0F1B3D] mb-4">Help Center & <span className="text-blue-600">FAQ</span></h1>
           <p className="text-slate-500 max-w-xl mx-auto mb-10">Search our knowledge base for instant answers to your technical questions.</p>
 
           <div className="max-w-2xl mx-auto relative">
@@ -121,7 +121,7 @@ const FAQPage = () => {
         <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-12">
           {/* Sidebar Nav */}
           <aside className="hidden lg:block space-y-2">
-            <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Categories</h3>
+            <h3 className="text-xs font-[500]text-slate-400 uppercase tracking-widest mb-4">Categories</h3>
             {faqCategories.map((cat, i) => (
               <a
                 key={i}
@@ -138,7 +138,7 @@ const FAQPage = () => {
           <div className="space-y-12">
             {filteredFaqs.length > 0 ? filteredFaqs.map((cat, catIdx) => (
               <div key={catIdx} id={`cat-${catIdx}`} className="scroll-mt-32">
-                <h2 className="flex items-center gap-3 text-xl font-bold text-[#0F1B3D] mb-6">
+                <h2 className="flex items-center gap-3 text-xl font-[500]text-[#0F1B3D] mb-6">
                   <span className="w-10 h-10 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center text-sm">{cat.icon}</span>
                   {cat.category}
                 </h2>
@@ -155,7 +155,7 @@ const FAQPage = () => {
                           onClick={() => setActiveFaq(activeFaq === uniqueId ? null : uniqueId)}
                           className="w-full flex items-center justify-between p-5 text-left"
                         >
-                          <span className={`font-bold ${activeFaq === uniqueId ? 'text-blue-600' : 'text-slate-700'}`}>{item.q}</span>
+                          <span className={`font-[500]${activeFaq === uniqueId ? 'text-blue-600' : 'text-slate-700'}`}>{item.q}</span>
                           <FaChevronDown className={`transition-transform duration-300 ${activeFaq === uniqueId ? 'rotate-180 text-blue-600' : 'text-slate-400'}`} />
                         </button>
                         {activeFaq === uniqueId && (
