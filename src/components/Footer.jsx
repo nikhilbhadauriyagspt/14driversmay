@@ -39,8 +39,8 @@ export default function Footer() {
                   <Mail size={18} className="text-[#005DE0]" />
                 </div>
                 <div>
-                  <p className="text-white/40 text-[12px] uppercase tracking-widest font-semibold">Write To Us</p>
-                  <a href="mailto:info@pixcircuit.co" className="text-white font-medium hover:text-[#005DE0] transition-colors">info@pixcircuit.co</a>
+                  <p className="text-white/80 text-[12px] uppercase tracking-widest font-semibold">Write To Us</p>
+                  <a href="mailto:info@pixcircuit.com" className="text-white font-medium hover:text-[#005DE0] transition-colors">info@pixcircuit.com</a>
                 </div>
               </div>
             </div>
