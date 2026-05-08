@@ -1,328 +1,118 @@
-SEO Checker
 
-ShareShare Icon
-
-PDFDownload Icon
-Analyze any web page for technical errors and on-page SEO problems, and get tips on how to optimize it.
-
-Need more checks per day?
-(Unlock 50 daily queries with Seobility Premium!)
-Learn more
-
-
-
-
-Check page
-You have 2of 3 checks left today
-
-Page URL
-https://lappylearnstop.netlify.app/
-Crawl mode
-HTTP authentication: Username
-Username
-HTTP authentication: Password
-Password
-
-Checks
-
-Elements
-
-Miscellaneous
-On-page score
-Issues:
-6
-Critical
-54%
-On-page score
-Meta data
-91 %
-Page quality
-52 %
-Page structure
-58 %
-Links
-0 %
-Server
-0 %
-External factors
-3 %
-HTML page
-Himmelimherzen
-Meta title
-false
-
-Meta description
-Understand WiFi, audio, printer, and USB driver topics with simple step-by-step information guides. Learn about hardware communication easily.
-
+Render blocking requests Est savings of 460 ms
+Requests are blocking the page's initial render, which may delay LCP. Deferring or inlining can move these network requests out of the critical path.LCPFCPUnscored
 URL
-https://lappylearnstop.netlify.app/
-Status code
-200
-Page status
-Follow
-Index
-Language
--
-Response time
-0.28 sec
-File size
-8.10 kB
-Word count
-0
-To-Do List
-Tasks sorted by priority
-
-To-Do
-
-Importance
-
-Action
-Add a title to your site.
-Error
-
-More details
-Add a H1 heading to this page.
-Error
-
-More details
-Use good headings on the page.
-Error
-
-More details
-This page has only very few internal links. If it's a welcome page, consider removing it.
-Error
-
-More details
-Use 301 redirects to drive traffic to URLS with the same domain and sub domain (www and non-www subdomain).
-Error
-
-More details
-Fix errors regarding the language markup of your web page.
-Error
-
-More details
-light bulb icon
-Not sure how to complete these tasks?
-Our SEO software Seobility helps you fix these issues with clear, easy-to-understand reports for your entire website. Each report explains what an issue means, why it matters for SEO, and how to fix it.
-
-Learn more
-Checks
-Meta data
-91%
-Title
-
-Learn more
-Errors
-0/1
-Very important
-The title tag is missing.
-light bulb icon
-Tip: Each page on your website should have a unique meta title
-This check only looks at the title of the checked URL, but if multiple pages on your website have the same title, it can still hurt your rankings. To find duplicate page titles on your website, you can use Seobility's Website Audit.
-
-Learn more
-Meta description
-
-Learn more
-2/2
-Very important
-Understand WiFi, audio, printer, and USB driver topics with simple step-by-step information guides. Learn about hardware communication easily.
-The length of the meta description is perfect. (889 pixels out of 1000 max pixel length)
-Crawlability
-
-Learn more
-1/1
-Very important
-There are no problems in accessing the page.
-Canonical link
-
-Learn more
-Errors
-1/2
-Important
-https://pixcircuit.com/
-The canonical link points to a different domain.
-Language
-
-Learn more
-Errors
-4/6
-Low importance
-Language defined in HTML: en
-Language defined in meta tags: english
-Server location: Germany
-There are different language information within the page markup.
-One or more of the specified languages are not ISO standard (en, en-us, de, etc.)
-The following language is defined in the HTML code: english
-Alternate/hreflang links
-
-Learn more
-1/1
-Low importance
-There are no alternate links specified on this page.
-Other meta tags
-
-Learn more
-2/2
-Low importance
-There is no rel=next meta tag on this page.
-There is no rel=prev meta tag on this page.
-Domain
-
-Learn more
-Warning
-1/2
-Low importance
-This page is hosted on a subdomain. Use a top level domain for better SEO results.
-The domain name does not contain any non-Latin characters.
-Page URL
-
-Learn more
-3/3
-Low importance
-No parameters were found in the URL.
-No session ID was found in the URL.
-The URL does not have too many subdirectories.
-Charset encoding
-
-Learn more
-1/1
-Low importance
-The charset encoding (UTF-8) is set correctly.
-Doctype
-
-Learn more
-2/2
-Nice to have
-The doctype HTML 5 is set correctly.
-The doctype is placed first in the HTML code.
-Favicon
-
-Learn more
-1/1
-Nice to have
-The favicon is linked correctly.
-Page quality
-52%
-Content
-
-Learn more
-Errors
-1/3
-Very important
-There are only 0 words on this page. Use at least 250 words to provide useful information
-No paragraphs were detected.
-No placeholder texts or images were found.
-Frames
-
-Learn more
-1/1
-Very important
-This page does not use a frameset.
-Mobile optimization
-
-Learn more
-2/2
-Low importance
-A viewport (width=device-width, initial-scale=1.0) is provided.
-One or more Apple Touch icons are specified.
-Strong and bold tags
-
-Learn more
-1/1
-Low importance
-The usage of strong and bold tags is perfect. We recommend the use of up to 6 tags for this page.
-Image SEO
-
-Learn more
-1/1
-Low importance
-ALT text (alternative text) is correctly used on all found images.
-Social media
-
-Learn more
-Warning
-0/1
-Nice to have
-There are few social sharing options on the page. Sharing plugins can increase the page's reach on social media.
-Additional markup
-
-Learn more
-1/1
-Nice to have
-No additional page markup was found.
-HTTPS
-
-Learn more
-2/2
-Low importance
-This page uses HTTPS to protect the privacy and integrity of information exchanged.
-All included files are also transferred via HTTPS.
-Others
-58%
-H1 heading
-
-Learn more
-Errors
-0/1
-Very important
-There is no H1 heading specified.
-Headings
-
-Learn more
-Errors
-0/1
-Important
-There are no headings specified on the page. Headings are important for search engine optimization and help to structure your content.
-Link structure
-0%
-Internal links
-
-Learn more
-Errors
-0/1
-Important
-This page seems to be an entry page, because only very few links were found
-External links
-
-Learn more
-Warning
-0/1
-Nice to have
-There are no external links on this page.
-Server configuration
-0%
-HTTP redirects
-
-Learn more
-Errors
-1/2
-Very important
-The checked page does not redirect to another URL.
-This website uses both www and non-www URLs. This can result in duplicate content and impact your rankings. Redirect Checker
-HTTP header
-
-Learn more
-2/2
-Important
-No X-Powered HTTP header is sent.
-This page uses compression for data transfer.
-Performance
-
-Learn more
-2/2
-Low importance
-The HTML page response time of 0,28 seconds is below the target of 0.40 seconds.
-The file size of the HTML document is fine. (8 kB)
-External factors
-3%
-Backlinks
-
-Learn more
-Warning
-0/4
-Very important
-This page has only a few links from other websites
-This page only has backlinks from 1 referring domains.
-This page only has 1 backlinks.
-This page only has backlinks from 1 different IP addresses
+Transfer Size
+Duration
+netlify.app 1st party
+9.3 KiB	420 ms
+/assets/index-D32zVaCm.css(pixcircuit.netlify.app)
+9.3 KiB
+420 ms
+Forced reflow
+A forced reflow occurs when JavaScript queries geometric properties (such as offsetWidth) after styles have been invalidated by a change to the DOM state. This can result in poor performance. Learn more about forced reflows and possible mitigations.Unscored
+Top function call
+Total reflow time
+/assets/vendor-co….js:2:9714(pixcircuit.netlify.app)
+111 ms
+Source
+Total reflow time
+/assets/index-B-iyytea.js:2:1351021(pixcircuit.netlify.app)
+24 ms
+/assets/index-B-iyytea.js:2:1356831(pixcircuit.netlify.app)
+85 ms
+/assets/index-B-iyytea.js:2:1363360(pixcircuit.netlify.app)
+2 ms
+[unattributed]
+27 ms
+LCP breakdown
+Each subpart has specific improvement strategies. Ideally, most of the LCP time should be spent on loading the resources, not within delays.LCPUnscored
+Subpart
+Duration
+Time to first byte
+0 ms
+Resource load delay
+2,510 ms
+Resource load duration
+1,170 ms
+Element render delay
+90 ms
+Driver learning banner
+<img alt="Driver learning banner" class="w-full h-full object-contain object-center" fetchpriority="high" loading="eager" src="/banner/banner_01.png">
+LCP request discovery
+Optimize LCP by making the LCP image discoverable from the HTML immediately, and avoiding lazy-loadingLCPUnscored
+lazy load not applied
+fetchpriority=high applied
+Request is discoverable in initial document
+Driver learning banner
+<img alt="Driver learning banner" class="w-full h-full object-contain object-center" fetchpriority="high" loading="eager" src="/banner/banner_01.png">
+Network dependency tree
+Avoid chaining critical requests by reducing the length of chains, reducing the download size of resources, or deferring the download of unnecessary resources to improve page load.LCPUnscored
+Maximum critical path latency: 2,518 ms
+Initial Navigation
+https://pixcircuit.netlify.app - 650 ms, 2.93 KiB
+…v24/pxiEyp8kv….woff2(fonts.gstatic.com) - 2,516 ms, 8.49 KiB
+…v24/pxiByp8kv….woff2(fonts.gstatic.com) - 2,518 ms, 8.36 KiB
+…v24/pxiByp8kv….woff2(fonts.gstatic.com) - 2,517 ms, 8.60 KiB
+…v51/KFO7CnqEu….woff2(fonts.gstatic.com) - 2,516 ms, 42.92 KiB
+/assets/index-B-iyytea.js(pixcircuit.netlify.app) - 2,212 ms, 459.28 KiB
+/assets/index-D32zVaCm.css(pixcircuit.netlify.app) - 1,129 ms, 9.28 KiB
+Preconnected origins
+preconnect hints help the browser establish a connection earlier in the page load, saving time when the first request for that origin is made. The following are the origins that the page preconnected to.
+Origin
+Source
+https://fonts.googleapis.com/
+head > link
+<link rel="preconnect" href="https://fonts.googleapis.com">
+Unused preconnect. Only use preconnect for origins that the page is likely to request.
+https://fonts.gstatic.com/
+head > link
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+Preconnect candidates
+Add preconnect hints to your most important origins, but try to use no more than 4.
+No additional origins are good candidates for preconnecting
+Optimize DOM size
+3rd parties
+These insights are also available in the Chrome DevTools Performance Panel - record a trace to view more detailed information.
+Diagnostics
+Reduce unused JavaScript Est savings of 435 KiB
+Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. Learn how to reduce unused JavaScript.LCPFCPUnscored
+URL
+Transfer Size
+Est Savings
+netlify.app 1st party
+529.8 KiB	435.2 KiB
+/assets/index-B-iyytea.js(pixcircuit.netlify.app)
+458.7 KiB
+406.4 KiB
+/assets/vendor-co….js(pixcircuit.netlify.app)
+71.0 KiB
+28.7 KiB
+Image elements do not have explicit width and height
+Set an explicit width and height on image elements to reduce layout shifts and improve CLS. Learn how to set image dimensionsCLSUnscored
+URL
+netlify.app 1st party
+Simple computer learning
+<img alt="Simple computer learning" class="w-full h-auto object-cover transform " src="/about/aboutmain.avif">
+/about/aboutmain.avif(pixcircuit.netlify.app)
+Pix Circuit
+<img alt="Pix Circuit" class="h-10 w-auto object-contain" src="/logo/logo.avif">
+/logo/logo.avif(pixcircuit.netlify.app)
+Understanding Driver Not Installed Errors
+<img alt="Understanding Driver Not Installed Errors" class="max-w-full max-h-full object-contain" src="/guide/guide-driver-not-installed_thumb.avif">
+/guide/guide-driver-not-installed_thumb.avif(pixcircuit.netlify.app)
+Understanding Common Printer Driver Topics
+<img alt="Understanding Common Printer Driver Topics" class="max-w-full max-h-full object-contain" src="/guide/guide-printer-driver_thumb.avif">
+/guide/guide-printer-driver_thumb.avif(pixcircuit.netlify.app)
+Understanding Audio and Sound Driver Topics
+<img alt="Understanding Audio and Sound Driver Topics" class="max-w-full max-h-full object-contain" src="/guide/guide-audio-driver_thumb.avif">
+/guide/guide-audio-driver_thumb.avif(pixcircuit.netlify.app)
+Understanding WiFi and Network Connection Topics
+<img alt="Understanding WiFi and Network Connection Topics" class="max-w-full max-h-full object-contain" src="/guide/guide-network-driver_thumb.avif">
+/guide/guide-network-driver_thumb.avif(pixcircuit.netlify.app)
+Understanding 'USB Device Not Recognized' Topics
+<img alt="Understanding 'USB Device Not Recognized' Topics" class="max-w-full max-h-full object-contain" src="/guide/guide-usb-driver_thumb.avif">
+/guide/guide-usb-driver_thumb.avif(pixcircuit.netlify.app)
+Understanding Graphics Driver Data
+<img alt="Understanding Graphics Driver Data" class="max-w-full max-h-full object-contain" src="/guide/guide-graphics-driver_thumb.avif">
+/guide/guide-graphics-driver_thumb.avif(pixcircuit.netlify.app)

@@ -101,6 +101,8 @@ const DriverChallengeSection = () => {
                             <img
                                 src="/about/aboutmain_01.avif"
                                 alt="Computer part learning"
+                                width="668"
+                                height="668"
                                 className="absolute inset-0 w-full h-full object-contain object-center lg:object-right  transition-transform duration-1000"
                             />
                         </picture>

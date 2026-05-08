@@ -13,6 +13,8 @@ export default function WhyChooseUs() {
                         <img
                             src="/about/aboutmain.avif"
                             alt="Simple computer learning"
+                            width="604"
+                            height="604"
                             className="w-full h-auto object-cover transform "
                         />
                     </div>

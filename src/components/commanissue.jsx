@@ -112,6 +112,8 @@ export default function CommonProblems() {
               <img
                 src="/about/bg-icon-box.avif"
                 alt=""
+                width="160"
+                height="203"
                 className="absolute top-6 right-2 w-[160px] opacity-0 group-hover:opacity-10 pointer-events-none transition-all duration-700 transform translate-x-4 group-hover:translate-x-0"
               />
 

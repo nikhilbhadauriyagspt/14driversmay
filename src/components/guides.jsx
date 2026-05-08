@@ -50,6 +50,8 @@ const PopularDriverGuides = () => {
                                 <img
                                     src={guide.thumbImg}
                                     alt={guide.title}
+                                    width="150"
+                                    height="112"
                                     className="max-w-full max-h-full object-contain"
                                 />
                             </div>

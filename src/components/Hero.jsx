@@ -40,13 +40,18 @@ export default function Hero() {
       {/* Right Image Circle (Static) */}
       <div className="absolute right-[-80px] -top-10 w-[52%] h-[100%] hidden lg:block">
         <div className="relative w-full h-full overflow-hidden">
-          <img
-            src="/banner/banner_01.png"
-            alt="Driver learning banner"
-            className="w-full h-full object-contain object-center"
-            fetchPriority="high"
-            loading="eager"
-          />
+          <picture>
+            <source srcSet="/banner/banner_01.avif" type="image/avif" />
+            <img
+              src="/banner/banner_01.avif"
+              alt="Driver learning banner"
+              width="694"
+              height="547"
+              className="w-full h-full object-contain object-center"
+              fetchPriority="high"
+              loading="eager"
+            />
+          </picture>
         </div>
       </div>
 
@@ -94,11 +99,16 @@ export default function Hero() {
       {/* Mobile Image (Static) */}
       <div className="relative z-10 lg:hidden px-6 pb-10 -mt-10">
         <div className="rounded-[36px] overflow-hidden shadow-2xl">
-          <img
-            src="/banner/banner_01.png"
-            alt="Driver learning"
-            className="w-full h-[280px] sm:h-[360px] object-cover object-center"
-          />
+          <picture>
+            <source srcSet="/banner/banner_01.avif" type="image/avif" />
+            <img
+              src="/banner/banner_01.avif"
+              alt="Driver learning"
+              width="360"
+              height="280"
+              className="w-full h-[280px] sm:h-[360px] object-cover object-center"
+            />
+          </picture>
         </div>
       </div>
     </section>

@@ -70,6 +70,8 @@ const About = () => {
               <img
                 src="/about/aboutmain.avif"
                 alt="Driver learning"
+                width="520"
+                height="520"
                 className="w-full h-auto object-contain bg-white p-4"
               />
             </div>
