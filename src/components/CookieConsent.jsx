@@ -41,10 +41,10 @@ const CookieConsent = () => {
                         <h3 className="text-[17px] font-[500]text-slate-900">Privacy Preference</h3>
                     </div>
 
-                    <p className="text-[14px] text-slate-500 font-medium leading-relaxed mb-6">
+                    <p className="text-[14px] text-slate-600 font-medium leading-relaxed mb-6">
                         We use data files to enhance your experience and analyze site traffic.
                         By clicking "Accept", you agree to our storage of these identifiers on your device.
-                        Read our <Link to="/cookie-policy" className="text-blue-600 hover:underline">Policy</Link> for details.
+                        Read our <Link to="/cookie-policy" className="text-[#005DE0] font-semibold underline underline-offset-4 decoration-2">Policy</Link> for details.
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-3">

@@ -342,7 +342,7 @@ const Header = () => {
                 <div className="absolute left-4 w-8 h-8 rounded-full btn-gradient flex items-center justify-center text-white z-10 shadow-sm transition-transform group-hover:scale-105">
                   <Search size={14} />
                 </div>
-                <div className="h-[46px] w-[260px] pl-14 pr-6 rounded-full border border-slate-200 bg-white flex items-center text-slate-400 font-medium text-[13px] group-hover:border-[#005DE0] group-hover:shadow-md transition-all">
+                <div className="h-[46px] w-[260px] pl-14 pr-6 rounded-full border border-slate-200 bg-white flex items-center text-slate-500 font-medium text-[13px] group-hover:border-[#005DE0] group-hover:shadow-md transition-all">
                   Search guides...
                 </div>
               </div>

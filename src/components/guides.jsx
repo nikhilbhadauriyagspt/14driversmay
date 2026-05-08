@@ -19,7 +19,7 @@ const PopularDriverGuides = () => {
                     <div className="max-w-[700px]">
                         <div className="inline-flex items-center gap-3 mb-6">
                             <span className="h-[2px] w-10 bg-gradient-to-r from-[#CF00FE] to-[#005DE0]"></span>
-                            <span className="text-[12px] font-[500] text-slate-400 uppercase tracking-[0.25em]">
+                            <span className="text-[12px] font-[500] text-slate-600 uppercase tracking-[0.25em]">
                                 Learning Resources
                             </span>
                         </div>

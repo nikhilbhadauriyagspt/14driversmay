@@ -1,118 +1,67 @@
 
-Render blocking requests Est savings of 460 ms
-Requests are blocking the page's initial render, which may delay LCP. Deferring or inlining can move these network requests out of the critical path.LCPFCPUnscored
-URL
-Transfer Size
-Duration
-netlify.app 1st party
-9.3 KiB	420 ms
-/assets/index-D32zVaCm.css(pixcircuit.netlify.app)
-9.3 KiB
-420 ms
-Forced reflow
-A forced reflow occurs when JavaScript queries geometric properties (such as offsetWidth) after styles have been invalidated by a change to the DOM state. This can result in poor performance. Learn more about forced reflows and possible mitigations.Unscored
-Top function call
-Total reflow time
-/assets/vendor-co….js:2:9714(pixcircuit.netlify.app)
-111 ms
-Source
-Total reflow time
-/assets/index-B-iyytea.js:2:1351021(pixcircuit.netlify.app)
-24 ms
-/assets/index-B-iyytea.js:2:1356831(pixcircuit.netlify.app)
-85 ms
-/assets/index-B-iyytea.js:2:1363360(pixcircuit.netlify.app)
-2 ms
-[unattributed]
-27 ms
-LCP breakdown
-Each subpart has specific improvement strategies. Ideally, most of the LCP time should be spent on loading the resources, not within delays.LCPUnscored
-Subpart
-Duration
-Time to first byte
-0 ms
-Resource load delay
-2,510 ms
-Resource load duration
-1,170 ms
-Element render delay
-90 ms
-Driver learning banner
-<img alt="Driver learning banner" class="w-full h-full object-contain object-center" fetchpriority="high" loading="eager" src="/banner/banner_01.png">
-LCP request discovery
-Optimize LCP by making the LCP image discoverable from the HTML immediately, and avoiding lazy-loadingLCPUnscored
-lazy load not applied
-fetchpriority=high applied
-Request is discoverable in initial document
-Driver learning banner
-<img alt="Driver learning banner" class="w-full h-full object-contain object-center" fetchpriority="high" loading="eager" src="/banner/banner_01.png">
-Network dependency tree
-Avoid chaining critical requests by reducing the length of chains, reducing the download size of resources, or deferring the download of unnecessary resources to improve page load.LCPUnscored
-Maximum critical path latency: 2,518 ms
-Initial Navigation
-https://pixcircuit.netlify.app - 650 ms, 2.93 KiB
-…v24/pxiEyp8kv….woff2(fonts.gstatic.com) - 2,516 ms, 8.49 KiB
-…v24/pxiByp8kv….woff2(fonts.gstatic.com) - 2,518 ms, 8.36 KiB
-…v24/pxiByp8kv….woff2(fonts.gstatic.com) - 2,517 ms, 8.60 KiB
-…v51/KFO7CnqEu….woff2(fonts.gstatic.com) - 2,516 ms, 42.92 KiB
-/assets/index-B-iyytea.js(pixcircuit.netlify.app) - 2,212 ms, 459.28 KiB
-/assets/index-D32zVaCm.css(pixcircuit.netlify.app) - 1,129 ms, 9.28 KiB
-Preconnected origins
-preconnect hints help the browser establish a connection earlier in the page load, saving time when the first request for that origin is made. The following are the origins that the page preconnected to.
-Origin
-Source
-https://fonts.googleapis.com/
-head > link
-<link rel="preconnect" href="https://fonts.googleapis.com">
-Unused preconnect. Only use preconnect for origins that the page is likely to request.
-https://fonts.gstatic.com/
-head > link
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-Preconnect candidates
-Add preconnect hints to your most important origins, but try to use no more than 4.
-No additional origins are good candidates for preconnecting
-Optimize DOM size
-3rd parties
-These insights are also available in the Chrome DevTools Performance Panel - record a trace to view more detailed information.
-Diagnostics
-Reduce unused JavaScript Est savings of 435 KiB
-Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. Learn how to reduce unused JavaScript.LCPFCPUnscored
-URL
-Transfer Size
-Est Savings
-netlify.app 1st party
-529.8 KiB	435.2 KiB
-/assets/index-B-iyytea.js(pixcircuit.netlify.app)
-458.7 KiB
-406.4 KiB
-/assets/vendor-co….js(pixcircuit.netlify.app)
-71.0 KiB
-28.7 KiB
-Image elements do not have explicit width and height
-Set an explicit width and height on image elements to reduce layout shifts and improve CLS. Learn how to set image dimensionsCLSUnscored
-URL
-netlify.app 1st party
-Simple computer learning
-<img alt="Simple computer learning" class="w-full h-auto object-cover transform " src="/about/aboutmain.avif">
-/about/aboutmain.avif(pixcircuit.netlify.app)
-Pix Circuit
-<img alt="Pix Circuit" class="h-10 w-auto object-contain" src="/logo/logo.avif">
-/logo/logo.avif(pixcircuit.netlify.app)
-Understanding Driver Not Installed Errors
-<img alt="Understanding Driver Not Installed Errors" class="max-w-full max-h-full object-contain" src="/guide/guide-driver-not-installed_thumb.avif">
-/guide/guide-driver-not-installed_thumb.avif(pixcircuit.netlify.app)
-Understanding Common Printer Driver Topics
-<img alt="Understanding Common Printer Driver Topics" class="max-w-full max-h-full object-contain" src="/guide/guide-printer-driver_thumb.avif">
-/guide/guide-printer-driver_thumb.avif(pixcircuit.netlify.app)
-Understanding Audio and Sound Driver Topics
-<img alt="Understanding Audio and Sound Driver Topics" class="max-w-full max-h-full object-contain" src="/guide/guide-audio-driver_thumb.avif">
-/guide/guide-audio-driver_thumb.avif(pixcircuit.netlify.app)
-Understanding WiFi and Network Connection Topics
-<img alt="Understanding WiFi and Network Connection Topics" class="max-w-full max-h-full object-contain" src="/guide/guide-network-driver_thumb.avif">
-/guide/guide-network-driver_thumb.avif(pixcircuit.netlify.app)
-Understanding 'USB Device Not Recognized' Topics
-<img alt="Understanding 'USB Device Not Recognized' Topics" class="max-w-full max-h-full object-contain" src="/guide/guide-usb-driver_thumb.avif">
-/guide/guide-usb-driver_thumb.avif(pixcircuit.netlify.app)
-Understanding Graphics Driver Data
-<img alt="Understanding Graphics Driver Data" class="max-w-full max-h-full object-contain" src="/guide/guide-graphics-driver_thumb.avif">
-/guide/guide-graphics-driver_thumb.avif(pixcircuit.netlify.app)
+Background and foreground colors do not have a sufficient contrast ratio.
+Low-contrast text is difficult or impossible for many users to read. Learn how to provide sufficient color contrast.
+Failing Elements
+Search guides...
+<div class="h-[46px] w-[260px] pl-14 pr-6 rounded-full border border-slate-200 bg-whit…">
+WHY CHOOSE US
+<span class="text-[12px] font-semibold text-slate-400 uppercase tracking-[0.25em]">
+WHY CHOOSE US Easy Computer Learning For Everyday Users Simple Step-by-Step Gui…
+<section class="w-full bg-white border-y border-gray-200 y-24 px-6 py-20 overflow-hidden">
+LEARNING RESOURCES
+<span class="text-[12px] font-[500] text-slate-400 uppercase tracking-[0.25em]">
+LEARNING RESOURCES Latest Knowledge Information Guides VIEW FULL LIBRARY GUIDE …
+<section class="w-full bg-white py-24 px-6 ">
+5 MIN READ
+<span class="text-[10px] font-[500] text-slate-400 uppercase tracking-widest">
+LEARNING RESOURCES Latest Knowledge Information Guides VIEW FULL LIBRARY GUIDE …
+<section class="w-full bg-white py-24 px-6 ">
+5 MIN READ
+<span class="text-[10px] font-[500] text-slate-400 uppercase tracking-widest">
+LEARNING RESOURCES Latest Knowledge Information Guides VIEW FULL LIBRARY GUIDE …
+<section class="w-full bg-white py-24 px-6 ">
+5 MIN READ
+<span class="text-[10px] font-[500] text-slate-400 uppercase tracking-widest">
+LEARNING RESOURCES Latest Knowledge Information Guides VIEW FULL LIBRARY GUIDE …
+<section class="w-full bg-white py-24 px-6 ">
+5 MIN READ
+<span class="text-[10px] font-[500] text-slate-400 uppercase tracking-widest">
+LEARNING RESOURCES Latest Knowledge Information Guides VIEW FULL LIBRARY GUIDE …
+<section class="w-full bg-white py-24 px-6 ">
+5 MIN READ
+<span class="text-[10px] font-[500] text-slate-400 uppercase tracking-widest">
+LEARNING RESOURCES Latest Knowledge Information Guides VIEW FULL LIBRARY GUIDE …
+<section class="w-full bg-white py-24 px-6 ">
+5 MIN READ
+<span class="text-[10px] font-[500] text-slate-400 uppercase tracking-widest">
+LEARNING RESOURCES Latest Knowledge Information Guides VIEW FULL LIBRARY GUIDE …
+<section class="w-full bg-white py-24 px-6 ">
+WRITE TO US
+<p class="text-white/40 text-[12px] uppercase tracking-widest font-semibold">
+A simple place to learn about your computer parts and how they work together to…
+<footer class="relative w-full bg-[#050A33] text-white pt-24 overflow-hidden">
+QUICK LINKS
+<h3 class="text-[14px] font-bold uppercase tracking-[0.2em] text-[#005DE0]">
+A simple place to learn about your computer parts and how they work together to…
+<footer class="relative w-full bg-[#050A33] text-white pt-24 overflow-hidden">
+EASY GUIDES
+<h3 class="text-[14px] font-bold uppercase tracking-[0.2em] text-[#005DE0]">
+A simple place to learn about your computer parts and how they work together to…
+<footer class="relative w-full bg-[#050A33] text-white pt-24 overflow-hidden">
+COMPUTER PARTS
+<h3 class="text-[14px] font-bold uppercase tracking-[0.2em] text-[#005DE0]">
+A simple place to learn about your computer parts and how they work together to…
+<footer class="relative w-full bg-[#050A33] text-white pt-24 overflow-hidden">
+OUR POLICIES
+<h3 class="text-[14px] font-bold uppercase tracking-[0.2em] text-[#005DE0]">
+div#root > div.App > footer.relative > div.absolute
+<div class="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-600/5 blur-[120px] roun…">
+A simple place to learn about your computer parts and how they work together to…
+<footer class="relative w-full bg-[#050A33] text-white pt-24 overflow-hidden">
+Links rely on color to be distinguishable.
+Low-contrast text is difficult or impossible for many users to read. Link text that is discernible improves the experience for users with low vision. Learn how to make links distinguishable.
+Failing Elements
+Policy
+<a class="text-blue-600 hover:underline" href="/cookie-policy" data-discover="true">
+We use data files to enhance your experience and analyze site traffic. By click…
+<p class="text-[14px] text-slate-500 font-medium leading-relaxed mb-6">

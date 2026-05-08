@@ -40,7 +40,7 @@ export default function Footer() {
                 </div>
                 <div>
                   <p className="text-white/40 text-[12px] uppercase tracking-widest font-semibold">Write To Us</p>
-                  <a href="mailto:info@pixcircuit.com" className="text-white font-medium hover:text-[#005DE0] transition-colors">info@pixcircuit.com</a>
+                  <a href="mailto:info@pixcircuit.co" className="text-white font-medium hover:text-[#005DE0] transition-colors">info@pixcircuit.co</a>
                 </div>
               </div>
             </div>
@@ -114,7 +114,7 @@ export default function Footer() {
 function FooterColumn({ title, links }) {
   return (
     <div className="flex flex-col gap-6">
-      <h3 className="text-[14px] font-bold uppercase tracking-[0.2em] text-[#005DE0]">
+      <h3 className="text-[14px] font-bold uppercase tracking-[0.2em] text-[#3395FF]">
         {title}
       </h3>
       <ul className="flex flex-col gap-4">

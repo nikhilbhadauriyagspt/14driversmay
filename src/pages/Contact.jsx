@@ -52,10 +52,10 @@ const Contact = () => {
 
               <p className="text-slate-500 text-[16px]">
                 <a
-                  href="mailto:info@pixcircuit.com"
+                  href="mailto:info@pixcircuit.co"
                   className="hover:text-[#005DE0] transition-colors"
                 >
-                  info@pixcircuit.com
+                  info@pixcircuit.co
                 </a>
               </p>
             </div>
@@ -157,7 +157,7 @@ const Contact = () => {
 
 const Field = ({ label, children }) => (
   <div className="space-y-3">
-    <label className="text-[12px] font-semibold text-slate-400 uppercase tracking-[0.2em]">
+    <label className="text-[12px] font-semibold text-slate-600 uppercase tracking-[0.2em]">
       {label}
     </label>
     {children}

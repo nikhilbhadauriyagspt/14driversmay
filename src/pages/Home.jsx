@@ -20,7 +20,7 @@ const Home = () => {
       <Helmet>
         <title>Pix Circuit | Driver Information Guides</title>
         <meta name="description" content="Technical repository for hardware specifications, driver-level architectural data, and system documentation for the global technical community." />
-        <link rel="canonical" href="https://pixcircuit.com" />
+        <link rel="canonical" href="https://pixcircuit.co" />
       </Helmet>
 
       <Hero />

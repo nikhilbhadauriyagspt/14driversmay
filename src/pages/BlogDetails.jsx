@@ -33,7 +33,7 @@ const BlogDetails = () => {
       <Helmet>
         <title>{blog.title} - Pix Circuit Blog</title>
         <meta name="description" content={blog.shortDesc} />
-        <link rel="canonical" href={`https://pixcircuit.com/blog/${blog.id}`} />
+        <link rel="canonical" href={`https://pixcircuit.co/blog/${blog.id}`} />
       </Helmet>
 
       <div className="container mx-auto px-4 max-w-4xl">

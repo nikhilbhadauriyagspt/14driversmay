@@ -14,7 +14,7 @@ const Blog = () => {
       <Helmet>
         <title>Our Blog - Pix Circuit</title>
         <meta name="description" content="Read our latest articles about appliance maintenance, repair tips, and industry news." />
-        <link rel="canonical" href="https://pixcircuit.com/blog" />
+        <link rel="canonical" href="https://pixcircuit.co/blog" />
       </Helmet>
 
       <div className="relative bg-white py-32 overflow-hidden border-b border-gray-100">

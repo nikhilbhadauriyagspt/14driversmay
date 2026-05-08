@@ -12,7 +12,7 @@ const CookiePolicy = () => {
       <Helmet>
         <title>Cookie Policy - Pix Circuit</title>
         <meta name="description" content="Cookie Policy for Pix Circuit. Understand how we use cookies and tracking technologies." />
-        <link rel="canonical" href="https://pixcircuit.com/cookie-policy" />
+        <link rel="canonical" href="https://pixcircuit.co/cookie-policy" />
       </Helmet>
 
       <div className="container mx-auto px-4 max-w-5xl">
@@ -24,7 +24,7 @@ const CookiePolicy = () => {
             <p>
               This Cookie Policy explains how Pix Circuit (“<strong>Company</strong>,” “<strong>we</strong>,” “<strong>us</strong>,” or “<strong>our</strong>”) uses
               cookies and similar tracking technologies when you visit our website
-              <a href="https://pixcircuit.com/" className="text-primary hover:text-secondary"> https://pixcircuit.com/</a> (the “<strong>Website</strong>”). This policy should be read together with our
+              <a href="https://pixcircuit.co/" className="text-primary hover:text-secondary"> https://pixcircuit.co/</a> (the “<strong>Website</strong>”). This policy should be read together with our
               <a href="/privacy-policy" className="text-primary hover:underline font-bold"> PRIVACY POLICY</a> and <a href="/terms-of-service" className="text-primary hover:underline font-bold">TERMS OF SERVICE</a>.
             </p>
           </section>
@@ -127,7 +127,7 @@ const CookiePolicy = () => {
             <address className="not-italic bg-gray-50 p-8 rounded-2xl border border-gray-100 mt-4 leading-relaxed font-bold">
               Henan Yunyue Network Technology Co. Ltd.<br />
               Room 0903, Building 2, Longshang New Residence, Jinshan Street, Kuancheng Manchu Autonomous County, Chengde City, Hebei Province, JS, 320500, China<br />
-              Email: <a href="mailto:info@pixcircuit.com" className="hover:text-blue-600 transition-colors">info@pixcircuit.com</a>
+              Email: <a href="mailto:info@pixcircuit.co" className="hover:text-blue-600 transition-colors">info@pixcircuit.co</a>
             </address>
           </section>
         </div>
