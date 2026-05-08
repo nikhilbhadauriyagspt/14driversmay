@@ -71,7 +71,7 @@ export default function Footer() {
               />
 
               <FooterColumn
-                title="Computer Parts"
+                title="Core Drivers"
                 links={[
                   { name: "Printer Info", path: "/guide/understand-printer-driver-topics" },
                   { name: "Internet & WiFi", path: "/guide/understand-wifi-network-topics" },
