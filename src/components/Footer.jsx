@@ -96,7 +96,7 @@ export default function Footer() {
 
         {/* Bottom Credits */}
         <div className="py-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="text-white/40 text-[14px]">
+          <p className="text-white/60 text-[14px]">
             © {currentYear} <span className="text-white font-medium">Pix Circuit</span>. Simple Computer Learning Site.
           </p>
 
