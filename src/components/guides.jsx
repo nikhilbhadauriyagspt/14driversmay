@@ -12,7 +12,7 @@ const PopularDriverGuides = () => {
     }));
 
     return (
-        <section className="w-full bg-white py-24 px-6 ">
+        <section className="w-full bg-white py-24 px-6 font-[Poppins] ">
             <div className="max-w-[1600px] mx-auto">
                 {/* Header Section */}
                 <div className="flex flex-col md:flex-row justify-between items-end gap-8 mb-20">

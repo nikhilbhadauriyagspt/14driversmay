@@ -14,8 +14,8 @@ const InfoMarquee = () => {
   ];
 
   return (
-    <section className="relative w-full overflow-hidden bg-white border-y border-slate-100 py-6 ">
-      <div className="relative flex overflow-hidden">
+    <section className="relative w-full overflow-hidden bg-white border-y border-slate-100 py-6 font-[Poppins]">
+      <section div className="relative flex overflow-hidden" >
         <div className="flex w-max animate-marquee items-center whitespace-nowrap">
           {[...messages, ...messages].map((msg, i) => (
             <div
@@ -34,7 +34,7 @@ const InfoMarquee = () => {
             </div>
           ))}
         </div>
-      </div>
+      </section >
 
       <style>{`
         @keyframes marquee {
@@ -50,7 +50,7 @@ const InfoMarquee = () => {
           animation-play-state: paused;
         }
       `}</style>
-    </section>
+    </section >
   );
 };
 

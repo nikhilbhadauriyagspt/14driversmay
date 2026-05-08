@@ -22,7 +22,7 @@ const DriverChallengeSection = () => {
     ];
 
     return (
-        <section className="relative w-full bg-white overflow-hidden ">
+        <section className="relative  font-[Poppins] w-full bg-white overflow-hidden ">
 
 
 

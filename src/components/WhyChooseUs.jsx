@@ -3,7 +3,7 @@ import { Check, ShieldCheck, BookOpen, Monitor } from "lucide-react";
 
 export default function WhyChooseUs() {
     return (
-        <section className="w-full bg-white border-y border-gray-200 y-24 px-6 py-20 overflow-hidden">
+        <section className="w-full bg-white border-y border-gray-200 y-24 px-6 py-20 overflow-hidden font-[Poppins]">
             <div className="max-w-[1600px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
 
                 {/* Left Side - Image with subtle styling */}

@@ -24,7 +24,7 @@ export default function FAQHelpSection() {
     ];
 
     return (
-        <section className="w-full bg-[#F7F7F7]  overflow-hidden">
+        <section className="w-full bg-[#F7F7F7]  overflow-hidden font-[Poppins] ">
             <div className="max-w-[1600px] mx-auto grid grid-cols-1 lg:grid-cols-2 min-h-[720px]">
 
                 {/* Left Image */}

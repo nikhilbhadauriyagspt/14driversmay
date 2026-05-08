@@ -81,7 +81,7 @@ const DriverInfoShowcase = () => {
     ];
 
     return (
-        <section className="relative w-full overflow-hidden bg-white py-24 px-6 ">
+        <section className="relative  font-[Poppins] w-full bg-white overflow-hidden py-24 px-6 ">
             {/* Background Texture */}
             <div className="absolute inset-0 repeating-bg opacity-[0.03] pointer-events-none"></div>
 
