@@ -125,7 +125,7 @@ const ServicesPage = () => {
                             <IconComponent />
                           </div>
 
-                          <span className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">
+                          <span className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500">
                             Guide
                           </span>
                         </div>

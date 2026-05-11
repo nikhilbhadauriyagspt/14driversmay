@@ -35,7 +35,7 @@ const About = () => {
           <div className="relative min-h-[560px] flex items-center justify-center">
             <img
               src="/about/aboutmain_03.webp"
-              alt="Driver learning"
+              alt="Aura Learning educational driver illustration"
               width="800"
               height="600"
               className="relative z-10 w-full  h-auto object-contain"

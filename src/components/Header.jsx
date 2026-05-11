@@ -223,6 +223,7 @@ const Header = () => {
 
             <Link
               to="/guides"
+              aria-label="Explore driver information guides"
               className="h-[50px] px-8 rounded-[4px] bg-[#104CEF] text-white text-[15px] font-semibold flex items-center gap-2 hover:bg-[#0f766e] transition"
             >
               Learn More <ArrowRight size={18} />
@@ -352,6 +353,7 @@ const Header = () => {
             <Link
               to="/guides"
               onClick={() => setIsOpen(false)}
+              aria-label="Explore driver information guides"
               className="mt-5 h-[52px] bg-[#104CEF] text-white rounded-md font-semibold flex items-center justify-center gap-2"
             >
               Learn More <ArrowRight size={17} />

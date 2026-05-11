@@ -61,7 +61,7 @@ const PopularDriverGuides = () => {
                                         Guide
                                     </span>
                                     <span className="w-1 h-1 rounded-full bg-slate-300"></span>
-                                    <span className="text-[11px] font-medium text-slate-400 uppercase tracking-[0.18em]">
+                                    <span className="text-[11px] font-medium text-slate-600 uppercase tracking-[0.18em]">
                                         5 Min Read
                                     </span>
                                 </div>

@@ -53,7 +53,7 @@ const Contact = () => {
                 </span>
 
                 <div>
-                  <p className="text-[13px] text-slate-400">Email Address</p>
+                  <p className="text-[13px] text-slate-500">Email Address</p>
                   <a
                     href="mailto:info@auralearning.co"
                     className="text-[15px] font-semibold text-slate-800 hover:text-[#2563eb] transition"
@@ -72,7 +72,7 @@ const Contact = () => {
 
             <img
               src="/about/aboutmain.avif"
-              alt="Learning topics"
+              alt="Contact Aura Learning for hardware driver information"
               className="relative z-10 w-full max-w-[480px] object-contain"
             />
 
@@ -119,14 +119,14 @@ const Contact = () => {
           </div>
 
           {/* Form Area */}
-            <div className="bg-[#fff1f2] border border-[#fecdd3] rounded-2xl p-6 mb-10 text-center">
-               <p className="text-[15px] font-semibold text-[#9f1239]">
-                 Aura Learning is an information-only portal. We do not fix computers or provide technical support. 
-                 Please do not send requests for repair or support assistance.
-               </p>
-            </div>
+          <div className="bg-[#fff1f2] border border-[#fecdd3] rounded-2xl p-6 mb-10 text-center">
+            <p className="text-[15px] font-semibold text-[#9f1239]">
+              Aura Learning is an information-only portal. We do not fix computers or provide technical support.
+              Please do not send requests for repair or support assistance.
+            </p>
+          </div>
 
-            <div className="bg-[#f8fbff] border border-[#e2e8ff] rounded-[36px] p-6 md:p-12">
+          <div className="bg-[#f8fbff] border border-[#e2e8ff] rounded-[36px] p-6 md:p-12">
             <form className="space-y-7">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <Field label="Full Name">

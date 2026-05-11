@@ -103,9 +103,9 @@ export default function WhenNeedDrivers() {
 
                                     <div className="space-y-4">
                                         <div className="flex gap-3">
-                                            <AlertCircle className="w-4 h-4 text-slate-400 shrink-0 mt-0.5" />
+                                            <AlertCircle className="w-4 h-4 text-slate-500 shrink-0 mt-0.5" />
                                             <div>
-                                                <p className="text-[10px] font-[500]text-slate-400 uppercase tracking-wider mb-0.5">The Problem</p>
+                                                <p className="text-[10px] font-[500]text-slate-500 uppercase tracking-wider mb-0.5">The Problem</p>
                                                 <p className="text-[13px] text-slate-600 leading-snug font-medium">{item.problem}</p>
                                             </div>
                                         </div>

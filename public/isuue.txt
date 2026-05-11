@@ -1,87 +1,92 @@
-On-Page SEO Results
-Your On-Page SEO could be better
-Your page has some level of On-Page SEO optimization but could be improved further. On-Page SEO is important to ensure Search Engines can understand your content appropriately and help it rank for relevant keywords. You should ensure that HTML Tag Content is completed correctly and align text content to target keywords.
-Title Tag
-You have a Title Tag, but ideally it should be between 50 and 60 characters in length (including spaces).
-Aura Learning | Driver Information Guides
-Length : 41
-Title Tags are very important for search engines to correctly understand and categorize your content.
-Meta Description Tag
-Your page has a Meta Description of optimal length (between 120 and 160 characters).
-Technical repository for hardware specifications, driver-level architectural data, and system documentation for the global technical community.
-Length : 143
-SERP Snippet Preview
-This illustrates how your page may appear in Search Results. Note, this is intended as a guide and Search Engines are more frequently generating this content dynamically.
 
-Aura Learning
-https://auralearning.netlify.app
-Aura Learning | Driver Information Guides
-Technical repository for hardware specifications, driver-level architectural data, and system documentation for the global technical community.
-Hreflang Usage
-Your page is not making use of Hreflang attributes.
-Language
-Your page is using the Lang Attribute.
-Declared: English
-H1 Header Tag Usage
-Your page has a H1 Tag.
-H2-H6 Header Tag Usage
-Your page is making use multiple levels of Header Tags.
-Header Tag	Frequency	
-H2	12	
-H3	55	
-H4	3	
-H5	0	
-H6	0	
-Keyword Consistency
-Your page's main keywords are not distributed well across the important HTML Tags.
-Your page content should be focused around particular keywords you would like to rank for. Ideally these keywords should also be distributed across tags such as the title, meta and header tags.
-Individual Keywords
-Keyword	Title	Meta Description Tag	Headings Tags	Page Frequency	
-driver	
-35	
-guides	
-26	
-topics	
-26	
-device	
-17	
-basics	
-15	
-printer	
-15	
-usb	
-15	
-drivers	
-15	
-Phrases
-Phrase	Title	Meta Description Tag	Headings Tags	Page Frequency	
-driver topics	
-11	
-guide 5	
-6	
-min read	
-6	
-read understanding	
-6	
-guide 5 min	
-6	
-min read understanding	
-6	
-driver guides	
-4	
-printer usb	
-4	
-Amount of Content
-Your page has a low volume of text content which search engines can interpret as 'thin content'.
-Word Count: 834
-It has been well researched that higher text content volumes are related to better ranking ability in general.
-Image Alt Attributes
-You have images on your page that are missing Alt Attributes.
-
-We found 14 images on your page and 1 of them are missing the attribute.
-Alt Attributes are an often overlooked and simple way to signal to Search Engines what an image is about, and help it rank in image search results.
-Canonical Tag
-Your page has more than one Canonical Tag. Each page should only have a single Canonical Tag
-The Canonical Tag tells Search Engines the primary URL of a page. URLs can have multiple versions due to things like parameters being passed or www and non-www versions resulting in potential duplicate content. Google recommends all pages specify a Canonical.
-https://auralearning.co
-https://auralearning.co
+Background and foreground colors do not have a sufficient contrast ratio.
+Low-contrast text is difficult or impossible for many users to read. Learn how to provide sufficient color contrast.
+Failing Elements
+Display & GPU basics
+<p class="text-[11px] leading-tight text-slate-600 mt-1 max-w-[120px]">
+Graphics Display & GPU basics
+<div class="group relative min-h-[118px] flex flex-col items-center justify-center tex…">
+Sound device info
+<p class="text-[11px] leading-tight text-slate-600 mt-1 max-w-[120px]">
+Audio Sound device info
+<div class="group relative min-h-[118px] flex flex-col items-center justify-center tex…">
+Wireless connection
+<p class="text-[11px] leading-tight text-slate-600 mt-1 max-w-[120px]">
+Wi-Fi Wireless connection
+<div class="group relative min-h-[118px] flex flex-col items-center justify-center tex…">
+Print device topics
+<p class="text-[11px] leading-tight text-slate-600 mt-1 max-w-[120px]">
+Printer Print device topics
+<div class="group relative min-h-[118px] flex flex-col items-center justify-center tex…">
+Port detection info
+<p class="text-[11px] leading-tight text-slate-600 mt-1 max-w-[120px]">
+USB Port detection info
+<div class="group relative min-h-[118px] flex flex-col items-center justify-center tex…">
+Pairing basics
+<p class="text-[11px] leading-tight text-slate-600 mt-1 max-w-[120px]">
+Bluetooth Pairing basics
+<div class="group relative min-h-[118px] flex flex-col items-center justify-center tex…">
+Camera input info
+<p class="text-[11px] leading-tight text-slate-600 mt-1 max-w-[120px]">
+Webcam Camera input info
+<div class="group relative min-h-[118px] flex flex-col items-center justify-center tex…">
+Scan device basics
+<p class="text-[11px] leading-tight text-slate-600 mt-1 max-w-[120px]">
+Scanner Scan device basics
+<div class="group relative min-h-[118px] flex flex-col items-center justify-center tex…">
+Core system bridge
+<p class="text-[11px] leading-tight text-slate-600 mt-1 max-w-[120px]">
+Chipset Core system bridge
+<div class="group relative min-h-[118px] flex flex-col items-center justify-center tex…">
+Input gesture info
+<p class="text-[11px] leading-tight text-slate-600 mt-1 max-w-[120px]">
+Touchpad Input gesture info
+<div class="group relative min-h-[118px] flex flex-col items-center justify-center tex…">
+SSD & HDD topics
+<p class="text-[11px] leading-tight text-slate-600 mt-1 max-w-[120px]">
+Storage SSD & HDD topics
+<div class="group relative min-h-[118px] flex flex-col items-center justify-center tex…">
+Key input basics
+<p class="text-[11px] leading-tight text-slate-600 mt-1 max-w-[120px]">
+Keyboard Key input basics
+<div class="group relative min-h-[118px] flex flex-col items-center justify-center tex…">
+Firmware basics
+<p class="text-[11px] leading-tight text-slate-600 mt-1 max-w-[120px]">
+BIOS / UEFI Firmware basics
+<div class="group relative min-h-[118px] flex flex-col items-center justify-center tex…">
+Power management
+<p class="text-[11px] leading-tight text-slate-600 mt-1 max-w-[120px]">
+Battery Power management
+<div class="group relative min-h-[118px] flex flex-col items-center justify-center tex…">
+Resolution topics
+<p class="text-[11px] leading-tight text-slate-600 mt-1 max-w-[120px]">
+Display Resolution topics
+<div class="group relative min-h-[118px] flex flex-col items-center justify-center tex…">
+Ethernet & LAN
+<p class="text-[11px] leading-tight text-slate-600 mt-1 max-w-[120px]">
+Network Ethernet & LAN
+<div class="group relative min-h-[118px] flex flex-col items-center justify-center tex…">
+5 MIN READ
+<span class="text-[11px] font-medium text-slate-600 uppercase tracking-[0.18em]">
+LEARNING RESOURCES Latest driver information guides Browse simple reading topi…
+<section class="w-full bg-[#fbfcff] py-24 px-6 font-[Poppins] overflow-hidden">
+5 MIN READ
+<span class="text-[11px] font-medium text-slate-600 uppercase tracking-[0.18em]">
+LEARNING RESOURCES Latest driver information guides Browse simple reading topi…
+<section class="w-full bg-[#fbfcff] py-24 px-6 font-[Poppins] overflow-hidden">
+5 MIN READ
+<span class="text-[11px] font-medium text-slate-600 uppercase tracking-[0.18em]">
+LEARNING RESOURCES Latest driver information guides Browse simple reading topi…
+<section class="w-full bg-[#fbfcff] py-24 px-6 font-[Poppins] overflow-hidden">
+5 MIN READ
+<span class="text-[11px] font-medium text-slate-600 uppercase tracking-[0.18em]">
+LEARNING RESOURCES Latest driver information guides Browse simple reading topi…
+<section class="w-full bg-[#fbfcff] py-24 px-6 font-[Poppins] overflow-hidden">
+5 MIN READ
+<span class="text-[11px] font-medium text-slate-600 uppercase tracking-[0.18em]">
+LEARNING RESOURCES Latest driver information guides Browse simple reading topi…
+<section class="w-full bg-[#fbfcff] py-24 px-6 font-[Poppins] overflow-hidden">
+5 MIN READ
+<span class="text-[11px] font-medium text-slate-600 uppercase tracking-[0.18em]">
+LEARNING RESOURCES Latest driver information guides Browse simple reading topi…
+<section class="w-full bg-[#fbfcff] py-24 px-6 font-[Poppins] overflow-hidden">

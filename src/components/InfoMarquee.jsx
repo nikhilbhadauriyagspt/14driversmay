@@ -60,7 +60,7 @@ const InfoMarquee = () => {
                   {item.text}
                 </h3>
 
-                <p className="text-[11px] leading-tight text-slate-400 mt-1 max-w-[120px]">
+                <p className="text-[11px] leading-tight text-slate-600 mt-1 max-w-[120px]">
                   {item.sub}
                 </p>
 

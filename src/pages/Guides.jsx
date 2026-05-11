@@ -65,7 +65,7 @@ const Guides = () => {
                       Guide
                     </span>
                     <span className="w-1 h-1 rounded-full bg-slate-300"></span>
-                    <span className="text-[11px] font-medium text-slate-400 uppercase tracking-[0.18em] inline-flex items-center gap-1">
+                    <span className="text-[11px] font-medium text-slate-600 uppercase tracking-[0.18em] inline-flex items-center gap-1">
                       <Clock size={12} />
                       5 Min Read
                     </span>

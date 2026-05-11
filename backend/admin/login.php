@@ -56,7 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="w-full max-w-md bg-white p-10 rounded-[2.5rem] shadow-2xl border border-slate-100">
         <div class="text-center mb-10">
             <h1 class="text-3xl font-[500]text-slate-900">Admin <span class="text-blue-600">Login</span></h1>
-            <p class="text-slate-400 text-sm mt-2">Enter credentials to access dashboard</p>
+            <p class="text-slate-500 text-sm mt-2">Enter credentials to access dashboard</p>
         </div>
 
         <?php if ($error): ?>
@@ -67,11 +67,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <form method="POST" class="space-y-6">
             <div>
-                <label class="text-[10px] font-[500]uppercase tracking-widest text-slate-400 ml-1">Username</label>
+                <label class="text-[10px] font-[500]uppercase tracking-widest text-slate-500 ml-1">Username</label>
                 <input type="text" name="username" required class="w-full bg-slate-50 border border-slate-100 rounded-xl px-5 py-4 focus:outline-none focus:border-blue-600 transition-all font-medium" placeholder="admin">
             </div>
             <div>
-                <label class="text-[10px] font-[500]uppercase tracking-widest text-slate-400 ml-1">Password</label>
+                <label class="text-[10px] font-[500]uppercase tracking-widest text-slate-500 ml-1">Password</label>
                 <input type="password" name="password" required class="w-full bg-slate-50 border border-slate-100 rounded-xl px-5 py-4 focus:outline-none focus:border-blue-600 transition-all font-medium" placeholder="••••••••">
             </div>
             <button type="submit" class="w-full bg-slate-900 text-white font-[500]py-4 rounded-xl hover:bg-blue-600 transition-all shadow-lg shadow-slate-900/10">

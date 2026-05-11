@@ -113,7 +113,7 @@ const FAQPage = () => {
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
             />
-            <FaSearch className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" />
+            <FaSearch className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-500" />
           </div>
         </div>
 
@@ -121,7 +121,7 @@ const FAQPage = () => {
         <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-12">
           {/* Sidebar Nav */}
           <aside className="hidden lg:block space-y-2">
-            <h3 className="text-xs font-[500]text-slate-400 uppercase tracking-widest mb-4">Categories</h3>
+            <h3 className="text-xs font-[500]text-slate-500 uppercase tracking-widest mb-4">Categories</h3>
             {faqCategories.map((cat, i) => (
               <a
                 key={i}
@@ -156,7 +156,7 @@ const FAQPage = () => {
                           className="w-full flex items-center justify-between p-5 text-left"
                         >
                           <span className={`font-[500]${activeFaq === uniqueId ? 'text-blue-600' : 'text-slate-700'}`}>{item.q}</span>
-                          <FaChevronDown className={`transition-transform duration-300 ${activeFaq === uniqueId ? 'rotate-180 text-blue-600' : 'text-slate-400'}`} />
+                          <FaChevronDown className={`transition-transform duration-300 ${activeFaq === uniqueId ? 'rotate-180 text-blue-600' : 'text-slate-500'}`} />
                         </button>
                         {activeFaq === uniqueId && (
                           <div className="px-5 pb-5 text-slate-500 font-medium leading-relaxed border-t border-slate-50 pt-4">
@@ -171,7 +171,7 @@ const FAQPage = () => {
             )) : (
               <div className="text-center py-20 bg-white rounded-2xl border border-dashed border-slate-300">
                 <FaQuestionCircle size={40} className="mx-auto text-slate-200 mb-4" />
-                <p className="text-slate-400 font-medium">No results found for "{searchTerm}"</p>
+                <p className="text-slate-500 font-medium">No results found for "{searchTerm}"</p>
               </div>
             )}
           </div>

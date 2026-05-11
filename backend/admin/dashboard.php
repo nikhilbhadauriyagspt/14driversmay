@@ -47,7 +47,7 @@ if (isset($_GET['logout'])) {
         <div class="container mx-auto flex justify-between items-center">
             <h1 class="text-xl font-[500]text-slate-900 ">Aura Learning <span class="text-blue-600">Admin</span></h1>
             <div class="flex items-center gap-6">
-                <span class="text-slate-400 text-xs font-[500]uppercase tracking-widest italic">Logged as: <?php echo $_SESSION['admin_user']; ?></span>
+                <span class="text-slate-500 text-xs font-[500]uppercase tracking-widest italic">Logged as: <?php echo $_SESSION['admin_user']; ?></span>
                 <a href="?logout=1" class="bg-slate-900 text-white px-6 py-2 rounded-xl text-xs font-[500]hover:bg-red-600 transition-all">Sign Out</a>
             </div>
         </div>
@@ -56,7 +56,7 @@ if (isset($_GET['logout'])) {
     <div class="container mx-auto px-6 lg:px-12 py-12">
         <div class="mb-12">
             <h2 class="text-3xl font-[500]text-slate-900 mb-2">Technical Submissions</h2>
-            <p class="text-slate-400 font-medium">Review system diagnostic requests from multiple platforms.</p>
+            <p class="text-slate-500 font-medium">Review system diagnostic requests from multiple platforms.</p>
         </div>
 
         <div class="bg-white rounded-[2.5rem] border border-slate-100 shadow-[0_20px_40px_-10px_rgba(0,0,0,0.03)] overflow-hidden">
@@ -64,12 +64,12 @@ if (isset($_GET['logout'])) {
                 <table class="w-full text-left">
                     <thead>
                         <tr class="bg-slate-50 border-b border-slate-100">
-                            <th class="px-6 py-6 text-[10px] font-black uppercase tracking-widest text-slate-400">Source Website</th>
-                            <th class="px-6 py-6 text-[10px] font-black uppercase tracking-widest text-slate-400">Full Name</th>
-                            <th class="px-6 py-6 text-[10px] font-black uppercase tracking-widest text-slate-400">Email/Phone</th>
-                            <th class="px-6 py-6 text-[10px] font-black uppercase tracking-widest text-slate-400">Category</th>
-                            <th class="px-6 py-6 text-[10px] font-black uppercase tracking-widest text-slate-400">Description</th>
-                            <th class="px-6 py-6 text-[10px] font-black uppercase tracking-widest text-slate-400">Date/Time</th>
+                            <th class="px-6 py-6 text-[10px] font-black uppercase tracking-widest text-slate-500">Source Website</th>
+                            <th class="px-6 py-6 text-[10px] font-black uppercase tracking-widest text-slate-500">Full Name</th>
+                            <th class="px-6 py-6 text-[10px] font-black uppercase tracking-widest text-slate-500">Email/Phone</th>
+                            <th class="px-6 py-6 text-[10px] font-black uppercase tracking-widest text-slate-500">Category</th>
+                            <th class="px-6 py-6 text-[10px] font-black uppercase tracking-widest text-slate-500">Description</th>
+                            <th class="px-6 py-6 text-[10px] font-black uppercase tracking-widest text-slate-500">Date/Time</th>
                         </tr>
                     </thead>
                     <tbody class="divide-y divide-slate-50">
@@ -92,14 +92,14 @@ if (isset($_GET['logout'])) {
                                     <td class="px-6 py-6 text-xs text-slate-500 font-medium max-w-xs leading-relaxed">
                                         <?php echo nl2br(htmlspecialchars($row['message'])); ?>
                                     </td>
-                                    <td class="px-6 py-6 text-xs font-[500]text-slate-400 whitespace-nowrap italic">
+                                    <td class="px-6 py-6 text-xs font-[500]text-slate-500 whitespace-nowrap italic">
                                         <?php echo date('M d, Y • H:i', strtotime($row['created_at'])); ?>
                                     </td>
                                 </tr>
                             <?php endwhile; ?>
                         <?php else: ?>
                             <tr>
-                                <td colspan="6" class="px-6 py-20 text-center text-slate-400 italic">No diagnostic requests found.</td>
+                                <td colspan="6" class="px-6 py-20 text-center text-slate-500 italic">No diagnostic requests found.</td>
                             </tr>
                         <?php endif; ?>
                     </tbody>

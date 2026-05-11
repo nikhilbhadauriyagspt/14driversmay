@@ -14,7 +14,7 @@ export default function Footer() {
             <Link to="/" className="inline-block mb-7">
               <img
                 src="/logo/logo.avif"
-                alt="Aura Learning"
+                alt="Aura Learning - Driver Information Guides"
                 className="h-12 w-auto object-contain"
               />
             </Link>

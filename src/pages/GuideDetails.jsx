@@ -54,7 +54,7 @@ const GuideDetails = () => {
         <div className="absolute bottom-[-170px] left-[-120px] w-[420px] h-[420px] rounded-full bg-indigo-100 blur-[90px]" />
 
         <div className="relative z-10 max-w-[1500px] mx-auto">
-          <div className="flex items-center gap-3 text-[12px] font-medium text-slate-400 mb-10">
+          <div className="flex items-center gap-3 text-[12px] font-medium text-slate-500 mb-10">
             <Link to="/" className="hover:text-[#2563eb] transition">
               Home
             </Link>
@@ -242,7 +242,7 @@ const GuideDetails = () => {
                       <h4 className="text-[14px] font-semibold text-slate-900 leading-snug group-hover:text-[#2563eb] transition-colors line-clamp-2">
                         {item.title}
                       </h4>
-                      <p className="text-[12px] text-slate-400 mt-1">
+                      <p className="text-[12px] text-slate-500 mt-1">
                         Information Guide
                       </p>
                     </div>
