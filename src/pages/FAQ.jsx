@@ -20,7 +20,7 @@ const FAQPage = () => {
       items: [
         {
           q: "What is Aura Learning?",
-          a: "Aura Learning is a professional technical resource portal dedicated to helping users understand hardware driver data for Windows systems. We provide step-by-step information guides and verified documentation links to ensure system knowledge."
+          a: "Aura Learning is an information-only educational resource. We provide documentation and guides to help users understand how hardware drivers work. We do NOT provide technical support, remote assistance, or repair services of any kind."
         },
         {
           q: "How often should I check for driver information?",

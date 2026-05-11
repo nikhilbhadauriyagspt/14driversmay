@@ -55,10 +55,7 @@ export default function FAQHelpSection() {
                         Simple answers about driver topics.
                     </h2>
 
-                    <p className="text-[16px] leading-[1.8] text-slate-500 max-w-[680px] mb-10">
-                        Learn common driver basics without service claims, remote support,
-                        or confusing technical language.
-                    </p>
+
 
                     <div className="divide-y divide-slate-200">
                         {faqs.map((faq, index) => (

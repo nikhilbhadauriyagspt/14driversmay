@@ -19,7 +19,10 @@ const Disclaimer = () => {
           <p>Last updated: Apr 2026</p>
 
           <h3>General Disclaimer</h3>
-          <p>The information provided by Aura Learning ("we," "us," or "our") on <a href="https://auralearning.co">https://auralearning.co</a> (the "Site") is for general informational purposes only. All information on the Site is provided in good faith, however we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, availability or completeness of any information on the Site.</p>
+          <p>The information provided by Aura Learning ("we," "us," or "our") on <a href="https://auralearning.co">https://auralearning.co</a> (the "Site") is for general informational and educational purposes only. <strong>Aura Learning is not a technical support service, hardware repair shop, or software troubleshooting company. We do not provide remote assistance, hardware fixes, or any form of professional IT support.</strong> All information on the Site is provided in good faith, however we make no representation or warranty regarding accuracy or completeness.</p>
+
+          <h3>No Technical Support Disclaimer</h3>
+          <p>We do not provide direct assistance for hardware or software problems. Our guides are for learning purposes only. Any actions taken based on our documentation are at your own risk. We strongly recommend contacting the original hardware manufacturer or a certified technician for actual repairs or support.</p>
 
           <h3>Professional Disclaimer</h3>
           <p>The Site cannot and does not contain legal or medical advice. The information is provided for general informational and educational purposes only and is not a substitute for professional advice. Accordingly, before taking any actions based upon such information, we encourage you to consult with the appropriate professionals.</p>

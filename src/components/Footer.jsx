@@ -19,9 +19,9 @@ export default function Footer() {
               />
             </Link>
 
-            <p className="text-[15px] leading-relaxed text-slate-500 max-w-[390px] mb-8">
-              A simple place to learn about your computer parts and how they
-              work together to help you every day.
+            <p className="text-[15px] leading-relaxed text-slate-500 max-w-[390px] mb-6">
+              An educational resource to learn about computer drivers and hardware communication.
+
             </p>
 
             <a

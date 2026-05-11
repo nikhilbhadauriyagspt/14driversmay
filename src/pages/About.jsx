@@ -106,11 +106,11 @@ const About = () => {
               storage drivers.
             </p>
 
-            <div className="inline-flex items-start gap-4 bg-[#f7f9ff] rounded-[24px] px-6 py-5 border border-[#e2e8ff]">
-              <ShieldCheck className="text-[#2563eb] shrink-0 mt-1" size={24} />
-              <p className="text-[15px] leading-relaxed text-slate-600">
-                Aura Learning is an information-only learning website. We do not
-                provide repair, remote access, or technical support services.
+            <div className="inline-flex items-start gap-4 bg-[#fff1f2] rounded-[24px] px-6 py-5 border border-[#fecdd3]">
+              <ShieldCheck className="text-[#e11d48] shrink-0 mt-1" size={24} />
+              <p className="text-[15px] leading-relaxed text-[#9f1239] font-semibold">
+                Aura Learning is an information-only learning website. We are NOT tech support. 
+                We do not provide repair, remote access, or technical assistance.
               </p>
             </div>
           </div>

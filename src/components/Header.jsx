@@ -105,7 +105,7 @@ const Header = () => {
             <img
               src="/logo/logo.avif"
               alt="Aura Learning"
-              className="h-[42px] w-auto object-contain"
+              className="h-[68px] w-auto object-contain"
             />
           </Link>
 
