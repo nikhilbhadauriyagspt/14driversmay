@@ -12,84 +12,84 @@ const PopularDriverGuides = () => {
     }));
 
     return (
-        <section className="w-full bg-white py-24 px-6 font-[Poppins] ">
-            <div className="max-w-[1600px] mx-auto">
-                {/* Header Section */}
-                <div className="flex flex-col md:flex-row justify-between items-end gap-8 mb-20">
-                    <div className="max-w-[700px]">
-                        <div className="inline-flex items-center gap-3 mb-6">
-                            <span className="h-[2px] w-10 bg-gradient-to-r from-[#CF00FE] to-[#005DE0]"></span>
-                            <span className="text-[12px] font-[500] text-slate-600 uppercase tracking-[0.25em]">
-                                Learning Resources
-                            </span>
-                        </div>
-
-                        <h2 className="text-[30px] md:text-[40px] font-semibold leading-tight text-slate-900 ">
-                            Latest Knowledge <br />
-                            Information Guides
-                        </h2>
+        <section className="w-full bg-[#fbfcff] py-24 px-6 font-[Poppins] overflow-hidden">
+            <div className="max-w-[1500px] mx-auto">
+                {/* Header */}
+                <div className="text-center max-w-[760px] mx-auto mb-16">
+                    <div className="inline-flex items-center gap-3 mb-5">
+                        <span className="w-10 h-10 rounded-full border border-dashed border-[#2563eb] flex items-center justify-center text-[#2563eb]">
+                            <BookOpen size={18} />
+                        </span>
+                        <span className="text-[14px] font-semibold text-[#2563eb] uppercase tracking-wide">
+                            Learning Resources
+                        </span>
                     </div>
 
-                    <Link
-                        to="/guides"
-                        className="inline-flex items-center gap-2 text-[14px] font-[500]text-[#005DE0] uppercase tracking-widest border-b-2 border-blue-50 pb-2 hover:border-[#005DE0] transition-all"
-                    >
-                        View Full Library <ArrowRight size={16} />
-                    </Link>
+                    <h2 className="text-[32px] md:text-[42px] font-semibold leading-tight text-[#202124]">
+                        Latest driver information guides
+                    </h2>
+
+                    <p className="mt-5 text-[15px] leading-relaxed text-slate-500">
+                        Browse simple reading topics about driver basics, device connection,
+                        and hardware communication.
+                    </p>
+
+                    <div className="w-[180px] h-[2px] bg-[#2563eb] mx-auto mt-7 rounded-full"></div>
                 </div>
 
-                {/* Clean Horizontal List Layout (No Large Boxes) */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12">
+                {/* Guides */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-14 gap-y-8">
                     {guides.map((guide, index) => (
                         <Link
                             key={index}
                             to={`/guide/${guide.slug}`}
-                            className="group flex items-center gap-6 border-b border-slate-100 pb-10 transition-all hover:border-[#CF00FE]/40"
+                            className="group relative flex items-center gap-6 py-6 border-b border-slate-200/70 hover:border-[#2563eb]/40 transition-all duration-300"
                         >
-                            <div className="flex-shrink-0 relative w-[150px]  flex items-center justify-center ">
+                            <div className="relative w-[118px] h-[92px] shrink-0 rounded-[22px] bg-white overflow-hidden flex items-center justify-center shadow-[0_12px_30px_rgba(15,23,42,0.05)]">
                                 <img
                                     src={guide.thumbImg}
                                     alt={guide.title}
-                                    width="150"
-                                    height="112"
-                                    className="max-w-full max-h-full object-contain"
+                                    width="118"
+                                    height="92"
+                                    className="w-full h-full object-contain p-3 transition-transform duration-500 group-hover:scale-105"
                                 />
                             </div>
 
-                            <div className="flex-1">
+                            <div className="flex-1 min-w-0">
                                 <div className="flex items-center gap-2 mb-2">
-                                    <span className="text-[10px] font-[500]text-[#005DE0] uppercase tracking-widest">
+                                    <span className="text-[11px] font-semibold text-[#2563eb] uppercase tracking-[0.18em]">
                                         Guide
                                     </span>
-                                    <div className="w-1 h-1 rounded-full bg-slate-200"></div>
-                                    <span className="text-[10px] font-[500] text-slate-600 uppercase tracking-widest">
+                                    <span className="w-1 h-1 rounded-full bg-slate-300"></span>
+                                    <span className="text-[11px] font-medium text-slate-400 uppercase tracking-[0.18em]">
                                         5 Min Read
                                     </span>
                                 </div>
 
-                                <h3 className="text-[18px] font-semibold text-slate-800 mb-2 group-hover:text-[#005DE0] transition-colors leading-tight">
+                                <h3 className="text-[18px] md:text-[20px] font-semibold text-slate-900 mb-2 group-hover:text-[#2563eb] transition-colors leading-snug">
                                     {guide.title}
                                 </h3>
 
-                                <p className="text-[13px] leading-relaxed text-slate-500 line-clamp-1">
+                                <p className="text-[14px] leading-relaxed text-slate-500 line-clamp-2">
                                     {guide.desc}
                                 </p>
                             </div>
 
-                            <div className="flex-shrink-0 text-slate-300 group-hover:text-[#005DE0] transition-colors">
-                                <ChevronRight size={20} />
+                            <div className="w-10 h-10 rounded-full bg-white text-slate-300 flex items-center justify-center shadow-[0_10px_25px_rgba(15,23,42,0.04)] group-hover:bg-[#2563eb] group-hover:text-white transition-all duration-300">
+                                <ChevronRight size={19} />
                             </div>
                         </Link>
                     ))}
                 </div>
 
-                {/* Bottom CTA */}
-                <div className="mt-20 text-center">
+                {/* CTA */}
+                <div className="mt-16 text-center">
                     <Link
                         to="/guides"
-                        className="inline-flex items-center justify-center h-[56px] px-12 rounded-full btn-gradient text-white text-[15px] font-[500]shadow-lg"
+                        className="inline-flex items-center gap-3 h-[54px] px-8 rounded-full bg-[#2563eb] text-white text-[15px] font-semibold hover:bg-[#1d4ed8] transition"
                     >
                         Browse All Information Topics
+                        <ArrowRight size={18} />
                     </Link>
                 </div>
             </div>

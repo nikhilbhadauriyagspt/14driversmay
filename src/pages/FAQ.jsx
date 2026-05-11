@@ -19,8 +19,8 @@ const FAQPage = () => {
       icon: <FaQuestionCircle />,
       items: [
         {
-          q: "What is Pix Circuit?",
-          a: "Pix Circuit is a professional technical resource portal dedicated to helping users understand hardware driver data for Windows systems. We provide step-by-step information guides and verified documentation links to ensure system knowledge."
+          q: "What is Aura Learning?",
+          a: "Aura Learning is a professional technical resource portal dedicated to helping users understand hardware driver data for Windows systems. We provide step-by-step information guides and verified documentation links to ensure system knowledge."
         },
         {
           q: "How often should I check for driver information?",
@@ -73,7 +73,7 @@ const FAQPage = () => {
       icon: <FaShieldAlt />,
       items: [
         {
-          q: "Is there a cost for using Pix Circuit?",
+          q: "Is there a cost for using Aura Learning?",
           a: "Access to our technical documentation, hardware registry, and guide library is completely free. We are a community-focused resource dedicated to hardware transparency."
         },
         {
@@ -95,7 +95,7 @@ const FAQPage = () => {
   return (
     <div className="bg-[#F8FAFC] min-h-screen pt-28 pb-20 font-[Poppins]">
       <Helmet>
-        <title>FAQ | Frequently Asked Questions | Pix Circuit</title>
+        <title>FAQ | Frequently Asked Questions | Aura Learning</title>
         <meta name="description" content="Find answers to common questions about driver installations, hardware fixes, and system optimization." />
       </Helmet>
 

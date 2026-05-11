@@ -12,106 +12,51 @@ import {
     Cpu,
     HardDrive,
     Keyboard,
-    ScanLine,
-    ShieldCheck
+    BookOpen,
 } from "lucide-react";
 
 const DriverInfoShowcase = () => {
     const cards = [
-        {
-            title: "WiFi & Internet",
-            desc: "Learn why your WiFi might be slow or not connecting.",
-            icon: Wifi,
-            link: "/guide/understand-wifi-network-topics",
-        },
-        {
-            title: "Sound & Audio",
-            desc: "Understand speaker, sound and microphone basics.",
-            icon: Volume2,
-            link: "/guide/understand-audio-driver-topics",
-        },
-        {
-            title: "Screen & Video",
-            desc: "Explore graphics and screen setting basics.",
-            icon: Monitor,
-            link: "/guide/understand-graphics-driver-topics",
-        },
-        {
-            title: "Printer Basics",
-            desc: "Read about printer connection and how they work.",
-            icon: Printer,
-            link: "/guide/understand-printer-driver-topics",
-        },
-        {
-            title: "Bluetooth Info",
-            desc: "Identify simple Bluetooth and pairing topics.",
-            icon: Bluetooth,
-            link: "/guide/understand-bluetooth-driver-topics",
-        },
-        {
-            title: "USB Ports",
-            desc: "Identify USB port basics and connection data.",
-            icon: Usb,
-            link: "/guide/understand-usb-driver-topics",
-        },
-        {
-            title: "Camera & Video",
-            desc: "Identify camera basics and black screen topics.",
-            icon: Video,
-            link: "/guide/understand-webcam-driver-topics",
-        },
-        {
-            title: "Main Computer Chip",
-            desc: "Understand how the main chip runs your system.",
-            icon: Cpu,
-            link: "/guide/guide-chipset-drivers",
-        },
-        {
-            title: "Mouse & Typing",
-            desc: "Learn about touchpad and keyboard settings.",
-            icon: Keyboard,
-            link: "/guide/understand-input-latency-drivers",
-        },
-        {
-            title: "Hard Drive Data",
-            desc: "Understand how your storage parts communicate.",
-            icon: HardDrive,
-            link: "/guide/understand-device-not-detected",
-        },
+        { title: "WiFi & Internet", desc: "Network driver topics, connection signals, and wireless basics.", icon: Wifi, link: "/guide/understand-wifi-network-topics" },
+        { title: "Sound & Audio", desc: "Speaker, microphone, headphone, and sound device information.", icon: Volume2, link: "/guide/understand-audio-driver-topics" },
+        { title: "Screen & Video", desc: "Display, graphics, resolution, and visual driver topics.", icon: Monitor, link: "/guide/understand-graphics-driver-topics" },
+        { title: "Printer Basics", desc: "Printer driver communication and common device topics.", icon: Printer, link: "/guide/understand-printer-driver-topics" },
+        { title: "Bluetooth Info", desc: "Bluetooth pairing, visibility, and device connection basics.", icon: Bluetooth, link: "/guide/understand-bluetooth-driver-topics" },
+        { title: "USB Ports", desc: "USB detection, port communication, and connected device data.", icon: Usb, link: "/guide/understand-usb-driver-topics" },
+        { title: "Camera & Video", desc: "Webcam driver topics, camera input, and video device basics.", icon: Video, link: "/guide/understand-webcam-driver-topics" },
+        { title: "Chipset Basics", desc: "How core system components communicate with your computer.", icon: Cpu, link: "/guide/guide-chipset-drivers" },
+        { title: "Mouse & Typing", desc: "Keyboard, touchpad, and input device driver topics.", icon: Keyboard, link: "/guide/understand-input-latency-drivers" },
+        { title: "Storage Data", desc: "Hard drive, SSD, and storage device communication basics.", icon: HardDrive, link: "/guide/understand-device-not-detected" },
     ];
 
     return (
-        <section className="relative  font-[Poppins] w-full bg-white overflow-hidden py-24 px-6 ">
-            {/* Background Texture */}
-            <div className="absolute inset-0 repeating-bg opacity-[0.03] pointer-events-none"></div>
-
-            <div className="relative z-10 max-w-[1600px] mx-auto">
-                {/* Section Header */}
-                <div className="flex flex-col md:flex-row justify-between items-end gap-8 mb-20">
-                    <div className="max-w-[700px]">
-                        <div className="inline-flex items-center gap-3 mb-6">
-                            <span className="h-[2px] w-10 bg-gradient-to-r from-[#CF00FE] to-[#005DE0]"></span>
-                            <span className="text-[12px] font-[500] text-slate-400 uppercase tracking-[0.25em]">
-                                Learning Directory
-                            </span>
-                        </div>
-
-                        <h2 className="text-[30px] md:text-[40px] font-semibold leading-tight text-slate-900 ">
-                            Simple Guides to <br />
-                            Understand Your PC
-                        </h2>
+        <section className="relative w-full bg-white py-24 px-6 font-[Poppins] overflow-hidden">
+            <div className="max-w-[1500px] mx-auto">
+                {/* Heading */}
+                <div className="text-center max-w-[760px] mx-auto mb-16">
+                    <div className="inline-flex items-center gap-3 mb-5">
+                        <span className="w-10 h-10 rounded-full border border-dashed border-[#2563eb] flex items-center justify-center text-[#2563eb]">
+                            <BookOpen size={18} />
+                        </span>
+                        <span className="text-[14px] font-semibold text-[#2563eb] uppercase tracking-wide">
+                            Learning Directory
+                        </span>
                     </div>
 
-                    <Link
-                        to="/guides"
-                        className="inline-flex items-center gap-2 text-[14px] font-[500] text-[#005DE0] uppercase tracking-widest border-b-2 border-blue-50 pb-2 hover:border-[#005DE0] transition-all"
-                    >
-                        View All Topics <ArrowRight size={16} />
-                    </Link>
+                    <h2 className="text-[32px] md:text-[42px] font-semibold leading-tight text-[#202124]">
+                        Explore driver topics in a simple way.
+                    </h2>
+
+                    <p className="mt-5 text-[15px] leading-relaxed text-slate-500">
+                        Browse easy information pages about WiFi, audio, graphics, USB,
+                        printer, Bluetooth, chipset, and other driver categories.
+                    </p>
+
+                    <div className="w-[180px] h-[2px] bg-[#2563eb] mx-auto mt-7 rounded-full"></div>
                 </div>
 
-                {/* Minimalist Directory List (No Boxes) */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-5 gap-x-12 gap-y-12">
+                {/* Clean list grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-2">
                     {cards.map((card, index) => {
                         const Icon = card.icon;
 
@@ -119,30 +64,41 @@ const DriverInfoShowcase = () => {
                             <Link
                                 key={index}
                                 to={card.link}
-                                className={`group flex flex-col items-start gap-6 border-b border-slate-100 pb-10 transition-all hover:border-[#CF00FE]/40 ${index === 9 ? "hidden 2xl:block" : "block"
-                                    }`}
+                                className="group flex items-center gap-5 py-6 border-b border-slate-200/70 hover:border-[#2563eb]/50 transition-all duration-300"
                             >
-                                <div className="flex-shrink-0 relative">
-                                    <div className="w-16 h-16 rounded-full bg-slate-50 flex items-center justify-center text-slate-300 group-hover:bg-blue-50 group-hover:text-[#005DE0] transition-all duration-500">
-                                        <Icon size={32} strokeWidth={1.5} />
-                                    </div>
-                                    <div className="absolute -top-1 -left-1 w-5 h-5 bg-gradient-to-br from-[#CF00FE] to-[#005DE0] rounded-full opacity-0 group-hover:opacity-10 transition-opacity"></div>
+                                <div className="w-14 h-14 rounded-full bg-[#eff6ff] text-[#2563eb] flex items-center justify-center shrink-0 group-hover:bg-[#2563eb] group-hover:text-white group-hover:-translate-y-1 transition-all duration-300">
+                                    <Icon size={24} strokeWidth={1.7} />
                                 </div>
 
-                                <div className="flex-1">
-                                    <h3 className="text-[19px] font-semibold text-slate-800 mb-3 group-hover:text-[#005DE0] transition-colors">
+                                <div className="flex-1 min-w-0">
+                                    <h3 className="text-[18px] md:text-[20px] font-semibold text-slate-900 mb-1 group-hover:text-[#2563eb] transition-colors">
                                         {card.title}
                                     </h3>
 
-                                    <p className="text-[14px] leading-relaxed text-slate-500 mb-6 line-clamp-2">
+                                    <p className="text-[14px] leading-relaxed text-slate-500 line-clamp-1">
                                         {card.desc}
                                     </p>
+                                </div>
 
-                                    <div className="h-[1px] w-0 bg-gradient-to-r from-[#CF00FE] to-[#005DE0] transition-all duration-700 group-hover:w-full"></div>
+                                <div className="w-10 h-10 rounded-full bg-[#f8fbff] text-slate-300 flex items-center justify-center shrink-0 group-hover:bg-[#2563eb] group-hover:text-white transition-all duration-300">
+                                    <ArrowRight
+                                        size={17}
+                                        className="transition-transform duration-300 group-hover:translate-x-1"
+                                    />
                                 </div>
                             </Link>
                         );
                     })}
+                </div>
+
+                <div className="text-center mt-14">
+                    <Link
+                        to="/guides"
+                        className="inline-flex items-center gap-3 h-[54px] px-8 rounded-full bg-[#2563eb] text-white text-[15px] font-semibold hover:bg-[#1d4ed8] transition"
+                    >
+                        View All Driver Topics
+                        <ArrowRight size={18} />
+                    </Link>
                 </div>
             </div>
         </section>

@@ -12,7 +12,7 @@ const CONFIG = {
     'guide': { width: 500, quality: 75, avifQuality: 60 },
     'needdriver': { width: 500, quality: 75, avifQuality: 60 },
     'images': { width: 800, quality: 80, avifQuality: 65 },
-    'banner': { width: 1400, quality: 80, avifQuality: 70 },
+    'banner': { width: 1830, quality: 90, avifQuality: 90 },
     'logo': { quality: 90, avifQuality: 80 }
 };
 
@@ -40,13 +40,13 @@ async function processImage(file) {
     const pathParts = relativePath.split(path.sep);
     const folder = pathParts[0];
     const baseName = path.basename(file, ext);
-    
+
     // Skip already processed versions
     if (baseName.endsWith('_thumb') || ext === '.webp' || ext === '.avif') return;
 
     const config = CONFIG[folder] || DEFAULT_CONFIG;
     const dirName = path.dirname(file);
-    
+
     const webpPath = path.join(dirName, `${baseName}.webp`);
     const avifPath = path.join(dirName, `${baseName}.avif`);
 
@@ -98,17 +98,17 @@ async function processImage(file) {
         if (['guide', 'needdriver'].includes(folder)) {
             const thumbWebp = path.join(dirName, `${baseName}_thumb.webp`);
             const thumbAvif = path.join(dirName, `${baseName}_thumb.avif`);
-            
+
             await sharp(file)
                 .resize({ width: 400, withoutEnlargement: true })
                 .webp({ quality: 70 })
                 .toFile(thumbWebp);
-            
+
             await sharp(file)
                 .resize({ width: 400, withoutEnlargement: true })
                 .avif({ quality: 55 })
                 .toFile(thumbAvif);
-            
+
             console.log(`  - Created Thumbnails (WebP & AVIF)`);
         }
     } catch (err) {
@@ -122,13 +122,13 @@ async function optimize() {
     const imageExtensions = ['.png', '.jpg', '.jpeg'];
 
     const targetFiles = files.filter(f => imageExtensions.includes(path.extname(f).toLowerCase()));
-    
+
     console.log(`Found ${targetFiles.length} images to process.`);
 
     for (const file of targetFiles) {
         await processImage(file);
     }
-    
+
     console.log('\n--- Optimization Complete! ---');
 }
 

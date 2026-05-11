@@ -10,143 +10,243 @@ import {
   Bluetooth,
   Video,
   Scan,
+  Cpu,
+  BookOpen,
+  MousePointer2,
+  HardDrive,
+  Keyboard,
+  ShieldCheck,
+  Zap,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function CommonProblems() {
-  const issues = [
+  const brandColor = "#104CEF";
+
+  const categories = [
     {
-      title: "WiFi & Network Driver Topics",
-      desc: "Learn why wireless connections may drop, slow down, or fail to detect available networks.",
+      title: "WiFi & Network",
+      count: "Network Guides",
+      desc: "Learn about wireless connectivity, signal stability, and local network data.",
       icon: <Wifi />,
       slug: "understand-wifi-network-topics",
+      image: "/guide/guide-network-driver.avif",
     },
     {
-      title: "Audio & Sound Driver Topics",
-      desc: "Understand speaker, headphone, and microphone issues caused by audio driver communication.",
+      title: "Audio & Sound",
+      count: "Audio Guides",
+      desc: "Detailed information on sound output, speaker data, and microphone logic.",
       icon: <Volume2 />,
       slug: "understand-audio-driver-topics",
+      image: "/guide/guide-audio-driver.avif",
     },
     {
-      title: "Graphics & Display Driver Topics",
-      desc: "Explore screen flickering, display scaling, brightness, and visual performance related topics.",
+      title: "Graphics & Display",
+      count: "Display Guides",
+      desc: "Explore GPU data, resolution settings, and visual performance details.",
       icon: <Monitor />,
       slug: "understand-graphics-driver-topics",
+      image: "/guide/guide-graphics-driver.avif",
     },
     {
-      title: "Printer Driver Connection Guides",
-      desc: "Learn why printers may appear offline, fail to respond, or not show correctly on your device.",
+      title: "Printer Drivers",
+      count: "Printer Guides",
+      desc: "Information on print spoolers, device connection, and hardware response.",
       icon: <Printer />,
       slug: "understand-printer-driver-topics",
+      image: "/guide/guide-printer-driver.avif",
     },
     {
-      title: "USB Device Recognition Topics",
-      desc: "Understand why USB devices may not be detected, load slowly, or disconnect unexpectedly.",
+      title: "USB Recognition",
+      count: "USB Guides",
+      desc: "Understand universal serial bus detection and external device connectivity.",
       icon: <Usb />,
       slug: "understand-usb-driver-topics",
+      image: "/guide/guide-usb-driver.avif",
     },
     {
-      title: "Missing Driver Information",
-      desc: "Learn what it means when a system shows driver not found, unavailable, or unknown device notices.",
+      title: "Missing Drivers",
+      count: "Device Guides",
+      desc: "Data regarding unknown devices and system recognition notifications.",
       icon: <Download />,
       slug: "understand-driver-not-installed",
+      image: "/guide/guide-driver-not-installed.avif",
     },
     {
-      title: "Bluetooth Pairing Topics",
-      desc: "Understand common wireless pairing, device visibility, and connection stability topics.",
+      title: "Bluetooth Topics",
+      count: "Bluetooth Guides",
+      desc: "Wireless pairing protocols, device visibility, and connection information.",
       icon: <Bluetooth />,
       slug: "understand-bluetooth-driver-topics",
+      image: "/needdriver/need-new-device.avif",
     },
     {
-      title: "Webcam Driver Topics",
-      desc: "Learn why a webcam may show a black screen, not open, or fail to appear in apps.",
+      title: "Webcam Drivers",
+      count: "Camera Guides",
+      desc: "Information on video input hardware and camera system integration.",
       icon: <Video />,
       slug: "understand-webcam-driver-topics",
+      image: "/images/support-agent.avif",
     },
     {
-      title: "Scanner Driver Topics",
-      desc: "Explore scanner detection, response, and communication topics in a simple educational format.",
+      title: "Scanner Drivers",
+      count: "Scanner Guides",
+      desc: "Explore digital imaging hardware and scanner communication data.",
       icon: <Scan />,
       slug: "understand-scanner-driver-topics",
+      image: "/needdriver/need-printer-scanner.avif",
     },
     {
-      title: "Driver Update Topics",
-      desc: "Understand why driver updates may pause, fail midway, or require careful compatibility checking.",
-      icon: <ArrowRight />,
+      title: "Chipset Info",
+      count: "System Guides",
+      desc: "Learn how the chipset manages communication between CPU and hardware components.",
+      icon: <Cpu />,
+      slug: "guide-chipset-drivers",
+      image: "/about/aboutmain_01.avif",
+    },
+    {
+      title: "Touchpad Data",
+      count: "Input Guides",
+      desc: "Understand touchpad gesture recognition, sensitivity settings, and input logic.",
+      icon: <MousePointer2 />,
+      slug: "understand-input-latency-drivers",
+      image: "/images/choose-1.avif",
+    },
+    {
+      title: "Storage Drives",
+      count: "Drive Guides",
+      desc: "Technical data on SSD and HDD controllers and data transfer protocols.",
+      icon: <HardDrive />,
+      slug: "understand-device-not-detected",
+      image: "/images/choose-2.avif",
+    },
+    {
+      title: "Keyboard Input",
+      count: "Input Guides",
+      desc: "Learn about key mapping, input lag, and internal keyboard hardware connections.",
+      icon: <Keyboard />,
+      slug: "understand-input-latency-drivers",
+      image: "/images/choose-3.avif",
+    },
+    {
+      title: "BIOS Firmware",
+      count: "Firmware Guides",
+      desc: "Low-level system information regarding hardware initialization and boot logic.",
+      icon: <ShieldCheck />,
+      slug: "guide-bios-firmware-updates",
+      image: "/needdriver/need-hardware-stop.avif",
+    },
+    {
+      title: "Battery Logic",
+      count: "Power Guides",
+      desc: "Data on power management settings, charging protocols, and ACPI drivers.",
+      icon: <Zap />,
       slug: "understand-driver-update-topics",
+      image: "/needdriver/need-windows-update.avif",
     },
   ];
 
   return (
-    <section className="relative bg-white py-24 md:py-28 px-4 sm:px-6  overflow-hidden font-[Poppins] ">
-      < div className="max-w-[1600px] mx-auto" >
+    <section className="bg-white py-24 px-4 sm:px-6 font-[Poppins]">
+      <div className="max-w-[1500px] mx-auto">
         {/* Heading */}
-        < div className="text-center max-w-[800px] mx-auto mb-16" >
-          <div className="flex items-center justify-center gap-3 mb-5">
-            <span className="w-12 h-[2px] bg-gradient-to-r from-[#CF00FE] to-[#005DE0]" />
-            <p className="text-[13px] font-[500]text-slate-400 uppercase tracking-[0.2em]">
-              Popular Topics
+        <div className="text-center mb-16">
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <span 
+              className="w-10 h-10 rounded-full border border-dashed flex items-center justify-center"
+              style={{ borderColor: brandColor, color: brandColor }}
+            >
+              <BookOpen size={18} />
+            </span>
+            <p 
+              className="text-[14px] font-semibold uppercase tracking-wider"
+              style={{ color: brandColor }}
+            >
+              Driver Categories
             </p>
           </div>
 
-          <h2 className="text-[30px] md:text-[40px] leading-[1.15] font-semibold text-slate-900">
-            Learn About Common Driver Issues
+          <h2 className="text-[32px] md:text-[42px] font-semibold text-[#202124] leading-tight">
+            Browse Simple Driver
+            <br />
+            Information Topics
           </h2>
 
-          <p className="mt-5 text-[15px] md:text-[16px] leading-[1.8] text-slate-500">
-            Explore clear educational guides about WiFi, sound, and other parts
-            that help your computer work correctly every day.
-          </p>
-        </ div>
+          <div 
+            className="w-[190px] h-[2px] mx-auto mt-6 rounded-full"
+            style={{ backgroundColor: brandColor }}
+          ></div>
+        </div>
 
         {/* Cards */}
-        < div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-5 gap-6" >
-          {
-            issues.map((issue, idx) => (
-              <Link
-                key={idx}
-                to={`/guide/${issue.slug}`}
-                className={`group relative min-h-[320px] rounded-[12px] p-8 overflow-hidden transition-all duration-500 bg-[#F8FAFC] text-slate-900 hover:bg-gradient-to-br hover:from-[#CF00FE] hover:to-[#005DE0] hover:text-white ${idx === 9 ? "hidden 2xl:block" : "block"
-                  }`}
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-7">
+          {categories.map((item, index) => (
+            <Link
+              key={index}
+              to={`/guide/${item.slug}`}
+              className="group relative h-[150px] rounded-[12px] border border-dashed border-[#d8dcff] bg-white overflow-hidden flex items-center px-8 transition-all duration-500 hover:border-transparent"
+            >
+              {/* Hover Image Background with Darker Layer */}
+              <div
+                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-500 bg-cover bg-center scale-110 group-hover:scale-100"
+                style={{ backgroundImage: `url(${item.image})` }}
               >
-                {/* Background Icon Pattern - Only on Hover */}
-                <img
-                  src="/about/bg-icon-box.avif"
-                  alt=""
-                  width="160"
-                  height="203"
-                  className="absolute top-6 right-2 w-[160px] opacity-0 group-hover:opacity-10 pointer-events-none transition-all duration-700 transform translate-x-4 group-hover:translate-x-0"
-                />
+                {/* Darker Overlay for content visibility */}
+                <div className="absolute inset-0 bg-black/75"></div>
+              </div>
 
-                {/* Icon */}
-                <div
-                  className="relative z-10 w-[56px] h-[56px] rounded-2xl flex items-center justify-center mb-7 transition-all duration-500 bg-white text-[#005DE0] group-hover:bg-white/20 group-hover:text-white"
+              {/* Icon */}
+              <div 
+                className="relative z-10 w-[74px] h-[74px] rounded-full bg-[#f8f8f8] group-hover:bg-white flex items-center justify-center shrink-0 transition-all duration-500 shadow-sm"
+                style={{ color: brandColor }}
+              >
+                {React.cloneElement(item.icon, {
+                  size: 30,
+                  strokeWidth: 1.8,
+                })}
+              </div>
+
+              {/* Text Area */}
+              <div className="relative z-10 ml-8 flex-1">
+                <h3 className="text-[20px] md:text-[22px] font-semibold text-[#252525] group-hover:text-white transition-colors duration-500 leading-tight">
+                  {item.title}
+                </h3>
+
+                {/* Badge (Hidden on Hover) */}
+                <span 
+                  className="inline-flex mt-3 px-3 py-1 rounded-[4px] bg-[#effdf8] text-[13px] font-medium group-hover:hidden transition-all duration-500"
+                  style={{ color: brandColor }}
                 >
-                  {React.cloneElement(issue.icon, {
-                    size: 28,
-                    strokeWidth: 2,
-                  })}
-                </div>
+                  {item.count}
+                </span>
 
-                <div className="relative z-10">
-                  <h3 className="text-[18px] leading-[1.4] font-semibold mb-4">
-                    {issue.title}
-                  </h3>
+                {/* Content/Desc (Shown on Hover - 2 lines) */}
+                <p className="hidden group-hover:block text-white/80 text-[13px] mt-2 leading-snug line-clamp-2 animate-fadeIn">
+                  {item.desc}
+                </p>
+              </div>
 
-                  <p className="text-[14px] leading-[1.6] mb-8 text-slate-500 group-hover:text-white/90 transition-colors duration-500">
-                    {issue.desc}
-                  </p>
+              {/* Arrow */}
+              <div 
+                className="relative z-10 ml-auto w-[44px] h-[44px] rounded-full bg-white shadow-[0_10px_30px_rgba(0,0,0,0.06)] flex items-center justify-center text-[#555] group-hover:text-white transition-all duration-500"
+              >
+                <div className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-[-1]" style={{ backgroundColor: brandColor }}></div>
+                <ArrowRight size={18} className="relative z-10" />
+              </div>
+            </Link>
+          ))}
+        </div>
+      </div>
 
-                  <div className="inline-flex items-center gap-2 text-[13px] font-[500] uppercase tracking-wider group-hover:text-white transition-colors duration-500">
-                    Read More
-                    <ArrowRight size={15} />
-                  </div>
-                </div>
-              </Link>
-            ))
-          }
-        </ div >
-      </div >
-    </section >
+      <style>{`
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(5px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fadeIn {
+          animation: fadeIn 0.4s ease forwards;
+        }
+      `}</style>
+    </section>
   );
 }

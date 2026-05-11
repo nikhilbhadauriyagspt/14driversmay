@@ -9,9 +9,9 @@ const Disclaimer = () => {
   return (
     <div className="bg-white min-h-screen pt-32 pb-24">
       <Helmet>
-        <title>Disclaimer - Pix Circuit</title>
-        <meta name="description" content="Disclaimer for Pix Circuit." />
-        <link rel="canonical" href="https://pixcircuit.co/disclaimer" />
+        <title>Disclaimer - Aura Learning</title>
+        <meta name="description" content="Disclaimer for Aura Learning." />
+        <link rel="canonical" href="https://auralearning.co/disclaimer" />
       </Helmet>
       <div className="container mx-auto px-4 max-w-4xl">
         <h1 className="text-4xl font-[500]text-gray-900 mb-8">Disclaimer</h1>
@@ -19,7 +19,7 @@ const Disclaimer = () => {
           <p>Last updated: Apr 2026</p>
 
           <h3>General Disclaimer</h3>
-          <p>The information provided by Pix Circuit ("we," "us," or "our") on <a href="https://pixcircuit.co">https://pixcircuit.co</a> (the "Site") is for general informational purposes only. All information on the Site is provided in good faith, however we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, availability or completeness of any information on the Site.</p>
+          <p>The information provided by Aura Learning ("we," "us," or "our") on <a href="https://auralearning.co">https://auralearning.co</a> (the "Site") is for general informational purposes only. All information on the Site is provided in good faith, however we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, availability or completeness of any information on the Site.</p>
 
           <h3>Professional Disclaimer</h3>
           <p>The Site cannot and does not contain legal or medical advice. The information is provided for general informational and educational purposes only and is not a substitute for professional advice. Accordingly, before taking any actions based upon such information, we encourage you to consult with the appropriate professionals.</p>

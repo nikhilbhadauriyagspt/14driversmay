@@ -1,4 +1,4 @@
 export const APP_CONFIG = {
-    NAME: 'Pix Circuit',
-    SUPPORT_EMAIL: 'info@pixcircuit.co'
+    NAME: 'Aura Learning',
+    SUPPORT_EMAIL: 'info@auralearning.co'
 };

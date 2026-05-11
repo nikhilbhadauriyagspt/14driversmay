@@ -1,20 +1,20 @@
 {
-  "short_name": "Pix Circuit",
-  "name": "Pix Circuit - Educational Driver Information",
+  "short_name": "Aura Learning",
+  "name": "Aura Learning - Educational Driver Information",
   "icons": [
     {
-      "src": "/logo/fabicon.png",
+      "src": "/logo/fabicon.webp",
       "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/png"
+      "type": "image/webp"
     },
     {
-      "src": "/logo/fabicon.png",
-      "type": "image/png",
+      "src": "/logo/fabicon.webp",
+      "type": "image/webp",
       "sizes": "192x192"
     },
     {
-      "src": "/logo/fabicon.png",
-      "type": "image/png",
+      "src": "/logo/fabicon.webp",
+      "type": "image/webp",
       "sizes": "512x512"
     }
   ],

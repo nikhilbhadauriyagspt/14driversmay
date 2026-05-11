@@ -10,7 +10,7 @@ export default function WhenNeedDrivers() {
             why: "Our guide helps you understand how your PC sees the new part.",
             img: "/needdriver/need-new-device_thumb.webp",
             avif: "/needdriver/need-new-device_thumb.avif",
-            png: "/needdriver/need-new-device.png",
+            webp: "/needdriver/need-new-device.webp",
             path: "/guide/understand-driver-not-installed"
         },
         {
@@ -19,7 +19,7 @@ export default function WhenNeedDrivers() {
             why: "Read this to understand changes in system behavior after the update.",
             img: "/needdriver/need-windows-update_thumb.webp",
             avif: "/needdriver/need-windows-update_thumb.avif",
-            png: "/needdriver/need-windows-update.png",
+            webp: "/needdriver/need-windows-update.webp",
             path: "/guide/understand-driver-update-topics"
         },
         {
@@ -28,7 +28,7 @@ export default function WhenNeedDrivers() {
             why: "Our guide explains why hardware communication might change.",
             img: "/needdriver/need-hardware-stop_thumb.webp",
             avif: "/needdriver/need-hardware-stop_thumb.avif",
-            png: "/needdriver/need-hardware-stop.png",
+            webp: "/needdriver/need-hardware-stop.webp",
             path: "/guide/understand-device-not-detected"
         },
         {
@@ -37,7 +37,7 @@ export default function WhenNeedDrivers() {
             why: "We show you how to understand printer and scanner data.",
             img: "/needdriver/need-printer-scanner_thumb.webp",
             avif: "/needdriver/need-printer-scanner_thumb.avif",
-            png: "/needdriver/need-printer-scanner.png",
+            webp: "/needdriver/need-printer-scanner.webp",
             path: "/guide/understand-printer-driver-topics"
         },
         {
@@ -46,7 +46,7 @@ export default function WhenNeedDrivers() {
             why: "Read this to understand wireless adapter and network data.",
             img: "/needdriver/need-audio-wifi_thumb.webp",
             avif: "/needdriver/need-audio-wifi_thumb.avif",
-            png: "/needdriver/need-audio-wifi.png",
+            webp: "/needdriver/need-audio-wifi.webp",
             path: "/guide/understand-wifi-network-topics"
         },
         {
@@ -55,7 +55,7 @@ export default function WhenNeedDrivers() {
             why: "Our guide explains what system data means for your PC hardware.",
             img: "/needdriver/need-driver-errors_thumb.webp",
             avif: "/needdriver/need-driver-errors_thumb.avif",
-            png: "/needdriver/need-driver-errors.png",
+            webp: "/needdriver/need-driver-errors.webp",
             path: "/guide/understand-driver-update-topics"
         },
     ];
@@ -84,7 +84,7 @@ export default function WhenNeedDrivers() {
                                     <source srcSet={item.avif} type="image/avif" />
                                     <source srcSet={item.img} type="image/webp" />
                                     <img
-                                        src={item.png}
+                                        src={item.webp}
                                         alt={item.title}
                                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                                     />
