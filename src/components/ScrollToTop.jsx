@@ -5,12 +5,8 @@ const ScrollToTop = () => {
   const { pathname, search, hash, key } = useLocation();
 
   useEffect(() => {
-    // Scroll to top smoothly on every navigation event
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: 'smooth'
-    });
+    // Scroll to top instantly on every navigation event to avoid forced reflows
+    window.scrollTo(0, 0);
   }, [pathname, search, hash, key]);
 
   return null;
