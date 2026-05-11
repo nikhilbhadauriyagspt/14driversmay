@@ -140,8 +140,6 @@ const Header = () => {
               About Us
             </Link>
 
-
-
             <div
               className="relative h-full"
               onMouseEnter={() => setActiveDropdown("pages")}
@@ -151,7 +149,7 @@ const Header = () => {
                 ? "bg-[#104CEF] text-white"
                 : "text-[#14233b] hover:text-[#104CEF]"
                 }`}>
-                Guides<FaChevronDown className="text-[11px]" />
+                Guides <FaChevronDown className="text-[11px]" />
               </button>
 
               <div
@@ -223,7 +221,7 @@ const Header = () => {
 
             <Link
               to="/guides"
-              aria-label="Explore driver information guides"
+              aria-label="Learn more about driver problems and guides"
               className="h-[50px] px-8 rounded-[4px] bg-[#104CEF] text-white text-[15px] font-semibold flex items-center gap-2 hover:bg-[#0f766e] transition"
             >
               Learn More <ArrowRight size={18} />
@@ -353,7 +351,7 @@ const Header = () => {
             <Link
               to="/guides"
               onClick={() => setIsOpen(false)}
-              aria-label="Explore driver information guides"
+              aria-label="Learn more about driver problems and guides"
               className="mt-5 h-[52px] bg-[#104CEF] text-white rounded-md font-semibold flex items-center justify-center gap-2"
             >
               Learn More <ArrowRight size={17} />
