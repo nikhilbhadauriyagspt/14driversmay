@@ -33,6 +33,8 @@ export default function FAQHelpSection() {
                     <img
                         src="/about/faq-driver.webp"
                         alt="Driver information learning"
+                        width="600"
+                        height="450"
                         className="relative z-10 w-full  h-auto object-cover"
                     />
 

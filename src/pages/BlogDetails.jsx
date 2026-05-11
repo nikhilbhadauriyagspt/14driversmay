@@ -65,7 +65,10 @@ const BlogDetails = () => {
             alt={blog.title}
           />
           <div className="absolute -bottom-6 -right-6">
-            <button className="bg-white text-primary p-6 rounded-full shadow-2xl hover:bg-secondary hover:text-white transition-all group active:scale-95">
+            <button
+              aria-label="Share this blog"
+              className="bg-white text-primary p-6 rounded-full shadow-2xl hover:bg-secondary hover:text-white transition-all group active:scale-95"
+            >
               <FaShareAlt size={20} className="group-hover:rotate-12 transition-transform" />
             </button>
           </div>

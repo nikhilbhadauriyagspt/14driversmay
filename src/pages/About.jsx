@@ -36,6 +36,8 @@ const About = () => {
             <img
               src="/about/aboutmain_03.webp"
               alt="Driver learning"
+              width="800"
+              height="600"
               className="relative z-10 w-full  h-auto object-contain"
             />
           </div>

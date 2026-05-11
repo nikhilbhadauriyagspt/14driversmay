@@ -34,6 +34,8 @@ export default function AboutDriverInfoSection() {
                         <img
                             src="/about/driver-learning-1.webp"
                             alt="Person learning about computer drivers"
+                            width="360"
+                            height="640"
                             className="w-full h-full object-cover"
                         />
                     </div>
@@ -42,6 +44,8 @@ export default function AboutDriverInfoSection() {
                         <img
                             src="/about/driver-learning-2.webp"
                             alt="Driver information learner"
+                            width="360"
+                            height="720"
                             className="w-full h-full object-cover"
                         />
                     </div>

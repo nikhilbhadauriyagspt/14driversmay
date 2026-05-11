@@ -1,67 +1,87 @@
+On-Page SEO Results
+Your On-Page SEO could be better
+Your page has some level of On-Page SEO optimization but could be improved further. On-Page SEO is important to ensure Search Engines can understand your content appropriately and help it rank for relevant keywords. You should ensure that HTML Tag Content is completed correctly and align text content to target keywords.
+Title Tag
+You have a Title Tag, but ideally it should be between 50 and 60 characters in length (including spaces).
+Aura Learning | Driver Information Guides
+Length : 41
+Title Tags are very important for search engines to correctly understand and categorize your content.
+Meta Description Tag
+Your page has a Meta Description of optimal length (between 120 and 160 characters).
+Technical repository for hardware specifications, driver-level architectural data, and system documentation for the global technical community.
+Length : 143
+SERP Snippet Preview
+This illustrates how your page may appear in Search Results. Note, this is intended as a guide and Search Engines are more frequently generating this content dynamically.
 
-Background and foreground colors do not have a sufficient contrast ratio.
-Low-contrast text is difficult or impossible for many users to read. Learn how to provide sufficient color contrast.
-Failing Elements
-Search guides...
-<div class="h-[46px] w-[260px] pl-14 pr-6 rounded-full border border-slate-200 bg-whit…">
-WHY CHOOSE US
-<span class="text-[12px] font-semibold text-slate-400 uppercase tracking-[0.25em]">
-WHY CHOOSE US Easy Computer Learning For Everyday Users Simple Step-by-Step Gui…
-<section class="w-full bg-white border-y border-gray-200 y-24 px-6 py-20 overflow-hidden">
-LEARNING RESOURCES
-<span class="text-[12px] font-[500] text-slate-400 uppercase tracking-[0.25em]">
-LEARNING RESOURCES Latest Knowledge Information Guides VIEW FULL LIBRARY GUIDE …
-<section class="w-full bg-white py-24 px-6 ">
-5 MIN READ
-<span class="text-[10px] font-[500] text-slate-400 uppercase tracking-widest">
-LEARNING RESOURCES Latest Knowledge Information Guides VIEW FULL LIBRARY GUIDE …
-<section class="w-full bg-white py-24 px-6 ">
-5 MIN READ
-<span class="text-[10px] font-[500] text-slate-400 uppercase tracking-widest">
-LEARNING RESOURCES Latest Knowledge Information Guides VIEW FULL LIBRARY GUIDE …
-<section class="w-full bg-white py-24 px-6 ">
-5 MIN READ
-<span class="text-[10px] font-[500] text-slate-400 uppercase tracking-widest">
-LEARNING RESOURCES Latest Knowledge Information Guides VIEW FULL LIBRARY GUIDE …
-<section class="w-full bg-white py-24 px-6 ">
-5 MIN READ
-<span class="text-[10px] font-[500] text-slate-400 uppercase tracking-widest">
-LEARNING RESOURCES Latest Knowledge Information Guides VIEW FULL LIBRARY GUIDE …
-<section class="w-full bg-white py-24 px-6 ">
-5 MIN READ
-<span class="text-[10px] font-[500] text-slate-400 uppercase tracking-widest">
-LEARNING RESOURCES Latest Knowledge Information Guides VIEW FULL LIBRARY GUIDE …
-<section class="w-full bg-white py-24 px-6 ">
-5 MIN READ
-<span class="text-[10px] font-[500] text-slate-400 uppercase tracking-widest">
-LEARNING RESOURCES Latest Knowledge Information Guides VIEW FULL LIBRARY GUIDE …
-<section class="w-full bg-white py-24 px-6 ">
-WRITE TO US
-<p class="text-white/40 text-[12px] uppercase tracking-widest font-semibold">
-A simple place to learn about your computer parts and how they work together to…
-<footer class="relative w-full bg-[#050A33] text-white pt-24 overflow-hidden">
-QUICK LINKS
-<h3 class="text-[14px] font-bold uppercase tracking-[0.2em] text-[#005DE0]">
-A simple place to learn about your computer parts and how they work together to…
-<footer class="relative w-full bg-[#050A33] text-white pt-24 overflow-hidden">
-EASY GUIDES
-<h3 class="text-[14px] font-bold uppercase tracking-[0.2em] text-[#005DE0]">
-A simple place to learn about your computer parts and how they work together to…
-<footer class="relative w-full bg-[#050A33] text-white pt-24 overflow-hidden">
-COMPUTER PARTS
-<h3 class="text-[14px] font-bold uppercase tracking-[0.2em] text-[#005DE0]">
-A simple place to learn about your computer parts and how they work together to…
-<footer class="relative w-full bg-[#050A33] text-white pt-24 overflow-hidden">
-OUR POLICIES
-<h3 class="text-[14px] font-bold uppercase tracking-[0.2em] text-[#005DE0]">
-div#root > div.App > footer.relative > div.absolute
-<div class="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-600/5 blur-[120px] roun…">
-A simple place to learn about your computer parts and how they work together to…
-<footer class="relative w-full bg-[#050A33] text-white pt-24 overflow-hidden">
-Links rely on color to be distinguishable.
-Low-contrast text is difficult or impossible for many users to read. Link text that is discernible improves the experience for users with low vision. Learn how to make links distinguishable.
-Failing Elements
-Policy
-<a class="text-blue-600 hover:underline" href="/cookie-policy" data-discover="true">
-We use data files to enhance your experience and analyze site traffic. By click…
-<p class="text-[14px] text-slate-500 font-medium leading-relaxed mb-6">
+Aura Learning
+https://auralearning.netlify.app
+Aura Learning | Driver Information Guides
+Technical repository for hardware specifications, driver-level architectural data, and system documentation for the global technical community.
+Hreflang Usage
+Your page is not making use of Hreflang attributes.
+Language
+Your page is using the Lang Attribute.
+Declared: English
+H1 Header Tag Usage
+Your page has a H1 Tag.
+H2-H6 Header Tag Usage
+Your page is making use multiple levels of Header Tags.
+Header Tag	Frequency	
+H2	12	
+H3	55	
+H4	3	
+H5	0	
+H6	0	
+Keyword Consistency
+Your page's main keywords are not distributed well across the important HTML Tags.
+Your page content should be focused around particular keywords you would like to rank for. Ideally these keywords should also be distributed across tags such as the title, meta and header tags.
+Individual Keywords
+Keyword	Title	Meta Description Tag	Headings Tags	Page Frequency	
+driver	
+35	
+guides	
+26	
+topics	
+26	
+device	
+17	
+basics	
+15	
+printer	
+15	
+usb	
+15	
+drivers	
+15	
+Phrases
+Phrase	Title	Meta Description Tag	Headings Tags	Page Frequency	
+driver topics	
+11	
+guide 5	
+6	
+min read	
+6	
+read understanding	
+6	
+guide 5 min	
+6	
+min read understanding	
+6	
+driver guides	
+4	
+printer usb	
+4	
+Amount of Content
+Your page has a low volume of text content which search engines can interpret as 'thin content'.
+Word Count: 834
+It has been well researched that higher text content volumes are related to better ranking ability in general.
+Image Alt Attributes
+You have images on your page that are missing Alt Attributes.
+
+We found 14 images on your page and 1 of them are missing the attribute.
+Alt Attributes are an often overlooked and simple way to signal to Search Engines what an image is about, and help it rank in image search results.
+Canonical Tag
+Your page has more than one Canonical Tag. Each page should only have a single Canonical Tag
+The Canonical Tag tells Search Engines the primary URL of a page. URLs can have multiple versions due to things like parameters being passed or www and non-www versions resulting in potential duplicate content. Google recommends all pages specify a Canonical.
+https://auralearning.co
+https://auralearning.co

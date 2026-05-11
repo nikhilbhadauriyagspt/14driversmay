@@ -42,7 +42,7 @@ export default function WhyChooseUs() {
                             src="/about/aboutmain_02.webp"
                             alt="Person learning about computer drivers"
                             width="760"
-                            height="760"
+                            height="630"
                             className="relative z-10 w-full max-w-full h-[630px] object-cover object-center"
                         />
                     </div>

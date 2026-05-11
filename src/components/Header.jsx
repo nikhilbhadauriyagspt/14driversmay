@@ -105,7 +105,7 @@ const Header = () => {
             <img
               src="/logo/logo.avif"
               alt="Aura Learning"
-              className="h-[64px] w-auto object-contain"
+              className="h-[42px] w-auto object-contain"
             />
           </Link>
 
@@ -130,6 +130,7 @@ const Header = () => {
             >
               About Us
             </Link>
+
 
 
             <div
@@ -205,6 +206,7 @@ const Header = () => {
           <div className="hidden lg:flex items-center gap-8">
             <button
               onClick={() => setShowSearchBox(true)}
+              aria-label="Open search"
               className="text-[#07152c] hover:text-[#104CEF] transition"
             >
               <FaSearch className="text-[23px]" />
@@ -222,6 +224,7 @@ const Header = () => {
           <div className="lg:hidden flex items-center gap-3">
             <button
               onClick={() => setShowSearchBox(true)}
+              aria-label="Open search"
               className="w-10 h-10 rounded-md bg-[#f0fdfa] text-[#0f766e] flex items-center justify-center"
             >
               <Search size={19} />
@@ -229,6 +232,7 @@ const Header = () => {
 
             <button
               onClick={() => setIsOpen(true)}
+              aria-label="Open menu"
               className="w-10 h-10 rounded-md bg-[#104CEF] text-white flex items-center justify-center"
             >
               <FaBars />
@@ -247,6 +251,7 @@ const Header = () => {
             setShowSearchBox(false);
             setSearchTerm("");
           }}
+          aria-label="Close search"
           className="absolute top-8 right-8 w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center"
         >
           <X size={24} />
@@ -307,6 +312,7 @@ const Header = () => {
             <img src="/logo/logo.avif" alt="Aura Learning" className="h-9 w-auto" />
             <button
               onClick={() => setIsOpen(false)}
+              aria-label="Close menu"
               className="w-10 h-10 rounded-md bg-slate-100 flex items-center justify-center"
             >
               <FaTimes />
