@@ -210,7 +210,7 @@ export const guidesData = [
     slug: "understand-webcam-driver-topics",
     title: "Understanding Webcam and Camera Topics",
     desc: "Identify 'Camera not found' and black screen topics in Zoom, Teams, and other apps.",
-    img: "/images/fix-driver-monitor.avif",
+    img: "/guide/webcam-drivers.avif",
     content: {
       introduction: "Webcam topics are often caused by privacy settings or outdated drivers, especially after a Windows update.",
       reasons: [
@@ -268,7 +268,7 @@ export const guidesData = [
     slug: "guide-chipset-drivers",
     title: "Guide to Chipset and Motherboard Drivers",
     desc: "Understand system stability, USB speed, and power management by learning about your motherboard's chipset drivers.",
-    img: "/needdriver/need-new-device.avif",
+    img: "/guide/chipset-info.avif",
     content: {
       introduction: "Chipset drivers tell Windows how to communicate with the motherboard's core components, including USB controllers and power management systems.",
       reasons: [
@@ -355,7 +355,7 @@ export const guidesData = [
     slug: "understand-input-latency-drivers",
     title: "Understanding Keyboard and Touchpad Lag Topics",
     desc: "Identify slow response times, ghosting, and laggy cursor movements on your laptop or PC.",
-    img: "/needdriver/need-hardware-stop.avif",
+    img: "/guide/keyboard-input.avif",
     content: {
       introduction: "Input lag can be extremely frustrating, especially when it affects your productivity or experience. Often, it's caused by outdated HID (Human Interface Device) drivers or background processes.",
       reasons: [
@@ -384,7 +384,7 @@ export const guidesData = [
     slug: "understand-device-not-detected",
     title: "Understanding When Windows Doesn't Detect Your Device",
     desc: "A comprehensive guide to identifying hardware that doesn't show up in Device Manager.",
-    img: "/images/fix-driver-monitor.avif",
+    img: "/guide/storage-drives.avif",
     content: {
       introduction: "When a device isn't detected at all, it's often a connection topic or a missing parent driver (like a USB controller or chipset driver) rather than just the device driver itself.",
       reasons: [
