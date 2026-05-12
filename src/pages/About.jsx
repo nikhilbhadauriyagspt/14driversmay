@@ -20,10 +20,10 @@ const About = () => {
   return (
     <div className="bg-white min-h-screen font-[Poppins]">
       <Helmet>
-        <title>About Us | Clear With Us - Driver Information Guides</title>
+        <title>Who We Are | Simple Driver Guides at Clear With Us</title>
         <meta
           name="description"
-          content="Learn about Clear With Us, an educational driver information website created to explain computer drivers, hardware topics, and device communication in simple language."
+          content="Clear With Us is a website where you can learn about computer drivers in simple English. We help you understand how your devices connect and work."
         />
       </Helmet>
 
@@ -33,18 +33,20 @@ const About = () => {
           <div>
             <p className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#315BFF] text-[#315BFF] text-[13px] font-semibold uppercase tracking-[0.14em] mb-6">
               <span className="w-2 h-2 rounded-full bg-[#315BFF]" />
-              About Clear With Us
+              Our Mission
             </p>
 
             <h1 className="text-[38px] 2xl:text-[62px] leading-tight font-semibold text-[#071B34] mb-7">
-              Driver knowledge made{" "}
-              <span className="text-[#315BFF]">simple to understand.</span>
+              Helping you understand computer hardware{" "}
+              <span className="text-[#315BFF]">without the hard words.</span>
             </h1>
 
+            <p className="text-[17px] leading-8 text-slate-500 max-w-[720px] mb-6">
+              Clear With Us was started to make technology easier for everyone. We know that computer drivers can sound scary or complicated. That's why we write our guides using simple language that anyone can understand.
+            </p>
+
             <p className="text-[17px] leading-8 text-slate-500 max-w-[720px] mb-9">
-              Clear With Us explains computer drivers, device categories, and
-              hardware communication in clear everyday language. Our goal is to
-              help users learn driver basics without technical confusion.
+              Whether you are a student, a professional, or someone who just uses a computer for fun, our site is here to help you learn. We believe that when you understand how your machine works, you can use it better and feel more in control.
             </p>
 
             <div className="flex flex-wrap gap-4">
@@ -68,7 +70,7 @@ const About = () => {
             <div className="absolute -left-6 top-8 w-[90%] h-[90%] rounded-[28px] border-[4px] border-[#315BFF]" />
             <img
               src="/about/aboutmain_03.webp"
-              alt="Clear With Us educational driver illustration"
+              alt="People learning together"
               width="760"
               height="620"
               className="relative z-10 w-full h-[560px] object-cover rounded-[28px]"
@@ -83,26 +85,25 @@ const About = () => {
           <div className="lg:sticky lg:top-28">
             <p className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#315BFF] text-[#315BFF] text-[13px] font-semibold uppercase tracking-[0.14em] mb-6">
               <span className="w-2 h-2 rounded-full bg-[#315BFF]" />
-              What We Do
+              How We Help
             </p>
 
             <h2 className="text-[36px] 2xl:text-[54px] leading-tight font-semibold text-[#071B34] mb-6">
-              We explain driver topics without{" "}
-              <span className="text-[#315BFF]">support claims.</span>
+              We explain common topics in{" "}
+              <span className="text-[#315BFF]">plain English.</span>
             </h2>
 
             <p className="text-[16px] leading-8 text-slate-500 mb-8">
-              Our content helps users understand how drivers connect hardware
-              with the operating system. We cover WiFi, audio, graphics,
-              printer, USB, Bluetooth, chipset, webcam, scanner, and storage
-              topics.
+              We focus on the things you use every day. From the Wi-Fi card that connects you to the internet, to the printer that handles your documents, we explain it all. Our articles are written by people who love technology but hate technical jargon.
+            </p>
+
+            <p className="text-[16px] leading-8 text-slate-500 mb-8">
+              Every guide on our site follows a simple path. We start with what the device is, then explain what the driver does, and finally show you how to identify common issues. This step-by-step approach ensures that you never feel lost.
             </p>
 
             <div className="border-l-4 border-[#315BFF] pl-5">
-              <p className="text-[15px] leading-7 text-slate-600 font-medium">
-                Clear With Us is an information-only website. We do not provide
-                repair, remote access, installation, or technical support
-                services.
+              <p className="text-[15px] leading-7 text-slate-600 font-medium italic">
+                Important Note: Clear With Us is a place for learning. We provide information to help you understand your computer. We do not offer repair services or one-on-one technical support.
               </p>
             </div>
           </div>
