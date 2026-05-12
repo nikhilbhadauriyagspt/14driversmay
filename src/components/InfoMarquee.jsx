@@ -63,7 +63,7 @@ const InfoMarquee = () => {
               Driver Topics
             </p>
 
-            <h2 className="text-[20px] md:text-[35px] leading-tight font-semibold text-black max-w-[760px]">
+            <h2 className="text-[36px] 2xl:text-[40px] leading-tight font-semibold text-black max-w-[760px]">
               Explore Device Categories for Simple{" "}
               <span className="text-[#315BFF]">Driver Learning.</span>
             </h2>
