@@ -42,7 +42,7 @@ const ServiceDetails = () => {
   return (
     <div className="bg-[#F7FBFF] min-h-screen font-[Poppins] text-slate-900 overflow-hidden">
       <Helmet>
-        <title>{service.title} Guide | Aura Learning</title>
+        <title>{service.title} Guide | Clear With Us</title>
 
         <meta
           name="description"

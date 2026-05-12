@@ -1,122 +1,122 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
    <url>
-      <loc>https://auralearning.co/</loc>
+      <loc>https://clearwithus.co/</loc>
       <lastmod>2026-04-06</lastmod>
       <changefreq>daily</changefreq>
       <priority>1.0</priority>
    </url>
    <url>
-      <loc>https://auralearning.co/about</loc>
+      <loc>https://clearwithus.co/about</loc>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://auralearning.co/blog</loc>
+      <loc>https://clearwithus.co/blog</loc>
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://auralearning.co/contact</loc>
+      <loc>https://clearwithus.co/contact</loc>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
    </url>
    
    <!-- Services -->
    <url>
-      <loc>https://auralearning.co/driver/chipset-information</loc>
+      <loc>https://clearwithus.co/driver/chipset-information</loc>
       <changefreq>weekly</changefreq>
       <priority>0.9</priority>
    </url>
    <url>
-      <loc>https://auralearning.co/driver/graphics-information</loc>
+      <loc>https://clearwithus.co/driver/graphics-information</loc>
       <changefreq>weekly</changefreq>
       <priority>0.9</priority>
    </url>
    <url>
-      <loc>https://auralearning.co/driver/audio-information</loc>
+      <loc>https://clearwithus.co/driver/audio-information</loc>
       <changefreq>weekly</changefreq>
       <priority>0.9</priority>
    </url>
    <url>
-      <loc>https://auralearning.co/driver/network-information</loc>
+      <loc>https://clearwithus.co/driver/network-information</loc>
       <changefreq>weekly</changefreq>
       <priority>0.9</priority>
    </url>
    <url>
-      <loc>https://auralearning.co/driver/storage-controller</loc>
+      <loc>https://clearwithus.co/driver/storage-controller</loc>
       <changefreq>weekly</changefreq>
       <priority>0.9</priority>
    </url>
    <url>
-      <loc>https://auralearning.co/driver/usb-information</loc>
+      <loc>https://clearwithus.co/driver/usb-information</loc>
       <changefreq>weekly</changefreq>
       <priority>0.9</priority>
    </url>
    <url>
-      <loc>https://auralearning.co/driver/bluetooth-information</loc>
+      <loc>https://clearwithus.co/driver/bluetooth-information</loc>
       <changefreq>weekly</changefreq>
       <priority>0.9</priority>
    </url>
    <url>
-      <loc>https://auralearning.co/driver/input-information</loc>
+      <loc>https://clearwithus.co/driver/input-information</loc>
       <changefreq>weekly</changefreq>
       <priority>0.9</priority>
    </url>
    <url>
-      <loc>https://auralearning.co/driver/printer-information</loc>
+      <loc>https://clearwithus.co/driver/printer-information</loc>
       <changefreq>weekly</changefreq>
       <priority>0.9</priority>
    </url>
    <url>
-      <loc>https://auralearning.co/driver/scanner-information</loc>
+      <loc>https://clearwithus.co/driver/scanner-information</loc>
       <changefreq>weekly</changefreq>
       <priority>0.9</priority>
    </url>
    <url>
-      <loc>https://auralearning.co/driver/webcam-information</loc>
+      <loc>https://clearwithus.co/driver/webcam-information</loc>
       <changefreq>weekly</changefreq>
       <priority>0.9</priority>
    </url>
    <url>
-      <loc>https://auralearning.co/driver/bios-uefi-firmware</loc>
+      <loc>https://clearwithus.co/driver/bios-uefi-firmware</loc>
       <changefreq>weekly</changefreq>
       <priority>0.9</priority>
    </url>
    <url>
-      <loc>https://auralearning.co/driver/security-drivers</loc>
+      <loc>https://clearwithus.co/driver/security-drivers</loc>
       <changefreq>weekly</changefreq>
       <priority>0.9</priority>
    </url>
    <url>
-      <loc>https://auralearning.co/driver/monitor-calibration</loc>
+      <loc>https://clearwithus.co/driver/monitor-calibration</loc>
       <changefreq>weekly</changefreq>
       <priority>0.9</priority>
    </url>
 
    <!-- Policies -->
    <url>
-      <loc>https://auralearning.co/privacy-policy</loc>
+      <loc>https://clearwithus.co/privacy-policy</loc>
       <changefreq>yearly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
-      <loc>https://auralearning.co/terms-of-service</loc>
+      <loc>https://clearwithus.co/terms-of-service</loc>
       <changefreq>yearly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
-      <loc>https://auralearning.co/refund-policy</loc>
+      <loc>https://clearwithus.co/refund-policy</loc>
       <changefreq>yearly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
-      <loc>https://auralearning.co/cookie-policy</loc>
+      <loc>https://clearwithus.co/cookie-policy</loc>
       <changefreq>yearly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
-      <loc>https://auralearning.co/disclaimer</loc>
+      <loc>https://clearwithus.co/disclaimer</loc>
       <changefreq>yearly</changefreq>
       <priority>0.5</priority>
    </url>

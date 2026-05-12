@@ -16,7 +16,7 @@ const BlogDetails = () => {
     return (
       <div className="min-h-screen flex items-center justify-center bg-light">
         <Helmet>
-          <title>Blog Not Found - Aura Learning</title>
+          <title>Blog Not Found - Clear With Us</title>
         </Helmet>
         <div className="text-center">
           <h2 className="text-4xl font-[500]text-primary mb-6">Blog Post Not Found</h2>
@@ -31,9 +31,9 @@ const BlogDetails = () => {
   return (
     <article className="bg-white min-h-screen pt-32 pb-24">
       <Helmet>
-        <title>{blog.title} - Aura Learning Blog</title>
+        <title>{blog.title} - Clear With Us Blog</title>
         <meta name="description" content={blog.shortDesc} />
-        <link rel="canonical" href={`https://auralearning.co/blog/${blog.id}`} />
+        <link rel="canonical" href={`https://clearwithus.co/blog/${blog.id}`} />
       </Helmet>
 
       <div className="container mx-auto px-4 max-w-4xl">

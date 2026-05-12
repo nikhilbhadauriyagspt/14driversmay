@@ -1,366 +1,304 @@
-import React, { useState, useEffect, useRef } from "react";
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import {
-  FaBars,
-  FaTimes,
-  FaSearch,
-  FaChevronDown,
-  FaMicrochip,
-  FaDesktop,
-  FaVolumeUp,
-  FaWifi,
-  FaUsb,
-  FaBluetooth,
-  FaKeyboard,
-  FaPrint,
-  FaVideo,
-  FaCode,
-  FaShieldAlt,
-  FaTv,
-  FaSearchPlus,
-  FaDatabase,
-} from "react-icons/fa";
-import { X, Search, BookOpen, ArrowRight } from "lucide-react";
+  Menu,
+  X,
+  Search,
+  ChevronDown,
+  ArrowRight,
+  BookOpen,
+} from "lucide-react";
 import { guidesData } from "../data/guidesData";
 
-const Header = () => {
+export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState(null);
+  const [showGuides, setShowGuides] = useState(false);
+  const [showSearch, setShowSearch] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
-  const [searchResults, setSearchResults] = useState([]);
-  const [showSearchBox, setShowSearchBox] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
-  const searchRef = useRef(null);
-  const navigate = useNavigate();
   const location = useLocation();
 
   useEffect(() => {
-    document.body.style.overflow = showSearchBox || isOpen ? "hidden" : "unset";
+    document.body.style.overflow = showSearch || isOpen ? "hidden" : "unset";
     return () => {
       document.body.style.overflow = "unset";
     };
-  }, [showSearchBox, isOpen]);
+  }, [showSearch, isOpen]);
 
-  useEffect(() => {
-    let ticking = false;
-    const handleScroll = () => {
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          setScrolled(window.scrollY > 20);
-          ticking = false;
-        });
-        ticking = true;
-      }
-    };
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  const results = guidesData.filter(
+    (item) =>
+      item.title?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      item.desc?.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
-  useEffect(() => {
-    if (searchTerm.trim() === "") {
-      setSearchResults([]);
-      return;
-    }
-
-    const results = guidesData.filter(
-      (guide) =>
-        guide.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        guide.desc.toLowerCase().includes(searchTerm.toLowerCase())
-    );
-
-    setSearchResults(results);
-  }, [searchTerm]);
-
-  const driverCategories = [
-    {
-      title: "Main System",
-      items: [
-        { name: "Chipset Drivers", icon: <FaMicrochip />, slug: "guide-chipset-drivers" },
-        { name: "Graphics Drivers", icon: <FaDesktop />, slug: "understand-graphics-driver-topics" },
-        { name: "Audio Drivers", icon: <FaVolumeUp />, slug: "understand-audio-driver-topics" },
-        { name: "Network Drivers", icon: <FaWifi />, slug: "understand-wifi-network-topics" },
-      ],
-    },
-    {
-      title: "Connected Devices",
-      items: [
-        { name: "Bluetooth Drivers", icon: <FaBluetooth />, slug: "understand-bluetooth-driver-topics" },
-        { name: "USB Drivers", icon: <FaUsb />, slug: "understand-usb-driver-topics" },
-        { name: "Keyboard Drivers", icon: <FaKeyboard />, slug: "understand-input-latency-drivers" },
-        { name: "Storage Drivers", icon: <FaDatabase />, slug: "understand-device-not-detected" },
-      ],
-    },
-    {
-      title: "External Devices",
-      items: [
-        { name: "Printer Drivers", icon: <FaPrint />, slug: "understand-printer-driver-topics" },
-        { name: "Scanner Drivers", icon: <FaSearchPlus />, slug: "understand-scanner-driver-topics" },
-        { name: "Webcam Drivers", icon: <FaVideo />, slug: "understand-webcam-driver-topics" },
-        { name: "Monitor Drivers", icon: <FaTv />, slug: "understand-graphics-driver-topics" },
-      ],
-    },
-  ];
+  const navLink = (path) =>
+    location.pathname === path
+      ? "text-blue-500"
+      : "text-slate-700 hover:text-blue-500";
 
   return (
     <>
-      <header
-        className={`fixed top-0 left-0 w-full z-[100] bg-white transition-all duration-300 ${scrolled ? "shadow-[0_8px_30px_rgba(15,23,42,0.08)]" : ""
-          }`}
-      >
-        <div className="max-w-[1600px] mx-auto h-[74px] px-6 lg:px-10 flex items-center justify-between font-[Poppins]">
-          {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 shrink-0">
+      <header className="fixed top-0 left-0 w-full z-[100] bg-white/95 backdrop-blur-md font-[Poppins]">
+        <div className="max-w-[1600px] mx-auto h-[86px] px-6 lg:px-10 flex items-center justify-between">
+          <Link to="/" className="flex items-center">
             <img
               src="/logo/logo.avif"
-              alt="Aura Learning"
-              className="h-[68px] w-auto object-contain"
+              alt="Clear With Us"
+              className="h-[54px] w-auto object-contain"
             />
           </Link>
 
-          {/* Desktop Nav */}
-          <nav className="hidden lg:flex items-center h-full ml-10">
-            <Link
-              to="/"
-              className={`h-full px-8 flex items-center text-[15px] font-semibold transition ${location.pathname === "/"
-                ? "bg-[#104CEF] text-white"
-                : "text-[#14233b] hover:text-[#104CEF]"
-                }`}
-            >
+          <nav className="hidden lg:flex items-center gap-10">
+            <Link to="/" className={`text-[15px] font-medium ${navLink("/")}`}>
               Home
             </Link>
 
-            <Link
-              to="/about"
-              className={`h-full px-7 flex items-center text-[15px] font-semibold transition ${location.pathname === "/about"
-                ? "bg-[#104CEF] text-white"
-                : "text-[#14233b] hover:text-[#104CEF]"
-                }`}
-            >
+            <Link to="/about" className={`text-[15px] font-medium ${navLink("/about")}`}>
               About Us
             </Link>
 
             <div
-              className="relative h-full"
-              onMouseEnter={() => setActiveDropdown("pages")}
-              onMouseLeave={() => setActiveDropdown(null)}
+              className="relative"
+              onMouseEnter={() => setShowGuides(true)}
+              onMouseLeave={() => setShowGuides(false)}
             >
-              <button className={`h-full px-7 flex items-center gap-2 text-[15px] font-semibold transition ${location.pathname.startsWith("/guide/")
-                ? "bg-[#104CEF] text-white"
-                : "text-[#14233b] hover:text-[#104CEF]"
-                }`}>
-                Guides <FaChevronDown className="text-[11px]" />
-              </button>
+              <Link
+                to="/guides"
+                className={`text-[15px] font-medium flex items-center gap-1 ${location.pathname.startsWith("/guide") ||
+                  location.pathname === "/guides"
+                  ? "text-blue-500"
+                  : "text-slate-700 hover:text-blue-500"
+                  }`}
+              >
+                Guides <ChevronDown size={15} />
+              </Link>
 
               <div
-                className={`absolute left-1/2 -translate-x-1/2 top-full w-[850px] pt-4 transition-all duration-300 ${activeDropdown === "pages"
+                className={`absolute top-8 left-1/2 -translate-x-1/2 w-[560px] bg-white rounded-[24px] shadow-[0_20px_60px_rgba(15,23,42,0.14)] border border-slate-100 p-5 transition-all duration-300 ${showGuides
                   ? "opacity-100 visible translate-y-0"
                   : "opacity-0 invisible translate-y-3"
                   }`}
               >
-                <div className="bg-white border border-slate-100 shadow-[0_25px_70px_rgba(15,23,42,0.14)] p-7 grid grid-cols-3 gap-6 rounded-sm">
-                  {driverCategories.map((cat, idx) => (
-                    <div key={idx}>
-                      <h4 className="text-[15px] font-semibold text-slate-900 mb-4">
-                        {cat.title}
-                      </h4>
-
-                      <div className="space-y-2">
-                        {cat.items.map((item, i) => (
-                          <Link
-                            key={i}
-                            to={`/guide/${item.slug}`}
-                            onClick={() => setActiveDropdown(null)}
-                            className="flex items-center gap-3 p-3 rounded-md hover:bg-[#f0fdfa] transition group"
-                          >
-                            <span className="w-9 h-9 rounded-md bg-[#ccfbf1] text-[#0f766e] flex items-center justify-center">
-                              {item.icon}
-                            </span>
-                            <span className="text-[14px] font-medium text-slate-700 group-hover:text-[#0f766e]">
-                              {item.name}
-                            </span>
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
+                <div className="grid grid-cols-2 gap-3">
+                  {[
+                    "Graphics",
+                    "Audio",
+                    "Wi-Fi",
+                    "Printer",
+                    "USB",
+                    "Bluetooth",
+                    "Webcam",
+                    "Scanner",
+                    "Chipset",
+                    "BIOS / UEFI",
+                  ].map((item) => (
+                    <Link
+                      key={item}
+                      to="/guides"
+                      className="px-4 py-3 rounded-[14px] text-[14px] text-slate-700 hover:bg-[#EFF8FF] hover:text-blue-500 transition"
+                    >
+                      {item}
+                    </Link>
                   ))}
                 </div>
               </div>
             </div>
 
-            <Link
-              to="/faq"
-              className={`h-full px-7 flex items-center text-[15px] font-semibold transition ${location.pathname === "/faq"
-                ? "bg-[#104CEF] text-white"
-                : "text-[#14233b] hover:text-[#104CEF]"
-                }`}
-            >
+            <Link to="/faq" className={`text-[15px] font-medium ${navLink("/faq")}`}>
               FAQ
             </Link>
 
-            <Link
-              to="/contact"
-              className={`h-full px-7 flex items-center text-[15px] font-semibold transition ${location.pathname === "/contact"
-                ? "bg-[#104CEF] text-white"
-                : "text-[#14233b] hover:text-[#104CEF]"
-                }`}
-            >
-              Contact
+            <Link to="/contact" className={`text-[15px] font-medium ${navLink("/contact")}`}>
+              Ask Us
             </Link>
           </nav>
 
-          {/* Right */}
-          <div className="hidden lg:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-2">
             <button
-              onClick={() => setShowSearchBox(true)}
-              aria-label="Open search"
-              className="text-[#07152c] hover:text-[#104CEF] transition"
-            >
-              <FaSearch className="text-[23px]" />
-            </button>
-
-            <Link
-              to="/guides"
-              aria-label="Learn more about driver problems and guides"
-              className="h-[50px] px-8 rounded-[4px] bg-[#104CEF] text-white text-[15px] font-semibold flex items-center gap-2 hover:bg-[#0f766e] transition"
-            >
-              Learn More <ArrowRight size={18} />
-            </Link>
-          </div>
-
-          {/* Mobile */}
-          <div className="lg:hidden flex items-center gap-3">
-            <button
-              onClick={() => setShowSearchBox(true)}
-              aria-label="Open search"
-              className="w-10 h-10 rounded-md bg-[#f0fdfa] text-[#0f766e] flex items-center justify-center"
+              onClick={() => setShowSearch(true)}
+              aria-label="Search guides"
+              className="w-[48px] h-[48px] rounded-full bg-black text-white flex items-center justify-center hover:bg-blue-500 hover:text-white transition"
             >
               <Search size={19} />
             </button>
 
-            <button
-              onClick={() => setIsOpen(true)}
-              aria-label="Open menu"
-              className="w-10 h-10 rounded-md bg-[#104CEF] text-white flex items-center justify-center"
+            <Link
+              to="/guides"
+              className="h-[48px] px-6  pr-2 rounded-full bg-blue-500 text-white text-[15px] font-medium flex items-center gap-2 hover:bg-[#0B82C7] transition"
             >
-              <FaBars />
-            </button>
+              Explore Guides
+              <span className="w-8 h-8 rounded-full bg-black text-white flex items-center justify-center">
+                <ArrowRight size={17} />
+              </span>
+            </Link>
           </div>
+
+          <button
+            onClick={() => setIsOpen(true)}
+            className="lg:hidden w-11 h-11 rounded-full bg-blue-500 text-white flex items-center justify-center"
+            aria-label="Open menu"
+          >
+            <Menu size={22} />
+          </button>
         </div>
       </header>
 
-      {/* Search Overlay */}
+      {/* Search Drawer */}
       <div
-        className={`fixed inset-0 z-[200] bg-white transition-all duration-500 ${showSearchBox ? "opacity-100 visible" : "opacity-0 invisible"
+        className={`fixed inset-0 z-[300] transition ${showSearch ? "visible" : "invisible"
           }`}
       >
-        <button
-          onClick={() => {
-            setShowSearchBox(false);
-            setSearchTerm("");
-          }}
-          aria-label="Close search"
-          className="absolute top-8 right-8 w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center"
+        <div
+          onClick={() => setShowSearch(false)}
+          className={`absolute inset-0 bg-slate-950/50 transition ${showSearch ? "opacity-100" : "opacity-0"
+            }`}
+        />
+
+        <div
+          className={`absolute right-0 top-0 h-full w-full sm:w-[520px] bg-white shadow-2xl transition-transform duration-500 ${showSearch ? "translate-x-0" : "translate-x-full"
+            }`}
         >
-          <X size={24} />
-        </button>
+          <div className="p-6 border-b flex items-center justify-between">
+            <div>
+              <h3 className="text-[24px] font-medium text-slate-900">
+                Search Driver Guides
+              </h3>
+              <p className="text-[14px] text-slate-500 mt-1">
+                Find simple topics about drivers and devices.
+              </p>
+            </div>
 
-        <div className="max-w-[900px] mx-auto px-6 pt-28">
-          <h2 className="text-center text-[34px] md:text-[44px] font-semibold text-slate-900 mb-8">
-            Search Drivers Problem
-          </h2>
-
-          <div className="relative mb-10">
-            <Search className="absolute left-5 top-1/2 -translate-y-1/2 text-[#104CEF]" />
-            <input
-              autoFocus={showSearchBox}
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              placeholder="Search WiFi, Printer, Audio, Graphics..."
-              className="w-full h-[64px] border border-slate-200 rounded-md pl-14 pr-5 text-[17px] outline-none focus:border-[#104CEF]"
-            />
+            <button
+              onClick={() => {
+                setShowSearch(false);
+                setSearchTerm("");
+              }}
+              className="w-11 h-11 rounded-full bg-slate-100 flex items-center justify-center"
+              aria-label="Close search"
+            >
+              <X size={21} />
+            </button>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {searchResults.map((res, idx) => (
-              <Link
-                key={idx}
-                to={`/guide/${res.slug}`}
-                onClick={() => {
-                  setShowSearchBox(false);
-                  setSearchTerm("");
-                }}
-                className="p-5 border border-slate-100 rounded-md hover:border-[#104CEF] hover:bg-[#f0fdfa] transition"
-              >
-                <h4 className="text-[16px] font-semibold text-slate-900">
-                  {res.title}
-                </h4>
-                <p className="text-[13px] text-slate-500 mt-2 line-clamp-1">
-                  {res.desc}
-                </p>
-              </Link>
-            ))}
+          <div className="p-6">
+            <div className="relative">
+              <Search className="absolute left-5 top-1/2 -translate-y-1/2 text-blue-500" size={20} />
+              <input
+                autoFocus={showSearch}
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                placeholder="Search graphics, audio, printer..."
+                className="w-full h-[58px] rounded-full border border-slate-200 pl-14 pr-5 outline-none text-[15px] focus:border-blue-500"
+              />
+            </div>
+
+            <div className="mt-7 space-y-3 max-h-[calc(100vh-210px)] overflow-y-auto pr-2">
+              {searchTerm.trim() === "" ? (
+                [
+                  "Graphics",
+                  "Audio",
+                  "Wi-Fi",
+                  "Printer",
+                  "USB",
+                  "Bluetooth",
+                  "Webcam",
+                  "Scanner",
+                ].map((item) => (
+                  <Link
+                    key={item}
+                    to="/guides"
+                    onClick={() => setShowSearch(false)}
+                    className="flex items-center gap-4 p-4 rounded-2xl bg-slate-50 hover:bg-[#EFF8FF] transition"
+                  >
+                    <span className="w-11 h-11 rounded-full bg-white text-blue-500 flex items-center justify-center">
+                      <BookOpen size={19} />
+                    </span>
+                    <span className="text-[15px] font-medium text-slate-800">
+                      {item} Guides
+                    </span>
+                  </Link>
+                ))
+              ) : results.length > 0 ? (
+                results.map((res, index) => (
+                  <Link
+                    key={index}
+                    to={`/guide/${res.slug}`}
+                    onClick={() => {
+                      setShowSearch(false);
+                      setSearchTerm("");
+                    }}
+                    className="block p-5 rounded-2xl border border-slate-100 hover:border-blue-500 hover:bg-[#EFF8FF] transition"
+                  >
+                    <h4 className="text-[16px] font-medium text-slate-900">
+                      {res.title}
+                    </h4>
+                    <p className="text-[13px] text-slate-500 mt-2 line-clamp-2">
+                      {res.desc}
+                    </p>
+                  </Link>
+                ))
+              ) : (
+                <div className="text-center py-12">
+                  <p className="text-slate-500 text-[15px]">
+                    No guide found for this search.
+                  </p>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>
 
       {/* Mobile Menu */}
-      <div className={`lg:hidden fixed inset-0 z-[150] ${isOpen ? "visible" : "invisible"}`}>
+      <div className={`fixed inset-0 z-[200] lg:hidden transition ${isOpen ? "visible" : "invisible"}`}>
         <div
           onClick={() => setIsOpen(false)}
-          className={`absolute inset-0 bg-slate-950/40 transition ${isOpen ? "opacity-100" : "opacity-0"
-            }`}
+          className={`absolute inset-0 bg-black/40 transition ${isOpen ? "opacity-100" : "opacity-0"}`}
         />
 
         <div
-          className={`absolute right-0 top-0 h-full w-[84%] bg-white shadow-2xl transition-transform duration-500 ${isOpen ? "translate-x-0" : "translate-x-full"
+          className={`absolute right-0 top-0 h-full w-[84%] bg-white p-6 transition-transform duration-300 ${isOpen ? "translate-x-0" : "translate-x-full"
             }`}
         >
-          <div className="flex items-center justify-between p-6 border-b">
-            <img src="/logo/logo.avif" alt="Aura Learning" className="h-9 w-auto" />
+          <div className="flex items-center justify-between mb-8">
+            <img src="/logo/logo.avif" alt="Clear With Us" className="h-10" />
             <button
               onClick={() => setIsOpen(false)}
-              aria-label="Close menu"
-              className="w-10 h-10 rounded-md bg-slate-100 flex items-center justify-center"
+              className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center"
             >
-              <FaTimes />
+              <X size={20} />
             </button>
           </div>
 
-          <div className="p-6 space-y-3">
+          <div className="space-y-3">
             {[
-              { name: "Home", path: "/" },
-              { name: "About Us", path: "/about" },
-              { name: "Drivers Problem", path: "/guides" },
-              { name: "FAQ", path: "/faq" },
-              { name: "Contact", path: "/contact" },
-            ].map((link) => (
+              ["Home", "/"],
+              ["About Us", "/about"],
+              ["Guides", "/guides"],
+              ["FAQ", "/faq"],
+              ["Ask Us", "/contact"],
+            ].map(([name, path]) => (
               <Link
-                key={link.name}
-                to={link.path}
+                key={name}
+                to={path}
                 onClick={() => setIsOpen(false)}
-                className={`block p-4 rounded-md font-semibold transition ${location.pathname === link.path
-                  ? "bg-[#104CEF] text-white"
-                  : "bg-slate-50 text-slate-900"
-                  }`}
+                className="block px-5 py-4 rounded-2xl bg-slate-50 text-slate-800 font-medium"
               >
-                {link.name}
+                {name}
               </Link>
             ))}
 
-            <Link
-              to="/guides"
-              onClick={() => setIsOpen(false)}
-              aria-label="Learn more about driver problems and guides"
-              className="mt-5 h-[52px] bg-[#104CEF] text-white rounded-md font-semibold flex items-center justify-center gap-2"
+            <button
+              onClick={() => {
+                setIsOpen(false);
+                setShowSearch(true);
+              }}
+              className="w-full px-5 py-4 rounded-2xl bg-[#EFF8FF] text-blue-500 font-medium flex items-center justify-center gap-2"
             >
-              Learn More <ArrowRight size={17} />
-            </Link>
+              <Search size={18} /> Search Guides
+            </button>
           </div>
         </div>
       </div>
     </>
   );
-};
-
-export default Header;
+}

@@ -9,9 +9,9 @@ const Disclaimer = () => {
   return (
     <div className="bg-white min-h-screen pt-32 pb-24">
       <Helmet>
-        <title>Disclaimer - Aura Learning</title>
-        <meta name="description" content="Disclaimer for Aura Learning." />
-        <link rel="canonical" href="https://auralearning.co/disclaimer" />
+        <title>Disclaimer - Clear With Us</title>
+        <meta name="description" content="Disclaimer for Clear With Us." />
+        <link rel="canonical" href="https://clearwithus.co/disclaimer" />
       </Helmet>
       <div className="container mx-auto px-4 max-w-4xl">
         <h1 className="text-4xl font-[500]text-gray-900 mb-8">Disclaimer</h1>
@@ -19,7 +19,7 @@ const Disclaimer = () => {
           <p>Last updated: Apr 2026</p>
 
           <h3>General Disclaimer</h3>
-          <p>The information provided by Aura Learning ("we," "us," or "our") on <a href="https://auralearning.co">https://auralearning.co</a> (the "Site") is for general informational and educational purposes only. <strong>Aura Learning is not a technical support service, hardware repair shop, or software troubleshooting company. We do not provide remote assistance, hardware fixes, or any form of professional IT support.</strong> All information on the Site is provided in good faith, however we make no representation or warranty regarding accuracy or completeness.</p>
+          <p>The information provided by Clear With Us ("we," "us," or "our") on <a href="https://clearwithus.co">https://clearwithus.co</a> (the "Site") is for general informational and educational purposes only. <strong>Clear With Us is not a technical support service, hardware repair shop, or software troubleshooting company. We do not provide remote assistance, hardware fixes, or any form of professional IT support.</strong> All information on the Site is provided in good faith, however we make no representation or warranty regarding accuracy or completeness.</p>
 
           <h3>No Technical Support Disclaimer</h3>
           <p>We do not provide direct assistance for hardware or software problems. Our guides are for learning purposes only. Any actions taken based on our documentation are at your own risk. We strongly recommend contacting the original hardware manufacturer or a certified technician for actual repairs or support.</p>

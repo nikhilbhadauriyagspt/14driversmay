@@ -6,87 +6,78 @@ import {
   BookOpen,
   ArrowRight,
   MessageCircle,
+  ShieldCheck,
 } from "lucide-react";
 
 const Contact = () => {
   return (
     <div className="bg-white min-h-screen font-[Poppins]">
       <Helmet>
-        <title>Contact | Aura Learning Driver Learning Resource</title>
+        <title>Contact | Clear With Us Driver Learning Resource</title>
         <meta
           name="description"
-          content="Contact Aura Learning for driver learning topics, educational feedback, or guide suggestions."
+          content="Contact Clear With Us for driver learning topics, educational feedback, or guide suggestions."
         />
       </Helmet>
 
       {/* HERO */}
-      <section className="relative pt-32 pb-24 px-6 bg-[#f7f9ff] overflow-hidden">
-        <div className="absolute top-[-140px] right-[-120px] w-[420px] h-[420px] rounded-full bg-blue-100 blur-[80px]" />
-        <div className="absolute bottom-[-180px] left-[-120px] w-[420px] h-[420px] rounded-full bg-indigo-100 blur-[90px]" />
-
-        <div className="relative z-10 max-w-[1500px] mx-auto grid grid-cols-1 lg:grid-cols-[1fr_520px] gap-16 items-center">
-          {/* Left */}
+      <section className="relative bg-white px-6 pt-32 pb-24 overflow-hidden">
+        <div className="max-w-[1500px] mx-auto grid grid-cols-1 lg:grid-cols-[0.95fr_1.05fr] gap-16 items-center">
           <div>
-            <div className="inline-flex items-center gap-3 mb-5">
-              <span className="w-10 h-10 rounded-full border border-dashed border-[#2563eb] flex items-center justify-center text-[#2563eb]">
-                <BookOpen size={18} />
-              </span>
-
-              <span className="text-[14px] font-semibold text-[#2563eb] uppercase tracking-wide">
-                Contact Aura Learning
-              </span>
-            </div>
-
-            <h1 className="text-[34px] md:text-[48px] font-semibold leading-tight text-[#202124] mb-7">
-              Share a learning topic or guide suggestion.
-            </h1>
-
-            <p className="text-[16px] leading-[1.9] text-slate-600 max-w-[760px]">
-              Send feedback, suggest a driver learning topic, or ask a general
-              question related to our educational computer information content.
+            <p className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#315BFF] text-[#315BFF] text-[13px] font-semibold uppercase tracking-[0.14em] mb-6">
+              <span className="w-2 h-2 rounded-full bg-[#315BFF]" />
+              Contact Clear With Us
             </p>
 
-            <div className="flex flex-wrap gap-6 mt-10">
-              <div className="flex items-center gap-3">
-                <span className="w-11 h-11 rounded-full bg-[#eff6ff] text-[#2563eb] flex items-center justify-center">
-                  <Mail size={18} />
+            <h1 className="text-[38px] 2xl:text-[62px] leading-tight font-semibold text-[#071B34] mb-7">
+              Share a driver learning topic or{" "}
+              <span className="text-[#315BFF]">guide idea.</span>
+            </h1>
+
+            <p className="text-[17px] leading-8 text-slate-500 max-w-[720px] mb-9">
+              Send educational feedback, suggest a driver topic, or share an
+              idea that can help us improve simple computer-driver learning
+              content.
+            </p>
+
+            <div className="border-t border-slate-200 pt-8">
+              <div className="flex items-center gap-4">
+                <span className="w-14 h-14 rounded-full bg-[#EEF4FF] text-[#315BFF] flex items-center justify-center">
+                  <Mail size={22} />
                 </span>
 
                 <div>
                   <p className="text-[13px] text-slate-500">Email Address</p>
                   <a
-                    href="mailto:info@auralearning.co"
-                    className="text-[15px] font-semibold text-slate-800 hover:text-[#2563eb] transition"
+                    href="mailto:info@clearwithus.co"
+                    className="text-[18px] font-semibold text-[#071B34] hover:text-[#315BFF] transition"
                   >
-                    info@auralearning.co
+                    info@clearwithus.co
                   </a>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Right Image */}
-          <div className="relative flex items-center justify-center min-h-[500px]">
-            <div className="absolute w-[430px] h-[430px] rounded-full bg-[#eaf4ff]" />
-            <div className="absolute top-12 right-10 w-20 h-20 rounded-full border border-dashed border-[#2563eb]/40" />
-
+          <div className="relative">
+            <div className="absolute -left-6 top-8 w-[90%] h-[90%] rounded-[28px] border-[4px] border-[#315BFF]" />
             <img
               src="/about/aboutmain.avif"
-              alt="Contact Aura Learning for hardware driver information"
-              className="relative z-10 w-full max-w-[480px] object-contain"
+              alt="Contact Clear With Us for driver information"
+              className="relative z-10 w-full h-[560px] object-cover rounded-[28px]"
             />
 
-            <div className="absolute left-8 bottom-16 z-20 bg-white/90 backdrop-blur rounded-full px-5 py-4 shadow-[0_18px_45px_rgba(15,23,42,0.10)] flex items-center gap-4">
-              <span className="w-12 h-12 rounded-full bg-[#2563eb] text-white flex items-center justify-center">
+            <div className="absolute left-8 bottom-8 z-20 bg-white rounded-full px-5 py-4 flex items-center gap-4">
+              <span className="w-12 h-12 rounded-full bg-[#315BFF] text-white flex items-center justify-center">
                 <MessageCircle size={20} />
               </span>
 
               <div>
-                <p className="text-[14px] font-semibold text-slate-900">
+                <p className="text-[14px] font-semibold text-[#071B34]">
                   Learning Feedback
                 </p>
                 <p className="text-[12px] text-slate-500">
-                  Information suggestions
+                  Topic suggestions only
                 </p>
               </div>
             </div>
@@ -94,80 +85,72 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* FORM */}
-      <section className="py-24 px-6 bg-white">
-        <div className="max-w-[1200px] mx-auto">
-          <div className="text-center max-w-[760px] mx-auto mb-16">
-            <div className="inline-flex items-center gap-3 mb-5">
-              <span className="w-10 h-10 rounded-full border border-dashed border-[#2563eb] flex items-center justify-center text-[#2563eb]">
-                <Send size={18} />
-              </span>
+      {/* FORM SECTION */}
+      <section className="py-24 px-6 bg-[#F4F7FB]">
+        <div className="max-w-[1500px] mx-auto grid grid-cols-1 lg:grid-cols-[0.85fr_1.15fr] gap-16 items-start">
+          {/* Left */}
+          <div className="lg:sticky lg:top-28">
+            <p className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#315BFF] text-[#315BFF] text-[13px] font-semibold uppercase tracking-[0.14em] mb-6">
+              <span className="w-2 h-2 rounded-full bg-[#315BFF]" />
+              Send Message
+            </p>
 
-              <span className="text-[14px] font-semibold text-[#2563eb] uppercase tracking-wide">
-                Send Message
-              </span>
-            </div>
-
-            <h2 className="text-[32px] md:text-[42px] font-semibold leading-tight text-[#202124]">
-              Share your feedback or topic idea.
+            <h2 className="text-[36px] 2xl:text-[54px] leading-tight font-semibold text-[#071B34] mb-6">
+              Help us improve our{" "}
+              <span className="text-[#315BFF]">learning library.</span>
             </h2>
 
-            <p className="mt-5 text-[15px] leading-relaxed text-slate-500">
-              Suggest a guide topic or share general learning feedback related
-              to drivers and computer hardware information.
+            <p className="text-[16px] leading-8 text-slate-500 mb-8">
+              Use this form for guide suggestions, educational feedback, or
+              general questions about our information content.
             </p>
+
+            <div className="border-l-4 border-[#315BFF] pl-5 flex gap-3">
+              <ShieldCheck className="text-[#315BFF] shrink-0 mt-1" size={22} />
+              <p className="text-[15px] leading-7 text-slate-600 font-medium">
+                Clear With Us is information-only. We do not provide computer
+                repair, remote access, installation, or technical support.
+              </p>
+            </div>
           </div>
 
-          {/* Form Area */}
-          <div className="bg-[#fff1f2] border border-[#fecdd3] rounded-2xl p-6 mb-10 text-center">
-            <p className="text-[15px] font-semibold text-[#9f1239]">
-              Aura Learning is an information-only portal. We do not fix computers or provide technical support.
-              Please do not send requests for repair or support assistance.
-            </p>
-          </div>
+          {/* Right Form */}
+          <form className="bg-white rounded-[28px] p-6 md:p-10 space-y-7">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <Field label="Full Name">
+                <input type="text" placeholder="Your name" className="inputBox" />
+              </Field>
 
-          <div className="bg-[#f8fbff] border border-[#e2e8ff] rounded-[36px] p-6 md:p-12">
-            <form className="space-y-7">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Field label="Full Name">
-                  <input
-                    type="text"
-                    placeholder="Your Name"
-                    className="inputBox"
-                  />
-                </Field>
-
-                <Field label="Email Address">
-                  <input
-                    type="email"
-                    placeholder="Email Address"
-                    className="inputBox"
-                  />
-                </Field>
-              </div>
-
-              <Field label="Learning Topic">
+              <Field label="Email Address">
                 <input
-                  type="text"
-                  placeholder="e.g. WiFi or Printer guide"
+                  type="email"
+                  placeholder="Email address"
                   className="inputBox"
                 />
               </Field>
+            </div>
 
-              <Field label="Your Message">
-                <textarea
-                  rows="6"
-                  placeholder="Share your feedback, suggestion, or learning topic..."
-                  className="inputBox resize-none"
-                />
-              </Field>
+            <Field label="Learning Topic">
+              <input
+                type="text"
+                placeholder="Example: WiFi, Printer, Audio, Graphics"
+                className="inputBox"
+              />
+            </Field>
 
-              <button className="inline-flex items-center justify-center gap-3 h-[56px] px-8 rounded-full bg-[#2563eb] text-white text-[15px] font-semibold hover:bg-[#1d4ed8] transition-all duration-300 active:scale-[0.99]">
-                Submit Message
-                <ArrowRight size={18} />
-              </button>
-            </form>
-          </div>
+            <Field label="Your Message">
+              <textarea
+                rows="6"
+                placeholder="Share your feedback, topic idea, or learning suggestion..."
+                className="inputBox resize-none"
+              />
+            </Field>
+
+            <button className="inline-flex items-center justify-center gap-3 h-[56px] px-8 rounded-full bg-[#315BFF] text-white text-[15px] font-semibold hover:bg-[#1DA7F2] transition">
+              Submit Message
+              <ArrowRight size={18} />
+            </button>
+          </form>
         </div>
       </section>
 
@@ -180,13 +163,12 @@ const Contact = () => {
           font-size: 15px;
           outline: none;
           color: #1e293b;
-          border-radius: 18px;
+          border-radius: 16px;
           transition: all 0.3s ease;
         }
 
         .inputBox:focus {
-          border-color: #2563eb;
-          box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.06);
+          border-color: #315BFF;
         }
 
         .inputBox::placeholder {
@@ -199,7 +181,7 @@ const Contact = () => {
 
 const Field = ({ label, children }) => (
   <div className="space-y-3">
-    <label className="text-[13px] font-semibold text-slate-700">
+    <label className="text-[13px] font-semibold text-[#071B34]">
       {label}
     </label>
     {children}

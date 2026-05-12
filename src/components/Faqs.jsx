@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Plus, Minus, HelpCircle, BookOpen, ArrowRight } from "lucide-react";
+import { Plus, Minus, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function FAQHelpSection() {
@@ -25,80 +25,78 @@ export default function FAQHelpSection() {
     ];
 
     return (
-        <section className="w-full bg-white py-24 px-6 overflow-hidden font-[Poppins]">
-            <div className="max-w-[1450px] mx-auto grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-20 items-center">
-                {/* Left */}
-                <div className="relative  flex items-center justify-center">
-
+        <section className="w-full bg-[#EEF4F8] font-[Poppins] overflow-hidden">
+            <div className="grid grid-cols-1 lg:grid-cols-[44%_56%] min-h-[760px]">
+                {/* Left Image */}
+                <div className="hidden lg:block relative overflow-hidden">
                     <img
-                        src="/about/faq-driver.webp"
+                        src="/about/faq-main.avif"
                         alt="Driver information learning"
-                        width="600"
-                        height="450"
-                        className="relative z-10 w-full  h-auto object-cover"
+                        className="w-full h-full object-cover"
                     />
-
+                    <div className="absolute inset-0 bg-[#071B34]/10" />
                 </div>
 
-                {/* Right */}
-                <div>
-                    <div className="inline-flex items-center gap-3 mb-5">
-                        <span className="w-10 h-10 rounded-full border border-dashed border-[#2563eb] flex items-center justify-center text-[#2563eb]">
-                            <HelpCircle size={18} />
-                        </span>
-                        <span className="text-[14px] font-semibold text-[#2563eb] uppercase tracking-wide">
-                            Driver Questions
-                        </span>
-                    </div>
+                {/* Right FAQ */}
+                <div className="px-6 md:px-14 lg:px-24 py-24 flex items-center">
+                    <div className="w-full max-w-[900px]">
+                        <div className="mb-10">
+                            <p className="flex items-center gap-4 text-[#315BFF] text-[13px] font-semibold uppercase tracking-[0.18em] mb-6">
+                                <span className="w-12 h-px bg-[#315BFF]" />
+                                Driver Questions
+                                <span className="w-12 h-px bg-[#315BFF]" />
+                            </p>
 
-                    <h2 className="text-[34px] md:text-[44px] font-semibold leading-tight text-[#202124] mb-5">
-                        Simple answers about driver topics.
-                    </h2>
+                            <h2 className="text-[36px] md:text-[54px] leading-tight font-semibold text-[#071B34]">
+                                Simple answers to common{" "}
+                                <span className="text-[#315BFF]">driver topics.</span>
+                            </h2>
+                        </div>
 
+                        <div className="space-y-4">
+                            {faqs.map((faq, index) => (
+                                <div key={index} className="bg-white rounded-[8px] overflow-hidden">
+                                    <button
+                                        onClick={() => setActive(active === index ? null : index)}
+                                        className="w-full min-h-[76px] px-7 flex items-center justify-between gap-6 text-left"
+                                    >
+                                        <div className="flex items-center gap-4">
+                                            <span className="text-[26px] text-slate-300 font-medium">
+                                                {String(index + 1).padStart(2, "0")}
+                                            </span>
 
+                                            <span className="text-[17px] font-semibold text-[#071B34]">
+                                                {faq.q}
+                                            </span>
+                                        </div>
 
-                    <div className="divide-y divide-slate-200">
-                        {faqs.map((faq, index) => (
-                            <div key={index} className="group">
-                                <button
-                                    onClick={() => setActive(active === index ? null : index)}
-                                    className="w-full flex items-center justify-between gap-6 py-7 text-left"
-                                >
-                                    <span className="text-[18px] md:text-[21px] font-semibold text-slate-900 group-hover:text-[#2563eb] transition">
-                                        {faq.q}
-                                    </span>
+                                        <span className="text-[#315BFF] shrink-0">
+                                            {active === index ? <Minus size={22} /> : <Plus size={22} />}
+                                        </span>
+                                    </button>
 
-                                    <span
-                                        className={`w-11 h-11 rounded-full flex items-center justify-center shrink-0 transition-all duration-300 ${active === index
-                                            ? "bg-[#2563eb] text-white rotate-180"
-                                            : "bg-[#f1f5ff] text-[#2563eb]"
+                                    <div
+                                        className={`overflow-hidden transition-all duration-300 ${active === index
+                                            ? "max-h-[180px] opacity-100"
+                                            : "max-h-0 opacity-0"
                                             }`}
                                     >
-                                        {active === index ? <Minus size={20} /> : <Plus size={20} />}
-                                    </span>
-                                </button>
-
-                                <div
-                                    className={`overflow-hidden transition-all duration-300 ${active === index
-                                        ? "max-h-[180px] opacity-100 pb-7"
-                                        : "max-h-0 opacity-0"
-                                        }`}
-                                >
-                                    <p className="text-[15px] leading-[1.9] text-slate-500 max-w-[780px]">
-                                        {faq.a}
-                                    </p>
+                                        <p className="px-7 pb-6 pl-[78px] text-[15px] leading-7 text-slate-600">
+                                            {faq.a}
+                                        </p>
+                                    </div>
                                 </div>
-                            </div>
-                        ))}
-                    </div>
+                            ))}
+                        </div>
 
-                    <Link
-                        to="/guides"
-                        className="mt-10 inline-flex items-center gap-3 text-[#2563eb] text-[15px] font-semibold border-b border-[#2563eb] pb-2 hover:gap-5 transition-all"
-                    >
-                        Browse Driver Guides
-                        <ArrowRight size={18} />
-                    </Link>
+                        <Link
+                            to="/guides"
+                            className="mt-9 inline-flex items-center gap-3 h-[52px] px-7 rounded-full bg-[#315BFF] text-white text-[15px] font-semibold hover:bg-[#1DA7F2] transition"
+                        >
+                            Browse Driver Guides
+                            <ArrowRight size={18} />
+                        </Link>
+                    </div>
                 </div>
             </div>
         </section>

@@ -23,7 +23,7 @@ const GuideDetails = () => {
   if (!guide) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center bg-white px-6 font-[Poppins]">
-        <h2 className="text-[34px] md:text-[44px] font-semibold text-slate-900">
+        <h2 className="text-[38px] font-semibold text-[#071B34]">
           Guide Not Found
         </h2>
         <p className="text-slate-500 mt-3 mb-8 text-center">
@@ -31,7 +31,7 @@ const GuideDetails = () => {
         </p>
         <Link
           to="/guides"
-          className="inline-flex items-center gap-3 h-[54px] px-8 rounded-full bg-[#2563eb] text-white text-[15px] font-semibold hover:bg-[#1d4ed8] transition"
+          className="inline-flex items-center gap-3 h-[54px] px-8 rounded-full bg-[#315BFF] text-white text-[15px] font-semibold hover:bg-[#1DA7F2] transition"
         >
           Back to Guides <ArrowRight size={18} />
         </Link>
@@ -42,71 +42,61 @@ const GuideDetails = () => {
   const otherGuides = guidesData.filter((g) => g.slug !== slug).slice(0, 4);
 
   return (
-    <div className="bg-white min-h-screen pt-0 pb-20 font-[Poppins]">
+    <div className="bg-white min-h-screen font-[Poppins]">
       <Helmet>
-        <title>{guide.title} | Aura Learning Guide</title>
+        <title>{guide.title} | Clear With Us Guide</title>
         <meta name="description" content={guide.desc} />
       </Helmet>
 
       {/* HERO */}
-      <section className="relative bg-[#f7f9ff] py-24 px-6 overflow-hidden">
-        <div className="absolute top-[-140px] right-[-120px] w-[420px] h-[420px] rounded-full bg-blue-100 blur-[80px]" />
-        <div className="absolute bottom-[-170px] left-[-120px] w-[420px] h-[420px] rounded-full bg-indigo-100 blur-[90px]" />
-
-        <div className="relative z-10 max-w-[1500px] mx-auto">
+      <section className="relative bg-[#EEF4FF] px-6 pt-32 pb-24 overflow-hidden">
+        <div className="max-w-[1500px] mx-auto">
           <div className="flex items-center gap-3 text-[12px] font-medium text-slate-500 mb-10">
-            <Link to="/" className="hover:text-[#2563eb] transition">
+            <Link to="/" className="hover:text-[#315BFF] transition">
               Home
             </Link>
             <ChevronRight size={14} />
-            <Link to="/guides" className="hover:text-[#2563eb] transition">
+            <Link to="/guides" className="hover:text-[#315BFF] transition">
               Guides
             </Link>
             <ChevronRight size={14} />
-            <span className="text-[#2563eb] truncate">{guide.title}</span>
+            <span className="text-[#315BFF] truncate">{guide.title}</span>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_520px] gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-[0.95fr_1.05fr] gap-16 items-center">
             <div>
-              <div className="inline-flex items-center gap-3 mb-5">
-                <span className="w-10 h-10 rounded-full border border-dashed border-[#2563eb] flex items-center justify-center text-[#2563eb]">
-                  <BookOpen size={18} />
-                </span>
-                <span className="text-[14px] font-semibold text-[#2563eb] uppercase tracking-wide">
-                  Learning Article
-                </span>
-              </div>
+              <p className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#315BFF] text-[#315BFF] text-[13px] font-semibold uppercase tracking-[0.14em] mb-6">
+                <span className="w-2 h-2 rounded-full bg-[#315BFF]" />
+                Learning Article
+              </p>
 
-              <h1 className="text-[34px] md:text-[48px] font-semibold leading-tight text-[#202124] mb-7">
+              <h1 className="text-[38px] md:text-[62px] leading-tight font-semibold text-[#071B34] mb-7">
                 {guide.title}
               </h1>
 
-              <p className="text-[16px] leading-[1.9] text-slate-600 max-w-[760px]">
+              <p className="text-[17px] leading-8 text-slate-600 max-w-[760px]">
                 {guide.content.introduction}
               </p>
 
-              <div className="flex flex-wrap gap-6 mt-10">
-                <div className="flex items-center gap-2 text-[14px] font-medium text-slate-500">
-                  <Clock size={16} className="text-[#2563eb]" />
+              <div className="flex flex-wrap gap-5 mt-10">
+                <span className="inline-flex items-center gap-2 h-[42px] px-5 rounded-full bg-white text-[#071B34] text-[14px] font-medium">
+                  <Clock size={16} className="text-[#315BFF]" />
                   5 Min Read
-                </div>
+                </span>
 
-                <div className="flex items-center gap-2 text-[14px] font-medium text-[#10b981]">
-                  <CheckCircle2 size={16} />
+                <span className="inline-flex items-center gap-2 h-[42px] px-5 rounded-full bg-white text-[#071B34] text-[14px] font-medium">
+                  <CheckCircle2 size={16} className="text-[#315BFF]" />
                   Information Guide
-                </div>
+                </span>
               </div>
             </div>
 
-            <div className="relative flex items-center justify-center min-h-[500px]">
-              <div className="absolute w-[430px] h-[430px] rounded-full bg-[#eaf4ff]" />
-              <div className="absolute top-12 right-8 w-20 h-20 rounded-full border border-dashed border-[#2563eb]/40" />
-              <div className="absolute bottom-16 left-10 w-24 h-24 rounded-full bg-white/70" />
-
+            <div className="relative">
+              <div className="absolute -left-6 top-8 w-[90%] h-[90%] rounded-[28px] border-[4px] border-[#315BFF]" />
               <img
                 src={guide.img}
                 alt={guide.title}
-                className="relative z-10 w-full max-w-[430px] object-contain"
+                className="relative z-10 w-full h-[560px] object-contain rounded-[28px] bg-white p-10"
               />
             </div>
           </div>
@@ -115,39 +105,46 @@ const GuideDetails = () => {
 
       {/* CONTENT */}
       <section className="max-w-[1500px] mx-auto px-6 py-24">
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-16">
-          {/* Main */}
-          <main className="space-y-20">
-            {/* Common Reasons */}
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_360px] gap-16">
+          <main className="space-y-24">
+            {/* Reasons */}
             <div>
-              <div className="mb-10">
-                <div className="inline-flex items-center gap-3 mb-4">
-                  <span className="w-10 h-10 rounded-full bg-[#eff6ff] text-[#2563eb] flex items-center justify-center">
-                    <AlertCircle size={18} />
-                  </span>
-                  <span className="text-[14px] font-semibold text-[#2563eb] uppercase tracking-wide">
-                    Common Reasons
-                  </span>
-                </div>
+              <div className="mb-12">
+                <p className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#315BFF] text-[#315BFF] text-[13px] font-semibold uppercase tracking-[0.14em] mb-6">
+                  <span className="w-2 h-2 rounded-full bg-[#315BFF]" />
+                  Common Reasons
+                </p>
 
-                <h2 className="text-[28px] md:text-[36px] font-semibold text-[#202124]">
+                <h2 className="text-[34px] md:text-[48px] leading-tight font-semibold text-[#071B34]">
                   Possible reasons to understand.
                 </h2>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+              <div className="border-t border-slate-200">
                 {guide.content.reasons.map((reason, i) => (
                   <div
                     key={i}
-                    className="group flex gap-4 p-6 rounded-[26px] bg-[#f8fbff] border border-[#e2e8ff] hover:border-[#2563eb]/40 transition-all duration-300"
+                    className="grid grid-cols-[58px_1fr] gap-5 py-7 border-b border-slate-200"
                   >
-                    <div className="w-11 h-11 rounded-full bg-white text-[#2563eb] flex items-center justify-center shrink-0 group-hover:bg-[#2563eb] group-hover:text-white transition">
-                      <AlertCircle size={19} />
-                    </div>
+                    <span className="w-12 h-12 rounded-full bg-[#EEF4FF] text-[#315BFF] flex items-center justify-center">
+                      <AlertCircle size={20} />
+                    </span>
 
-                    <p className="text-[15px] leading-relaxed text-slate-600">
-                      {reason}
-                    </p>
+                    <div>
+                      <div className="flex items-center gap-3 mb-2">
+                        <span className="text-[12px] font-semibold text-[#315BFF]">
+                          {String(i + 1).padStart(2, "0")}
+                        </span>
+                        <span className="w-8 h-px bg-slate-300" />
+                        <span className="text-[12px] uppercase tracking-wider text-slate-400">
+                          Reason
+                        </span>
+                      </div>
+
+                      <p className="text-[16px] leading-8 text-slate-600">
+                        {reason}
+                      </p>
+                    </div>
                   </div>
                 ))}
               </div>
@@ -155,33 +152,45 @@ const GuideDetails = () => {
 
             {/* Steps */}
             <div>
-              <div className="mb-8">
-                <div className="inline-flex items-center gap-3 mb-4">
-                  <span className="w-10 h-10 rounded-full bg-[#eff6ff] text-[#2563eb] flex items-center justify-center">
-                    <Lightbulb size={18} />
-                  </span>
-                  <span className="text-[14px] font-semibold text-[#2563eb] uppercase tracking-wide">
-                    Helpful Steps
-                  </span>
-                </div>
+              <div className="mb-12">
+                <p className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#315BFF] text-[#315BFF] text-[13px] font-semibold uppercase tracking-[0.14em] mb-6">
+                  <span className="w-2 h-2 rounded-full bg-[#315BFF]" />
+                  Helpful Steps
+                </p>
 
-                <h2 className="text-[28px] md:text-[36px] font-semibold text-[#202124]">
+                <h2 className="text-[34px] md:text-[48px] leading-tight font-semibold text-[#071B34]">
                   Simple steps you can read through.
                 </h2>
               </div>
 
-              <div className="divide-y divide-slate-200">
+              <div className="space-y-12">
                 {guide.content.steps.map((step, i) => (
-                  <div key={i} className="group flex gap-6 py-8">
-                    <div className="w-12 h-12 rounded-full bg-[#eff6ff] text-[#2563eb] flex items-center justify-center text-[16px] font-semibold shrink-0 group-hover:bg-[#2563eb] group-hover:text-white transition">
-                      {i + 1}
+                  <div
+                    key={i}
+                    className="grid grid-cols-[120px_1fr] items-center gap-8"
+                  >
+                    <div className="relative flex items-center justify-center">
+                      <div
+                        className={`w-[96px] h-[96px] rounded-full flex items-center justify-center ${i === 0
+                          ? "bg-[#315BFF] text-white"
+                          : "bg-[#EEF4FF] text-[#315BFF]"
+                          }`}
+                      >
+                        <Lightbulb size={36} strokeWidth={1.6} />
+                      </div>
+
+                      <span className="absolute left-[92px] top-1/2 w-[55px] border-t border-dashed border-[#315BFF]/40" />
+
+                      <span className="absolute -right-[38px] top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-[#315BFF] text-white flex items-center justify-center text-[13px] font-bold">
+                        {String(i + 1).padStart(2, "0")}
+                      </span>
                     </div>
 
-                    <div>
-                      <h3 className="text-[22px] font-semibold text-slate-900 mb-3 group-hover:text-[#2563eb] transition">
+                    <div className="border-b border-slate-200 pb-8">
+                      <h3 className="text-[25px] font-semibold text-[#071B34] mb-3">
                         {step.title}
                       </h3>
-                      <p className="text-[16px] leading-[1.85] text-slate-500">
+                      <p className="text-[16px] leading-8 text-slate-500">
                         {step.text}
                       </p>
                     </div>
@@ -190,89 +199,79 @@ const GuideDetails = () => {
               </div>
             </div>
 
-            {/* Bottom CTA */}
-            <div className="relative bg-[#f7f9ff] rounded-[36px] px-8 md:px-12 py-12 overflow-hidden text-center border border-[#e2e8ff]">
-              <div className="absolute right-[-80px] top-[-80px] w-[220px] h-[220px] bg-blue-100 rounded-full blur-[50px]" />
+            {/* CTA */}
+            <div className="bg-[#071B34] rounded-[30px] px-8 md:px-12 py-14 text-center">
+              <h3 className="text-[32px] md:text-[46px] leading-tight font-semibold text-white mb-5">
+                Want to learn more driver topics?
+              </h3>
 
-              <div className="relative z-10 max-w-[720px] mx-auto">
-                <h3 className="text-[28px] md:text-[38px] font-semibold text-[#202124] mb-4">
-                  Want to learn more driver topics?
-                </h3>
+              <p className="text-[16px] leading-8 text-white/65 max-w-[720px] mx-auto mb-9">
+                Browse the full library of simple educational guides about
+                computer drivers and device communication.
+              </p>
 
-                <p className="text-[15px] leading-relaxed text-slate-600 mb-8">
-                  Browse our full library of simple information guides about
-                  computer drivers and device communication.
-                </p>
-
-                <Link
-                  to="/guides"
-                  className="inline-flex items-center gap-3 h-[54px] px-8 rounded-full bg-[#2563eb] text-white text-[15px] font-semibold hover:bg-[#1d4ed8] transition"
-                >
-                  View All Guides
-                  <ArrowRight size={18} />
-                </Link>
-              </div>
+              <Link
+                to="/guides"
+                className="inline-flex items-center gap-3 h-[56px] px-8 rounded-full bg-[#315BFF] text-white text-[15px] font-semibold hover:bg-[#1DA7F2] transition"
+              >
+                View All Guides <ArrowRight size={18} />
+              </Link>
             </div>
           </main>
 
           {/* Sidebar */}
-          <aside className="space-y-8 lg:sticky lg:top-28 self-start">
-            <div className="bg-[#f8fbff] rounded-[30px] border border-[#e2e8ff] p-7">
-              <h3 className="text-[22px] font-semibold text-slate-900 mb-7 flex items-center gap-3">
-                <BookOpen size={21} className="text-[#2563eb]" />
+          <aside className="space-y-10 lg:sticky lg:top-28 self-start">
+            <div className="border-t border-slate-200">
+              <h3 className="text-[24px] font-semibold text-[#071B34] py-6 flex items-center gap-3 border-b border-slate-200">
+                <BookOpen size={22} className="text-[#315BFF]" />
                 Related Reading
               </h3>
 
-              <div className="space-y-4">
-                {otherGuides.map((item, i) => (
-                  <Link
-                    key={i}
-                    to={`/guide/${item.slug}`}
-                    className="group flex gap-4 items-center py-4 border-b border-slate-200/70 last:border-b-0"
-                  >
-                    <div className="w-16 h-16 rounded-[18px] bg-white flex items-center justify-center shrink-0 overflow-hidden">
-                      <img
-                        src={item.img}
-                        alt={item.title}
-                        className="max-w-[46px] max-h-[46px] object-contain group-hover:scale-110 transition-transform duration-500"
-                      />
-                    </div>
-
-                    <div className="flex-1">
-                      <h4 className="text-[14px] font-semibold text-slate-900 leading-snug group-hover:text-[#2563eb] transition-colors line-clamp-2">
-                        {item.title}
-                      </h4>
-                      <p className="text-[12px] text-slate-500 mt-1">
-                        Information Guide
-                      </p>
-                    </div>
-
-                    <ArrowRight
-                      size={15}
-                      className="text-slate-300 group-hover:text-[#2563eb] group-hover:translate-x-1 transition"
+              {otherGuides.map((item, i) => (
+                <Link
+                  key={i}
+                  to={`/guide/${item.slug}`}
+                  className="group grid grid-cols-[64px_1fr_24px] gap-4 items-center py-5 border-b border-slate-200"
+                >
+                  <div className="w-16 h-16 rounded-[16px] bg-[#F4F7FB] flex items-center justify-center overflow-hidden">
+                    <img
+                      src={item.img}
+                      alt={item.title}
+                      className="max-w-[44px] max-h-[44px] object-contain group-hover:scale-110 transition duration-500"
                     />
-                  </Link>
-                ))}
-              </div>
+                  </div>
+
+                  <div>
+                    <h4 className="text-[14px] font-semibold text-[#071B34] leading-snug group-hover:text-[#315BFF] transition line-clamp-2">
+                      {item.title}
+                    </h4>
+                    <p className="text-[12px] text-slate-500 mt-1">
+                      Information Guide
+                    </p>
+                  </div>
+
+                  <ArrowRight
+                    size={15}
+                    className="text-slate-300 group-hover:text-[#315BFF] group-hover:translate-x-1 transition"
+                  />
+                </Link>
+              ))}
             </div>
 
-            <div className="bg-white rounded-[30px] border border-slate-200 p-7">
-              <div className="w-14 h-14 rounded-full bg-[#eff6ff] text-[#2563eb] flex items-center justify-center mb-6">
-                <BookOpen size={26} />
-              </div>
-
-              <h3 className="text-[24px] font-semibold text-slate-900 mb-4">
-                Easy driver learning
+            <div className="border-l-4 border-[#315BFF] pl-5">
+              <h3 className="text-[24px] font-semibold text-[#071B34] mb-4">
+                Educational driver learning
               </h3>
 
-              <p className="text-[15px] leading-relaxed text-slate-500 mb-7">
-                Aura Learning explains driver topics in simple language for
-                everyday computer users.
+              <p className="text-[15px] leading-7 text-slate-500 mb-6">
+                Clear With Us explains driver topics in simple language for
+                everyday computer users. We do not provide repair, remote access,
+                or technical support.
               </p>
 
               <Link
                 to="/"
-                className="inline-flex items-center gap-2 text-[14px] font-semibold text-[#2563eb] hover:gap-4 transition-all"
+                className="inline-flex items-center gap-2 text-[14px] font-semibold text-[#315BFF] hover:gap-4 transition-all"
               >
                 Back To Home <ArrowRight size={15} />
               </Link>

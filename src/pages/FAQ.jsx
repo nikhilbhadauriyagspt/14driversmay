@@ -19,8 +19,8 @@ const FAQPage = () => {
       icon: <FaQuestionCircle />,
       items: [
         {
-          q: "What is Aura Learning?",
-          a: "Aura Learning is an information-only educational resource. We provide documentation and guides to help users understand how hardware drivers work. We do NOT provide technical support, remote assistance, or repair services of any kind."
+          q: "What is Clear With Us?",
+          a: "Clear With Us is an information-only educational resource. We provide documentation and guides to help users understand how hardware drivers work. We do NOT provide technical support, remote assistance, or repair services of any kind."
         },
         {
           q: "How often should I check for driver information?",
@@ -73,7 +73,7 @@ const FAQPage = () => {
       icon: <FaShieldAlt />,
       items: [
         {
-          q: "Is there a cost for using Aura Learning?",
+          q: "Is there a cost for using Clear With Us?",
           a: "Access to our technical documentation, hardware registry, and guide library is completely free. We are a community-focused resource dedicated to hardware transparency."
         },
         {
@@ -95,7 +95,7 @@ const FAQPage = () => {
   return (
     <div className="bg-[#F8FAFC] min-h-screen pt-28 pb-20 font-[Poppins]">
       <Helmet>
-        <title>FAQ | Frequently Asked Questions | Aura Learning</title>
+        <title>FAQ | Frequently Asked Questions | Clear With Us</title>
         <meta name="description" content="Find answers to common questions about driver installations, hardware fixes, and system optimization." />
       </Helmet>
 

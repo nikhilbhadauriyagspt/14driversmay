@@ -19,9 +19,9 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>Aura Learning | Driver Information Guides</title>
+        <title>Clear With Us | Driver Information Guides</title>
         <meta name="description" content="Technical repository for hardware specifications, driver-level architectural data, and system documentation for the global technical community." />
-        <link rel="canonical" href="https://auralearning.co" />
+        <link rel="canonical" href="https://clearwithus.co" />
       </Helmet>
 
       <Hero />
