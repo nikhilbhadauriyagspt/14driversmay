@@ -37,7 +37,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 w-full z-[100] bg-white/95 backdrop-blur-md font-[Poppins]">
+      <header className="fixed top-0 left-0 w-full z-[100] bg-white backdrop-blur-md font-[Poppins]">
         <div className="max-w-[1600px] mx-auto h-[86px] px-6 lg:px-10 flex items-center justify-between">
           <Link to="/" className="flex items-center">
             <img
