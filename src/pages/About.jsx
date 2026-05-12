@@ -36,7 +36,7 @@ const About = () => {
               Our Mission
             </p>
 
-            <h1 className="text-[38px] 2xl:text-[62px] leading-tight font-semibold text-[#071B34] mb-7">
+            <h1 className="text-[38px] 2xl:text-[54px] leading-tight font-semibold text-[#071B34] mb-7">
               Helping you understand computer hardware{" "}
               <span className="text-[#315BFF]">without the hard words.</span>
             </h1>
