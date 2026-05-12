@@ -43,7 +43,7 @@ export default function Header() {
             <img
               src="/logo/logo.avif"
               alt="Clear With Us"
-              className="h-[54px] w-auto object-contain"
+              className="h-[60px] w-auto object-contain"
             />
           </Link>
 
