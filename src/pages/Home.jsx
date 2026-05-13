@@ -47,7 +47,7 @@ const Home = () => {
       <DriverChallengeSection />
 
       <CommonProblems />
-
+      <WhyChooseUs />
       <DriverFixIssue />
 
       {/* Expanded Learning Section */}
@@ -75,8 +75,8 @@ const Home = () => {
         </div>
       </section>
 
-      <WhyChooseUs />
-      <Guides />
+
+
       <FAQ />
 
 

@@ -3,103 +3,92 @@ import { ArrowRight, BookOpen } from "lucide-react";
 import { Link } from "react-router-dom";
 import { guidesData } from "../data/guidesData";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/pagination";
+const GuideCard = ({ guide, large = false }) => (
+    <Link
+        to={`/guide/${guide.slug}`}
+        className={`group block overflow-hidden rounded-xl border border-slate-100 bg-white p-2 transition hover:border-blue-100 ${large ? "md:col-span-2" : ""
+            }`}
+    >
+        <div className={`relative overflow-hidden rounded-lg ${large ? "h-[260px]" : "h-[190px]"}`}>
+            <img
+                src={guide.thumbImg}
+                alt={guide.title}
+                className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+            />
+
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+
+            <span className="absolute bottom-[56px] left-4 rounded-md bg-white px-2 py-0.5 text-[10px] font-semibold text-[#071B34] uppercase tracking-wider">
+                Guide Article
+            </span>
+
+            <h3 className="absolute bottom-4 left-4 right-4 text-[17px] font-semibold leading-snug text-white">
+                {guide.title}
+            </h3>
+        </div>
+
+        <div className="flex items-center justify-between gap-4 px-2 py-4">
+            <p className="line-clamp-2 text-[13px] leading-relaxed text-slate-500">
+                {guide.desc}
+            </p>
+
+            <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-slate-100 text-[#071B34] transition group-hover:border-[#315BFF] group-hover:text-[#315BFF]">
+                <ArrowRight size={14} strokeWidth={1.5} />
+            </span>
+        </div>
+    </Link>
+);
 
 const PopularDriverGuides = () => {
-    const guides = guidesData.slice(0, 9).map((guide) => ({
+    const guides = guidesData.slice(0, 11).map((guide) => ({
         ...guide,
         thumbImg: guide.img.includes("/images/")
             ? guide.img
             : guide.img.replace(".avif", "_thumb.avif"),
     }));
 
-    return (
-        <section className="w-full bg-[#F4F6FA] py-24 px-6 font-[Poppins] overflow-hidden">
-            <div className="max-w-[1500px] mx-auto">
-                {/* Header */}
-                <div className="text-center max-w-[780px] mx-auto mb-14">
-                    <p className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#315BFF] text-[#315BFF] text-[13px] font-semibold uppercase tracking-[0.14em] mb-5">
-                        <span className="w-2 h-2 rounded-full bg-[#315BFF]" />
-                        Learning Resources
-                    </p>
+    const mainGuide = guides[0];
+    const smallGuides = guides.slice(1);
 
-                    <h2 className="text-[34px] md:text-[52px] leading-tight font-semibold text-[#071B34]">
-                        Explore the Latest Driver
-                        <br />
-                        <span className="text-[#315BFF]">Guides and Updates.</span>
-                    </h2>
+    return (
+        <section className="w-full bg-white px-6 py-20 font-[Poppins]">
+            <div className="mx-auto max-w-[1600px]">
+                <div className="mb-12 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+                    <div>
+                        <div className="flex items-center gap-2 mb-4">
+                            <span className="w-8 h-[1px] bg-[#315BFF]"></span>
+                            <span className="text-[#315BFF] text-xs font-semibold uppercase tracking-widest">Recommended Reading</span>
+                        </div>
+
+                        <h2 className="text-2xl md:text-4xl font-semibold leading-tight text-[#071B34]">
+                            Most Read Information Guides
+                        </h2>
+                    </div>
+
+                    <div className="max-w-[430px] text-left md:text-right">
+                        <p className="mb-6 text-[14px] leading-relaxed text-slate-500">
+                            Explore simple driver guide articles for common WiFi, audio,
+                            printer, USB, graphics, and device-related issues.
+                        </p>
+
+                        <Link
+                            to="/guides"
+                            className="inline-flex items-center gap-2 bg-[#071B34] text-white px-7 py-3 rounded-lg text-[13px] font-medium transition hover:bg-blue-700"
+                        >
+                            View All Guides
+                            <ArrowRight size={15} strokeWidth={1.5} />
+                        </Link>
+                    </div>
                 </div>
 
-                {/* Slider */}
-                <Swiper
-                    modules={[Autoplay, Pagination]}
-                    spaceBetween={28}
-                    slidesPerView={1}
-                    loop={true}
-                    autoplay={{
-                        delay: 2800,
-                        disableOnInteraction: false,
-                    }}
+                <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4">
+                    <GuideCard guide={mainGuide} large />
 
-                    breakpoints={{
-                        768: {
-                            slidesPerView: 2,
-                        },
-                        1200: {
-                            slidesPerView: 2,
-                        },
-                    }}
-                    className="popularGuidesSwiper pb-14"
-                >
-                    {guides.map((guide, index) => (
-                        <SwiperSlide key={index}>
-                            <Link
-                                to={`/guide/${guide.slug}`}
-                                className="group bg-white rounded-[18px] p-6 min-h-[260px] flex items-center gap-6 hover:shadow-[0_22px_55px_rgba(15,23,42,0.10)] transition-all duration-300"
-                            >
-                                {/* Left Content */}
-                                <div className="flex-1">
-                                    <div className="flex items-center gap-3 mb-4">
-                                        <span className="text-[14px] text-slate-500">
-                                            Driver Guide
-                                        </span>
-                                        <span className="w-8 h-px bg-slate-400" />
-                                    </div>
-
-                                    <h3 className="text-[22px] leading-snug font-semibold text-[#071B34] group-hover:text-[#315BFF] transition">
-                                        {guide.title}
-                                    </h3>
-
-                                    <p className="mt-3 text-[14px] leading-6 text-slate-500 line-clamp-2">
-                                        {guide.desc}
-                                    </p>
-
-                                    <span className="mt-7 pr-2 inline-flex items-center gap-3 h-[48px] px-6 rounded-full bg-[#1018D7] text-white text-[14px] font-semibold">
-                                        Read More
-                                        <span className="w-8 h-8 rounded-full bg-white text-[#1018D7] flex items-center justify-center">
-                                            <ArrowRight size={17} />
-                                        </span>
-                                    </span>
-                                </div>
-
-                                {/* Right Image */}
-                                <div className="w-[170px] h-[170px] rounded-[12px] overflow-hidden shrink-0 bg-[#EEF4FF]">
-                                    <img
-                                        src={guide.thumbImg}
-                                        alt={guide.title}
-                                        className="w-full h-full object-contain p-4 group-hover:scale-105 transition duration-500"
-                                    />
-                                </div>
-                            </Link>
-                        </SwiperSlide>
+                    {smallGuides.map((guide, index) => (
+                        <GuideCard key={index} guide={guide} />
                     ))}
-                </Swiper>
+                </div>
             </div>
-
-
         </section>
     );
 };

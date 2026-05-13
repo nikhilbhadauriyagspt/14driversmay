@@ -11,8 +11,9 @@ import {
   Volume2,
   Printer,
   Usb,
-  ShieldCheck,
   HelpCircle,
+  ShieldCheck,
+  Zap,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -28,38 +29,36 @@ const About = () => {
       </Helmet>
 
       {/* HERO */}
-      <section className="relative bg-white px-6 pt-32 pb-24 overflow-hidden">
-        <div className="max-w-[1500px] mx-auto grid grid-cols-1 lg:grid-cols-[0.95fr_1.05fr] gap-16 items-center">
+      <section className="pt-32 pb-20 px-6">
+        <div className="max-w-[1600px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <p className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#315BFF] text-[#315BFF] text-[13px] font-semibold uppercase tracking-[0.14em] mb-6">
-              <span className="w-2 h-2 rounded-full bg-[#315BFF]" />
-              Our Mission
-            </p>
+            <div className="flex items-center gap-2 mb-6">
+              <span className="w-8 h-[1px] bg-[#315BFF]"></span>
+              <span className="text-[#315BFF] text-xs font-semibold uppercase tracking-widest">Our Mission</span>
+            </div>
 
-            <h1 className="text-[38px] 2xl:text-[54px] leading-tight font-semibold text-[#071B34] mb-7">
-              Helping you understand computer hardware{" "}
-              <span className="text-[#315BFF]">without the hard words.</span>
+            <h1 className="text-3xl lg:text-4xl 2xl:text-5xl font-semibold text-[#071B34] leading-[1.2] mb-8">
+              Helping you understand computer hardware <span className="text-[#315BFF]">without complexity.</span>
             </h1>
 
-            <p className="text-[17px] leading-8 text-slate-500 max-w-[720px] mb-6">
+            <p className="text-[17px] text-slate-500 leading-relaxed mb-6">
               Clear With Us was started to make technology easier for everyone. We know that computer drivers can sound scary or complicated. That's why we write our guides using simple language that anyone can understand.
             </p>
 
-            <p className="text-[17px] leading-8 text-slate-500 max-w-[720px] mb-9">
+            <p className="text-[17px] text-slate-500 leading-relaxed mb-10">
               Whether you are a student, a professional, or someone who just uses a computer for fun, our site is here to help you learn. We believe that when you understand how your machine works, you can use it better and feel more in control.
             </p>
 
             <div className="flex flex-wrap gap-4">
               <Link
                 to="/guides"
-                className="inline-flex items-center gap-3 h-[54px] px-7 rounded-full bg-[#315BFF] text-white text-[15px] font-semibold hover:bg-[#1DA7F2] transition"
+                className="inline-flex items-center gap-2 bg-[#315BFF] text-white px-7 py-3.5 rounded-lg font-medium hover:bg-blue-700 transition-colors"
               >
                 Browse Guides <ArrowRight size={18} />
               </Link>
-
               <Link
                 to="/faq"
-                className="inline-flex items-center gap-3 h-[54px] px-7 rounded-full border border-slate-200 text-[#071B34] text-[15px] font-semibold hover:border-[#315BFF] hover:text-[#315BFF] transition"
+                className="inline-flex items-center gap-2 border border-slate-200 text-[#071B34] px-7 py-3.5 rounded-lg font-medium hover:bg-slate-50 transition-colors"
               >
                 Common Questions
               </Link>
@@ -67,69 +66,62 @@ const About = () => {
           </div>
 
           <div className="relative">
-            <div className="absolute -left-6 top-8 w-[90%] h-[90%] rounded-[28px] border-[4px] border-[#315BFF]" />
+            <div className="absolute inset-0 bg-blue-50 rounded-xl transform translate-x-3 translate-y-3 -z-10"></div>
             <img
-              src="/about/aboutmain_03.webp"
+              src="/about/abou.png"
               alt="People learning together"
-              width="760"
-              height="620"
-              className="relative z-10 w-full h-[560px] object-cover rounded-[28px]"
+              className="w-full h-[450px] object-cover rounded-xl border border-slate-100"
             />
           </div>
         </div>
       </section>
 
-      {/* WHAT WE DO */}
-      <section className="py-24 px-6 bg-[#F4F7FB]">
-        <div className="max-w-[1500px] mx-auto grid grid-cols-1 lg:grid-cols-[0.85fr_1.15fr] gap-16 items-start">
-          <div className="lg:sticky lg:top-28">
-            <p className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#315BFF] text-[#315BFF] text-[13px] font-semibold uppercase tracking-[0.14em] mb-6">
-              <span className="w-2 h-2 rounded-full bg-[#315BFF]" />
-              How We Help
-            </p>
-
-            <h2 className="text-[36px] 2xl:text-[54px] leading-tight font-semibold text-[#071B34] mb-6">
-              We explain common topics in{" "}
-              <span className="text-[#315BFF]">plain English.</span>
-            </h2>
-
-            <p className="text-[16px] leading-8 text-slate-500 mb-8">
-              We focus on the things you use every day. From the Wi-Fi card that connects you to the internet, to the printer that handles your documents, we explain it all. Our articles are written by people who love technology but hate technical jargon.
-            </p>
-
-            <p className="text-[16px] leading-8 text-slate-500 mb-8">
-              Every guide on our site follows a simple path. We start with what the device is, then explain what the driver does, and finally show you how to identify common issues. This step-by-step approach ensures that you never feel lost.
-            </p>
-
-            <div className="border-l-4 border-[#315BFF] pl-5">
-              <p className="text-[15px] leading-7 text-slate-600 font-medium italic">
-                Important Note: Clear With Us is a place for learning. We provide information to help you understand your computer. We do not offer repair services or one-on-one technical support.
+      {/* HOW WE HELP */}
+      <section className="py-20 px-6 border-y border-slate-100 bg-slate-50/20">
+        <div className="max-w-[1600px] mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-16">
+            <div>
+              <div className="flex items-center gap-2 mb-6">
+                <span className="w-8 h-[1px] bg-[#315BFF]"></span>
+                <span className="text-[#315BFF] text-xs font-semibold uppercase tracking-widest">How We Help</span>
+              </div>
+              <h2 className="text-2xl lg:text-3xl font-semibold text-[#071B34] leading-tight mb-6">
+                We explain common topics in <span className="text-[#315BFF]">plain English.</span>
+              </h2>
+              <p className="text-slate-500 leading-relaxed mb-6">
+                We focus on the things you use every day. From the Wi-Fi card that connects you to the internet, to the printer that handles your documents, we explain it all. Our articles are written by people who love technology but hate technical jargon.
               </p>
+            </div>
+            <div className="lg:pt-12">
+              <p className="text-slate-500 leading-relaxed mb-6">
+                Every guide on our site follows a simple path. We start with what the device is, then explain what the driver does, and finally show you how to identify common issues. This step-by-step approach ensures that you never feel lost.
+              </p>
+              <div className="bg-white p-5 rounded-lg border border-slate-100 border-l-2 border-l-[#315BFF]">
+                <p className="text-[13px] font-medium text-slate-600 italic">
+                  Important Note: Clear With Us is a place for learning. We provide information to help you understand your computer. We do not offer repair services or one-on-one technical support.
+                </p>
+              </div>
             </div>
           </div>
 
-          <div className="border-t border-slate-200">
-            <InfoRow
-              icon={<BookOpen />}
-              number="01"
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <FeatureCard
+              icon={<BookOpen size={24} strokeWidth={1.5} />}
               title="Easy Guides"
               desc="Simple driver explanations written in clear everyday language."
             />
-            <InfoRow
-              icon={<Search />}
-              number="02"
+            <FeatureCard
+              icon={<Search size={24} strokeWidth={1.5} />}
               title="Topic Discovery"
               desc="Find driver information by device type or common hardware category."
             />
-            <InfoRow
-              icon={<CheckCircle />}
-              number="03"
+            <FeatureCard
+              icon={<CheckCircle size={24} strokeWidth={1.5} />}
               title="Clear Learning"
               desc="Understand common signs, terms, and driver-related concepts."
             />
-            <InfoRow
-              icon={<HelpCircle />}
-              number="04"
+            <FeatureCard
+              icon={<HelpCircle size={24} strokeWidth={1.5} />}
               title="Beginner Friendly"
               desc="Made for users who want simple knowledge without complex jargon."
             />
@@ -137,131 +129,99 @@ const About = () => {
         </div>
       </section>
 
-      {/* HOW TO USE */}
-      <section className="relative py-24 px-6 bg-[#EAF0FF] overflow-hidden">
-        <div className="max-w-[1500px] mx-auto grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-20 items-center">
-          <div className="space-y-12">
-            <StepRow
+      {/* STEPS */}
+      <section className="py-20 px-6">
+        <div className="max-w-[1600px] mx-auto">
+          <div className="text-center max-w-2xl mx-auto mb-16">
+            <div className="inline-flex items-center gap-2 mb-4 justify-center">
+              <span className="w-6 h-[1px] bg-[#315BFF]"></span>
+              <span className="text-[#315BFF] text-xs font-semibold uppercase tracking-widest">How To Use</span>
+              <span className="w-6 h-[1px] bg-[#315BFF]"></span>
+            </div>
+            <h2 className="text-2xl lg:text-4xl font-semibold text-[#071B34] mb-4">
+              Learn driver basics in <span className="text-[#315BFF]">3 simple steps.</span>
+            </h2>
+            <p className="text-slate-500 text-[16px]">
+              Start with a topic, read the simple guide, and understand how device-driver communication works.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <StepItem
               number="01"
-              icon={<BookOpen />}
+              icon={<Zap size={28} strokeWidth={1.5} />}
               title="Choose a Topic"
               desc="Select a category such as WiFi, audio, graphics, USB, printer, Bluetooth, or chipset."
-              active
             />
-            <StepRow
+            <StepItem
               number="02"
-              icon={<Search />}
+              icon={<Search size={28} strokeWidth={1.5} />}
               title="Read the Guide"
               desc="Go through simple explanations created for everyday computer users."
             />
-            <StepRow
+            <StepItem
               number="03"
-              icon={<CheckCircle />}
-              title="Understand the Basics"
+              icon={<CheckCircle size={28} strokeWidth={1.5} />}
+              title="Understand basics"
               desc="Learn how drivers help hardware and system software communicate."
             />
           </div>
 
-          <div>
-            <p className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#315BFF] text-[#315BFF] text-[13px] font-semibold uppercase tracking-[0.14em] mb-6">
-              <span className="w-2 h-2 rounded-full bg-[#315BFF]" />
-              How To Use
-            </p>
-
-            <h2 className="text-[38px] 2xl:text-[56px] leading-tight font-semibold text-[#071B34] mb-7">
-              Learn driver basics in{" "}
-              <span className="text-[#315BFF]">3 simple steps.</span>
-            </h2>
-
-            <p className="text-[17px] leading-8 text-slate-500 max-w-[560px] mb-9">
-              Start with a topic, read the simple guide, and understand how
-              device-driver communication works.
-            </p>
-
+          <div className="mt-12 text-center">
             <Link
               to="/guides"
-              className="inline-flex items-center gap-3 h-[54px] px-7 rounded-full bg-[#315BFF] text-white text-[15px] font-semibold hover:bg-[#1DA7F2] transition"
+              className="inline-flex items-center gap-2 bg-[#315BFF] text-white px-8 py-3.5 rounded-lg font-medium hover:bg-blue-700 transition-colors"
             >
-              Explore Guides <ArrowRight size={18} />
+              Explore All Guides <ArrowRight size={18} />
             </Link>
           </div>
         </div>
       </section>
 
       {/* TOPICS */}
-      <section className="py-24 px-6 bg-white">
-        <div className="max-w-[1500px] mx-auto">
-          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-14">
+      <section className="py-20 px-6 bg-[#071B34] text-white relative">
+        <div className="max-w-[1600px] mx-auto relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-end mb-12">
             <div>
-              <p className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#315BFF] text-[#315BFF] text-[13px] font-semibold uppercase tracking-[0.14em] mb-6">
-                <span className="w-2 h-2 rounded-full bg-[#315BFF]" />
-                Topics We Cover
-              </p>
-
-              <h2 className="text-[36px] 2xl:text-[54px] leading-tight font-semibold text-[#071B34]">
-                Common driver categories{" "}
-                <span className="text-[#315BFF]">explained simply.</span>
+              <div className="flex items-center gap-2 mb-6 text-blue-400">
+                <span className="w-8 h-[1px] bg-blue-400"></span>
+                <span className="text-xs font-semibold uppercase tracking-widest">Topics We Cover</span>
+              </div>
+              <h2 className="text-2xl lg:text-4xl font-semibold leading-tight">
+                Common driver categories <span className="text-blue-400">explained simply.</span>
               </h2>
             </div>
-
-            <p className="text-[16px] leading-8 text-slate-500 max-w-[520px]">
-              Browse clear information about device-driver areas that affect
-              everyday computer use.
+            <p className="text-blue-100/60 text-[16px] leading-relaxed lg:pb-1">
+              Browse clear information about device-driver areas that affect everyday computer use. We break down the technical parts into easy bits.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-t border-slate-200">
-            {[
-              { icon: <Monitor />, text: "Graphics", sub: "Display & GPU basics" },
-              { icon: <Volume2 />, text: "Audio", sub: "Sound device information" },
-              { icon: <Wifi />, text: "Network", sub: "Wi-Fi and LAN topics" },
-              { icon: <Printer />, text: "Printer", sub: "Print device communication" },
-              { icon: <Usb />, text: "USB", sub: "Port detection basics" },
-              { icon: <Cpu />, text: "Chipset", sub: "Core system bridge" },
-            ].map((item, i) => (
-              <div
-                key={i}
-                className="group flex items-center gap-5 py-8 border-b border-slate-200 lg:px-6"
-              >
-                <span className="w-14 h-14 rounded-full bg-[#EEF4FF] text-[#315BFF] flex items-center justify-center group-hover:bg-[#315BFF] group-hover:text-white transition">
-                  {React.cloneElement(item.icon, { size: 24 })}
-                </span>
-
-                <div>
-                  <h3 className="text-[22px] font-semibold text-[#071B34]">
-                    {item.text}
-                  </h3>
-                  <p className="text-[14px] text-slate-500 mt-1">
-                    {item.sub}
-                  </p>
-                </div>
-              </div>
-            ))}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            <TopicMiniCard icon={<Monitor size={22} strokeWidth={1.5} />} title="Graphics" />
+            <TopicMiniCard icon={<Volume2 size={22} strokeWidth={1.5} />} title="Audio" />
+            <TopicMiniCard icon={<Wifi size={22} strokeWidth={1.5} />} title="Network" />
+            <TopicMiniCard icon={<Printer size={22} strokeWidth={1.5} />} title="Printer" />
+            <TopicMiniCard icon={<Usb size={22} strokeWidth={1.5} />} title="USB" />
+            <TopicMiniCard icon={<Cpu size={22} strokeWidth={1.5} />} title="Chipset" />
           </div>
         </div>
       </section>
 
       {/* FINAL CTA */}
-      <section className="py-24 px-6 bg-[#071B34] text-center">
-        <div className="max-w-[900px] mx-auto">
-          <p className="text-[#8ED8FF] text-[13px] font-semibold uppercase tracking-[0.18em] mb-5">
-            Start Learning
-          </p>
-
-          <h2 className="text-[36px] 2xl:text-[54px] leading-tight font-semibold text-white mb-6">
-            Explore driver information in a clear and simple way.
+      <section className="py-20 px-6 bg-white">
+        <div className="max-w-[1600px] mx-auto bg-blue-50/50 rounded-xl p-8 md:p-14 text-center border border-blue-100/50">
+          <ShieldCheck size={40} strokeWidth={1.5} className="text-[#315BFF] mx-auto mb-6" />
+          <h2 className="text-2xl lg:text-3xl font-semibold text-[#071B34] mb-6">
+            Ready to learn more about your devices?
           </h2>
-
-          <p className="text-[16px] leading-8 text-white/65 mb-10">
-            Read educational guides created to help you understand computer
-            drivers, device behavior, and hardware communication topics.
+          <p className="text-slate-500 text-[17px] mb-8 max-w-2xl mx-auto">
+            Read educational guides created to help you understand computer drivers, device behavior, and hardware communication topics.
           </p>
-
           <Link
             to="/guides"
-            className="inline-flex items-center gap-3 h-[56px] px-8 rounded-full bg-[#315BFF] text-white text-[15px] font-semibold hover:bg-[#1DA7F2] transition"
+            className="inline-flex items-center gap-2 bg-[#315BFF] text-white px-8 py-3.5 rounded-lg font-medium hover:bg-blue-700 transition-colors shadow-sm shadow-blue-100"
           >
-            Explore All Guides <ArrowRight size={18} />
+            Start Exploring <ArrowRight size={18} />
           </Link>
         </div>
       </section>
@@ -269,54 +229,35 @@ const About = () => {
   );
 };
 
-const InfoRow = ({ icon, number, title, desc }) => (
-  <div className="grid grid-cols-[60px_1fr] gap-5 py-8 border-b border-slate-200">
-    <span className="w-14 h-14 rounded-full bg-white text-[#315BFF] flex items-center justify-center">
-      {React.cloneElement(icon, { size: 23 })}
-    </span>
-
-    <div>
-      <div className="flex items-center gap-3 mb-2">
-        <span className="text-[12px] font-semibold text-[#315BFF]">
-          {number}
-        </span>
-        <span className="w-8 h-px bg-slate-300" />
-        <span className="text-[12px] uppercase tracking-wider text-slate-400">
-          Learning Point
-        </span>
-      </div>
-
-      <h3 className="text-[24px] font-semibold text-[#071B34] mb-2">
-        {title}
-      </h3>
-      <p className="text-[15px] leading-7 text-slate-500">{desc}</p>
+const FeatureCard = ({ icon, title, desc }) => (
+  <div className="bg-white p-6 rounded-lg border border-slate-100 hover:border-blue-100 transition-colors group">
+    <div className="text-[#315BFF] mb-5">
+      {icon}
     </div>
+    <h3 className="text-lg font-semibold text-[#071B34] mb-2">{title}</h3>
+    <p className="text-slate-400 text-[13px] leading-relaxed">{desc}</p>
   </div>
 );
 
-const StepRow = ({ number, icon, title, desc, active }) => (
-  <div className="grid grid-cols-[120px_1fr] items-center gap-8">
-    <div className="relative flex items-center justify-center">
-      <div
-        className={`w-[96px] h-[96px] rounded-full flex items-center justify-center ${active ? "bg-[#315BFF] text-white" : "bg-white text-[#315BFF]"
-          }`}
-      >
-        {React.cloneElement(icon, { size: 38, strokeWidth: 1.6 })}
-      </div>
-
-      <span className="absolute left-[92px] top-1/2 w-[55px] border-t border-dashed border-[#315BFF]/40" />
-
-      <span className="absolute -right-[38px] top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-[#315BFF] text-white flex items-center justify-center text-[13px] font-bold">
-        {number}
-      </span>
+const StepItem = ({ number, icon, title, desc }) => (
+  <div className="relative p-6 rounded-lg border border-slate-100 bg-white group hover:border-blue-100 transition-colors">
+    <div className="absolute -top-3 -left-3 w-8 h-8 bg-[#315BFF] text-white rounded-md flex items-center justify-center font-semibold text-xs">
+      {number}
     </div>
-
-    <div className="bg-white rounded-[12px] px-8 py-7">
-      <h3 className="text-[24px] font-semibold text-[#071B34] mb-3">
-        {title}
-      </h3>
-      <p className="text-[15px] leading-7 text-slate-500">{desc}</p>
+    <div className="text-[#315BFF] mb-5">
+      {icon}
     </div>
+    <h3 className="text-lg font-semibold text-[#071B34] mb-2">{title}</h3>
+    <p className="text-slate-400 text-[13px] leading-relaxed">{desc}</p>
+  </div>
+);
+
+const TopicMiniCard = ({ icon, title }) => (
+  <div className="bg-white/5 border border-white/5 hover:bg-white/10 p-5 rounded-lg text-center transition-colors cursor-default">
+    <div className="text-blue-400/80 mb-3 flex justify-center">
+      {icon}
+    </div>
+    <span className="text-[13px] font-medium tracking-wide text-blue-100/80">{title}</span>
   </div>
 );
 

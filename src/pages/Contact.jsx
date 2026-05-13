@@ -21,36 +21,35 @@ const Contact = () => {
       </Helmet>
 
       {/* HERO */}
-      <section className="relative bg-white px-6 pt-32 pb-24 overflow-hidden">
-        <div className="max-w-[1500px] mx-auto grid grid-cols-1 lg:grid-cols-[0.95fr_1.05fr] gap-16 items-center">
+      <section className="relative px-6 pt-32 pb-20 overflow-hidden">
+        <div className="max-w-[1600px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <p className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#315BFF] text-[#315BFF] text-[13px] font-semibold uppercase tracking-[0.14em] mb-6">
-              <span className="w-2 h-2 rounded-full bg-[#315BFF]" />
-              Contact Clear With Us
-            </p>
+            <div className="flex items-center gap-2 mb-6">
+              <span className="w-8 h-[1px] bg-[#315BFF]"></span>
+              <span className="text-[#315BFF] text-xs font-semibold uppercase tracking-widest">Contact Clear With Us</span>
+            </div>
 
-            <h1 className="text-[38px] 2xl:text-[62px] leading-tight font-semibold text-[#071B34] mb-7">
-              Share a driver learning topic or{" "}
-              <span className="text-[#315BFF]">guide idea.</span>
+            <h1 className="text-3xl lg:text-4xl 2xl:text-5xl font-semibold text-[#071B34] leading-[1.2] mb-8">
+              Share a driver learning topic or <span className="text-[#315BFF]">guide idea.</span>
             </h1>
 
-            <p className="text-[17px] leading-8 text-slate-500 max-w-[720px] mb-9">
+            <p className="text-[17px] text-slate-500 leading-relaxed max-w-[720px] mb-10">
               Send educational feedback, suggest a driver topic, or share an
               idea that can help us improve simple computer-driver learning
               content.
             </p>
 
-            <div className="border-t border-slate-200 pt-8">
+            <div className="border-t border-slate-100 pt-8">
               <div className="flex items-center gap-4">
-                <span className="w-14 h-14 rounded-full bg-[#EEF4FF] text-[#315BFF] flex items-center justify-center">
-                  <Mail size={22} />
+                <span className="w-12 h-12 rounded-lg bg-blue-50 text-[#315BFF] flex items-center justify-center border border-blue-50">
+                  <Mail size={20} strokeWidth={1.5} />
                 </span>
 
                 <div>
-                  <p className="text-[13px] text-slate-500">Email Address</p>
+                  <p className="text-[11px] font-semibold text-slate-400 uppercase tracking-widest mb-1">Email Address</p>
                   <a
                     href="mailto:info@clearwithus.co"
-                    className="text-[18px] font-semibold text-[#071B34] hover:text-[#315BFF] transition"
+                    className="text-lg font-semibold text-[#071B34] hover:text-[#315BFF] transition-colors"
                   >
                     info@clearwithus.co
                   </a>
@@ -60,23 +59,23 @@ const Contact = () => {
           </div>
 
           <div className="relative">
-            <div className="absolute -left-6 top-8 w-[90%] h-[90%] rounded-[28px] border-[4px] border-[#315BFF]" />
+            <div className="absolute inset-0 bg-blue-50 rounded-xl transform translate-x-3 translate-y-3 -z-10"></div>
             <img
-              src="/about/aboutmain.avif"
+              src="/about/contact.png"
               alt="Contact Clear With Us for driver information"
-              className="relative z-10 w-full h-[560px] object-cover rounded-[28px]"
+              className="relative z-10 w-full h-[450px] object-cover rounded-xl border border-slate-100"
             />
 
-            <div className="absolute left-8 bottom-8 z-20 bg-white rounded-full px-5 py-4 flex items-center gap-4">
-              <span className="w-12 h-12 rounded-full bg-[#315BFF] text-white flex items-center justify-center">
-                <MessageCircle size={20} />
+            <div className="absolute left-6 bottom-6 z-20 bg-white rounded-lg px-5 py-4 flex items-center gap-4 border border-slate-100 shadow-sm">
+              <span className="w-10 h-10 rounded-lg bg-[#315BFF] text-white flex items-center justify-center">
+                <MessageCircle size={18} strokeWidth={1.5} />
               </span>
 
               <div>
-                <p className="text-[14px] font-semibold text-[#071B34]">
+                <p className="text-sm font-semibold text-[#071B34]">
                   Learning Feedback
                 </p>
-                <p className="text-[12px] text-slate-500">
+                <p className="text-[11px] text-slate-400 uppercase tracking-wider">
                   Topic suggestions only
                 </p>
               </div>
@@ -86,28 +85,27 @@ const Contact = () => {
       </section>
 
       {/* FORM SECTION */}
-      <section className="py-24 px-6 bg-[#F4F7FB]">
-        <div className="max-w-[1500px] mx-auto grid grid-cols-1 lg:grid-cols-[0.85fr_1.15fr] gap-16 items-start">
+      <section className="py-20 px-6 border-y border-slate-100 bg-slate-50/20">
+        <div className="max-w-[1600px] mx-auto grid grid-cols-1 lg:grid-cols-[0.85fr_1.15fr] gap-16 items-start">
           {/* Left */}
           <div className="lg:sticky lg:top-28">
-            <p className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#315BFF] text-[#315BFF] text-[13px] font-semibold uppercase tracking-[0.14em] mb-6">
-              <span className="w-2 h-2 rounded-full bg-[#315BFF]" />
-              Send Message
-            </p>
+            <div className="flex items-center gap-2 mb-6">
+              <span className="w-8 h-[1px] bg-[#315BFF]"></span>
+              <span className="text-[#315BFF] text-xs font-semibold uppercase tracking-widest">Send Message</span>
+            </div>
 
-            <h2 className="text-[36px] 2xl:text-[54px] leading-tight font-semibold text-[#071B34] mb-6">
-              Help us improve our{" "}
-              <span className="text-[#315BFF]">learning library.</span>
+            <h2 className="text-2xl lg:text-3xl font-semibold text-[#071B34] leading-tight mb-6">
+              Help us improve our <span className="text-[#315BFF]">learning library.</span>
             </h2>
 
-            <p className="text-[16px] leading-8 text-slate-500 mb-8">
+            <p className="text-slate-500 leading-relaxed mb-8">
               Use this form for guide suggestions, educational feedback, or
               general questions about our information content.
             </p>
 
-            <div className="border-l-4 border-[#315BFF] pl-5 flex gap-3">
-              <ShieldCheck className="text-[#315BFF] shrink-0 mt-1" size={22} />
-              <p className="text-[15px] leading-7 text-slate-600 font-medium">
+            <div className="bg-white p-5 rounded-lg border border-slate-100 border-l-2 border-l-[#315BFF] flex gap-4">
+              <ShieldCheck className="text-[#315BFF] shrink-0 mt-0.5" size={20} strokeWidth={1.5} />
+              <p className="text-[14px] leading-relaxed text-slate-600 font-medium italic">
                 Clear With Us is information-only. We do not provide computer
                 repair, remote access, installation, or technical support.
               </p>
@@ -115,17 +113,21 @@ const Contact = () => {
           </div>
 
           {/* Right Form */}
-          <form className="bg-white rounded-[28px] p-6 md:p-10 space-y-7">
+          <form className="bg-white rounded-xl border border-slate-100 p-8 md:p-10 space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <Field label="Full Name">
-                <input type="text" placeholder="Your name" className="inputBox" />
+                <input
+                  type="text"
+                  placeholder="Your name"
+                  className="w-full bg-white border border-slate-200 rounded-lg px-5 py-3.5 text-sm outline-none focus:border-[#315BFF] transition-colors placeholder:text-slate-400 text-[#071B34]"
+                />
               </Field>
 
               <Field label="Email Address">
                 <input
                   type="email"
                   placeholder="Email address"
-                  className="inputBox"
+                  className="w-full bg-white border border-slate-200 rounded-lg px-5 py-3.5 text-sm outline-none focus:border-[#315BFF] transition-colors placeholder:text-slate-400 text-[#071B34]"
                 />
               </Field>
             </div>
@@ -134,54 +136,32 @@ const Contact = () => {
               <input
                 type="text"
                 placeholder="Example: WiFi, Printer, Audio, Graphics"
-                className="inputBox"
+                className="w-full bg-white border border-slate-200 rounded-lg px-5 py-3.5 text-sm outline-none focus:border-[#315BFF] transition-colors placeholder:text-slate-400 text-[#071B34]"
               />
             </Field>
 
             <Field label="Your Message">
               <textarea
-                rows="6"
+                rows="5"
                 placeholder="Share your feedback, topic idea, or learning suggestion..."
-                className="inputBox resize-none"
+                className="w-full bg-white border border-slate-200 rounded-lg px-5 py-3.5 text-sm outline-none focus:border-[#315BFF] transition-colors placeholder:text-slate-400 text-[#071B34] resize-none"
               />
             </Field>
 
-            <button className="inline-flex items-center justify-center gap-3 h-[56px] px-8 rounded-full bg-[#315BFF] text-white text-[15px] font-semibold hover:bg-[#1DA7F2] transition">
+            <button className="inline-flex items-center justify-center gap-2 bg-[#315BFF] text-white px-8 py-3.5 rounded-lg font-medium hover:bg-blue-700 transition-colors">
               Submit Message
-              <ArrowRight size={18} />
+              <ArrowRight size={18} strokeWidth={1.5} />
             </button>
           </form>
         </div>
       </section>
-
-      <style>{`
-        .inputBox {
-          width: 100%;
-          background: #ffffff;
-          border: 1px solid #dbe4ff;
-          padding: 18px 20px;
-          font-size: 15px;
-          outline: none;
-          color: #1e293b;
-          border-radius: 16px;
-          transition: all 0.3s ease;
-        }
-
-        .inputBox:focus {
-          border-color: #315BFF;
-        }
-
-        .inputBox::placeholder {
-          color: #94a3b8;
-        }
-      `}</style>
     </div>
   );
 };
 
 const Field = ({ label, children }) => (
-  <div className="space-y-3">
-    <label className="text-[13px] font-semibold text-[#071B34]">
+  <div className="space-y-2">
+    <label className="text-[12px] font-semibold text-[#071B34] uppercase tracking-wider">
       {label}
     </label>
     {children}
