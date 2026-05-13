@@ -44,7 +44,7 @@ export default function Header() {
             <img
               src="/logo/logo.avif"
               alt="Fanny Learn Hub"
-              className=" h-[40px] 2xl:h-[60px] w-auto object-contain"
+              className=" h-[40px] 2xl:h-[70px] w-auto object-contain"
             />
           </Link>
 
