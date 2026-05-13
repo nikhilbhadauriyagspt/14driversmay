@@ -12,9 +12,9 @@ const Blog = () => {
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
-        <title>Our Blog - Clear With Us</title>
+        <title>Our Blog - Fanny Learn Hub</title>
         <meta name="description" content="Read our latest articles about appliance maintenance, repair tips, and industry news." />
-        <link rel="canonical" href="https://clearwithus.co/blog" />
+        <link rel="canonical" href="https://fannylearnhub.co/blog" />
       </Helmet>
 
       <div className="relative bg-white py-32 overflow-hidden border-b border-gray-100">

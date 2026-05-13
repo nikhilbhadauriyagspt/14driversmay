@@ -13,10 +13,10 @@ const Contact = () => {
   return (
     <div className="bg-white min-h-screen font-[Poppins]">
       <Helmet>
-        <title>Contact | Clear With Us Driver Learning Resource</title>
+        <title>Contact | Fanny Learn Hub Driver Learning Resource</title>
         <meta
           name="description"
-          content="Contact Clear With Us for driver learning topics, educational feedback, or guide suggestions."
+          content="Contact Fanny Learn Hub for driver learning topics, educational feedback, or guide suggestions."
         />
       </Helmet>
 
@@ -26,7 +26,7 @@ const Contact = () => {
           <div>
             <div className="flex items-center gap-2 mb-6">
               <span className="w-8 h-[1px] bg-[#315BFF]"></span>
-              <span className="text-[#315BFF] text-xs font-semibold uppercase tracking-widest">Contact Clear With Us</span>
+              <span className="text-[#315BFF] text-xs font-semibold uppercase tracking-widest">Contact Fanny Learn Hub</span>
             </div>
 
             <h1 className="text-3xl lg:text-4xl 2xl:text-5xl font-semibold text-[#071B34] leading-[1.2] mb-8">
@@ -48,10 +48,10 @@ const Contact = () => {
                 <div>
                   <p className="text-[11px] font-semibold text-slate-400 uppercase tracking-widest mb-1">Email Address</p>
                   <a
-                    href="mailto:info@clearwithus.co"
+                    href="mailto:info@fannylearnhub.co"
                     className="text-lg font-semibold text-[#071B34] hover:text-[#315BFF] transition-colors"
                   >
-                    info@clearwithus.co
+                    info@fannylearnhub.co
                   </a>
                 </div>
               </div>
@@ -62,7 +62,7 @@ const Contact = () => {
             <div className="absolute inset-0 bg-blue-50 rounded-xl transform translate-x-3 translate-y-3 -z-10"></div>
             <img
               src="/about/contact.png"
-              alt="Contact Clear With Us for driver information"
+              alt="Contact Fanny Learn Hub for driver information"
               className="relative z-10 w-full h-[450px] object-cover rounded-xl border border-slate-100"
             />
 
@@ -106,7 +106,7 @@ const Contact = () => {
             <div className="bg-white p-5 rounded-lg border border-slate-100 border-l-2 border-l-[#315BFF] flex gap-4">
               <ShieldCheck className="text-[#315BFF] shrink-0 mt-0.5" size={20} strokeWidth={1.5} />
               <p className="text-[14px] leading-relaxed text-slate-600 font-medium italic">
-                Clear With Us is information-only. We do not provide computer
+                Fanny Learn Hub is information-only. We do not provide computer
                 repair, remote access, installation, or technical support.
               </p>
             </div>

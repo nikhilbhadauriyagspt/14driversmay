@@ -1,4 +1,4 @@
 export const APP_CONFIG = {
-    NAME: 'Clear With Us',
-    SUPPORT_EMAIL: 'info@clearwithus.co'
+    NAME: 'Fanny Learn Hub',
+    SUPPORT_EMAIL: 'info@fannylearnhub.co'
 };

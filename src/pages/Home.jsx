@@ -19,9 +19,9 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>Clear With Us | Easy Guides for Computer Drivers</title>
+        <title>Fanny Learn Hub | Easy Guides for Computer Drivers</title>
         <meta name="description" content="Learn how computer drivers work with our easy-to-read guides. We explain graphics, audio, WiFi, and printer basics for everyone." />
-        <link rel="canonical" href="https://clearwithus.co" />
+        <link rel="canonical" href="https://fannylearnhub.co" />
       </Helmet>
 
       <Hero />

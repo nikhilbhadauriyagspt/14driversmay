@@ -21,10 +21,10 @@ const About = () => {
   return (
     <div className="bg-white min-h-screen font-[Poppins]">
       <Helmet>
-        <title>Who We Are | Simple Driver Guides at Clear With Us</title>
+        <title>Who We Are | Simple Driver Guides at Fanny Learn Hub</title>
         <meta
           name="description"
-          content="Clear With Us is a website where you can learn about computer drivers in simple English. We help you understand how your devices connect and work."
+          content="Fanny Learn Hub is a website where you can learn about computer drivers in simple English. We help you understand how your devices connect and work."
         />
       </Helmet>
 
@@ -42,7 +42,7 @@ const About = () => {
             </h1>
 
             <p className="text-[17px] text-slate-500 leading-relaxed mb-6">
-              Clear With Us was started to make technology easier for everyone. We know that computer drivers can sound scary or complicated. That's why we write our guides using simple language that anyone can understand.
+              Fanny Learn Hub was started to make technology easier for everyone. We know that computer drivers can sound scary or complicated. That's why we write our guides using simple language that anyone can understand.
             </p>
 
             <p className="text-[17px] text-slate-500 leading-relaxed mb-10">
@@ -98,7 +98,7 @@ const About = () => {
               </p>
               <div className="bg-white p-5 rounded-lg border border-slate-100 border-l-2 border-l-[#315BFF]">
                 <p className="text-[13px] font-medium text-slate-600 italic">
-                  Important Note: Clear With Us is a place for learning. We provide information to help you understand your computer. We do not offer repair services or one-on-one technical support.
+                  Important Note: Fanny Learn Hub is a place for learning. We provide information to help you understand your computer. We do not offer repair services or one-on-one technical support.
                 </p>
               </div>
             </div>

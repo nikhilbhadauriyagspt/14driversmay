@@ -44,7 +44,7 @@ const GuideDetails = () => {
   return (
     <div className="bg-white min-h-screen font-[Poppins]">
       <Helmet>
-        <title>{guide.title} | Clear With Us Guide</title>
+        <title>{guide.title} | Fanny Learn Hub Guide</title>
         <meta name="description" content={guide.desc} />
       </Helmet>
 
@@ -196,7 +196,7 @@ const GuideDetails = () => {
             {/* CTA */}
             <div className="bg-[#071B34] rounded-xl px-8 md:px-12 py-14 text-center relative overflow-hidden">
               <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/5 blur-3xl -mr-32 -mt-32 rounded-full"></div>
-              
+
               <h3 className="text-2xl md:text-4xl font-semibold text-white mb-5 relative z-10">
                 Want to learn more driver topics?
               </h3>
@@ -261,7 +261,7 @@ const GuideDetails = () => {
               </h3>
 
               <p className="text-[13px] leading-relaxed text-slate-500 mb-6">
-                Clear With Us explains driver topics in simple language for
+                Fanny Learn Hub explains driver topics in simple language for
                 everyday computer users. We do not provide repair, remote access,
                 or technical support.
               </p>

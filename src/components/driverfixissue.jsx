@@ -179,7 +179,7 @@ const DriverInfoShowcase = () => {
                         </span>
 
                         <p className="max-w-[820px] text-[15px] leading-7 text-slate-500">
-                            Clear With Us is an educational driver information resource. The
+                            Fanny Learn Hub is an educational driver information resource. The
                             content is written for general understanding and does not offer
                             remote support, repair, or installation services.
                         </p>

@@ -9,9 +9,9 @@ const RefundPolicy = () => {
   return (
     <div className="bg-white min-h-screen pt-32 pb-24">
       <Helmet>
-        <title>Return Policy - Clear With Us</title>
-        <meta name="description" content="Official Return Policy for Clear With Us. Details on returns, process, and refunds." />
-        <link rel="canonical" href="https://clearwithus.co/refund-policy" />
+        <title>Return Policy - Fanny Learn Hub</title>
+        <meta name="description" content="Official Return Policy for Fanny Learn Hub. Details on returns, process, and refunds." />
+        <link rel="canonical" href="https://fannylearnhub.co/refund-policy" />
       </Helmet>
 
       <div className="container mx-auto px-4 max-w-4xl">
@@ -38,13 +38,13 @@ const RefundPolicy = () => {
           <section>
             <h2 className="text-2xl font-[500]text-gray-900 mb-4 uppercase">RETURN PROCESS</h2>
             <p>
-              To return an item, please email customer service at <a href="mailto:info@clearwithus.co" className="text-primary font-bold">info@clearwithus.co</a> to obtain
+              To return an item, please email customer service at <a href="mailto:info@fannylearnhub.co" className="text-primary font-bold">info@fannylearnhub.co</a> to obtain
               an Return Merchandise Authorization (RMA) number. After receiving an RMA number, place
               the item securely in its original packaging and include your proof of purchase, then mail your
               return to the following address:
             </p>
             <address className="not-italic bg-gray-50 p-8 rounded-2xl border border-gray-100 mt-6 leading-relaxed font-bold">
-              Clear With Us<br />
+              Fanny Learn Hub<br />
               Attn: Returns<br />
               RMA #<br />
               1267 Filer Ave E<br />
@@ -80,7 +80,7 @@ const RefundPolicy = () => {
             </p>
             <div className="bg-primary text-white p-8 rounded-2xl shadow-xl mt-4">
               <p className="font-[500]text-xl mb-2">+1-402-508-9991</p>
-              <a href="mailto:info@clearwithus.co" className="text-secondary font-[500]text-lg hover:underline">info@clearwithus.co</a>
+              <a href="mailto:info@fannylearnhub.co" className="text-secondary font-[500]text-lg hover:underline">info@fannylearnhub.co</a>
             </div>
           </section>
         </div>

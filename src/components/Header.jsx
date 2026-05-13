@@ -43,7 +43,7 @@ export default function Header() {
           <Link to="/" className="flex items-center">
             <img
               src="/logo/logo.avif"
-              alt="Clear With Us"
+              alt="Fanny Learn Hub"
               className=" h-[40px] 2xl:h-[60px] w-auto object-contain"
             />
           </Link>
@@ -291,7 +291,7 @@ export default function Header() {
             }`}
         >
           <div className="mb-8 flex items-center justify-between">
-            <img src="/logo/logo.avif" alt="Clear With Us" className="h-10" />
+            <img src="/logo/logo.avif" alt="Fanny Learn Hub" className="h-10" />
             <button
               onClick={() => setIsOpen(false)}
               className="flex h-10 w-10 items-center justify-center rounded-full bg-slate-100"

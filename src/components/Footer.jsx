@@ -16,7 +16,7 @@ export default function Footer() {
               <Link to="/" className="inline-flex items-center mb-6">
                 <img
                   src="/logo/logo.avif"
-                  alt="clearwithus"
+                  alt="fannylearnhub"
                   className="h-10 w-auto object-contain"
                 />
               </Link>
@@ -31,7 +31,7 @@ export default function Footer() {
               </p>
 
               <a
-                href="mailto:info@clearwithus.co"
+                href="mailto:info@fannylearnhub.co"
                 className="inline-flex items-center gap-2 mt-8 bg-black text-white px-6 py-3 rounded-full text-[14px] font-semibold hover:bg-blue-600 transition"
               >
                 <Mail size={16} />
@@ -93,7 +93,7 @@ export default function Footer() {
           {/* Bottom */}
           <div className="border-t border-[#DCDCDC] px-8 md:px-10 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-[#4B5563] text-[13px] text-center md:text-left">
-              © {currentYear} clearwithus. All information is for educational purposes.
+              © {currentYear} fannylearnhub. All information is for educational purposes.
             </p>
 
 
